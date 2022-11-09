@@ -1,0 +1,134 @@
+---
+permalink: configure/task_create_storage_capability_profiles.html 
+sidebar: sidebar 
+keywords:  
+summary: Mit VSC können Sie manuell Storage-Funktionsprofile erstellen, anhand der Funktionen eines Datastores automatisch ein Profil erstellen oder ein Profil entsprechend den Anforderungen ändern. 
+---
+= Erstellung von Storage-Funktionsprofilen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit VSC können Sie manuell Storage-Funktionsprofile erstellen, anhand der Funktionen eines Datastores automatisch ein Profil erstellen oder ein Profil entsprechend den Anforderungen ändern.
+
+*Was Sie brauchen*
+
+Sie müssen Ihre VASA Provider Instanz mit ONTAP Tools für VMware vSphere registriert haben.
+
+Nachdem Sie ein Profil eingerichtet haben, können Sie das Profil nach Bedarf bearbeiten.
+
+*Schritte*
+
+. Klicken Sie auf der Startseite von ONTAP Tools auf *Storage Capability Profiles*.
+. Erstellen Sie ein Profil oder bearbeiten Sie ein vorhandenes Profil, falls erforderlich:
++
+|===
+
+
+| *Wenn Sie wollen...* | *Do this...* 
+
+
+ a| 
+Erstellen Sie ein Profil
+ a| 
+Klicken Sie Auf *image:../media/create_icon.gif[""]*.
+
+
+
+ a| 
+Bearbeiten Sie ein vorhandenes Profil
+ a| 
+Klicken Sie auf das Profil, das Sie ändern möchten, auf den Profilen auf der Seite *Storage Capability Profiles*.
+
+|===
+
+
+
+NOTE: Um die Werte anzuzeigen, die einem vorhandenen Profil zugeordnet sind, können Sie auf der Seite Storage Capabilities Profile auf den Profilnamen klicken. VASA Provider zeigt dann die Übersichtsseite für dieses Profil an.
+
+. Füllen Sie die Seiten im Assistenten „Storage Capability Profile erstellen“ aus, um ein Profil einzurichten oder Werte zu bearbeiten, um ein vorhandenes Profil zu ändern.
++
+Die meisten Felder in diesem Assistenten sind selbsterklärend. In der folgenden Tabelle werden einige der Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
+
++
+|===
+
+
+| *Feld* | *Erklärung* 
+
+
+ a| 
+Identifizierung mehrerer Profile
+ a| 
+Sie können den Zweck des Storage-Capability-Profils mithilfe des Feldes *DESCRIPTION* auf der Registerkarte Name und Beschreibung beschreiben. Eine gute Beschreibung ist nützlich, da es sich bei der Einrichtung verschiedener Profile auf der Grundlage der verwendeten Anwendungen empfiehlt.
+
+So erfordert eine geschäftskritische Applikation beispielsweise ein Profil mit Funktionen, die eine höhere Performance unterstützen, beispielsweise eine AFF Plattform. Ein Datenspeicher, der zu Test- oder Schulungszwecken verwendet wird, kann ein Profil mit einer FAS Plattform mit geringerer Performance verwenden und alle Storage-Effizienzfunktionen und das Tiering zur Kostenkontrolle nutzen.
+
+Wenn Sie den Modus „`Linked`“ für Ihre vCenter Server aktiviert haben, müssen Sie den vCenter Server auswählen, für den Sie das Storage-Funktionsprofil erstellen.
+
+
+
+ a| 
+Plattform
+ a| 
+Sie können Ihr Storage-System entweder für den Plattformtyp AFF oder FAS auswählen. Die Optionen auf den nachfolgenden Bildschirmen werden basierend auf Ihrer Auswahl des Speichersystems aktualisiert.
+
+
+
+ a| 
+Protokoll
+ a| 
+Sie können auf der Grundlage der für das Speichersystem ausgewählten Plattform eine Auswahl aus den verfügbaren Protokollen auswählen. Bei der Konfiguration von Virtual Machines können Sie VM Storage-Richtlinien mit Storage-Funktionsprofil konfigurieren und im Feld für Protokolle nach Datastores basierend auf bestimmten Protokollen filtern. Das Feld 'Any' ermöglicht die Arbeit mit allen Protokollen.
+
+
+
+ a| 
+Leistung
+ a| 
+Über die Registerkarte Performance können Sie herkömmliche QoS-Richtlinien für Ihr Storage-System festlegen.
+
+** Wenn Sie *Keine* auswählen, wird eine QoS-Richtlinie ohne Limit (unendlich) auf ein Daten VVol angewendet.
+** Wenn Sie *QoS Policy Group* auswählen, wird auf ein VVol eine herkömmliche QoS-Richtlinie angewendet.
++
+Sie können den Wert für *Max IOPS* und *Min IOPS* festlegen, wodurch Sie die QoS-Funktionalität nutzen können. Wenn Sie Infinite IOPS auswählen, wird das Feld Max IOPS deaktiviert. Bei der Anwendung auf einen herkömmlichen Datenspeicher wird eine QoS-Richtlinie mit Wert „`Max IOPS`“ erstellt und einem FlexVol Volume zugewiesen. In Kombination mit einem VVols Datastore wird für jeden Data VVols Datastore eine QoS-Richtlinie mit maximalen IOPS-Werten und IOPS-Minima-Werten erstellt.
+
++
+*HINWEIS*:
+
++
+*** Maximale IOPS und minimale IOPS können auch auf das FlexVol Volume für einen herkömmlichen Datenspeicher angewendet werden.
+*** Sie müssen sicherstellen, dass die Performance-Kennzahlen nicht auch auf Storage Virtual Machine (SVM)-Ebene, auf Aggregatebene oder auf FlexVol Volume-Ebene separat festgelegt werden.
+
+
+
+
+
+
+ a| 
+Storage-Attribute
+ a| 
+Die Storage-Attribute, die Sie in dieser Registerkarte aktivieren können, hängen vom Storage-Typ ab, den Sie in der Registerkarte Personality auswählen.
+
+** Bei der Auswahl von FAS Storage können Sie die Speicherplatzreserve (Thick oder Thin Provisioning) konfigurieren, die Deduplizierung, Komprimierung und Verschlüsselung aktivieren.
++
+Das Tiering-Attribut ist deaktiviert, da dieses Attribut für den FAS Storage nicht anwendbar ist.
+
+** Wenn Sie sich für AFF Storage entscheiden, können Sie Verschlüsselung und Tiering aktivieren.
++
+Die Deduplizierung und Komprimierung sind für AFF Storage standardmäßig aktiviert und können nicht deaktiviert werden.
+
++
+Das Tiering-Attribut ermöglicht die Nutzung von Volumes, die zu einem FabricPool-fähigen Aggregat gehören (unterstützt von VASA Provider für AFF Systeme mit ONTAP 9.4 und höher). Für das Tiering-Attribut können Sie eine der folgenden Richtlinien konfigurieren:
+
+** Keine: Verhindert, dass Volume-Daten in die Kapazitäts-Tier verschoben werden
+** Snapshot: Verschiebt Benutzerdatenblöcke von Volume-Snapshot-Kopien, die nicht dem aktiven Dateisystem zugeordnet sind, in die Kapazitäts-Tier
+
+
+|===
+. Überprüfen Sie Ihre Auswahl auf der Zusammenfassungsseite und klicken Sie dann auf *OK*.
++
+Nachdem Sie ein Profil erstellt haben, können Sie zur Seite Storage Mapping zurückkehren, um anzuzeigen, welche Profile mit welchen Datastores übereinstimmen.
+
+

@@ -1,0 +1,30 @@
+---
+permalink: manage/task_migrate_virtual_machines_with_older_storage_capability_profiles.html 
+sidebar: sidebar 
+keywords:  
+summary: Wenn Sie die neueste Version von ONTAP Tools für VMware vSphere verwenden, Dann sollten Sie Ihre virtuellen Maschinen migrieren, die mit den QoS-Metriken „MaxThrughput MBPS“ oder „MaxThrughput IOPS“ bereitgestellt werden, auf neue VVol Datastores, die mit den QoS-Kennzahlen „Max IOPS“ der neuesten Version von ONTAP Tools bereitgestellt werden. 
+---
+= Migration von Virtual Machines mit älteren Storage-Funktionsprofilen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn Sie die neueste Version von ONTAP Tools für VMware vSphere verwenden, Anschließend sollten Sie Ihre Virtual Machines, die mit den QoS-Kennzahlen „`MaxThroughput MBPS`“ oder „`MaxThrughput IOPS`“ bereitgestellt werden, auf neue VVol Datastores migrieren, die mit den QoS-Kennzahlen „`Max IOPS`“ der neuesten Version der ONTAP Tools bereitgestellt werden.
+
+*Über diese Aufgabe*
+
+Bei der aktuellen Version von ONTAP Tools können Sie QoS-Kennzahlen für jede Virtual Machine bzw. Virtual Machine Disk (VMDK) konfigurieren. Die QoS-Kennzahlen wurden bereits auf ONTAP FlexVol Volume-Ebene angewendet und von allen Virtual Machines bzw. VMDKs genutzt, die auf diesem FlexVol Volume bereitgestellt wurden.
+
+Ab der Version 7.2 von ONTAP Tools werden die QoS-Kennzahlen einer Virtual Machine nicht gemeinsam mit anderen Virtual Machines genutzt.
+
+
+NOTE: Sie dürfen die vorhandene VM-Speicherrichtlinie nicht ändern, da die virtuellen Maschinen möglicherweise nicht mehr kompatibel sind.
+
+*Schritte*
+
+. Erstellen Sie VVols Datastores mithilfe eines neuen Storage-Funktionsprofils mit dem erforderlichen Wert „`Max IOPS`“.
+. Erstellen Sie eine VM Storage Policy und ordnen Sie die neue VM Storage Policy dem neuen Storage-Funktionsprofil zu.
+. Migrieren Sie die vorhandenen Virtual Machines mithilfe der neuen VM-Storage-Richtlinie zu den neu erstellten VVol Datastores.
+

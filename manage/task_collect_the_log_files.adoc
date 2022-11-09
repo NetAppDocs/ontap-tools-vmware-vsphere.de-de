@@ -1,0 +1,34 @@
+---
+permalink: manage/task_collect_the_log_files.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie können Log-Dateien für ONTAP®-Tools für VMware vSphere über die in der grafischen Benutzeroberfläche der VSC \(GUI\) verfügbare Option sammeln. Der technische Support fordert Sie möglicherweise auf, die Protokolldateien zu sammeln, damit Sie Probleme beheben können.' 
+---
+= Sammeln Sie die Protokolldateien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Protokolldateien für ONTAP Tools für VMware vSphere von der in der grafischen Benutzeroberfläche der VSC verfügbaren Option (GUI) sammeln. Der technische Support fordert Sie möglicherweise auf, die Protokolldateien zu sammeln, damit Sie Probleme beheben können.
+
+*Über diese Aufgabe*
+
+Wenn Sie VASA Provider-Protokolldateien benötigen, können Sie über das Bedienfeld des Anbieters ein Supportpaket generieren. Diese Seite ist Teil der VASA Provider-Wartungsmenüs, auf die Sie über die Konsole der virtuellen Appliance zugreifen können.
+
+`\https://vm_ip:9083`
+
+Sie können die VSC Protokolldateien mithilfe der Funktion „`VSC Logs` exportieren“ in der VSC GUI erfassen. Wenn Sie ein VSC-Protokollpaket mit aktiviertem VASA Provider erfassen, werden im VSC-Protokollpaket auch die VP-Protokolle enthalten. Mit den folgenden Schritten erfahren Sie, wie Sie die VSC Protokolldateien sammeln können:
+
+*Schritte*
+
+. Klicken Sie auf der Startseite der ONTAP Tools auf *Konfiguration* > *VSC-Protokolle exportieren*.
++
+Dieser Vorgang kann mehrere Minuten dauern.
+
+. Speichern Sie die Datei auf Ihrem lokalen Computer, wenn Sie dazu aufgefordert werden.
++
+Anschließend können Sie die Datei _.zip_ an den technischen Support senden.
+
+

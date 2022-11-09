@@ -1,0 +1,36 @@
+---
+permalink: configure/concept_virtual_storage_console_and_vasa_provider_log_files.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die Protokolldateien im Verzeichnis /opt/netapp/vscserver/log und im Verzeichnis /opt/netapp/vpserver/log überprüfen, wenn Fehler auftreten. 
+---
+= Protokolldateien von Virtual Storage Console und VASA Provider
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die Log-Dateien im Verzeichnis '/opt/netapp/vscserver/log' und im Verzeichnis '/opt/netapp/vpserver/log' überprüfen, wenn Fehler auftreten.
+
+Die folgenden drei Log-Dateien können bei der Identifizierung von Problemen hilfreich sein:
+
+* 'cxf.log' mit Informationen über API-Traffic in und aus dem VASA Provider *'kaminoPrefs.XML', mit Informationen zu den VSC-Einstellungen
+* 'Vvolvp.log', mit allen Log-Informationen über VASA Provider
+
+
+Im Wartungsmenü der ONTAP Tools für VMware vSphere können Sie unterschiedliche Log-Level für Ihre Anforderungen festlegen. Folgende Protokollebenen sind verfügbar:
+
+* Info
+* Debuggen
+* Fehler
+* Verfolgen
+
+
+Wenn Sie die Protokollebenen festlegen, werden die folgenden Dateien aktualisiert:
+
+* VSC-Server: 'kamino.log' und 'vvolvp.log'
+* VASA Provider Server: 'Vvolvp.log', 'error.log' und 'netapp.log'
+
+
+Darüber hinaus enthält die Seite über die Webbefehlszeilenschnittstelle (CLI) von VASA Provider die vorgemachten API-Aufrufe, die zurückgegebenen Fehler sowie mehrere Performance-bezogene Zähler. Die Web-CLI-Seite finden Sie unter 'https://<IP_address_or_hostname>:9083/stats'[].

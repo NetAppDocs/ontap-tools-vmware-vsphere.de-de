@@ -1,0 +1,65 @@
+---
+permalink: configure/concept_configure_storage_capability_profiles.html 
+sidebar: sidebar 
+keywords: storage capability profiles 
+summary: MIT VASA Provider for ONTAP können Sie Storage-Funktionsprofile erstellen und diesen Ihrem Storage zuordnen. Auf diese Weise können Sie die Konsistenz im gesamten Storage gewährleisten. Mit VASA Provider können Sie auch die Compliance zwischen dem Storage und den Storage-Funktionsprofilen prüfen. 
+---
+= Überblick über die Storage-Funktionsprofile
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MIT VASA Provider for ONTAP können Sie Storage-Funktionsprofile erstellen und diesen Ihrem Storage zuordnen. Auf diese Weise können Sie die Konsistenz im gesamten Storage gewährleisten. Mit VASA Provider können Sie auch die Compliance zwischen dem Storage und den Storage-Funktionsprofilen prüfen.
+
+Eine Storage-Funktion ist eine Reihe von Attributen von Storage-Systemen. Dadurch wird ein bestimmter Level an Storage-Performance, Storage-Effizienz und anderen Funktionen identifiziert, wie z. B. die Verschlüsselung für das Storage-Objekt.
+
+Bei herkömmlichen Datastores können Sie ein Storage-Funktionsprofil verwenden, um Datastores mit gängigen Attributen zu konsistent zu erstellen und ihnen QoS-Richtlinien zuzuweisen. Während der Bereitstellung werden mit VSC Cluster, SVMs und Aggregate angezeigt, die dem Storage-Funktionsprofil entsprechen. Sie können aus bestehenden herkömmlichen Datastores ein Storage-Funktionsprofil generieren, indem Sie im Menü Storage Mapping die Option *GLOBAL AUTO-GENERATE PROFILES* verwenden. Nach der Erstellung des Profils können Sie mit VSC die Compliance von Datastores mit dem Profil überwachen.
+
+Bei Verwendung mit VVols-Datastores kann der Bereitstellungsassistent mehrere Storage-Funktionsprofile verwenden, um verschiedene FlexVol Volumes im Datastore zu erstellen. Sie können die VM Storage-Richtlinie verwenden, um VVols automatisch für eine Virtual Machine in entsprechenden FlexVol Volumes gemäß Definition zu erstellen. Sie können beispielsweise Profile für allgemeine Storage-Klassen erstellen (beispielsweise für Performance-Limits und andere Funktionen wie Verschlüsselung oder FabricPool). Sie können später VM Storage-Richtlinien in vCenter Server erstellen, die Business-Klassen von Virtual Machines darstellen und diese mit dem entsprechenden Storage-Funktionsprofil nach Name verknüpfen (z. B. Produktion, Test, HR).
+
+In Kombination mit VVols wird darüber hinaus das Storage-Funktionsprofil verwendet, um die Storage-Performance für die individuelle Virtual Machine festzulegen und diese auf das FlexVol Volume im VVols Datastore abzulegen, der die Performance-Anforderungen am besten erfüllt. Sie können eine QoS-Richtlinie mit minimalen und/oder maximalen IOPS für die Performance festlegen. Die Standardrichtlinien können verwendet werden, wenn Sie eine Virtual Machine bereitstellen oder Ihre VM Storage-Richtlinie später ändern, wenn sich Ihre Geschäftsanforderungen ändern. Die standardmäßigen Storage-Funktionsprofile für diese Version von ONTAP Tools:
+
+* All Flash FAS_dick
+* FAS_MAX20
+* FAS_Standard
+* All Flash FAS_Standard
+* All Flash FAS_Tiering
+* All Flash FAS_verschlüsselt
+* AFF_verschlüsseltes_Tiering
+* All Flash FAS_Encrypted_Min50
+* Platin
+* Bronze
+
+
+Der vCenter Server ordnet dann die Storage-Fähigkeit einer LUN oder eines Volumes dem Datenspeicher zu, der auf dieser LUN oder diesem Volume bereitgestellt ist. Damit können Sie eine Virtual Machine in einem Datenspeicher bereitstellen, der dem Storage-Profil der Virtual Machine entspricht, und es können sichergestellt werden, dass alle Datenspeicher in einem Datastore-Cluster dieselben Storage Service Levels aufweisen.
+
+Mithilfe von ONTAP Tools können Sie jeden Datastore für virtuelle Volumes (VVols) mit einem neuen Storage-Funktionsprofil konfigurieren, in dem die Bereitstellung von Virtual Machines mit wechselnden IOPS-Anforderungen auf demselben VVols Datastore unterstützt wird. Bei der Ausführung des VM Provisioning Workflows mit IOPS-Anforderung werden alle VVols Datastores in der Liste kompatibler Datastores aufgeführt.
+
+
+NOTE: Wenn Sie versuchen, Virtual Machines für vCenter Server vor 6.5 bereitzustellen oder zu ändern, werden in der Liste kompatibler Datastores nur die VVols Datastores aufgeführt, die Storage-Funktionsprofile mit Performance-Einstellung auf „`MAX_IOPS`“ enthalten. Die verbleibenden VVols-Datastores werden in der Liste inkompatibler Datastores aufgeführt. Sie können diese Klassifizierung ignorieren und jeden beliebigen VVols-Datastore aus der Liste inkompatibler Datastores auswählen, um die Virtual Machine bereitzustellen oder zu ändern.
+
+
+
+== Überlegungen beim Erstellen und Bearbeiten von Storage-Funktionsprofilen
+
+Beachten Sie bei der Erstellung und Bearbeitung von Storage-Funktionsprofilen die Überlegungen.
+
+* Sie können Minimum-IOPS nur für AFF Systeme konfigurieren.
+* Sie können QoS-Metriken auf Datastore-Ebene (VVols) auf einem virtuellen Volume konfigurieren.
++
+Diese Funktion bietet größere Flexibilität bei der Zuweisung unterschiedlicher QoS-Metriken für unterschiedliche VMDKs derselben Virtual Machine, die in einem virtuellen Datastore bereitgestellt wird.
+
+* Sie können Storage-Funktionsprofile für FAS und AFFDatastores konfigurieren.
++
+Bei FAS- und AFF-Systemen können Sie die Speicherplatzreserve als Thick oder Thin Provisioning konfigurieren.
+
+* Sie können Storage-Funktionsprofile zur Verschlüsselung Ihrer Datenspeicher nutzen.
+* Vorhandene Storage-Funktionsprofile, die vor der Version 7.2 erstellt wurden, können nach dem Upgrade von einer früheren Version der ONTAP Tools für VMware vSphere auf die aktuelle Version der ONTAP Tools nicht geändert werden.
++
+Die Profile der älteren Storage-Funktionen werden zur Rückwärtskompatibilität aufbewahrt. Wenn die Standardvorlagen nicht verwendet werden, werden die vorhandenen Vorlagen während des Upgrades auf die neueste Version der ONTAP Tools überschrieben, um die neuen QoS-Kennzahlen und Tiering-Richtlinien festzulegen, die mit der Performance der Storage-Funktionsprofile zusammenhängen.
+
+* Sie können die alten Storage-Funktionsprofile nicht ändern oder verwenden, um neue virtuelle Datastores oder VM Storage-Richtlinien bereitzustellen.
+* Sie müssen für alle neuen Datenspeicher neue Storage-Funktionsprofile verwenden.
+

@@ -1,0 +1,104 @@
+---
+permalink: deploy/task_deploy_ontap_tools.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie sollten ONTAP-Tools in Ihrer Umgebung implementieren und die erforderlichen Parameter angeben, um die Appliance verwenden zu können. 
+---
+= So implementieren Sie ONTAP-Tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten ONTAP-Tools in Ihrer Umgebung implementieren und die erforderlichen Parameter angeben, um die Appliance verwenden zu können.
+
+*Was Sie brauchen*
+
+* Sie müssen eine unterstützte Version von vCenter Server ausführen.
++
+
+NOTE: ONTAP Tools können entweder bei einer Windows Implementierung von vCenter Server oder bei einer Implementierung von VMware vCenter Server Virtual Appliance (vCSA) registriert werden.
+
++
+https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]
+
+* Sie müssen Ihre vCenter Server-Umgebung konfiguriert und eingerichtet haben.
+* Sie müssen einen ESXi-Host für Ihre virtuelle Maschine einrichten.
+* Sie müssen die Datei _.ova_ heruntergeladen haben.
+* Sie müssen über die Anmeldedaten des Administrators für Ihre vCenter Server-Instanz verfügen.
+* Sie sollten alle Browser-Sitzungen des vSphere Clients abgemeldet und geschlossen haben und den Browser-Cache gelöscht haben, um Probleme mit dem Browser-Cache während der Bereitstellung von ONTAP-Tools zu vermeiden.
+* Sie müssen das Internet Control Message Protocol (ICMP) aktiviert haben.
++
+Wenn ICMP deaktiviert ist, schlägt die Erstkonfiguration von ONTAP-Tools fehl, und VSC kann die VSC- und VASA-Provider-Services nach der Implementierung nicht starten. Nach der Implementierung müssen Sie die VSC- und VASA-Provider-Services manuell aktivieren.
+
+
+
+*Über diese Aufgabe*
+
+Bei der Implementierung einer Neuinstallation von ONTAP Tools ist VASA Provider standardmäßig aktiviert. Bei einem Upgrade von einer früheren Version der ONTAP Tools bleibt der Status von VASA Provider erhalten, und VASA Provider muss möglicherweise manuell aktiviert werden.
+
+link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html["Aktivieren Sie VASA Provider zur Konfiguration von virtuellen Datastores"]
+
+*Schritte*
+
+. Melden Sie sich beim vSphere Client an.
+. Wählen Sie *Startseite* > *Host & Cluster*.
+. Klicken Sie mit der rechten Maustaste auf das gewünschte Rechenzentrum und klicken Sie dann auf *OVA-Vorlage bereitstellen*.
+. Wählen Sie die anzuwendende Methode, um die Bereitstellungsdatei für ONTAP-Tools bereitzustellen, und klicken Sie dann auf *Weiter*.
++
+|===
+
+
+| *Lage* | *Aktion* 
+
+
+ a| 
+URL
+ a| 
+Geben Sie die URL für die Datei _.ova_ für ONTAP-Tools an.
+
+
+
+ a| 
+Ordner
+ a| 
+Wählen Sie die Datei _.ova_ für ONTAP-Tools am gespeicherten Speicherort aus.
+
+|===
+. Geben Sie die Details ein, um den Bereitstellungsassistenten anzupassen.
++
+(Optional) Wählen Sie im Abschnitt vCenter konfigurieren oder VCF aktivieren das Kontrollkästchen *VMware Cloud Foundation (VCF) aktivieren* aus und geben Sie ein Passwort für die ONTAP Tools-Anmeldedaten ein. Sie müssen keine IP-Adresse angeben, aber es ist ein Kennwort erforderlich. Sämtliche Details finden Sie im Folgenden.
+
++
+** link:../deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html["Überlegungen zur Anpassung der Implementierung"]
+** link:../deploy/vmware_cloud_foundation_mode_deployment.html["Implementierungs-Modus von VMware Cloud Foundation für ONTAP Tools"]
+
+
+. Überprüfen Sie die Konfigurationsdaten, und klicken Sie dann auf *Weiter*, um die Bereitstellung abzuschließen.
++
+Wenn Sie auf den Abschluss der Implementierung warten, können Sie den Fortschritt der Implementierung auf der Registerkarte Aufgaben anzeigen.
+
+. Schalten Sie die ONTAP Tools Virtual Machine ein, und öffnen Sie dann eine Konsole der Virtual Machine, auf der die ONTAP Tools ausgeführt werden.
+. Überprüfen Sie, ob die ONTAP-Tools nach Abschluss der Implementierung ausgeführt werden.
+. Wenn ONTAP-Tools nicht bei vCenter-Servern registriert sind, verwenden Sie ``\https://appliance_ip:8143/Register.html` Um die VSC Instanz zu registrieren.
+. Melden Sie sich beim vSphere Client ab, und melden Sie sich erneut an, um die implementierten ONTAP Tools anzuzeigen.
++
+Es kann ein paar Minuten dauern, bis das Plug-in im vSphere Client aktualisiert wird.
+
++
+*Fehlerbehebung:* Wenn Sie das Plug-in auch nach dem Anmelden nicht anzeigen können, müssen Sie den vSphere Client Cache reinigen.
+
++
+link:../deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html["Löschen Sie die heruntergeladenen Plug-in-Pakete von vSphere im Cache"]
+
+
+
+
+NOTE: Wenn Sie ONTAP 9.6 oder eine frühere Version verwenden, müssen Sie OnCommand API Services herunterladen und installieren, um das VVols Dashboard anzuzeigen. Für ONTAP 9.7 müssen jedoch keine OnCommand API Services beim VASA Provider registriert werden.
+
+link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html["Aktivieren Sie VASA Provider zur Konfiguration von virtuellen Datastores"]
+
+*Verwandte Informationen*
+
+https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Storage_Software%2FVirtual_Storage_Console_for_VMware_vSphere%2FError_during_fresh_deployment_of_virtual_appliance_for_VSC%252C_VASA_Provider%252C_and_SRA["Fehler bei neuer Implementierung der virtuellen Appliance für VSC, VASA Provider und SRA"]

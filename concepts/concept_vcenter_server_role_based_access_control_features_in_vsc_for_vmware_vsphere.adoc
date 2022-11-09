@@ -1,0 +1,18 @@
+---
+permalink: concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: 'VCenter Server bietet eine rollenbasierte Zugriffssteuerung \(RBAC\), mit der Sie den Zugriff auf vSphere Objekte steuern können. In ONTAP Tools für VMware vSphere arbeitet die vCenter Server RBAC mit der ONTAP RBAC. So können Sie ermitteln, welche VSC-Aufgaben ein bestimmter Benutzer auf Objekten auf einem bestimmten Storage-System ausführen kann.' 
+---
+= Übersicht über die rollenbasierte Zugriffssteuerung in den ONTAP Tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VCenter Server bietet rollenbasierte Zugriffssteuerung (RBAC), über die Sie den Zugriff auf vSphere Objekte kontrollieren können. In ONTAP Tools für VMware vSphere arbeitet die vCenter Server RBAC mit der ONTAP RBAC. So können Sie ermitteln, welche VSC-Aufgaben ein bestimmter Benutzer auf Objekten auf einem bestimmten Storage-System ausführen kann.
+
+Zum erfolgreichen Abschluss einer Aufgabe müssen Sie über die entsprechenden Berechtigungen für die rollenbasierte Zugriffssteuerung von vCenter Server verfügen. Während einer Aufgabe überprüft VSC die Berechtigungen eines Benutzers im vCenter Server, bevor sie die ONTAP-Berechtigungen des Benutzers überprüfen.
+
+Sie können die vCenter Server-Berechtigungen auf dem Root-Objekt (auch als Stammordner bekannt) festlegen. Sie können dann die Sicherheit verbessern, indem Sie untergeordnete Entitäten, die diese Berechtigungen nicht benötigen, einschränken.

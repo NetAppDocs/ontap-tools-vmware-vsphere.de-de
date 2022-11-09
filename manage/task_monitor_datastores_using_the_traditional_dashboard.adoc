@@ -1,0 +1,53 @@
+---
+permalink: manage/task_monitor_datastores_using_the_traditional_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Mithilfe der herkömmlichen Konsole der ONTAP Tools können Sie die herkömmlichen Datenspeicher und Virtual Machines überwachen. Mit den Dashboard-Daten können Sie die Datenspeicherauslastung analysieren und Korrekturmaßnahmen ergreifen, um zu verhindern, dass die Virtual Machines mit speicherbezogenen Einschränkungen umgehen. 
+---
+= Analyse der Performance-Daten mit dem herkömmlichen Dashboard
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mithilfe der herkömmlichen Konsole der ONTAP Tools können Sie die herkömmlichen Datenspeicher und Virtual Machines überwachen. Mit den Dashboard-Daten können Sie die Datenspeicherauslastung analysieren und Korrekturmaßnahmen ergreifen, um zu verhindern, dass die Virtual Machines mit speicherbezogenen Einschränkungen umgehen.
+
+*Was Sie brauchen*
+
+Wählen Sie im Dialogfeld Storage-I/O-Steuerung konfigurieren die Option *Storage-I/O-Steuerung aktivieren und Statistiken sammeln* oder *Storage-I/O-Steuerung deaktivieren, aber Statistiksammlung aktivieren* aus. Sie können Storage I/O Control nur aktivieren, wenn Sie über die Enterprise Plus Lizenz von VMware verfügen.
+
+https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-BB5D9BAB-9E0E-4204-A76A-54634CD8AD51.html["Dokumentation zu VMware vSphere: Storage I/O Control ermöglichen"]
+
+Im herkömmlichen Dashboard werden Kennzahlen zu IOPS, Kapazitätsauslastung, Latenz und engagierte Kapazität angezeigt, die vom vCenter Server abgerufen werden. ONTAP bietet im herkömmlichen Dashboard Metriken zur Speicherersparnis für das Aggregat. Sie können die Speicherplatzeinsparung für ein bestimmtes Aggregat anzeigen. Mit diesen Performance-Parametern können Sie Performance-Engpässe in der virtuellen Umgebung identifizieren und Korrekturmaßnahmen ergreifen, um die Probleme zu beheben.
+
+
+NOTE: FlexGroup Datastores, die auf Virtual Machines (SVMs) als direkte Storage-Lösung konfiguriert sind, werden nicht von der Dateiüberwachung unterstützt.
+
+Die herkömmliche Konsole der ONTAP-Tools ermöglicht die Anzeige von NFS-Datenspeichern oder VMFS-Datastores. Sie können auf einen Datastore klicken, um zur Detailansicht des Datastores zu navigieren, die von der vCenter Server-Instanz bereitgestellt wird, um Probleme mit den Datastores in Ihrem vCenter Server anzuzeigen und zu beheben.
+
+*Schritte*
+
+. Klicken Sie auf der Startseite des vSphere Clients auf *ONTAP Tools für VMware vSphere*.
+. Wählen Sie den erforderlichen vCenter Server aus, indem Sie das vCenter Server-Dropdown-Menü verwenden, um die Datenspeicher anzuzeigen.
+. Klicken Sie Auf *Traditionelles Dashboard*.
++
+Das Portlet „Datastores“ enthält folgende Details:
+
++
+** Die Anzahl herkömmlicher Datastores mit ihren Performance-Metriken, die von VSC in Ihrer vCenter Server Instanz gemanagt werden
+** Die fünf wichtigsten Datastores basierend auf Ressourcennutzung und Performance-Parametern, die geändert werden können. Sie können bei Bedarf die Liste der Datenspeicher basierend auf dem genutzten Speicherplatz, den IOPS oder der Latenz und der erforderlichen Reihenfolge ändern.
+
+
++
+Das Portlet „Virtuelle Maschinen“ enthält folgende Details:
+
++
+** Anzahl der Virtual Machines, die NetApp Datastores in Ihrem vCenter Server verwenden
+** Die fünf wichtigsten Virtual Machines basieren auf engagierter Kapazität, Latenz, IOPS, Durchsatz und Uptime
++
+Die IOPS- und Durchsatzdaten im Portlet „Virtual Machines“ sind nur für Datenspeicher verfügbar, die auf FlexGroup-gestützten Volumes erstellt wurden.
+
+
+
+

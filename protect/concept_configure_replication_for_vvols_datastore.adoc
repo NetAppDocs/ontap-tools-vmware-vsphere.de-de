@@ -1,0 +1,28 @@
+---
+permalink: protect/concept_configure_replication_for_vvols_datastore.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Die Replizierung für Ihren VVols-Datastore kann mithilfe von ONTAP Tools konfiguriert werden. Hauptziel der VVols-Replizierung ist die Sicherung kritischer Virtual Machines während des Disaster Recovery mit VMware Site Recovery Manager \ (SRM\).' 
+---
+= Konfigurieren Sie die Replizierung für VVols-Datastore zum Schutz von Virtual Machines
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Replizierung für Ihren VVols-Datastore kann mithilfe von ONTAP Tools konfiguriert werden. Hauptziel der VVols Replizierung ist die Sicherung kritischer Virtual Machines während des Disaster Recovery mit VMware Site Recovery Manager (SRM).
+
+Um die VVols Replizierung für ONTAP Tools zu konfigurieren, müssen jedoch die VASA Provider-Funktion und die VVols Replizierung aktiviert werden. VASA-Provider ist standardmäßig in ONTAP-Tools aktiviert. Die Array-basierte Replikation wird auf FlexVol-Ebene durchgeführt. Jeder VVols Datastore wird einem Storage-Container zugewiesen, der aus einem oder mehreren FlexVol-Volumes besteht. Die FlexVol Volumes sollten mit SnapMirror von ONTAP vorkonfiguriert sein.
+
+
+WARNING: Es sollten keine Kombination aus geschützten und ungesicherten Virtual Machines in einem einzigen VVols Datastore konfiguriert werden. Ein erneuter Schutz nach einem Failover führt zum Löschen ungesicherter Virtual Machines. Stellen Sie sicher, dass alle Virtual Machines in einem VVols Datastore bei der Replizierung gesichert sind.
+
+Replizierungsgruppen werden während der Erstellung des VVols-Datastores für jedes FlexVol Volume erstellt. Um die VVols Replizierung zu verwenden, müssen VM Storage-Richtlinien erstellt werden, die den Replizierungsstatus und Zeitplan sowie das Storage-Funktionsprofil beinhalten. Eine Replikationsgruppe umfasst Virtual Machines, die als Teil der Disaster Recovery auf den Zielstandort repliziert werden. Replizierungsgruppen können über die SRM-Konsole für DR-Workflows mit Sicherungsgruppen und Recovery-Plänen konfiguriert werden.
+
+
+NOTE: Wenn Sie Disaster Recovery für VVols Datastores verwenden, müssen Sie den Storage Replication Adapter (SRA) nicht separat konfigurieren, da die VASA Provider-Funktion erweitert wird und VVols-Replizierung ermöglicht.
+
+image::../media/vvols_replication.png[vvols Replizierung]
+
+link:../protect/configure_vvols_replication_existing_datastore.html["Konfigurieren Sie die VVols Replizierung für vorhandene Datastores"]

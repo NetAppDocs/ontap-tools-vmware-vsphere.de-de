@@ -1,0 +1,100 @@
+---
+permalink: manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können Ihre Applikations-, System- und Netzwerkkonfigurationen mithilfe der Wartungskonsole der ONTAP Tools managen. Sie können Ihr Administratorkennwort und Ihr Wartungskennwort ändern. Außerdem können Sie Supportpakete generieren, verschiedene Protokollebenen festlegen, TLS-Konfigurationen anzeigen und verwalten und die Remote-Diagnose starten. 
+---
+= Überblick über Wartungskonsole für ONTAP-Tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Ihre Applikations-, System- und Netzwerkkonfigurationen mithilfe der Wartungskonsole der ONTAP Tools managen. Sie können Ihr Administratorkennwort und Ihr Wartungskennwort ändern. Außerdem können Sie Supportpakete generieren, verschiedene Protokollebenen festlegen, TLS-Konfigurationen anzeigen und verwalten und die Remote-Diagnose starten.
+
+Sie müssen VMware-Tools installiert haben, nachdem Sie ONTAP-Tools implementiert haben, um auf die Wartungskonsole zuzugreifen. Sie sollten „`maint`“ als Benutzernamen und das Passwort verwenden, das Sie während der Bereitstellung konfiguriert haben, um sich an der Wartungskonsole der ONTAP-Tools anzumelden.
+
+
+NOTE: Sie müssen ein Passwort für den Benutzer „`diag`“ festlegen, während Sie die Ferndiagnose aktivieren.
+
+Sie können über die Registerkarte *Zusammenfassung* der bereitgestellten ONTAP-Tools auf die Wartungskonsole zugreifen. Wenn Sie auf klicken image:../media/launch_maintenance_console.gif[""], Die Wartungskonsole wird gestartet.
+
+|===
+
+
+| *Konsolenmenü* | *Optionen* 
+
+
+ a| 
+Anwendungskonfiguration
+ a| 
+. Zeigt eine Zusammenfassung des Serverstatus an
+. Starten Sie den Virtual Storage Console Service
+. Beenden Sie den Virtual Storage Console Service
+. Starten Sie VASA Provider und SRA Service
+. Beenden Sie den VASA Provider und den SRA Service
+. Ändern Sie das Benutzerpasswort „Administrator“
+. Zertifikate erneut generieren
+. Hard Reset Key Store und Zertifikate
+. Hard Reset-Datenbank
+. ÄNDERN SIE DAS PROTOKOLL-Level für den Virtual Storage Console-Service
+. Ändern Sie DIE PROTOKOLLEBENE für den VASA Provider und den SRA Service
+. Anzeigen der TLS-Konfiguration
+
+
+
+
+ a| 
+Systemkonfiguration
+ a| 
+. Starten Sie die virtuelle Maschine neu
+. Virtuelle Maschine herunterfahren
+. Ändern Sie das Benutzerpasswort „Wartung“
+. Zeitzone ändern
+. Fügen Sie den neuen NTP-Server hinzu
++
+Sie können eine IPv6-Adresse für Ihren NTP-Server angeben.
+
+. Aktivieren Sie SSH-Zugriff
+. Erhöhen der Größe der Jail-Festplatte (/jail)
+. Upgrade
+. Installation der VMware Tools
+
+
+
+
+ a| 
+Netzwerkkonfiguration
+ a| 
+. Zeigt die Einstellungen für die IP-Adresse an
+. Ändern Sie die IP-Adresseinstellungen
++
+Sie können diese Option verwenden, um die IP-Adresse nach der Implementierung in IPv6 zu ändern.
+
+. Zeigen Sie die Einstellungen für die Suche nach Domain-Namen an
+. Ändern Sie die Einstellungen für die DNS-Suche
+. Statische Routen anzeigen
+. Ändern Sie statische Routen
++
+Sie können diese Option verwenden, um eine IPv6-Route hinzuzufügen.
+
+. Änderungen speichern
+. Ping an einen Host
++
+Sie können diese Option verwenden, um einen Ping an einen IPv6-Host zu senden.
+
+. Standardeinstellungen wiederherstellen
+
+
+
+
+ a| 
+Support und Diagnose
+ a| 
+. Erzeugen Sie das Support Bundle
+. Zugriff auf die Diagnoseschale
+. Remote-Diagnosezugriff aktivieren
+
+
+|===

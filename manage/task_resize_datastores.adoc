@@ -1,0 +1,34 @@
+---
+permalink: manage/task_resize_datastores.html 
+sidebar: sidebar 
+keywords:  
+summary: Durch die Anpassung der Größe eines Datenspeichers können Sie den Speicher für die Dateien Ihrer virtuellen Maschine vergrößern oder verkleinern. Möglicherweise müssen Sie die Größe eines Datastores ändern, wenn sich Ihre Infrastrukturanforderungen ändern. 
+---
+= Datenspeichergröße ändern
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch die Anpassung der Größe eines Datenspeichers können Sie den Speicher für die Dateien Ihrer virtuellen Maschine vergrößern oder verkleinern. Möglicherweise müssen Sie die Größe eines Datastores ändern, wenn sich Ihre Infrastrukturanforderungen ändern.
+
+*Über diese Aufgabe*
+
+Wenn Sie möchten, dass die VSC die Größe des enthaltenden Volumes ändert, wenn es den VMFS-Datastore neu vergrößert, sollten Sie bei der ersten Bereitstellung des VMFS-Datastore nicht die Option *vorhandenes Volume* verwenden* unter Speicherattribut-Abschnitt verwenden, sondern es automatisch ein neues Volume für jeden Datastore erstellen lassen.
+
+Sie können einen NFS-Datenspeicher vergrößern oder verkleinern, aber bei einem VMFS-Datastore ist nur eine Vergrößerung möglich. Die Größe des Datenspeichers wird auch bei FlexGroup-Datenspeichern unterstützt, bei denen die Option „Auto Grow“ und „Verkleinerung“ aktiviert ist. Ein FlexGroup, der Teil eines herkömmlichen Datastores und ein FlexVol Volume ist, das Teil eines VVols Datastores ist, kann nicht unter die vorhandene Größe sinken, er kann jedoch maximal 120 % wachsen. Standard-Snapshots sind auf diesen FlexGroup und FlexVol Volumes aktiviert.
+
+
+NOTE: Wenn Sie All-SAN-Array (ASA) Typ Storage-Plattformen mit ONTAP 9.9.1 oder höher verwenden, nur dann können Sie VVols-Datastores mit VMDK-Größe über 16 TB erstellen.
+
+*Schritte*
+
+. Klicken Sie auf der vSphere Client-Startseite auf *Hosts und Cluster*.
+. Wählen Sie im Navigationsbereich das Rechenzentrum aus, das den Datastore enthält.
+. Klicken Sie mit der rechten Maustaste auf den Datastore und wählen Sie *NetApp ONTAP Tools* > *QoS zuweisen* aus.
+. Geben Sie im Dialogfeld Größe ändern eine neue Größe für den Datastore an, und klicken Sie dann auf *OK*.
++
+Sie können die Option *RECOVER ALL* im Menü Storage Systems ausführen, um die Speicherliste unter Storage Systems und Dashboard manuell zu aktualisieren oder auf die nächste geplante Aktualisierung zu warten.
+
+

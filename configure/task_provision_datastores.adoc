@@ -1,0 +1,211 @@
+---
+permalink: configure/task_provision_datastores.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Durch die Bereitstellung eines Datenspeichers wird ein logischer Container für Ihre Virtual Machines und deren Festplatten \ (VMDKs\) erstellt. Sie können einen Datenspeicher bereitstellen und dann den Datenspeicher an einen einzelnen Host, an alle Hosts in einem Cluster oder an alle Hosts im Datacenter anschließen.' 
+---
+= Bereitstellung herkömmlicher Datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Bereitstellung eines Datenspeichers wird ein logischer Container für Ihre Virtual Machines und deren Virtual Machine Disks (VMDKs) erstellt. Sie können einen Datenspeicher bereitstellen und dann den Datenspeicher an einen einzelnen Host, an alle Hosts in einem Cluster oder an alle Hosts im Datacenter anschließen.
+
+*Was Sie brauchen*
+
+* Um einen Datastore auf einer SVM bereitzustellen, die direkt mit der Virtual Storage Console (VSC) verbunden ist, muss die SVM zur VSC hinzugefügt werden. Dabei muss ein Benutzerkonto mit den entsprechenden Rechten, nicht jedoch das vsadmin Standardbenutzerkonto oder die vsadmin Rolle, verwendet werden.
++
+Sie können auch einen Datastore durch Hinzufügen eines Clusters bereitstellen.
+
+* Sie müssen sicherstellen, dass die Subnetzdetails aller Netzwerke, mit denen der ESXi-Host verbunden ist, in der keinoprefs.XML eingegeben werden.
++
+Siehe „Aktivieren von Datastore-Mounting über verschiedene Subnetze“.
+
+* Wenn Sie NFS oder iSCSI verwenden und das Subnetz zwischen Ihren ESXi Hosts und Ihrem Speichersystem unterschiedlich ist, müssen die NFS- oder iSCSI-Einstellungen in der kampinoprefs Preferences-Datei ESXi Host-Subnetzmasken enthalten.
++
+Diese Voreinstellungsdatei gilt auch für die Erstellung von VVols-Datenspeichern. Weitere Informationen finden Sie unter _Mounten von Datastores über verschiedene Subnetze aktivieren_ und _die VSC-Präferenzdateien konfigurieren_.
+
+* Wenn Sie VASA Provider aktiviert haben und Storage-Funktionsprofile für Ihre NFS-Datastores oder VMFS-Datastores angeben möchten, müssen Sie ein oder mehrere Storage-Funktionsprofile erstellt haben.
+* Um einen NFSv4.1-Datastore zu erstellen, muss NFSv4.1 auf SVM-Ebene aktiviert sein.
+
+
+Mit der Option *Provision Datastore* können Sie ein Speicherfähigkeit-Profil für den Datastore angeben. Storage-Funktionsprofile unterstützen die Festlegung konsistenter Service Level Objectives (SLOs) und vereinfachen den Provisionierungsprozess. Sie können nur ein Storage-Funktionsprofil angeben, wenn Sie VASA Provider aktiviert haben. Die ONTAP Tools für VMware vSphere unterstützen folgende Protokolle:
+
+* NFSv3 und NFSv4.1
+* VMFS5 und VMFS6
+
+
+VSC kann einen Datastore entweder auf einem NFS Volume oder auf einer LUN erstellen:
+
+* Für einen NFS-Datastore erstellt VSC ein NFS-Volume auf dem Storage-System und aktualisiert dann die Exportrichtlinien.
+* Für einen VMFS-Datenspeicher erstellt die VSC ein neues Volume (oder verwendet ein vorhandenes Volume, wenn Sie diese Option ausgewählt haben) und erstellt dann eine LUN und eine Initiatorgruppe.
+
+
+[NOTE]
+====
+* ONTAP Tools unterstützen die Bereitstellung von VMFS5 und VMFS6-Datastores bis zur maximalen VMFS-LUN- und Volume-Größe von 64 TB bei der Verwendung mit ASA und genehmigten AFF Systemen mit ONTAP 9.8 und höher.
++
+Auf anderen Plattformen wird die maximal unterstützte LUN-Größe 16 TB unterstützt.
+
+* VMware unterstützt NFSv4.1 mit Datastore-Clustern nicht.
+
+
+====
+* Für die Kerberos-Authentifizierung benötigen Sie Folgendes:
++
+** Windows-Maschine mit Active Directory (AD)
+** Domain Name Server (DNS)
+** Key Distribution Center (KDC)
+** ONTAP Storage System (Cluster) mit konfiguriertem Kerberos
+** ESXi Host mit konfiguriertem Kerberos
+
+
+
+
+Wenn ein Storage-Funktionsprofil während der Bereitstellung nicht angegeben wird, können Sie es später auf der Seite Storage Mapping verwenden, um einen Datenspeicher einem Storage-Funktionsprofil zuzuordnen. Sie können Storage-QoS-Einstellungen, Durchsatzobergrenze (max. IOPS) und Durchsatzboden (Min. IOPS) auf Daten-VMDK-Dateien von Virtual Machines anwenden, die auf FlexGroup-gestütztem Datastore bereitgestellt werden. QoS-Einstellungen können auf Datastore-Ebene oder auf Ebene einzelner Virtual Machines angewendet werden, indem Sie mit der rechten Maustaste auf den Datenspeicher klicken. Die Option mit einem Rechtsklick ist nur für die Datenspeicher oder Virtual Machines verfügbar, die durch den FlexGroup Datastore gesichert werden. Nachdem die QoS auf einen Datastore angewendet wurde, werden alle QoS-Einstellungen für vorab vorhandene Datastores oder Virtual Machines außer Kraft gesetzt. QoS-Einstellungen können nicht auf Datastore-Ebene oder auf Virtual-Machine-Ebene für Datastores angewendet werden, die auf Direct-SVM's bereitgestellt werden, da ONTAP keine QoS auf SVM-Managementebene unterstützt.
+
+*Schritte*
+
+. Sie können über eine der folgenden Methoden auf den Assistenten zur Bereitstellung von Datenspeichern zugreifen:
++
+|===
+
+
+| *Wenn Sie wählen aus ...* | *Ausführen des folgenden...* 
+
+
+ a| 
+Startseite von vSphere Client
+ a| 
+.. Klicken Sie auf *Hosts und Cluster*.
+.. Wählen Sie im Navigationsbereich das Rechenzentrum aus, auf dem Sie den Datastore bereitstellen möchten.
+.. Informationen zum Festlegen der Hosts für das Mounten des Datastores finden Sie im nächsten Schritt.
+
+
+
+
+ a| 
+Homepage zu ONTAP Tools
+ a| 
+.. Klicken Sie Auf *Übersicht*.
+.. Klicken Sie auf die Registerkarte *erste Schritte*.
+.. Klicken Sie auf die Schaltfläche *Bereitstellung*.
+.. Klicken Sie auf *Durchsuchen*, um das Ziel für die Bereitstellung des Datenspeichers wie im nächsten Schritt auszuwählen.
+
+
+|===
+. Geben Sie die Hosts an, auf denen der Datastore gemountet werden soll.
++
+|===
+
+
+| *Um den Datenspeicher zur Verfügung zu stellen...* | *Do this...* 
+
+
+ a| 
+Alle Hosts in einem Datacenter
+ a| 
+Klicken Sie mit der rechten Maustaste auf ein Datacenter und wählen Sie dann *NetApp ONTAP-Tools* > *Datastore bereitstellen* aus.
+
+
+
+ a| 
+Alle Hosts in einem Cluster
+ a| 
+Klicken Sie mit der rechten Maustaste auf einen Host-Cluster und wählen Sie dann *NetApp ONTAP-Tools* > *Provisionieren Sie Datastore* aus.
+
+
+
+ a| 
+Einem einzelnen Host aus
+ a| 
+Klicken Sie mit der rechten Maustaste auf einen Host und wählen Sie *NetApp ONTAP Tools* > *Provisionieren Sie Datenspeicher* aus.
+
+|===
+. Füllen Sie die Felder im Dialogfeld Neuer Datenspeicher aus, um den Datenspeicher zu erstellen.
++
+Die meisten Felder im Dialogfeld sind selbsterklärend. In der folgenden Tabelle werden einige der Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.
+
++
+|===
+
+
+| *Abschnitt* | *Beschreibung* 
+
+
+ a| 
+Allgemein
+ a| 
+Im Abschnitt „Allgemein“ des Dialogfelds „Bereitstellung neuer Datenspeicher“ werden Optionen zum Eingeben von Ziel, Name, Größe, Typ und Protokoll für den neuen Datenspeicher bereitgestellt.
+
+Sie können entweder *NFS* oder *VMFS* Protokolltyp auswählen, um einen herkömmlichen Datenspeicher zu konfigurieren. Für NFS können Sie entweder NFS3 oder NFS 4.1 auswählen.
+
+In diesem Release können Sie einen VMFS-Datenspeicher mit einer maximalen Größe von 64 TB konfigurieren. Sie können die Option „`Distbutle Datastore Data im ONTAP Cluster`“ auswählen, um ein FlexGroup Volume auf dem Storage-System bereitzustellen. Wenn Sie diese Option aktivieren, deaktivieren Sie automatisch das Kontrollkästchen „`Storage Capability Profile for Provisioning` verwenden“. Für die Bereitstellung von FlexGroup-Datastores werden ONTAP-Cluster mit 9.8 und höher nur zur Auswahl aufgeführt. Der VVols-Datastore-Typ wird zur Konfiguration eines VVols-Datastores verwendet. Wenn VASA Provider aktiviert ist, können Sie auch entscheiden, ob Sie die Storage-Funktionsprofile verwenden möchten. Die Option *Datastore Cluster* ist nur für traditionelle Datenspeicher verfügbar. Sie sollten die Option *Advanced* verwenden, um das Dateisystem *VMFS5* oder *VMFS6* anzugeben.
+
+
+
+ a| 
+Kerberos Authentifizierung
+ a| 
+Wenn Sie auf der Seite *Allgemein* NFS 4.1 ausgewählt haben, wählen Sie die Sicherheitsstufe aus.
+
+Kerberos Authentifizierung wird nur für FlexVols unterstützt.
+
+
+
+ a| 
+Storage-System
+ a| 
+Sie können eines der aufgeführten Storage-Funktionsprofile auswählen, wenn Sie im Abschnitt Allgemein die Option ausgewählt haben.
+
+** Wenn Sie einen FlexGroup-Datenspeicher bereitstellen, wird das Storage-Funktionsprofil für diesen Datenspeicher nicht unterstützt. Die vom System empfohlenen Werte für das Storage-System und die Storage Virtual Machine werden problemlos befüllt. Sie können die Werte jedoch bei Bedarf ändern.
+** Für Kerberos-Authentifizierung werden die für Kerberos aktivierten Speichersysteme aufgelistet.
+
+
+
+
+ a| 
+Storage-Attribute
+ a| 
+Standardmäßig füllt VSC die empfohlenen Werte für *Aggregate*- und *Volumen*-Optionen aus. Sie können die Werte entsprechend Ihren Anforderungen anpassen. Die Aggregatauswahl wird bei FlexGroup-Datastores nicht unterstützt, da ONTAP die Aggregat-Auswahl managt.
+
+Die Option *Space Reserve*, die im Menü *Advanced* verfügbar ist, wird ebenfalls ausgefüllt, um optimale Ergebnisse zu erzielen.
+
+(Optional) Sie können den Namen der Initiatorgruppe im Feld *Name der Initiatorgruppe ändern* angeben.
+
+** Eine neue Initiatorgruppe wird mit diesem Namen erstellt, wenn eine Initiatorgruppe nicht bereits vorhanden ist.
+** Der Protokollname wird an den Namen der angegebenen Initiatorgruppe angehängt.
+** Wenn eine vorhandene Initiatorgruppe mit den ausgewählten Initiatoren gefunden wurde, wird die Initiatorgruppe mit dem angegebenen Namen umbenannt und wird erneut verwendet.
+** Wenn Sie keinen Initiatorgruppennamen angeben, wird die Initiatorgruppe mit dem Standardnamen erstellt.
+
+
+
+
+ a| 
+Zusammenfassung
+ a| 
+Sie können die Zusammenfassung der Parameter, die Sie für den neuen Datastore angegeben haben, überprüfen.
+
+Das Feld „`Volume Style`“ ermöglicht es Ihnen, den Typ des erstellten Datastore zu differenzieren. Der „`Volume Style`“ kann entweder „`FlexVol`“ oder „`FlexGroup`“ lauten.
+
+|===
+
+
+
+NOTE: Ein FlexGroup, der Teil eines herkömmlichen Datastores ist, kann die vorhandene Größe nicht unter die bestehende verkleinern, dieses Wachstum kann jedoch um bis zu 120 % steigen. Auf diesen FlexGroup Volumes sind Standard-Snapshots aktiviert. . Klicken Sie im Abschnitt Zusammenfassung auf *Fertig stellen*.
+
+*Verwandte Informationen*
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/Datastore_inaccessible_when_volume_status_is_changed_to_offline["Zugriff auf Datenspeicher, wenn der Status eines Volume in Offline geändert wurde"]
+
+https://docs.netapp.com/us-en/ontap/nfs-admin/ontap-support-kerberos-concept.html["ONTAP-Unterstützung für Kerberos"]
+
+https://docs.netapp.com/us-en/ontap/nfs-admin/requirements-configuring-kerberos-concept.html["Anforderungen für die Konfiguration von Kerberos mit NFS"]
+
+https://docs.netapp.com/us-en/ontap-sm-classic/online-help-96-97/concept_kerberos_realm_services.html["Verwalten Sie Kerberos-Realm-Dienste mit System Manager - ONTAP 9.7 und früher"]
+
+https://docs.netapp.com/us-en/ontap/nfs-config/create-kerberos-config-task.html["Aktivieren Sie Kerberos auf einer Daten-LIF"]
+
+https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.storage.doc/GUID-BDCB7500-72EC-4B6B-9574-CFAEAF95AE81.html["Konfigurieren Sie ESXi Hosts für die Kerberos Authentifizierung"]

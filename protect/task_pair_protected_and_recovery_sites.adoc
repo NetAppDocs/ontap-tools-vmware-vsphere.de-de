@@ -1,0 +1,45 @@
+---
+permalink: protect/task_pair_protected_and_recovery_sites.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie müssen die geschützten und Recovery-Standorte, die mit Ihrem vSphere Client erstellt wurden, kombinieren, um Storage Replication Adapter \(SRA\) zu aktivieren, um die Storage-Systeme zu ermitteln.' 
+---
+= Kombinieren Sie geschützte Standorte und Recovery-Standorte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen die geschützten und Recovery-Standorte, die mit Ihrem vSphere Client erstellt wurden, kombinieren, um Storage Replication Adapter (SRA) zu aktivieren, um die Storage-Systeme zu ermitteln.
+
+*Was Sie brauchen*
+
+* Sie müssen Site Recovery Manager (SRM) auf den geschützten und Recovery-Standorten installiert haben.
+* Sie müssen SRA auf den geschützten und Recovery-Standorten installiert haben.
+
+
+*Über diese Aufgabe*
+
+Bei SnapMirror Fan-out-Konfigurationen wird ein Quell-Volume auf zwei unterschiedliche Ziele repliziert. Diese erzeugen ein Problem während der Recovery, wenn SRM die Virtual Machine vom Ziel wiederherstellen muss.
+
+
+NOTE: Storage Replication Adapter (SRA) unterstützt keine Fan-out-SnapMirror-Konfigurationen.
+
+*Schritte*
+
+. Doppelklicken Sie auf der Startseite des vSphere Clients auf *Site Recovery* und klicken Sie dann auf *Sites*.
+. Klicken Sie Auf *Objects* > *Aktionen* > *Pair Sites*.
+. Geben Sie im Dialogfeld Site Recovery Manager Servers Pair die Adresse des Plattform-Services-Controllers des geschützten Standorts ein, und klicken Sie dann auf *Weiter*.
+. Gehen Sie im Abschnitt vCenter Server auswählen folgendermaßen vor:
++
+.. Stellen Sie sicher, dass der vCenter Server des geschützten Standorts als übereinstimmender Kandidat für das Pairing angezeigt wird.
+.. Geben Sie die SSO-Administratoranmeldedaten ein, und klicken Sie dann auf *Fertig stellen*.
+
+
+. Wenn Sie dazu aufgefordert werden, klicken Sie auf *Ja*, um die Sicherheitszertifikate zu akzeptieren.
+
+
+*Ergebnis*
+
+Sowohl die geschützten als auch die Wiederherstellungsstandorte werden im Dialogfeld Objekte angezeigt.

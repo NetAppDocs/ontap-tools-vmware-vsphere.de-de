@@ -1,0 +1,24 @@
+---
+permalink: configure/add_different_subnets.html 
+sidebar: sidebar 
+keywords:  
+summary: Über die Schnittstelle ONTAP Tools können Sie nun verschiedene Subnetze für die Datastore-Montage hinzufügen. 
+---
+= Verschiedene Subnetze hinzufügen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über die Schnittstelle des ONTAP-Tools oder REST-APIs können verschiedene Subnetze von ESXi Hosts hinzugefügt werden. So können Sie nach dem Provisioning von Storage-Systemen Subnetze für den Datastore-Mount-Vorgang zulassen oder einschränken. Wenn Sie keine Subnetze von ESXi Hosts hinzufügen, dann blockiert ONTAP-Tools den Datastore-Mount-Vorgang für die Subnetze.
+
+*Schritte*
+
+. Melden Sie sich bei der vCenter Serverinstanz an und greifen Sie auf ONTAP Tools zu.
+. Klicken Sie auf der Startseite auf *Einstellungen* > *Subnetz-Zugriff verwalten*.
+. Klicken Sie im Dialogfeld Subnetz-Zugriff verwalten auf die Option *ausgewählt* in zulässigen Subnetzen für NFS-Subnetze Access.
+. Geben Sie die Werte für die erforderlichen Subnetze ein, und klicken Sie dann auf *ADD*.
+. Wählen Sie für eingeschränkte Subnetze entweder *Keine* oder *ausgewählt* aus.
+. Wiederholen Sie die oben genannten Schritte für iSCSI Subnets Access, und klicken Sie auf *Apply*.
+

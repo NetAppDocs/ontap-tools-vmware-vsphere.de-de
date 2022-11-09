@@ -1,0 +1,44 @@
+---
+permalink: manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie können die ONTAP-Tools konfigurieren, um SSH-Zugriff für den Diagnose-Benutzer zu aktivieren. 
+---
+= Konfigurieren Sie den Zugriff auf die Remote-Diagnose
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können die ONTAP-Tools konfigurieren, um SSH-Zugriff für den Diagnose-Benutzer zu aktivieren.
+
+*Was Sie brauchen*
+
+Die VASA Provider-Erweiterung muss für Ihre vCenter Server-Instanz aktiviert sein.
+
+*Über diese Aufgabe*
+
+Die Verwendung von SSH für den Zugriff auf das Diagnose-Benutzerkonto weist folgende Einschränkungen auf:
+
+* Sie haben nur ein Anmeldekonto pro Aktivierung von SSH.
+* SSH-Zugriff auf das Diagnose-Benutzerkonto ist deaktiviert, wenn eines der folgenden Ereignisse eintritt:
++
+** Die Zeit läuft ab.
++
+Die Anmeldesitzung bleibt nur bis Mitternacht am nächsten Tag gültig.
+
+** Sie melden sich erneut als Diagnose-Benutzer mit SSH an.
+
+
+
+
+*Schritte*
+
+. Öffnen Sie über den vCenter Server eine Konsole für VASA Provider.
+. Melden Sie sich als Wartungbenutzer an.
+. Eingabe `4` Wählen Sie Support und Diagnose aus.
+. Eingabe `3` So wählen Sie den Zugriff auf Remote-Diagnose aktivieren aus.
+. Eingabe `y` Im Dialogfeld „Bestätigung“ können Sie den Remote-Diagnosezugriff aktivieren.
+. Geben Sie ein Kennwort für den Remote-Diagnosezugriff ein.
+

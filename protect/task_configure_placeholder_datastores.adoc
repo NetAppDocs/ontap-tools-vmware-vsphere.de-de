@@ -1,0 +1,34 @@
+---
+permalink: protect/task_configure_placeholder_datastores.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie müssen einen Platzhalter-Datenspeicher konfigurieren, um einen Platz im vCenter-Inventar am Wiederherstellungsstandort für die geschützte virtuelle Maschine \(VM\) zu speichern. Der Platzhalter-Datenspeicher muss nicht groß sein, da die Platzhalter-VMs klein sind und nur einige Hundert Kilobyte verwenden.' 
+---
+= Platzhalter-Datastores konfigurieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen einen Platzhalterdatenspeicher konfigurieren, um einen Platz im vCenter Inventar am Recovery-Standort für die geschützte Virtual Machine (VM) zu speichern. Der Platzhalter-Datenspeicher muss nicht groß sein, da die Platzhalter-VMs klein sind und nur einige Hundert Kilobyte verwenden.
+
+*Was Sie brauchen*
+
+* Sie müssen die geschützten und die Recovery-Standorte miteinander verbunden haben.
+* Sie müssen Ihre Ressourcen-Zuordnungen konfiguriert haben.
+
+
+*Schritte*
+
+. Melden Sie sich bei Ihrem vCenter Server an und klicken Sie auf *Site Recovery* > *Sites*.
+. Wählen Sie Ihre geschützte Seite aus, und klicken Sie dann auf *Verwalten*.
+. Wählen Sie auf der Registerkarte Verwalten die Option *Platzhalter-Datenspeicher* aus.
+. Klicken Sie auf das image:../media/new_placeholder_datastore.gif[""] Symbol, um einen neuen Platzhalter-Datenspeicher zu erstellen.
+. Wählen Sie den entsprechenden Datenspeicher aus, und klicken Sie dann auf *OK*.
++
+
+NOTE: Als Platzhalter-Datenspeicher können lokale oder Remote-Standorte verwendet werden und sollten nicht repliziert werden.
+
+. Wiederholen Sie die Schritte 3 bis 5, um einen Platzhalter-Datenspeicher für den Recovery-Standort zu konfigurieren.
+

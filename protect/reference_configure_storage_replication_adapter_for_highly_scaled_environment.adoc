@@ -1,0 +1,76 @@
+---
+permalink: protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie müssen die Intervalle für die Storage-Zeitüberschreitung entsprechend den empfohlenen Einstellungen für Storage Replication Adapter \(SRA\) konfigurieren, um in stark skalierten Umgebungen optimal arbeiten zu können.' 
+---
+= Konfigurieren Sie Storage Replication Adapter für Umgebungen mit hoher Skalierbarkeit
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Um in stark skalierten Umgebungen optimal arbeiten zu können, müssen Sie die Storage-Timeout-Intervalle gemäß den empfohlenen Einstellungen für Storage Replication Adapter (SRA) konfigurieren.
+
+
+
+== Einstellungen für Speicheranbieter
+
+Sie sollten für eine skalierte Umgebung die folgenden Zeitüberschreitungswerte für SRM einstellen:
+
+|===
+
+
+| *Erweiterte Einstellungen* | *Timeout-Werte* 
+
+
+ a| 
+`StorageProvider.resignatureTimeout`
+ a| 
+Erhöhen Sie den Wert der Einstellung von 900 Sekunden auf 12000 Sekunden.
+
+
+
+ a| 
+`storageProvider.hostRescanDelaySec`
+ a| 
+60
+
+
+
+ a| 
+`storageProvider.hostRescanRepeatCnt`
+ a| 
+20
+
+
+
+ a| 
+`storageProvider.hostRescanTimeoutSec`
+ a| 
+Legen Sie einen hohen Wert fest (z. B.: 99999)
+
+|===
+Sie sollten auch die aktivieren `StorageProvider.autoResignatureMode` Option.
+
+Weitere Informationen zum Ändern der Speicheranbieter-Einstellungen finden Sie in der VMware-Dokumentation.
+
+https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["Dokumentation zu VMware vSphere: Ändern der Storage Provider-Einstellungen"]
+
+
+
+== Speichereinstellungen
+
+Sie müssen den Wert des festlegen `storage.commandTimeout` Und `storage.maxConcurrentCommandCnt` Timeout-Intervall für Umgebungen mit hoher Skalierbarkeit auf 99,999 Sekunden
+
+
+NOTE: Das angegebene Zeitüberschreitungsintervall ist der Höchstwert. Sie müssen nicht warten, bis die maximale Zeitüberschreitung erreicht ist. Die meisten Befehle sind innerhalb des festgelegten maximalen Timeout-Intervalls abgeschlossen.
+
+Sie sollten auch die maximale Zeit für SRA festlegen, um eine einzelne Operation in der Datei vvol.properties: offtap.operation.timeout.period.seconds=86400 durchzuführen.
+
+https://kb.netapp.com/app/answers/answer_view/a_id/1001111["Antwort auf die NetApp Knowledgebase 1001111: NetApp Storage Replication Adapter 4.0/7.X für den ONTAP Sizing Guide"]
+
+Die VMware Dokumentation zum Ändern der SAN-Provider-Einstellungen enthält weitere Informationen.
+
+https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GUID-711FD223-50DB-414C-A2A7-3BEB8FAFDBD9.html["Dokumentation zum VMware Site Recovery Manager: Storage-Einstellungen ändern"]

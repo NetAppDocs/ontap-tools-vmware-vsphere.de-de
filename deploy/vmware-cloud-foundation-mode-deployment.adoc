@@ -1,0 +1,246 @@
+---
+permalink: deploy/vmware_cloud_foundation_mode_deployment.html 
+sidebar: sidebar 
+keywords:  
+summary: ONTAP Tools für VMware vSphere können in einer VMware Cloud-Umgebung implementiert werden. 
+---
+= Implementierungs-Modus von VMware Cloud Foundation für ONTAP Tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP Tools für VMware vSphere können in VMware Cloud Foundation (VCF) Umgebung implementiert werden. Hauptziel der VCF-Implementierung ist die Verwendung von ONTAP-Tools in einem Cloud-Setup und die Erstellung von Containern ohne vCenter Server.
+
+Im VCF-Modus können Sie Container für Ihren Speicher erstellen, ohne dass ein vCenter Server benötigt wird. VASA Provider ist standardmäßig nach der Bereitstellung von ONTAP-Tools im VCF-Modus aktiviert. Nach Abschluss der Implementierung können Sie mit REST-APIs Storage-Systeme hinzufügen und Container erstellen. Es wird eine neue API zur Generierung des _Appliance-API-Tokens_ eingeführt, das API-Aufrufe authentifiziert. Einige der vorhandenen APIs wurden geändert, um den Header _Appliance-API-Token_ zu verwenden.
+
+Folgende APIs sind für den VCF-Bereitstellungsmodus verfügbar:
+
+|===
+
+
+| *API* | *HTTP-Methode* | *Neu/geändert* | *Abschnitt Kopfzeile* 
+
+
+ a| 
+/1.0/admin/Container
+ a| 
+GET
+ a| 
+Neu
+ a| 
+Container
+
+
+
+ a| 
+/1.0/admin/Container
+ a| 
+POST
+ a| 
+Neu
+ a| 
+Container
+
+
+
+ a| 
+/1.0/vcf/user/Login
+ a| 
+POST
+ a| 
+Neu
+ a| 
+Benutzerauthentifizierung
+
+
+
+ a| 
+/1.0/admin/Storage-Systems
+ a| 
+GET
+ a| 
+Geändert
+ a| 
+Storage-Systeme
+
+
+
+ a| 
+/1.0/admin/Storage-Systems
+ a| 
+POST
+ a| 
+Geändert
+ a| 
+Storage-Systeme
+
+
+
+ a| 
+/2.0/Storage/Clusters/discover
+ a| 
+POST
+ a| 
+Geändert
+ a| 
+Storage-Systeme
+
+
+
+ a| 
+/2.0/Storage/Capability-profile
+ a| 
+GET
+ a| 
+Geändert
+ a| 
+Storage-Funktionsprofil
+
+
+
+ a| 
+/2.0/Tasks/{id}
+ a| 
+GET
+ a| 
+Geändert
+ a| 
+Aufgabe
+
+|===
+Sie können nur mit VVols-Datastores im VCF-Implementierungsmodus arbeiten. Zum Erstellen von Containern müssen DIE FÜR die VCF-Bereitstellung angepassten REST-APIs verwendet werden. Nach Abschluss der Bereitstellung können Sie über die Swagger-Schnittstelle auf DIE REST-APIs zugreifen. Beim Erstellen von Containern im VCF-Modus müssen Sie Namen der Speicher-VM, Aggregate und Volume angeben. Sie müssen ONTAP APIs verwenden, um diese Details zu erhalten, da die ONTAP-Tools APIs für diese Ressourcen NICHT aktualisiert werden.
+
+|===
+
+
+| *Speicherobjekt* | *API* 
+
+
+ a| 
+Storage VM
+ a| 
+api/svm/svms
+
+
+
+ a| 
+Aggregat
+ a| 
+Storage/Aggregate
+
+
+
+ a| 
+Datenmenge
+ a| 
+Storage/Volumes
+
+|===
+Beim Ausführen der API zur Erstellung von Containern können Sie dem Container vorhandene Volumes hinzufügen. Sie sollten jedoch sicherstellen, dass die Komprimierungs- und Deduplizierungswerte der vorhandenen Volumes der Storage-Fähigkeit des Containers entsprechen. Die Erstellung der virtuellen Maschine schlägt fehl, wenn die Werte nicht übereinstimmen. Die folgende Tabelle enthält Einzelheiten zu den Werten, die vorhandene Volumes für die entsprechenden Storage-Funktionsprofile haben sollten.
+
+|===
+
+
+| *Container Storage Capability Profile* | *Deduplizierung* | *Komprimierung* 
+
+
+ a| 
+Platin
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+All Flash FAS_dick
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+All Flash FAS_Standard
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+All Flash FAS_Tiering
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+All Flash FAS_verschlüsselt
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+AFF_verschlüsseltes_Tiering
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+All Flash FAS_Encrypted_Min50
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+FAS_Standard
+ a| 
+Hintergrund
+ a| 
+Keine
+
+
+
+ a| 
+FAS_Max20
+ a| 
+Hintergrund
+ a| 
+Keine
+
+
+
+ a| 
+Bronze
+ a| 
+Keine
+ a| 
+Keine
+
+|===
+Sie können die ONTAP-PATCH-API verwenden, um die entsprechenden Werte festzulegen.
+
+`https://<machine_IP>/api/storage/volumes/{uuid}`
+
+Die VCF-Implementierung von ONTAP-Tools erlaubt nur die Erstellung von Containern. Wenn Sie andere Workflows wie das Bereitstellen von Datastores, das Erstellen von Storage-Funktionsprofilen oder Disaster Recovery verwenden möchten, sollten Sie ONTAP Tools über die Seite Register.html bei vCenter Server registrieren. ONTAP-Tools sind im VCF-Modus nicht für die Disaster Recovery konfiguriert.
+
+image::../media/VCF_deployment.png[Implementierungs-Workflow für VMware Cloud Foundation]
+
+link:../deploy/task_deploy_ontap_tools.html["So implementieren Sie ONTAP-Tools"]

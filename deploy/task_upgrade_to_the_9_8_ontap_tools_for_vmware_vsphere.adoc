@@ -1,0 +1,78 @@
+---
+permalink: deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords: Virtual Storage Console, Storage Replication Adapter 
+summary: Sie können gemäß den hier angegebenen Anweisungen ein Upgrade auf die neueste Version von ONTAP Tools von Ihrem bestehenden 9.7.1 oder höher durchführen. 
+---
+= Upgraden auf die aktuelle Version von ONTAP-Tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können gemäß den hier angegebenen Anweisungen ein Upgrade auf die aktuelle Version von ONTAP Tools von Ihrem 9.7P1 oder einer neueren Version durchführen.
+
+*Was Sie brauchen*
+
+* Sie müssen die Datei _.iso_ für die neueste Version der ONTAP-Tools heruntergeladen haben.
+* Sie müssen mindestens 12 GB RAM reserviert haben, damit die ONTAP-Tools nach dem Upgrade optimal arbeiten können.
+* Sie müssen den vSphere Client-Browser-Cache reinigen.
++
+link:../deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html["Löschen Sie die heruntergeladenen Plug-in-Pakete von vSphere im Cache"]
+
+
+
+Nach dem Upgrade bleibt der Status von VASA Provider aus der vorhandenen Implementierung erhalten. Sie sollten VASA Provider anhand der Anforderungen nach dem Upgrade manuell aktivieren oder deaktivieren. VASA Provider sollte jedoch auch dann aktiviert werden, wenn nicht VMware Virtual Volumes (VVols) verwendet werden sollen, da damit Storage-Funktionsprofile für die herkömmliche Datastore-Bereitstellung und Storage-Alarme aktiviert werden können.
+
+
+NOTE: Sie können ein Upgrade auf die aktuelle Version von ONTAP Tools ohne bestehende Version 9.7P1 oder höhere Version durchführen. Wenn Sie auf Version 9.7.1 von ONTAP-Tools aktualisieren und die VVols Replizierung verwenden möchten, müssen Sie einen weiteren vCenter Server mit installierten ONTAP-Tools (Site Recovery Manager, SRM) einrichten.
+
+*Schritte*
+
+. Mounten Sie die heruntergeladene Datei _.iso_ in die ONTAP Tools:
++
+.. Klicken Sie auf *Einstellungen bearbeiten* > *DVD/CD-ROM-Laufwerk*.
+.. Wählen Sie in der Dropdown-Liste die Option *Datastore ISO*-Datei aus.
+.. Navigieren Sie zu der heruntergeladenen _.iso_-Datei, und wählen Sie dann das Kontrollkästchen *bei Einschalten verbinden* aus.
+
+
+. Rufen Sie die Registerkarte „Summary“ Ihrer implementierten ONTAP Tools auf.
+. Klicken Sie Auf *image:../media/launch_maintenance_console.gif[""]* Um die Wartungskonsole zu starten.
+. Geben Sie an der Eingabeaufforderung „`Main Menu`“ die Option ein `2` Geben Sie für *Systemkonfiguration* die Option ein `8` Für *Upgrade*.
++
+Nach Abschluss des Upgrades werden die ONTAP-Tools neu gestartet. ONTAP-Tools werden auf dem vCenter-Server mit derselben IP-Adresse wie vor dem Upgrade registriert.
+
+. Wenn Sie möchten, dass ONTAP-Tools mit der IPv6-Adresse beim vCenter-Server registriert werden, müssen Sie Folgendes durchführen:
++
+.. Deregistrieren von ONTAP Tools.
+.. Registrieren Sie die IPv6-Adresse von ONTAP-Tools über die Seite *Registrieren* auf vCenter Server.
+.. Erstellen Sie nach der Registrierung VSC- und VASA Provider-Zertifikate erneut.
+
+
++
+
+IMPORTANT: IPv6 wird nur ab vCenter Server 6.7 unterstützt.
+
+. Melden Sie sich beim vSphere Client ab, und melden Sie sich erneut an, um die eingesetzten ONTAP Tools anzuzeigen.
++
+.. Melden Sie sich von Ihrem vorhandenen vSphere Web Client oder vSphere Client ab, und schließen Sie das Fenster.
+.. Melden Sie sich beim vSphere Client an.
++
+Es kann ein paar Minuten dauern, bis das Plug-in im vSphere Client aktualisiert wird.
+
+
+
+
+
+[NOTE]
+====
+* Wenn Sie ein Upgrade von der Version 7.0 von ONTAP Tools auf die neueste Version von ONTAP Tools durchführen, müssen Sie zuerst Storage-Funktionsprofile erstellen, bevor Sie versuchen, eine vorhandene VM-Speicherrichtlinie zu bearbeiten. Andernfalls wird möglicherweise ein Fehler angezeigt, dass falsche oder fehlende Werte vorhanden sind.
+* Wenn Sie ein Upgrade von einer früheren Version auf die neueste Version von ONTAP Tools durchführen, wird das gefunden `vvol.rebalance.threshold` Die Eigenschaft fehlt in der Datei `vvol.properties.
++
+Der Standardwert der Eigenschaft ist 85 %.
+
+* Nach einem Upgrade auf die aktuelle OTV(9.10)-Version, die FIPS-aktiviert hat, aber eine ältere Version von vCenter, in der FIPS nicht unterstützt wird, funktioniert die Bereitstellung weiterhin. Wenn Sie jedoch ein Upgrade Ihres vCenter auf die neueste von FIPS unterstützte Version durchführen und zudem eine frühere Version von ONTAP Tools verwenden, funktioniert die Implementierung nur dann, wenn FIPS im vCenter deaktiviert ist.
+
+
+====

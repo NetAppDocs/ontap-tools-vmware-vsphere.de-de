@@ -1,0 +1,119 @@
+---
+permalink: deploy/reference_considerations_for_deploying_virtual_appliance_for_vsc_vasa_provider_and_sra.html 
+sidebar: sidebar 
+keywords: Virtual Storage Console,Storage Replication Adapter 
+summary: Bevor Sie ONTAP Tools für VMware vSphere implementieren, sollten Sie gut planen, Ihre Implementierung zu planen und darüber zu entscheiden, wie Sie ONTAP Tools in Ihrer Umgebung konfigurieren möchten. 
+---
+= Überlegungen bei der Implementierung von ONTAP Tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bevor Sie ONTAP Tools für VMware vSphere implementieren, sollten Sie gut planen, Ihre Implementierung zu planen und darüber zu entscheiden, wie Sie ONTAP Tools in Ihrer Umgebung konfigurieren möchten.
+
+Die folgende Tabelle bietet eine Übersicht über die Punkte, die Sie vor der Implementierung von ONTAP Tools beachten sollten.
+
+|===
+
+
+| *Überlegungen* | *Beschreibung* 
+
+
+ a| 
+Erstmalige Implementierung von ONTAP-Tools
+ a| 
+Durch die Implementierung der ONTAP Tools werden die VSC Funktionen automatisch installiert.
+
+link:../deploy/concept_deploy_or_upgrade_ontap_tools.html["Implementieren oder Aktualisieren von ONTAP Tools für VMware vSphere"]
+
+link:../deploy/concept_installation_workflow_for_new_users.html["Implementierungs-Workflow für neue Benutzer von ONTAP Tools für VMware vSphere"]
+
+
+
+ a| 
+Upgrade von einer bestehenden VSC Implementierung
+ a| 
+Das Upgrade-Verfahren von einer vorhandenen Implementierung von VSC- zu ONTAP-Tools hängt von der VSC-Version ab und ob Sie ONTAP-Tools implementiert haben. Der Abschnitt zu Bereitstellungs-Workflows und Upgrade enthält weitere Informationen.
+
+link:concept_installation_workflow_for_existing_users_of_vsc.html["Implementierungs-Workflow für bestehende Benutzer von ONTAP-Tools"]
+
+Best Practices vor einem Upgrade:
+
+* Sie sollten Informationen über die verwendeten Speichersysteme und deren Anmeldeinformationen erfassen.
++
+Nach dem Upgrade sollten Sie überprüfen, ob alle Speichersysteme automatisch erkannt wurden und die korrekten Anmeldedaten besitzen.
+
+* Wenn Sie eine der Standard-VSC Rollen geändert haben, sollten Sie diese Rollen kopieren, um Ihre Änderungen zu speichern.
++
+VSC überschreibt bei jedem Neustart des VSC Service die Standardrollen mit den aktuellen Standardeinstellungen.
+
+
+
+
+
+ a| 
+Erneutes Generieren eines SSL-Zertifikats für VSC
+ a| 
+Das SSL-Zertifikat wird automatisch generiert, wenn Sie die ONTAP-Tools bereitstellen. Möglicherweise müssen Sie das SSL-Zertifikat erneut generieren, um ein standortspezifisches Zertifikat zu erstellen.
+
+link:../configure/task_regenerate_an_ssl_certificate_for_vsc.html["Erstellen Sie ein SSL-Zertifikat für die virtuelle Speicherkonsole erneut"]
+
+
+
+ a| 
+Festlegen der ESXi-Serverwerte
+ a| 
+Obwohl die meisten ESXi-Serverwerte standardmäßig festgelegt sind, empfiehlt es sich, die Werte zu überprüfen. Diese Werte basieren auf internen Tests. Je nach Umgebung müssen Sie möglicherweise einige der Werte ändern, um die Leistung zu verbessern.
+
+* link:../configure/task_configure_esx_server_multipathing_and_timeout_settings.html["Konfigurieren Sie Multipathing- und Zeitüberschreitungseinstellungen für ESXi-Server"]
+* link:../configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html["ESXi Hostwerte werden mithilfe der ONTAP Tools für VMware vSphere gesetzt"]
+
+
+
+
+ a| 
+Werte für die Zeitüberschreitung des Gastbetriebssystems
+ a| 
+Die Timeout-Skripte für Gastbetriebssysteme (Gast-OS) legen die SCSI I/O-Zeitüberschreitungswerte für die unterstützten Linux, Solaris und Windows Gastbetriebssysteme fest, um das richtige Failover-Verhalten sicherzustellen.
+
+|===
+Die folgende Tabelle bietet eine Übersicht über die erforderlichen Komponenten zur Konfiguration der ONTAP Tools.
+
+|===
+
+
+| *Überlegungen* | *Beschreibung* 
+
+
+ a| 
+Anforderungen der rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC)
+ a| 
+VSC unterstützt sowohl vCenter Server RBAC als auch ONTAP RBAC. Das Konto, mit dem VSC bei vCenter Server registriert wird (`https://<appliance_ip>:8143/Register.html`) Muss ein vCenter Server Administrator sein (dem vCenter Server Administrator oder der Administratorrolle zugewiesen). Wenn Sie planen, VSC als Administrator auszuführen, müssen Sie über alle erforderlichen Berechtigungen und Berechtigungen für alle Aufgaben verfügen.
+
+Wenn in Ihrem Unternehmen der Zugriff auf vSphere Objekte eingeschränkt werden muss, können Sie Benutzer Standard-VSC-Rollen erstellen und zuweisen, um die Anforderungen von vCenter Server zu erfüllen.
+
+Sie können die empfohlenen ONTAP-Rollen mit ONTAP System Manager erstellen. Verwenden Sie dabei die JSON-Datei, die in den ONTAP Tools enthalten ist.
+
+Wenn ein Benutzer versucht, eine Aufgabe ohne die entsprechenden Berechtigungen und Berechtigungen auszuführen, werden die Aufgabenoptionen ausgegraut.
+
+* link:../concepts/concept_standard_roles_packaged_with_virtual_appliance_for_vsc_vp_and_sra.html["Standardrollen in Paket mit ONTAP Tools"]
+* link:../concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html["Berechtigungen für ONTAP Storage-Systeme und vSphere-Objekte"]
+
+
+
+
+ a| 
+ONTAP-Version
+ a| 
+Ihre Storage-Systeme müssen mit ONTAP 9.3, 9.5, 9.6, 9.7, 9.8P1 oder höher ausgeführt werden.
+
+
+
+ a| 
+Storage-Funktionsprofile
+ a| 
+Um Storage-Funktionsprofile zu verwenden oder Alarme einzurichten, müssen Sie VASA Provider für ONTAP aktivieren. Nach der Aktivierung von VASA Provider können Sie VMware Virtual Volumes (VVols) Datastores konfigurieren und Storage-Funktionsprofile und Alarme erstellen und managen. Die Alarme warnen Sie, wenn ein Volume oder ein Aggregat fast voll ausgelastet ist oder wenn ein Datenspeicher nicht mehr dem zugehörigen Storage-Funktionsprofil entspricht.
+
+|===

@@ -1,0 +1,49 @@
+---
+section: protect
+title: Sicherung von Data Stores und Virtual Machines
+entries:
+- title: Aktivieren Sie Storage Replication Adapter, um Datenspeicher zu schützen
+  url: "/protect/task_enable_storage_replication_adapter.html"
+- title: Konfiguration des Storage-Systems für Disaster Recovery
+  entries:
+  - title: Konfiguration der Storage-Systeme für SAN und NAS
+    url: "/protect/task_configure_storage_replication_adapter_for_san_environment.html"
+  - title: Konfigurieren Sie Storage für Umgebungen mit hoher Skalierbarkeit
+    url: "/protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html"
+- title: Konfigurieren Sie SRA auf der SRM Appliance
+  url: "/protect/task_configure_sra_on_srm_appliance.html"
+- title: SRA-Anmeldedaten aktualisieren
+  url: "/protect/task_update_sra_credentials.html"
+- title: Migrieren Sie Windows SRM auf eine SRM-Appliance
+  url: "/protect/concept_migration_of_disaster_recovery_setup_from_windows_to_appliance.html"
+- title: Konfigurieren Sie die Replizierung für VVols-Datastore zum Schutz von Virtual
+    Machines
+  url: "/protect/concept_configure_replication_for_vvols_datastore.html"
+- title: Konfigurieren Sie die VVols Replizierung für vorhandene Datastores
+  url: "/protect/configure_vvols_replication_existing_datastore.html"
+- title: Sicherung ungesicherter Virtual Machines
+  url: "/protect/task_protect_non_protected_virtual_machines.html"
+- title: Geschützte Standorte und Recovery-Standorte konfigurieren
+  entries:
+  - title: Konfiguration von VM Storage Policies
+    url: "/protect/task_configure_vm_storage_policies.html"
+  - title: Konfigurieren Sie Schutzgruppen
+    url: "/protect/task_configure_protection_groups.html"
+  - title: Kombinieren Sie geschützte Standorte und Recovery-Standorte
+    url: "/protect/task_pair_protected_and_recovery_sites.html"
+  - title: Konfigurieren Sie geschützte Ressourcen und Recovery-Standortressourcen
+    entries:
+    - title: Konfigurieren Sie die Netzwerkzuordnungen
+      url: "/protect/task_configure_network_mappings.html"
+    - title: Konfigurieren von Ordnerzuordnungen
+      url: "/protect/task_configure_folder_mappings.html"
+    - title: Konfigurieren von Ressourcenzuordnungen
+      url: "/protect/task_configure_resource_mappings.html"
+    - title: Zuordnung von Storage-Richtlinien
+      url: "/protect/task_map_storage_policies.html"
+    - title: Platzhalter-Datastores konfigurieren
+      url: "/protect/task_configure_placeholder_datastores.html"
+    - title: Konfigurieren Sie SRA mit Array Manager
+      url: "/protect/task_configure_array_manager.html"
+  - title: Überprüfen Sie die replizierten Storage-Systeme
+    url: "/protect/task_verify_the_replicated_storage_environment.html"

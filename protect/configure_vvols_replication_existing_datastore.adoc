@@ -1,0 +1,54 @@
+---
+permalink: protect/configure_vvols_replication_existing_datastore.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie können Storage Replication Adapter \(SRA\) mithilfe des Array Manager-Assistenten von Site Recovery Manager \(SRM\) konfigurieren, um Interaktionen zwischen SRM und Storage Virtual Machines \(SVMs\) zu ermöglichen.' 
+---
+= Konfigurieren Sie die VVols Replizierung für vorhandene Datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die VVols Replizierungsfunktion wird erweitert, um die VVols Replizierung für vorhandene Virtual Machines zu ermöglichen, die vor dem SRM Setup erstellt wurden. Damit können Sie vorhandene Virtual Machines wiederherstellen und diese am Recovery-Standort sichern.
+
+*Was Sie brauchen*
+
+* Cluster und SVM werden Peering durchgeführt.
+* Datastores und FlexVol Volumes werden auf Quell- und Zielstandorten erstellt.
+* Quell- und Zielstandorte verfügen über dieselben Storage-Funktionsprofile.
+* FlexVol Volumes haben denselben SnapMirror Zeitplan.
+* VVols Replizierung ist aktiviert.
+
+
+In einem vorhandenen Datastore werden keine Replikationsgruppen erstellt.
+
+*Schritte*
+
+. Öffnen Sie die Swagger-Schnittstelle.
+. AUSFÜHREN der REST-API zur Konfiguration der Replizierungsgruppe für den vorhandenen Datastore
++
+API: /3.0/admin/{Datastore}/Replication-Gruppen
+
+. Erstellen Sie eine VM Storage-Richtlinie für vorhandenen VVols-Datastore mit dem Storage-Funktionsprofil, in dem der Datastore erstellt wurde.
++
+Fügen Sie die Replizierungsrichtlinie, den Replizierungszeitplan und den kompatiblen Datastore aus der Liste zur Verfügung.
+
+
+
+
+NOTE: Wenn Sie mit System Manager zum Schutz des FlexVol Volumes und des Storage-Funktionsprofils eine QoS-Richtlinie als „Keine“ verwenden, stellen Sie sicher, dass die Option *Performance Limit* durchsetzen für Disaster Recovery deaktiviert ist.
+
+. Greifen Sie auf die ungesicherte Virtual Machine zu und bearbeiten Sie die VM Storage-Richtlinie.
+. Wählen Sie die VM Storage-Richtlinie und den Datastore aus.
+. Fügen Sie die Replikationsgruppe der ungeschützten virtuellen Maschine hinzu.
+
+
+image::../media/vvols_replication_existing_datastore.png[vvols Replizierung vorhandener Datastore]
+
+*HINWEIS:*
+
+* Wenn Sie eine Virtual Machine konfigurieren, um die Replikation für eine vorhandene Data Stores zu ermöglichen, überprüfen Sie das FlexVol Volume mit einer Config VVols.
+* Wenn VVols einer vorhandenen Virtual Machine über mehrere Datastores verteilt werden, sollten Sie alle VVols dieser Virtual Machine mit vMotion in einen einzigen Datastore verschieben, bevor Sie die Replizierung aktivieren können.
+

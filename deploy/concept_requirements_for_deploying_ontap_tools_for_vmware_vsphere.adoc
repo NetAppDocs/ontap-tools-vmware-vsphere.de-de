@@ -1,0 +1,14 @@
+---
+permalink: deploy/concept_requirements_for_deploying_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie sollten vor der Implementierung von ONTAP Tools die Implementierungsanforderungen kennen und dann die gewünschten Aufgaben festlegen. Sie können das Implementierungsmodell für die Implementierung der ONTAP-Tools anhand Ihrer Aufgaben auswählen 
+---
+= Anforderungen für die Implementierung der ONTAP Tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie sollten vor der Implementierung von ONTAP Tools die Implementierungsanforderungen kennen und dann die gewünschten Aufgaben festlegen. Sie können das Implementierungsmodell für die Implementierung der ONTAP-Tools anhand Ihrer Aufgaben auswählen

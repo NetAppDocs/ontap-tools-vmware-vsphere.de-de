@@ -1,0 +1,45 @@
+---
+permalink: concepts/concept_privileges_required_for_vsc_tasks.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Für verschiedene ONTAP Tools für VMware vSphere-Aufgaben sind verschiedene Kombinationen von Berechtigungen erforderlich, die spezifisch für Virtual Storage Console \(VSC\) und native vCenter Server-Berechtigungen gelten.' 
+---
+= Für VSC Aufgaben erforderliche Berechtigungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Für verschiedene ONTAP Tools für VMware vSphere-Aufgaben sind verschiedene Kombinationen von Berechtigungen erforderlich, die spezifisch für Virtual Storage Console (VSC) und native vCenter Server-Berechtigungen gelten.
+
+Informationen zu den für VSC Aufgaben erforderlichen Berechtigungen finden Sie im NetApp Knowledgebase Artikel 1032542.
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/How_to_configure_RBAC_for_Virtual_Storage_Console["So konfigurieren Sie RBAC für die Virtual Storage Console"]
+
+
+
+== Product-Level-Berechtigung erforderlich, die von ONTAP Tools für VMware vSphere benötigt wird
+
+Um auf die ONTAP Tools für die VMware vSphere Benutzeroberfläche zuzugreifen, müssen Sie über die VSC-spezifische View Berechtigung auf Produktebene, die auf der richtigen vSphere Objektebene zugewiesen ist, verfügen. Wenn Sie sich ohne diese Berechtigung anmelden, zeigt die VSC eine Fehlermeldung an, wenn Sie auf das NetApp Symbol klicken und verhindert, dass Sie auf die VSC zugreifen.
+
+In den folgenden Informationen wird die VSC Berechtigung auf Produktebene View beschrieben:
+
+|===
+
+
+| *Privilege* | *Beschreibung* | * Zuweisungsebene* 
+
+
+ a| 
+Anzeigen
+ a| 
+Sie können auf die VSC GUI zugreifen. Diese Berechtigung ermöglicht Ihnen nicht, Aufgaben in der VSC auszuführen. Zum Ausführen von VSC Aufgaben müssen Sie über die richtigen VSC-spezifischen und nativen vCenter Server-Berechtigungen für diese Aufgaben verfügen.
+ a| 
+Die Zuweisungsebene legt fest, welche Teile der Benutzeroberfläche angezeigt werden können. Durch das Zuweisen der View-Berechtigung im Root-Objekt (Ordner) können Sie VSC durch Klicken auf das NetApp Symbol eingeben.
+
+Sie können die View-Berechtigung einer anderen vSphere Objektebene zuweisen. Dabei ist jedoch die VSC-Menüs, die Sie anzeigen und verwenden können, beschränkt.
+
+Das Root-Objekt ist der empfohlene Ort, um alle Berechtigungen zuzuweisen, die die View-Berechtigung enthalten.
+
+|===

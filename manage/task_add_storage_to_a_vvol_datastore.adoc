@@ -1,0 +1,83 @@
+---
+permalink: manage/task_add_storage_to_a_vvols_datastore.html 
+sidebar: sidebar 
+keywords: virtual volume datastores 
+summary: 'Sie können den verfügbaren Storage mit dem Assistenten zum Hinzufügen von Storage erhöhen, um FlexVol Volumes zu einem vorhandenen VMware Virtual Volumes \(VVols\)-Datastore hinzuzufügen.' 
+---
+= Fügen Sie Storage zu einem VVols Datastore hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können den verfügbaren Storage mit dem Assistenten zum Hinzufügen von Storage erhöhen, um einem vorhandenen Datastore von VMware Virtual Volumes (VVols) FlexVol Volumes hinzuzufügen.
+
+*Über diese Aufgabe*
+
+Wenn Sie ein FlexVol Volume hinzufügen, haben Sie auch die Möglichkeit, das mit diesem Volume verknüpfte Storage-Funktionsprofil zu ändern. Sie können entweder über die VASA Provider-Funktion zur automatischen Generierung ein neues Profil für das Volume erstellen oder einem vorhandenen Profil dem Volume zuweisen.
+
+[NOTE]
+====
+* Während Sie einen VVols Datastore mit Replizierungsfunktionen erweitern, können Sie nicht neue FlexVol Volumes erstellen. Sie können aber nur vorkonfigurierte FlexVol Volumes aus der bestehenden Liste auswählen.
+* Beim Klonen einer geschützten Virtual Machine, die auf einem Datastore mit VVols-Replizierung bereitgestellt wird, aufgrund von mangelhaftdem Speicherplatz ausfällt, sollte die FlexVol-Volume-Größe erhöht werden.
+* Wenn ein VVols Datastore auf einem AFF Cluster erstellt wird, können Sie den Datastore nicht mit einem anderen FlexVol Volume erweitern, bei dem das Storage-Funktionsprofil automatisch generiert wird.
++
+** Sie können den VVols-Datastore mit FlexVol Volumes erweitern, die bereits vorab erstellte Storage-Funktionsprofile erstellen.
+
+
+
+
+====
+*Schritte*
+
+. Klicken Sie auf der vSphere Client-Startseite auf *Hosts und Cluster*.
+. Klicken Sie mit der rechten Maustaste auf den VVols-Datastore und wählen Sie dann *NetApp ONTAP-Tools* > *erweitern Sie den Storage von vVol Datastore* aus.
+. Auf der Seite „Expand Storage of VVols Datastore“ können Sie entweder einem vorhandenen FlexVol Volume zum VVols Datastore hinzufügen oder ein neues FlexVol Volume erstellen, das der Datenbank hinzugefügt werden soll.
++
+|===
+
+
+| *Wenn Sie wählen...* | *Ausführen des folgenden...* 
+
+
+ a| 
+Wählen Sie Volumes aus
+ a| 
+.. Wählen Sie die FlexVol Volumes aus, die Sie dem VVols Datastore hinzufügen möchten.
+.. Verwenden Sie in der Spalte Funktionsprofile speichern die Dropdown-Liste, um entweder ein neues Profil basierend auf den FlexVol Volumes zu erstellen, oder wählen Sie eines der vorhandenen Profile aus.
++
+Die Funktion zum automatischen Generieren erstellt ein Profil basierend auf den Storage-Funktionen, die diesem FlexVol Volume zugewiesen sind. Beispiel: Festplattentyp, hohe Verfügbarkeit, Disaster Recovery, Performance-Funktionen und Deduplizierung.
+
+
+
+
+
+ a| 
+Erstellen neuer Volumes
+ a| 
+.. Geben Sie Namen, Größe und Storage-Funktionsprofil für die FlexVol ein.
++
+Die Aggregate werden vom System ausgewählt, basierend auf dem ausgewählten Storage-Funktionsprofil.
+
+.. Wählen Sie die Option *Auto Grow* und geben Sie die maximale Größe an.
+.. Klicken Sie auf *ADD*, um die FlexVol zur Liste der Volumes hinzuzufügen.
+
+
+|===
++
+*Erinnerung*: Alle FlexVol Volumes in einem VVols Datastore müssen sich von derselben Storage Virtual Machine (SVM, früher als Vserver bezeichnet) befinden.
+
++
+Nachdem Sie ein FlexVol-Volume erstellt haben, können Sie es bearbeiten, indem Sie auf die Schaltfläche *Ändern* klicken. Sie können sie auch löschen.
+
+. Wählen Sie ein Standard-Storage-Funktionsprofil aus, das bei der Erstellung virtueller Maschinen verwendet werden soll, und klicken Sie dann auf *Weiter*, um die Zusammenfassung des Speichers, der dem VVols Datastore hinzugefügt wurde, anzuzeigen.
+. Klicken Sie Auf *Fertig Stellen*.
+
+
+*Ergebnis*
+
+Der Assistent fügt den Speicher hinzu, den Sie dem VVols-Datastore angegeben haben. Sie zeigt eine Erfolgsmeldung an, wenn sie beendet ist.
+
+
+NOTE: Der Assistent Expand Storage of VVols Datastore verarbeitet automatisch alle erforderlichen ESXi Storage-Ressourcen oder andere wichtige Operationen. Da es sich bei einem VVols-Datastore um eine logische Einheit handelt, die über VASA-Provider gesteuert wird, müssen Sie nur die Kapazität des Storage-Containers durch das Hinzufügen des FlexVol Volume erweitern.

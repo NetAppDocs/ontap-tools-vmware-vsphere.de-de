@@ -1,0 +1,36 @@
+---
+permalink: configure/task_add_storage_systems.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sie können Storage-System manuell zur Virtual Storage Console \(VSC\) hinzufügen.' 
+---
+= Fügen Sie Storage-Systeme zur VSC hinzu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können Storage-System manuell zur Virtual Storage Console (VSC) hinzufügen.
+
+*Über diese Aufgabe*
+
+Jedes Mal, wenn Sie die Virtual Storage Console (VSC) starten oder die *ALLE* Option WIEDERENTDECKEN, erkennt VSC die verfügbaren Speichersysteme automatisch.
+
+*Schritte*
+
+. Fügen Sie ein Storage-System zur VSC mithilfe der Startseite der ONTAP Tools hinzu:
++
+** Klicken Sie Auf *Speichersysteme* > *Hinzufügen*.
+** Klicken Sie auf *Übersicht* > *erste Schritte* und dann auf die Schaltfläche *HINZUFÜGEN* unter Speichersystem hinzufügen.
+
+
+. Geben Sie im Dialogfeld *Storage-System hinzufügen* die Management-IP-Adresse und die Anmeldeinformationen für dieses Speichersystem ein.
++
+Sie können auch Storage-Systeme mit der IPv6-Adresse des Clusters oder der SVM hinzufügen. In diesem Dialogfeld können Sie außerdem die Standardwerte für TLS und die Portnummer ändern.
+
++
+Wenn Sie Storage von der Seite VSC Storage System hinzufügen, müssen Sie auch die vCenter Server-Instanz angeben, in der sich der Speicher befindet. Das Dialogfeld Add Storage System enthält eine Dropdown-Liste der verfügbaren vCenter Server-Instanzen. Die VSC zeigt diese Option nicht an, wenn Sie einem Rechenzentrum Storage hinzufügen, das bereits einer vCenter Server-Instanz zugeordnet ist.
+
+. Klicken Sie auf *OK*, nachdem Sie alle erforderlichen Informationen hinzugefügt haben.
+

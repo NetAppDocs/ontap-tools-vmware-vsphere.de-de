@@ -1,0 +1,45 @@
+---
+permalink: configure/task_configure_user_role_and_privileges.html 
+sidebar: sidebar 
+keywords: user roles 
+summary: Mit der JSON-Datei, die mit ONTAP Tools und ONTAP System Manager bereitgestellt wird, können Sie neue Benutzerrollen zum Managen von Storage-Systemen konfigurieren. 
+---
+= Konfigurieren von Benutzerrollen und -Berechtigungen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mit der JSON-Datei, die mit ONTAP Tools und ONTAP System Manager bereitgestellt wird, können Sie neue Benutzerrollen zum Managen von Storage-Systemen konfigurieren.
+
+*Was Sie brauchen*
+
+* Sie sollten die ONTAP-Berechtigungsdatei unter Verwendung von \https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip von ONTAP-Tools heruntergeladen haben.
+* Sie sollten ONTAP 9.8P1 oder höher Storage konfiguriert haben.
+* Sie sollten sich mit Administratorrechten für das Speichersystem angemeldet haben.
+
+
+*Schritte*
+
+. Entpacken Sie die heruntergeladene Datei `\https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip` Datei:
+. Greifen Sie auf ONTAP System Manager zu.
+. Klicken Sie auf *CLUSTER* > *Einstellungen* > *Benutzer und Rollen*.
+. Klicken Sie Auf *Benutzer Hinzufügen*.
+. Wählen Sie im Dialogfeld Benutzer hinzufügen die Option *Virtualisierungsprodukte* aus.
+. Klicken Sie auf *Durchsuchen*, um die JSON-Datei der ONTAP-Berechtigungen auszuwählen und hochzuladen.
++
+DAS PRODUKTFELD wird automatisch ausgefüllt.
+
+. Wählen Sie die erforderliche Funktion aus dem Dropdown-Menü „PRODUKTFUNKTION“ aus.
++
+Das Feld * ROLLE* wird automatisch ausgefüllt, basierend auf der ausgewählten Produktfunktion.
+
+. Geben Sie den erforderlichen Benutzernamen und das erforderliche Passwort ein.
+. Wählen Sie die für den Benutzer erforderlichen Berechtigungen (Discovery, Create Storage, Modify Storage, Destroy Storage) aus, und klicken Sie dann auf *Add*.
+
+
+Die neue Rolle und der neue Benutzer werden hinzugefügt, und Sie können die detaillierten Berechtigungen unter der von Ihnen konfigurierten Rolle sehen.
+
+
+NOTE: Bei der Deinstallation werden die VSC-Rollen nicht entfernt, sondern die lokalisierten Namen für die VSC-spezifischen Berechtigungen werden entfernt und das Präfix an „`XXX fehlende Berechtigung`“ angehängt. Dieses Verhalten geschieht, weil vCenter Server keine Option zum Entfernen von Berechtigungen bietet. Wenn Sie VSC neu installieren oder ein Upgrade auf eine neuere Version von VSC durchführen, werden alle standardmäßigen VSC-Rollen und VSC-spezifischen Berechtigungen wiederhergestellt.

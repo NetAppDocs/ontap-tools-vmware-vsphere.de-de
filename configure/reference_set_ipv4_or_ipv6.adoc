@@ -1,0 +1,70 @@
+---
+permalink: configure/reference_set_ipv4_or_ipv6.html 
+sidebar: sidebar 
+keywords:  
+summary: Die Vorzugsdatei kaminoprefs.xmlls wurde um eine neue Option ergänzt, die Sie so einstellen können, dass die Unterstützung für IPv4 oder IPv6 für alle Storage-Systeme, die VSC hinzugefügt wurden, aktiviert wird. 
+---
+= Legen Sie IPv4 oder IPv6 mithilfe der Voreinferenzdatei fest
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die Einstellungsdateien enthalten Einstellungen, die die ONTAP-Tools für VMware vSphere Vorgänge steuern. In den meisten Fällen müssen Sie die Einstellungen in diesen Dateien nicht ändern. Es ist hilfreich zu wissen, welche Dateien die Virtual Storage Console (VSC) verwenden.
+
+Die VSC enthält verschiedene Voreinstellungsdateien. Diese Dateien enthalten Eintragsschlüssel und Werte, die bestimmen, wie VSC verschiedene Vorgänge durchführt. Im Folgenden werden einige Präferenz-Dateien beschrieben, die VSC verwendet:
+
+`/opt/netapp/vscserver/etc/kamino/kaminoprefs.xml`
+
+`/opt/netapp/vscserver/etc/vsc/vscPreferences.xml`
+
+Möglicherweise müssen Sie die Voreinpräferenzen-Dateien in bestimmten Situationen ändern. Wenn Sie beispielsweise iSCSI oder NFS verwenden und das Subnetz zwischen Ihren ESXi Hosts und Ihrem Speichersystem unterschiedlich ist, müssen Sie die Voreinstellungen ändern. Falls Sie die Einstellungen in der Voreinstellungsdatei nicht ändern, schlägt die Datastore-Bereitstellung fehl, da VSC den Datastore nicht mounten kann.
+
+Der Vorzugsdatei wurde eine neue Option hinzugefügt `kaminoprefs.xml` Die Sie einstellen können, dass IPv4 oder IPv6 für alle Storage-Systeme, die der VSC hinzugefügt werden, aktiviert werden.
+
+* Der `default.override.option.provision.mount.datastore.address.family` Der Parameter wurde dem hinzugefügt `kaminoprefs.xml` Bevorzugte Datei zur Festlegung eines bevorzugten LIF-Protokolls für die Bereitstellung von Datenspeichern.
++
+Diese Präferenz gilt für alle neu zu VSC hinzugefügten Storage-Systeme.
+
+* Die Werte für die neue Option sind `IPv4`, `IPv6`, und `NONE`.
+* Der Wert ist standardmäßig auf festgelegt `NONE`.
+
+
+|===
+
+
+| *Wert* | *Beschreibung* 
+
+
+ a| 
+KEINE
+ a| 
+* Bei der Bereitstellung wird derselbe IPv6- oder IPv4-Adresstyp von Daten-LIF wie der Typ des Clusters oder die SVM-Management-LIF verwendet, die zum Hinzufügen des Storage verwendet wird.
+* Wenn der gleiche IPv6- oder IPv4-Adressentyp der Daten-LIF nicht in der SVM vorhanden ist, erfolgt die Bereitstellung über den anderen Typ von Daten-LIF, falls verfügbar.
+
+
+
+
+ a| 
+IPv4
+ a| 
+* Die Bereitstellung erfolgt über die IPv4-Daten-LIF in der ausgewählten SVM.
+* Wenn die SVM keine IPv4-Daten-LIF hat, erfolgt die Bereitstellung über die IPv6-Daten-LIF, sofern diese in der SVM verfügbar ist.
+
+
+
+
+ a| 
+IPv6
+ a| 
+* Die Bereitstellung erfolgt mithilfe der IPv6-Daten-LIF in der ausgewählten SVM.
+* Wenn die SVM keine IPv6-Daten-LIF hat, erfolgt die Bereitstellung über die IPv4-Daten-LIF, sofern diese in der SVM verfügbar ist.
+
+
+|===
+Informationen zur Konfiguration von IPv4 oder IPv6 über die Benutzeroberfläche finden Sie in den folgenden Abschnitten:
+
+* link:../configure/add_different_subnets.html["Verschiedene Subnetze hinzufügen"]
+* link:../configure/task_enable_datastore_mounting_across_different_subnets.html["Aktivieren Sie das Mounten von Datenspeichern in unterschiedlichen Subnetzen"]
+

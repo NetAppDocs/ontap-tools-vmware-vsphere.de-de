@@ -1,0 +1,28 @@
+---
+permalink: configure/task_assign_qos_policies.html 
+sidebar: sidebar 
+keywords:  
+summary: Bei der Bereitstellung von FlexGroup-Datastores wird das Zuweisen von Storage-Funktionsprofilen zu den Datastores nicht unterstützt. Sie können Virtual Machines, die auf FlexGroup-gesicherten Datastores erstellt werden, jedoch QoS-Richtlinien zuweisen. 
+---
+= Zuweisung von QoS-Richtlinien
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Bereitstellung von FlexGroup-Datastores wird das Zuweisen von Storage-Funktionsprofilen zu den Datastores nicht unterstützt. Sie können Virtual Machines, die auf FlexGroup-gesicherten Datastores erstellt werden, jedoch QoS-Richtlinien zuweisen.
+
+*Über diese Aufgabe*
+
+Die QoS-Richtlinien können auf VM-Ebene oder auf Datastore-Ebene angewendet werden. Die QoS-Richtlinien sind für einen Datastore erforderlich, um Durchsatzschwellenwerte (max. Und Min. IOPS) zu konfigurieren. Wenn Sie die QoS auf einem Datastore festlegen, wird dies auf die Virtual Machines angewendet, die sich auf dem Datastore befinden, nicht auf dem FlexGroup Volume. Wenn Sie jedoch die QoS auf allen Virtual Machines in einem Datastore festlegen, werden alle individuellen QoS-Einstellungen für die Virtual Machines außer Kraft gesetzt. Dies gilt nur für die im Datastore verfügbaren virtuellen Maschinen und nicht für migrierte oder hinzugefügte Virtual Machines. Wenn Sie QoS auf neu hinzugefügte oder migrierte Virtual Machines eines bestimmten Datastores anwenden möchten, müssen Sie die QoS-Werte manuell festlegen.
+
+
+NOTE: Sie können QoS-Einstellungen auf Datastore- oder Virtual-Machine-Ebene für Datastores, die auf Direct-Storage-VMs bereitgestellt werden, nicht anwenden, da ONTAP QoS auf Storage-VM-Managementebene nicht unterstützt.
+
+*Schritte*
+
+. Klicken Sie auf der ONTAP Tools Homepage auf *Menü* > *Host und Cluster*.
+. Klicken Sie mit der rechten Maustaste auf den gewünschten Datenspeicher oder die virtuelle Maschine und klicken Sie auf *NetApp ONTAP Tools* > *QoS zuweisen*.
+. Geben Sie im Dialogfeld „QoS zuweisen“ Werte für die erforderlichen IOPS-Werte ein, und klicken Sie auf *Anwenden*.
+

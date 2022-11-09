@@ -1,0 +1,32 @@
+---
+permalink: configure/concept_considerations_for_creating_and_editing_storage_capability_profiles.html 
+sidebar: sidebar 
+keywords:  
+summary: Beachten Sie bei der Erstellung und Bearbeitung von Storage-Funktionsprofilen die Überlegungen. 
+---
+= Überlegungen beim Erstellen und Bearbeiten von Storage-Funktionsprofilen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Beachten Sie bei der Erstellung und Bearbeitung von Storage-Funktionsprofilen die Überlegungen.
+
+* Sie können Minimum-IOPS nur für AFF Systeme konfigurieren.
+* Sie können QoS-Kennzahlen auf Datastore-Ebene eines virtuellen Volumes (VVol) konfigurieren.
++
+Diese Funktion bietet größere Flexibilität bei der Zuweisung unterschiedlicher QoS-Metriken für unterschiedliche VMDKs derselben Virtual Machine, die in einem virtuellen Datastore bereitgestellt wird.
+
+* Sie können Storage-Funktionsprofile für FAS- und AFF-Datastores konfigurieren.
++
+Bei FAS AFF-Systemen können Sie die Speicherplatzreserve als Thick oder Thin Provisioning konfigurieren.
+
+* Sie können Storage-Funktionsprofile zur Verschlüsselung Ihrer Datenspeicher nutzen.
+* Vorhandene Storage-Funktionsprofile, die vor der Version 7.2 erstellt wurden, können nach dem Upgrade von einer früheren Version der ONTAP Tools für VMware vSphere auf die aktuelle Version der ONTAP Tools nicht geändert werden.
++
+Die Profile der älteren Storage-Funktionen werden zur Rückwärtskompatibilität aufbewahrt. Wenn die Standardvorlagen nicht verwendet werden, werden die vorhandenen Vorlagen während des Upgrades auf die neueste Version der ONTAP Tools überschrieben, um die neuen QoS-Metriken zu reflektieren, die mit der Performance der Storage-Funktionsprofile zusammenhängen.
+
+* Sie können die alten Storage-Funktionsprofile nicht ändern oder verwenden, um neue virtuelle Datastores oder VM Storage-Richtlinien bereitzustellen.
+* Sie müssen für alle neuen Datenspeicher neue Storage-Funktionsprofile verwenden.
+

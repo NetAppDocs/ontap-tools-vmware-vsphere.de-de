@@ -1,0 +1,50 @@
+---
+permalink: configure/reference_configure_guest_operating_system_scripts.html 
+sidebar: sidebar 
+keywords: Guest operating system 
+summary: 'Die ISO-Images des Gast-Betriebssystems \(OS\)-Scripts werden auf ONTAP®-Tools für VMware vSphere-Server eingebunden. Damit Sie die Speicherzeituts für virtuelle Maschinen mithilfe der Gast-BS-Skripts festlegen können, müssen Sie die Skripte vom vSphere-Client mounten.' 
+---
+= Konfigurieren von Gast-Betriebssystem-Skripten
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die ISO-Images des Gastbetriebssystems (OS) Skripte werden auf ONTAP® Tools für VMware vSphere Server eingebunden. Damit Sie die Speicherzeituts für virtuelle Maschinen mithilfe der Gast-BS-Skripts festlegen können, müssen Sie die Skripte vom vSphere-Client mounten.
+
+|===
+
+
+| *Betriebssystem* | *60 Sekunden Timeout-Einstellungen* | *190 Sekunden Timeout-Einstellungen* 
+
+
+ a| 
+Linux
+ a| 
+\https://<appliance_ip>:8143/vsc/public/writable/linux_gos_timeout-install.iso
+ a| 
+\https://<appliance_ip>:8143/vsc/public/writable/linux_gos_timeout_190-install.iso
+
+
+
+ a| 
+Windows
+ a| 
+\https://<appliance_ip>:8143/vsc/public/writable/windows_gos_timeout.iso
+ a| 
+\https://<appliance_ip>:8143/vsc/public/writable/windows_gos_timeout_190.iso
+
+
+
+ a| 
+Solaris
+ a| 
+\https://<appliance_ip>:8143/vsc/public/writable/solaris_gos_timeout-install.iso
+ a| 
+\https://<appliance_ip>:8143/vsc/public/writable/solaris_gos_timeout_190-install.iso
+
+|===
+Sie sollten das Skript aus der Kopie der VSC-Instanz installieren, die beim vCenter Server registriert ist, der die Virtual Machine managt. Wenn in Ihrer Umgebung mehrere vCenter-Server enthalten sind, sollten Sie den Server auswählen, der die virtuelle Maschine enthält, für die Sie die Werte für das Speicherzeitlimit festlegen möchten.
+
+Sie sollten sich bei der virtuellen Maschine anmelden und dann das Skript ausführen, um die Werte für die Speicherzeitüberschreitung festzulegen.

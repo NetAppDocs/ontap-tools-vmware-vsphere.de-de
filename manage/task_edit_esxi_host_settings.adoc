@@ -1,0 +1,65 @@
+---
+permalink: manage/task_edit_esxi_host_settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Über das Dashboard der ONTAP Tools für VMware vSphere können Sie Ihre ESXi Host-Einstellungen bearbeiten. 
+---
+= Ändern Sie ESXi Hosteinstellungen mithilfe von ONTAP Tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Über das Dashboard der ONTAP Tools für VMware vSphere können Sie Ihre ESXi Host-Einstellungen bearbeiten.
+
+*Was Sie brauchen*
+
+Sie müssen ein ESXi-Hostsystem für Ihre vCenter-Serverinstanz konfiguriert haben.
+
+Wenn ein Problem mit Ihren ESXi-Hosteinstellungen auftritt, wird das Problem im Portlet ESXi Hostsysteme des Dashboards angezeigt. Sie können auf das Problem klicken, um den Hostnamen oder die IP-Adresse des ESXi-Hosts anzuzeigen, der das Problem hat.
+
+*Schritte*
+
+. Klicken Sie auf der vSphere-Client-Startseite auf *ONTAP-Tools*.
+. Bearbeiten Sie die ESXi-Hosteinstellungen.
++
+|===
+
+
+| *Wenn Sie die ESXi-Hosteinstellungen von bearbeiten möchten...* | *Do this...* 
+
+
+ a| 
+Es werden Probleme angezeigt
+ a| 
+.. Klicken Sie im Portlet „ESXi Host Systems“ auf das Problem.
+.. Klicken Sie auf die ESXi-Hostnamen, für die Sie die Einstellungen ändern möchten.
+.. Klicken Sie mit der rechten Maustaste auf den ESXi Host-Namen und klicken Sie auf *NetApp ONTAP-Tools* > *Set Recommended Values*.
+.. Ändern Sie die gewünschten Einstellungen, und klicken Sie dann auf *OK*.
+
+
+
+
+ a| 
+Startseite von vSphere Client
+ a| 
+.. Klicken Sie auf *Menü* > *Hosts und Cluster*.
+.. Klicken Sie mit der rechten Maustaste auf den gewünschten ESXi Host und wählen Sie *NetApp ONTAP Tools* > *Set Recommended Value* aus.
+.. Klicken Sie auf *OK*.
+
+
+
+
+ a| 
+Portlet „ESXi Host Systems“
+ a| 
+.. Klicken Sie auf die Registerkarte *Traditionelles Dashboard* im Abschnitt Übersicht der VSC.
+.. Klicken Sie auf *ESXi Host-Einstellungen bearbeiten*.
+.. Wählen Sie auf der Registerkarte Host-Einstellungen und Status den ESXi-Hostnamen aus, für den Sie die Einstellungen ändern möchten, und klicken Sie auf *WEITER*.
+.. Wählen Sie auf der Registerkarte Empfohlene Hosteinstellungen die gewünschten Einstellungen aus, und klicken Sie dann auf *Weiter*.
+.. Überprüfen Sie Ihre Auswahl auf der Registerkarte Zusammenfassung und klicken Sie dann auf *FERTIG stellen*.
+
+
+|===
+

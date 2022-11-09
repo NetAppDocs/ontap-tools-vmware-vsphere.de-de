@@ -1,0 +1,16 @@
+---
+permalink: configure/concept_workflow_for_configuring_the_unified_appliance.html 
+sidebar: sidebar 
+keywords:  
+summary: Zur Konfiguration von ONTAP Tools müssen Sie Ihre Storage-Systeme konfigurieren, ein Storage-Funktionsprofil erstellen, den Datenspeicher bereitstellen und optional SRA für die Disaster Recovery konfigurieren. 
+---
+= Workflow für die Konfiguration von ONTAP Tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zur Konfiguration von ONTAP Tools müssen Sie Ihre Storage-Systeme konfigurieren, ein Storage-Funktionsprofil erstellen, den Datenspeicher bereitstellen und optional SRA für die Disaster Recovery konfigurieren.
+
+image::../media/use_case_vsc_users.gif[Workflow zur Konfiguration von ONTAP Tools]

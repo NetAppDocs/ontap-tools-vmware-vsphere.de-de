@@ -1,0 +1,28 @@
+---
+permalink: configure/task_regenerate_an_ssl_certificate_for_vsc.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Das SSL-Zertifikat wird generiert, wenn Sie Virtual Storage Console \(VSC\) installieren. Der für das SSL-Zertifikat generierte Distinguished Name \(DN\) ist möglicherweise kein allgemeiner Name \(CN\), den die Clientcomputer erkennen. Durch Ändern der Passwörter für den Schlüsselspeicher und den privaten Schlüssel können Sie das Zertifikat erneut generieren und ein standortspezifisches Zertifikat erstellen.' 
+---
+= Erstellen Sie ein SSL-Zertifikat für die virtuelle Speicherkonsole erneut
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Das SSL-Zertifikat wird generiert, wenn Sie die Virtual Storage Console (VSC) installieren. Der Distinguished Name (DN), der für das SSL-Zertifikat generiert wird, ist möglicherweise kein allgemeiner Name (CN), den die Clientcomputer erkennen. Durch Ändern der Passwörter für den Schlüsselspeicher und den privaten Schlüssel können Sie das Zertifikat erneut generieren und ein standortspezifisches Zertifikat erstellen.
+
+*Über diese Aufgabe*
+
+Sie können die Remote-Diagnose mit der Wartungskonsole aktivieren und standortspezifisches Zertifikat generieren.
+
+https://kb.netapp.com/advice_and_troubleshooting/data_storage_software/vsc_and_vasa_provider/virtual_storage_console%3a_implementing_ca_signed_certificates["Virtual Storage Console: Implementierung von CA-signierten Zertifikaten"]
+
+*Schritte*
+
+. Melden Sie sich bei der Wartungskonsole an.
+. Eingabe `1` Um das Menü Anwendungskonfiguration aufzurufen.
+. Geben Sie im Menü Anwendungskonfiguration die Option ein `3` Um den VSC Service zu beenden.
+. Eingabe `7` Um das SSL-Zertifikat erneut zu generieren.
+

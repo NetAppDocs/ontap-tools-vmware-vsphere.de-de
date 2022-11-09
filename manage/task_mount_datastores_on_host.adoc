@@ -1,0 +1,29 @@
+---
+permalink: manage/task_mount_datastores_on_host.html 
+sidebar: sidebar 
+keywords:  
+summary: Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf den Speicher zugreifen. Nachdem Sie die Hosts der VMware Umgebung hinzugefügt haben, können Sie den Datastore auf den zusätzlichen Hosts einbinden. 
+---
+= Mounten Sie Datenspeicher auf zusätzlichen Hosts
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durch das Mounten eines Datenspeichers können zusätzliche Hosts auf den Speicher zugreifen. Nachdem Sie die Hosts der VMware Umgebung hinzugefügt haben, können Sie den Datastore auf den zusätzlichen Hosts einbinden.
+
+*Was Sie brauchen*
+
+Sie müssen sicherstellen, dass die Subnetzdetails aller Netzwerke, mit denen der ESXi-gehostete verbunden ist, in eingegeben werden `Kaminoprefs.xml`.
+
+Siehe Aktivieren der Datastore-Montage über verschiedene Subnetze Abschnitt.
+
+*Schritte*
+
+. Klicken Sie auf der vSphere Client-Startseite auf *Hosts und Cluster*.
+. Wählen Sie im Navigationsbereich das Rechenzentrum aus, das den Host enthält.
+. Wiederholen Sie Schritt 2 für weitere Hosts.
+. Klicken Sie mit der rechten Maustaste auf den Host und wählen Sie dann *NetApp ONTAP-Tools* > *Mount Datastores* aus.
+. Wählen Sie die Datenspeicher aus, die Sie mounten möchten, und klicken Sie dann auf *OK*.
+

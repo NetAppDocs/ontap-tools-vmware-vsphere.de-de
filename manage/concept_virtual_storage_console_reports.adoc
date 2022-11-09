@@ -1,0 +1,164 @@
+---
+permalink: manage/concept_virtual_storage_console_reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Über das Menü „Konsolenberichte für ONTAP Tools“ können Sie vordefinierte Berichte für alle Datenspeicher anzeigen, die von einer ausgewählten VSC-Instanz eines bestimmten vCenter Servers gemanagt werden. Sie können Vorgänge wie Sortieren und Exportieren von Berichten durchführen. 
+---
+= Übersicht über ONTAP Tools Datastore und VVols Berichte
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie können über die ONTAP Tools-Konsole *Berichte* Menü vordefinierte Berichte für alle Datenspeicher anzeigen, die von einer ausgewählten VSC-Instanz in einem bestimmten vCenter Server verwaltet werden. Sie können Vorgänge wie Sortieren und Exportieren von Berichten durchführen.
+
+Berichte enthalten detaillierte Informationen zu Datastores und Virtual Machines, sodass Sie potenzielle Probleme bei Datastores und Virtual Machines in Ihrem vCenter Server prüfen und identifizieren können
+
+Sie können Berichte anzeigen, sortieren und exportieren.
+
+Virtual Storage Console (VSC) bietet die folgenden vordefinierten Berichte:
+
+* Datastore Report
+* Virtual Machine Report
+* VVols-Datastore-Bericht
+* VVols Virtual Machine Report
+
+
+
+
+== Datastore Reports
+
+Die Datastore-Berichte bieten detaillierte Informationen zu herkömmlichen Datastores und den auf diesen Datastores erstellten Virtual Machines.
+
+Das herkömmliche Dashboard ermöglicht es Ihnen, potenzielle Probleme mit den Datastores und Virtual Machines in Ihrem vCenter Server zu prüfen und zu identifizieren. Sie können Berichte anzeigen, sortieren und exportieren. Die Daten für die Berichte zu herkömmlichen Datastores und Virtual Machines werden vom vCenter Server bereitgestellt. Doch aufgrund der Unterstützung von FlexGroup-gestützten Datastore kommen einige Metriken wie Latenz, Durchsatz und IOPS bei ONTAP zum Einsatz.
+
+
+NOTE: FlexGroup Datastores, die auf Virtual Machines (SVMs) als direkte Storage-Lösung konfiguriert sind, werden nicht von der Dateiüberwachung unterstützt.
+
+Der Datastore bietet die folgenden vordefinierten Berichte:
+
+* Datastore Report
+* Virtual Machine Report
+
+
+* Datastore-Bericht*
+
+Das Menü Datastore Report enthält Informationen zu den folgenden Parametern für Datenspeicher:
+
+* Name des Datenspeichers
+* Datenspeichertyp: NFS oder VMFS
+* Volume-Stil
++
+Der Volume-Stil kann entweder ein FlexVol Volume oder ein FlexGroup Volume sein.
+
+* Freier Speicherplatz
+* Genutzter Speicherplatz
+* Gesamter Speicherplatz
+* Prozentsatz des genutzten Speicherplatzes
+* Prozentsatz des verfügbaren Speicherplatzes
+* IOPS
++
+Der Bericht zeigt die IOPS für den Datastore an.
+
+* Latenz
++
+Der Bericht zeigt die Latenzinformationen für den Datastore an.
+
++
+Sie können auch die Zeit überprüfen, zu der der Bericht generiert wurde. Das Menü Datastore Report ermöglicht es Ihnen, den Bericht nach Ihren Anforderungen zu organisieren und dann den organisierten Bericht mit der Schaltfläche *Export in CSV* zu exportieren. Bei den Datenspeichernamen im Bericht handelt es sich um Links, die zur Registerkarte Überwachung des ausgewählten Datastores navigieren. Dort können Sie die Performance-Metriken des Datastores anzeigen.
+
+
+
+*Virtual Machine Report*
+
+Das Menü „Virtual Machine Report“ enthält die Performance-Kennzahlen für alle Virtual Machines, die von VSC bereitgestellte Datenspeicher für einen ausgewählten vCenter Server verwenden. Die in den Virtual Machine Reports angezeigten Kennzahlen sind Archivdaten, die alle 30 Minuten für Virtual Machines in herkömmlichen Datastores erfasst werden. Die „Letzte Aktualisierungszeit“ und „Nächste Aktualisierungszeit“ werden in die Tabelle aufgenommen, um Einzelheiten darüber zu geben, wann die Daten erfasst wurden und wann sie die nächste Datenerfassung sein werden.
+
+* Name der virtuellen Maschine
+* Name des Datenspeichers
+* Volume-Stil
++
+Der Volume-Stil kann entweder ein FlexVol Volume oder ein FlexGroup Volume sein.
+
+* Quelle
++
+Als Quelle für die Details der Virtual Machine kann es sich um ONTAP oder vCenter Server handeln.
+
+* Latenz
++
+Der Bericht zeigt die Latenz für Virtual Machines in allen Datastores an, die den Virtual Machines zugeordnet sind.
+
+* IOPS
+* Durchsatz
+* Engagierte Kapazität
++
+Der Bericht zeigt den Wert für die für eine virtuelle Maschine bestimmte Kapazität an.
+
+* Host
++
+Der Bericht zeigt die Hostsysteme an, auf denen die virtuelle Maschine verfügbar ist.
+
+* Verfügbarkeit
++
+Der Bericht zeigt die Zeit an, zu der die virtuelle Maschine eingeschaltet ist und auf einem ESXi-Host verfügbar ist.
+
+* Stromzustand
++
+Der Bericht zeigt an, ob die virtuelle Maschine eingeschaltet oder ausgeschaltet ist.
+
+
+
+Jeder Name der virtuellen Maschine im Bericht ist ein Link zur Registerkarte Überwachung der ausgewählten virtuellen Maschine. Sie können den Bericht virtueller Maschinen nach Ihren Anforderungen sortieren und den Bericht in einer CSV-Datei exportieren und den Bericht auf Ihrem lokalen System speichern. Der Zeitstempel des Berichts wird ebenfalls an den gespeicherten Bericht angehängt.
+
+Bei Virtual Machines, die durch FlexGroup Volumes gesichert werden, werden Dateien für das Monitoring auf ONTAP registriert, wenn eine neue Virtual Machine eingeschaltet ist. Die historischen Metriken für Latenz, Durchsatz und IOPS erhalten, wenn auf VM-Berichte von ONTAP zugegriffen wird.
+
+
+
+== VVols Berichte
+
+VVols Berichte enthalten detaillierte Informationen zu VMware Virtual Volumes (VVols) Datastores und den Virtual Machines, die auf diesen Datastores erstellt werden. Über das VVols Dashboard können Sie potenzielle Probleme mit den VVols Datastores und Virtual Machines in Ihrem vCenter Server prüfen und identifizieren.
+
+Sie können Berichte anzeigen, organisieren und exportieren. Die Daten für die VVols-Datastores und den Bericht Virtual Machines werden vom ONTAP zusammen mit den OnCommand API Services bereitgestellt.
+
+VVols bietet die folgenden vordefinierten Berichte:
+
+* VVols-Datastore-Bericht
+* VVols VM Report
+
+
+*VVols Datastore Report*
+
+Das Menü VVols Datastore Report bietet Informationen zu den folgenden Parametern für Datastores:
+
+* Name des VVols-Datastores
+* Freier Speicherplatz
+* Genutzter Speicherplatz
+* Gesamter Speicherplatz
+* Prozentsatz des genutzten Speicherplatzes
+* Prozentsatz des verfügbaren Speicherplatzes
+* IOPS
+* Für NFS-basierte VVols Datastores unter ONTAP 9.8 und höher sind Kennzahlen zur Latenz-Performance verfügbar. Sie können auch die Zeit überprüfen, zu der der Bericht generiert wurde. Mit dem VVols Datastore Report können Sie den Bericht nach Ihren Anforderungen organisieren und anschließend den organisierten Bericht über die Schaltfläche *in CSV exportieren* exportieren. Der Name jedes SAN VVols Datastore in dem Bericht ist ein Link, der zur Registerkarte Monitor des ausgewählten SAN VVols Datastores navigiert. Dort können Sie die Performance-Kennzahlen anzeigen.
+
+
+*VVols Virtual Machine Report*
+
+Der Zusammenfassungsbericht für VVols Virtual Machines enthält Performance-Kennzahlen für alle Virtual Machines, die SAN VVols Datastores verwenden, die von VASA Provider für ONTAP für einen ausgewählten vCenter Server bereitgestellt werden. Bei den in VM-Berichten angezeigten Virtual Machine-Kennzahlen handelt es sich um Archivdaten, die alle 10 Minuten für Virtual Machines in VVols-Datastores erfasst werden. „Letzte Aktualisierungszeit“ und „Nächste Aktualisierungszeit“ werden in die Tabelle aufgenommen, um zu erfahren, wann und wann die Daten erfasst wurden.
+
+* Name der virtuellen Maschine
+* Engagierte Kapazität
+* Verfügbarkeit
+* IOPS
+* Durchsatz
++
+Der Bericht zeigt an, ob die virtuelle Maschine eingeschaltet oder ausgeschaltet ist.
+
+* Logischer Speicherplatz
+* Host
+* Stromzustand
+* Latenz
++
+Der Bericht zeigt die Latenz für Virtual Machines über alle VVols Datastores an, die den Virtual Machines zugeordnet sind.
+
+
+
+Jeder Name der virtuellen Maschine im Bericht ist ein Link zur Registerkarte Überwachung der ausgewählten virtuellen Maschine. Sie können den Bericht der virtuellen Maschine gemäß Ihren Anforderungen organisieren und den Bericht in exportieren `.CSV` Formatieren Sie den Bericht und speichern Sie ihn dann auf Ihrem lokalen System. Der Zeitstempel des Berichts wird an den gespeicherten Bericht angehängt.

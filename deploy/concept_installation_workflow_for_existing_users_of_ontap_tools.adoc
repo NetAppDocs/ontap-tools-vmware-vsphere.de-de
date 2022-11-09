@@ -1,0 +1,55 @@
+---
+permalink: deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html 
+sidebar: sidebar 
+keywords:  
+summary: Die 9.x-Versionen der ONTAP Tools für VMware vSphere unterstützen vorhandenes Upgrade auf die neueste Version. 
+---
+= Implementierungs-Workflow für bestehende Benutzer von ONTAP-Tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Die 9.x-Versionen der ONTAP Tools für VMware vSphere unterstützen vorhandenes Upgrade auf die neueste Version.
+
+Bei früheren Versionen von einzelnen Applikationen wie Virtual Storage Console 6.x, Storage Replication Adapter 2.x, 3.x, 4.x und VASA Provider 6.x wird ein anderer Upgrade-Prozess verwendet. Wenn Sie die älteren Versionen von VSC oder VASA Provider oder SRA in Ihrem Setup installiert haben, sollten Sie die folgenden Vorgänge durchführen:
+
+. Nutzen Sie die aktuelle Version von ONTAP Tools.
+. Migrieren Sie alle vorhandenen Konfigurationsdaten.
++
+Die Konfigurationsdaten umfassen Anmeldeinformationen des Storage-Systems sowie die Einstellungen in `kaminoprefs.xml` Und `vscPreferences.xml` Dateien:
+
+
+
+link:../configure/reference_set_ipv4_or_ipv6.html["Legen Sie IPv4 oder IPv6 mithilfe der Voreinferenzdatei fest"]
+
+In vielen Fällen sind Konfigurationsdaten möglicherweise nicht notwendig. Wenn Sie die Voreinpräferenzen jedoch bereits zuvor angepasst haben, sollten Sie sie überprüfen und ähnliche Änderungen an den neu implementierten ONTAP Tools vornehmen. Sie können die Storage-Systeme zu den neu implementierten ONTAP Tools hinzufügen und die Anmeldedaten beim Hinzufügen angeben.
+
+Wenn Sie ein Upgrade von VASA Provider 6.X durchführen, sollten Sie vor dem Upgrade VASA Provider aus registrieren. Weitere Informationen finden Sie in der Dokumentation zu Ihrer aktuellen Version.
+
+Wenn Sie ein Upgrade von SRA 4.0 oder einer älteren Version durchführen:
+
+* Wenn Sie SRA 4.0P1 verwenden, müssen Sie zuerst auf SRA9.6 aktualisieren und dann ein Upgrade der SRA 9.6 Version durchführen. Sie können ein Upgrade später auf die aktuelle Version der ONTAP Tools durchführen.
++
+link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["Upgraden auf die aktuelle Version von ONTAP-Tools"]
+
+* Bei Verwendung von SRA 2.1 oder 3.0 sollten Sie zunächst die vorhandenen Standortkonfigurationsdetails beachten.
++
+_Installations- und Setup-Leitfaden für Storage Replication Adapter 4.0 für ONTAP_ enthält die detaillierten Anweisungen im Abschnitt „Upgrade-Übersicht“. Diese SRA Versionen nutzen auch den VASA Provider. Das Registrieren von VASA Provider muss also aufgehoben und die aktuelle Version der ONTAP Tools implementiert werden. Die vorherige Version des Servers (`.ova`) Kann entfernt werden, wenn die Aktualisierung abgeschlossen ist.
+
+
+
+Bei jedem SRA-Upgrade die SRA-Software (der Adapter auf dem Site Recovery Manager-Server, installiert vom `.msi` Datei) sollte vom Site Recovery Manager-Server entfernt werden. Sie können die Windows-Systemsteuerung verwenden, um die Software zu deinstallieren und dann die neueste SRA-Software auf dem SRA-Server mithilfe der zu installieren `.msi` Datei:
+
+Bei der VASA Provider Implementierung müssen Sie nach dem Upgrade aus der bestehenden Einrichtung die Speichergröße für Ihre ONTAP Tools unter Verwendung der 12 GB konfigurieren `Edit Settings` Option. Sie müssen auch die virtuelle Speicherreservierung ändern. Die virtuelle Maschine muss ausgeschaltet sein, um die Speichergröße zu ändern.
+
+Wenn Sie 7.2 oder 7.2.1 Versionen der virtuellen Appliance für VSC, VASA Provider und SRA haben, können Sie kein direktes Upgrade auf 9.7P1 oder eine neuere Version der Unified Appliance durchführen. Sie müssen zuerst Ihr vorhandenes Setup auf Version 9.7 der virtuellen Appliance aktualisieren und dann auf die neueste Version aktualisieren.
+
+Zum Upgrade auf ONTAP-Tools 9.10 sollten Sie die virtuelle Appliance 9.7P1 oder höher ausführen. Ein Upgrade von einer früheren Version vor 9.7P1 der virtuellen Appliance wird nicht unterstützt.
+
+Wenn Sie die neueste Version von ONTAP Tools implementieren, müssen Sie das Thema sehen `Requirements for deploying the ONTAP tools.` Das Thema `Upgrading to the latest release of ONTAP tools` Verfügt über Informationen zur Durchführung eines vorhandenen Upgrades.
+
+*Verwandte Informationen*
+
+https://mysupport.netapp.com/site/tools[]

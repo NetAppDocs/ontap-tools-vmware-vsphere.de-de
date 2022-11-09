@@ -1,0 +1,42 @@
+---
+permalink: configure/reference_rebalance_vvols_datastore.html 
+sidebar: sidebar 
+keywords: vVols datastore,rebalancing 
+summary: ONTAP Tools unterstützen einen Befehl zum Ausbalancieren von FlexVol Volumes im Datacenter. Das Hauptziel besteht darin, eine gleichmäßige Speicherauslastung zwischen FlexVol Volumes zu ermöglichen. ONTAP Tools verteilen VVols auf vorhandene Volumes neu auf Basis von Speicherplatznutzung, Thin Provisioning, LUN-Anzahl und Storage-Funktionsprofilen. 
+---
+= Lastausgleich von VVols Datastores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP Tools unterstützen einen Befehl zum Ausbalancieren von FlexVol Volumes im Datacenter. Das Hauptziel besteht darin, eine gleichmäßige Speicherauslastung zwischen FlexVol Volumes zu ermöglichen. ONTAP Tools verteilen VVols auf vorhandene Volumes neu auf Basis von Speicherplatznutzung, Thin Provisioning, LUN-Anzahl und Storage-Funktionsprofilen.
+
+Die Ausbalancierung von VVols Datastore wird durch LUN-Verschiebung oder Dateiverschiebung durchgeführt. Bei der Ausbalancierung von VVols werden folgende Kriterien berücksichtigt:
+
+* NFS vVol Datastores werden nicht unterstützt
+* Die Größe vorhandener FlexVol Volumes wird nicht geändert. Zudem werden keine neuen FlexVol Volumes hinzugefügt
+* Nur FlexVol Volumes mit denselben Storage-Funktionen oder Volume-Attributen werden ausgeglichen
+* FlexVol Volumes mit höchster Speicherauslastung werden als Ausgleich betrachtet
+* Alle VVols, die einer Virtual Machine zugeordnet sind, werden auf dieselben FlexVol Volumes verschoben
+* Die maximal zulässige Anzahl von LUNs und Dateien bleibt erhalten
+* Der Ausgleich erfolgt nicht, wenn das Delta zwischen der Speicherauslastung von FlexVol Volumes 10 % beträgt
+
+
+Der Befehl zum Ausgleich entfernt leere FlexVol Volumes, um Platz für andere Datenspeicher bereitzustellen. Somit können Sie mit dem Befehl unerwünschte FlexVol Volumes entfernen, sodass sie aus dem Datastore entfernt werden können. Mit dem Befehl werden alle VVols, die einer virtuellen Maschine zugeordnet sind, auf dasselbe FlexVol Volume verschoben. Es wird ein Vorabcheck mit dem Befehl durchgeführt, bevor der Ausgleichs gestartet wird, um Ausfälle zu minimieren. Doch selbst bei erfolgreichem Vorabcheck kann der Ausgleichvorgang bei einem oder mehreren VVols fehlschlagen. In diesem Fall erfolgt kein Rollback des Ausgleichs. VVols, die einer Virtual Machine zugewiesen sind, können also auf verschiedenen FlexVol Volumes platziert werden und führen zu Warnmeldungen.
+
+[NOTE]
+====
+* Parallele Datenspeicher- und VM-Vorgänge werden nicht unterstützt.
+* Nach Abschluss des VVols-Ausgleichvorgangs müssen Sie die Cluster-Neuerkennung durchführen.
+* Wenn während des VVols-Ausgleichs eine große Anzahl von VVols-Datastores identifiziert wird, erfolgt die Übertragung nach dem festgelegten Standardwert.
++
+** Wenn dies der Fall ist, sollten Sie den ändern `vvol.properties` Datei, um den Wert auf einzustellen `offtap.operation.timeout.period.seconds=29700` Und starten Sie den VASA Provider Service neu.
+
+
+* Wenn ein FlexVol Volume über Snapshots verfügt, werden die VVols während des Ausgleichs für VVols nicht richtig neu ausgeglichen, da die Speicherplatzauslastung nicht ausreichend ist.
+* Sie können die Eigenschaft „VASA Provider“ _enable.Update.vvol.Through.Discovery_ auf „true“ setzen, um konsistente Daten zwischen ONTAP Tools und ONTAP zu erhalten, wenn während des Ausgleichs für Container Zeitüberschreitung auftritt.
+
+
+====

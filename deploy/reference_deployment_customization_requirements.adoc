@@ -1,0 +1,58 @@
+---
+permalink: deploy/reference_deployment_customization_requirements.html 
+sidebar: sidebar 
+keywords:  
+summary: Bei der Anpassung der ONTAP Bereitstellungs-Tools müssen Sie jedoch einige Einschränkungen berücksichtigen. 
+---
+= Überlegungen zur Anpassung der Implementierung
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Bei der Anpassung der ONTAP Bereitstellungs-Tools müssen Sie jedoch einige Einschränkungen berücksichtigen.
+
+
+
+== Benutzerpasswort für den Appliance-Administrator
+
+Sie dürfen keine Leerzeichen im Administratorpasswort verwenden.
+
+
+
+== Anmeldedaten für die Appliance-Wartungskonsole
+
+Sie müssen über den Benutzernamen „`maint`“ auf die Wartungskonsole zugreifen. Sie können das Passwort für den Benutzer „`maint`“ während der Bereitstellung festlegen. Sie können das Passwort über das Menü Anwendungskonfiguration der Wartungskonsole Ihrer ONTAP-Tools ändern.
+
+
+
+== Anmeldedaten für vCenter Server-Administrator
+
+Sie können die Administratoranmeldeinformationen für den vCenter Server festlegen, während Sie ONTAP-Tools bereitstellen.
+
+Wenn sich das Kennwort für den vCenter Server ändert, können Sie das Kennwort für den Administrator mithilfe der folgenden URL aktualisieren: \https://<IP>:8143/Register.html. Dabei handelt es sich um die IP-Adresse von ONTAP-Tools, die Sie während der Bereitstellung bereitstellen.
+
+
+
+== IP-Adresse des vCenter Server
+
+* Sie sollten die IP-Adresse (IPv4 oder IPv6) der vCenter Server-Instanz angeben, für die Sie ONTAP-Tools registrieren möchten.
++
+Der generierte Typ von VSC- und VASA-Zertifikaten hängt von der IP-Adresse (IPv4 oder IPv6) ab, die Sie während der Bereitstellung bereitgestellt haben. Wenn Sie bei der Bereitstellung von ONTAP-Tools keine statischen IP-Details und DHCP eingegeben haben, stellt das Netzwerk sowohl IPv4- als auch IPv6-Adressen bereit.
+
+* Die IP-Adresse der ONTAP-Tools, die für die Registrierung mit vCenter Server verwendet wird, hängt vom Typ der im Bereitstellungsassistenten eingegebenen vCenter Server-IP-Adresse (IPv4 oder IPv6) ab.
++
+Sowohl VSC- als auch VASA-Zertifikate werden mit derselben IP-Adresse generiert, die bei der vCenter Server Registrierung verwendet wird.
+
++
+
+NOTE: : IPv6 wird nur mit vCenter Server 6.7 und höher unterstützt.
+
+
+
+
+
+== Netzwerkeigenschaften von Appliances
+
+Wenn Sie DHCP nicht verwenden, geben Sie einen gültigen DNS-Hostnamen (nicht qualifiziert) sowie die statische IP-Adresse für die ONTAP-Tools und die anderen Netzwerkparameter an. Alle diese Parameter sind für eine ordnungsgemäße Installation und Betrieb erforderlich.

@@ -1,0 +1,35 @@
+---
+permalink: configure/task_automatically_generating_scps.html 
+sidebar: sidebar 
+keywords:  
+summary: VASA Provider für ONTAP ermöglicht die automatische Generierung von Storage-Funktionsprofilen für vorhandene herkömmliche Datastores. Wenn Sie die Option zur automatischen Generierung für einen Datastore auswählen, erstellt VASA Provider ein Profil mit den Storage-Funktionen, die von diesem Datastore verwendet werden. 
+---
+= Automatische Generierung von Storage-Funktionsprofilen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VASA Provider für ONTAP ermöglicht die automatische Generierung von Storage-Funktionsprofilen für vorhandene herkömmliche Datastores. Wenn Sie die Option zur automatischen Generierung für einen Datastore auswählen, erstellt VASA Provider ein Profil mit den Storage-Funktionen, die von diesem Datastore verwendet werden.
+
+*Was Sie brauchen*
+
+* Sie müssen Ihre VASA Provider-Instanz über die Virtual Storage Console (VSC) registriert haben.
+* VSC muss Ihren Storage erkannt haben.
+
+
+*Über diese Aufgabe*
+
+Nachdem Sie ein Storage-Funktionsprofil erstellt haben, können Sie das Profil mit weiteren Funktionen ändern. Der Assistent zum Erstellen von Storage-Funktionsprofiles enthält Informationen über die Funktionen, die Sie in ein Profil einbeziehen können.
+
+*Schritte*
+
+. Klicken Sie auf der Startseite der ONTAP Tools auf *Speicherzuordnung*.
+. Wählen Sie den Datenspeicher aus der Liste verfügbar aus.
+. Wählen Sie im Menü Aktionen die Option *automatisch generieren* aus.
+. Wenn der Vorgang zum automatischen Generieren abgeschlossen ist, aktualisieren Sie den Bildschirm, um Informationen zum neuen Profil anzuzeigen.
++
+Das neue Profil wird in der Spalte mit dem zugeordneten Profil aufgelistet. Der Name des neuen Profils basiert auf den Ressourcen im Profil. Sie können das Profil bei Bedarf umbenennen.
+
+

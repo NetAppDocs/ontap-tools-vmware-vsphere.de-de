@@ -1,0 +1,88 @@
+---
+permalink: concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Zur Vereinfachung der Arbeit mit vCenter Server-Berechtigungen und rollenbasierter Zugriffssteuerung \ (RBAC\) bietet die Virtual Storage Console \(VSC\) standardmäßige VSC-Rollen, mit denen Sie wichtige VSC-Aufgaben ausführen können. Es gibt auch eine schreibgeschützte Rolle, mit der Sie VSC Informationen anzeigen, aber keine Aufgaben ausführen können.' 
+---
+= Standardrollen in Paket mit ONTAP Tools
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Zur Vereinfachung der Arbeit mit vCenter Server-Berechtigungen und rollenbasierter Zugriffssteuerung (Role Based Access Control, RBAC) bietet die Virtual Storage Console (VSC) standardmäßige VSC-Rollen, mit denen Sie wichtige VSC Aufgaben ausführen können. Es gibt auch eine schreibgeschützte Rolle, mit der Sie VSC Informationen anzeigen, aber keine Aufgaben ausführen können.
+
+Die VSC Standardrollen verfügen sowohl über die erforderlichen VSC-spezifischen Berechtigungen als auch über die nativen vCenter Server-Berechtigungen, die für Benutzer zur Ausführung von VSC Aufgaben erforderlich sind. Darüber hinaus werden die Rollen so eingerichtet, dass sie über die erforderlichen Berechtigungen für alle unterstützten Versionen des vCenter Servers verfügen.
+
+Als Administrator können Sie diese Rollen bei Bedarf Benutzern zuweisen.
+
+
+NOTE: Wenn Sie die VSC auf die neueste Version aktualisieren, werden die Standardrollen automatisch aktualisiert, um sie mit der neuen Version von VSC zu verwenden.
+
+Sie können die VSC Standardrollen anzeigen, indem Sie auf der vSphere Client Startseite auf *Rollen* klicken.
+
+Die Rollen der VSC ermöglichen Ihnen, die folgenden Aufgaben auszuführen:
+
+|===
+
+
+| * Rolle* | *Beschreibung* 
+
+
+ a| 
+VSC Administrator
+ a| 
+Bietet alle nativen vCenter Server-Berechtigungen und VSC-spezifische Berechtigungen, die zur Durchführung aller VSC-Aufgaben erforderlich sind.
+
+
+
+ a| 
+VSC schreibgeschützt
+ a| 
+Bietet schreibgeschützten Zugriff auf VSC Diese Benutzer können keine VSC Aktionen ausführen, die durch den Zugriff gesteuert werden.
+
+
+
+ a| 
+VSC Provisionierung
+ a| 
+Bietet alle nativen vCenter Server-Berechtigungen und VSC-spezifische Berechtigungen, die für die Bereitstellung von Storage erforderlich sind. Sie können die folgenden Aufgaben ausführen:
+
+* Erstellen neuer Datenspeicher
+* Datastores zerstören
+* Zeigt Informationen zu Storage-Funktionsprofilen an
+
+
+|===
+
+
+== Richtlinien zur Verwendung von VSC Standardrollen
+
+Wenn Sie mit standardmäßigen ONTAP-Tools für VMware vSphere-Rollen arbeiten, gibt es bestimmte Richtlinien, die Sie befolgen sollten.
+
+Sie sollten die Standardrollen nicht direkt ändern. Wenn Sie das tun, überschreiben die Änderungen bei jedem VSC-Upgrade die VSC. Das Installationsprogramm aktualisiert bei jedem VSC-Upgrade die Standardrollendefinitionen. So wird sichergestellt, dass die Rollen sowohl für Ihre VSC-Version als auch für alle unterstützten Versionen des vCenter Server aktuell sind.
+
+Sie können jedoch die Standardrollen verwenden, um Rollen zu erstellen, die auf Ihre Umgebung zugeschnitten sind. Dazu sollten Sie die VSC Standardrolle kopieren und dann die kopierte Rolle bearbeiten. Durch das Erstellen einer neuen Rolle können Sie diese Rolle auch beibehalten, wenn Sie den VSC Windows Service neu starten oder aktualisieren.
+
+Möglicherweise verwenden Sie die VSC Standardrollen wie folgt:
+
+* Verwenden Sie die VSC Standardrollen für alle VSC Aufgaben.
++
+In diesem Szenario bieten die Standardrollen alle Berechtigungen, die ein Benutzer zur Durchführung der VSC-Aufgaben benötigt.
+
+* Kombinieren Sie Rollen, um die Aufgaben zu erweitern, die ein Benutzer ausführen kann.
++
+Wenn die VSC Standardrollen zu viel Granularität für Ihre Umgebung bieten, können Sie ihre Rollen erweitern, indem Sie Gruppen auf höherer Ebene mit mehreren Rollen erstellen.
+
++
+Wenn ein Benutzer andere Aufgaben ausführen muss, die keine VSC erfordern, die zusätzliche native Berechtigungen von vCenter Server erfordern, können Sie eine Rolle erstellen, die diese Berechtigungen bereitstellt und sie der Gruppe auch hinzufügen.
+
+* Erstellung feingranularer Rollen
++
+Wenn in Ihrem Unternehmen bestimmte Rollen restriktiver implementiert werden müssen als die VSC Standardrollen, können Sie mit den VSC Rollen neue Rollen erstellen.
+
++
+In diesem Fall würden Sie die nötigen VSC Rollen klonen und dann die geklonte Rolle bearbeiten, damit sie nur die Berechtigungen hat, die Ihr Benutzer benötigt.
+
+

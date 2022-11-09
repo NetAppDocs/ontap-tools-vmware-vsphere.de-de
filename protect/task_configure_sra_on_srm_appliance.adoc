@@ -1,0 +1,38 @@
+---
+permalink: protect/task_configure_sra_on_srm_appliance.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sobald Sie die SRM Appliance implementiert haben, sollten Sie SRA auf der SRM Appliance konfigurieren. Die erfolgreiche Konfiguration von SRA ermöglicht die Kommunikation der SRM Appliance mit SRA für das Disaster-Recovery-Management. Um die Kommunikation zwischen SRM-Appliance und SRA zu ermöglichen, sollten Sie die Zugangsdaten für das ONTAP-Tool \(IP-Adresse und Administratorpasswort\) in der SRM-Appliance speichern.' 
+---
+= Konfigurieren Sie SRA auf der SRM Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sobald Sie die SRM Appliance implementiert haben, sollten Sie SRA auf der SRM Appliance konfigurieren. Die erfolgreiche Konfiguration von SRA ermöglicht die Kommunikation der SRM Appliance mit SRA für das Disaster-Recovery-Management. Um die Kommunikation zwischen SRM-Appliance und SRA zu ermöglichen, sollten die Zugangsdaten für das ONTAP-Tool (IP-Adresse und Administratorpasswort) in der SRM Appliance gespeichert werden.
+
+*Was Sie brauchen*
+
+Sie sollten die Datei _tar.gz_ von heruntergeladen haben https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Website"].
+
+*Über diese Aufgabe*
+
+Die Konfiguration von SRA auf einer SRM Appliance speichert die SRA Anmeldedaten in der SRM Appliance.
+
+*Schritte*
+
+. Klicken Sie auf dem Bildschirm der SRM-Appliance auf *Storage Replication Adapter* > *Neuer Adapter*.
+. Laden Sie die Datei _.tar.gz_ in SRM hoch.
+. Überprüfen Sie die Adapter erneut, ob die Details auf der Seite SRM Storage Replication Adapter aktualisiert werden.
+. Melden Sie sich mit Hilfe eines Administratorkontos an der SRM-Appliance mit putty an.
+. Wechseln Sie mit dem Befehl zum Root-Benutzer: `su root`
+. Führen Sie den Befehl aus `cd /var/log/vmware/srm` Zum Navigieren zum Protokollverzeichnis.
+. Geben Sie im Protokollverzeichnis den Befehl ein, um die von SRA verwendete Docker-ID zu erhalten: `docker ps -l`
+. Geben Sie den Befehl ein, um sich bei der Container-ID anzumelden: `docker exec -it -u srm <container id> sh`
+. Konfigurieren Sie SRM mit der IP-Adresse und dem Passwort der ONTAP-Tools mit dem Befehl: `perl command.pl -I <va-IP> administrator <va-password>`
++
+Eine Erfolgsmeldung, die bestätigt, dass die Speicher-Anmeldedaten gespeichert werden, wird angezeigt. SRA kann mit dem SRA-Server unter Verwendung der angegebenen IP-Adresse, des Ports und der Anmeldeinformationen kommunizieren.
+
+
