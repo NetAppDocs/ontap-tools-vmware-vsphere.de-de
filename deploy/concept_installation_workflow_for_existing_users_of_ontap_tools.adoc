@@ -46,7 +46,7 @@ Bei der VASA Provider Implementierung müssen Sie nach dem Upgrade aus der beste
 
 Wenn Sie 7.2 oder 7.2.1 Versionen der virtuellen Appliance für VSC, VASA Provider und SRA haben, können Sie kein direktes Upgrade auf 9.7P1 oder eine neuere Version der Unified Appliance durchführen. Sie müssen zuerst Ihr vorhandenes Setup auf Version 9.7 der virtuellen Appliance aktualisieren und dann auf die neueste Version aktualisieren.
 
-Zum Upgrade auf ONTAP-Tools 9.10 sollten Sie die virtuelle Appliance 9.7P1 oder höher ausführen. Ein Upgrade von einer früheren Version vor 9.7P1 der virtuellen Appliance wird nicht unterstützt.
+Führen Sie zum Upgrade von ONTAP Tools 9.10 und höheren Versionen die virtuelle Appliance 9.7P1 oder höher aus. Ein Upgrade von einer früheren Version vor 9.7P1 der virtuellen Appliance wird nicht unterstützt.
 
 Wenn Sie die neueste Version von ONTAP Tools implementieren, müssen Sie das Thema sehen `Requirements for deploying the ONTAP tools.` Das Thema `Upgrading to the latest release of ONTAP tools` Verfügt über Informationen zur Durchführung eines vorhandenen Upgrades.
 
