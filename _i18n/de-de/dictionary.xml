@@ -565,7 +565,6 @@
   <block id="5cd110d372988e6fedf83dab3b77194b" category="list-text">Führen Sie den Befehl aus<block ref="ab64b2f5839594835c3c4d3e3c725c7c" prefix=" " category="inline-code"></block> Zum Navigieren zum Protokollverzeichnis.</block>
   <block id="9d58dbd20800ce51e37de67c2297da5f" category="list-text">Geben Sie im Protokollverzeichnis den Befehl ein, um die von SRA verwendete Docker-ID zu erhalten:<block ref="c3933049d26fccba0396e7760f0fba06" prefix=" " category="inline-code"></block></block>
   <block id="7202896d218d74a45a1995fe74164f61" category="list-text">Geben Sie den Befehl ein, um sich bei der Container-ID anzumelden:<block ref="1b6eefce0212551da88d489c9ed8f5e9" prefix=" " category="inline-code"></block></block>
-  <block id="6408528f5006f0df83e2b2cc7b5f3eae" category="list-text">Konfigurieren Sie SRM mit der IP-Adresse und dem Passwort der ONTAP-Tools mit dem Befehl:<block ref="31ba3f744db79546f73a60bc44a81da2" prefix=" " category="inline-code"></block></block>
   <block id="3e06c9490934f18ce97a637bf06b781e" category="paragraph">Eine Erfolgsmeldung, die bestätigt, dass die Speicher-Anmeldedaten gespeichert werden, wird angezeigt. SRA kann mit dem SRA-Server unter Verwendung der angegebenen IP-Adresse, des Ports und der Anmeldeinformationen kommunizieren.</block>
   <block id="8ebe726ad95e28b7a4c0239a1c8a5242" category="summary">Sie müssen Ihre Ressourcen am geschützten Standort und am Recovery-Standort zuordnen, damit Virtual Machines für ein Failover zu einer oder anderen Host-Gruppe konfiguriert werden.</block>
   <block id="7e4aa301715707912ba8ed9cba9c0eb7" category="doc">Konfigurieren von Ressourcenzuordnungen</block>
@@ -2002,4 +2001,5 @@
   <block id="544c4e9e8bb8792201c78fc0c53ee086" category="sidebar">Storage-Funktionsprofile konfigurieren</block>
   <block id="f98484fc38c578aca640fd781e7196ae" category="sidebar">Konfigurieren von Datastores</block>
   <block id="ed2b91672ee08a221afee30153dc24a9" category="paragraph">Führen Sie zum Upgrade von ONTAP Tools 9.10 und höheren Versionen die virtuelle Appliance 9.7P1 oder höher aus. Ein Upgrade von einer früheren Version vor 9.7P1 der virtuellen Appliance wird nicht unterstützt.</block>
+  <block id="65f6fb9b3fd7c8798ba4a7010e84a65b" category="list-text">Konfigurieren Sie SRM mit der IP-Adresse und dem Passwort der ONTAP-Tools mit dem Befehl:<block ref="2ca82e2fa9750815c3356b6e1692f9ca" prefix=" " category="inline-code"></block></block>
 </blocks>
