@@ -631,7 +631,6 @@
   <block id="bc5ad92fecd3f6eeb4473c9df6479d46" category="list-text"><block ref="4609acba202877f99742342f4195d95e" prefix="" category="inline-code"></block></block>
   <block id="42f35b3ef9c82737da1f02ca0b45f308" category="list-text">Führen Sie den Perl-Befehl aus, um SRA mit den neuen Zugangsdaten zu konfigurieren:</block>
   <block id="325c22d13dffac10de126d900c39ff29" category="list-text"><block ref="c8a7687f579de473b4cc34b8e40736ff" prefix="" category="inline-code"></block></block>
-  <block id="000595390ba91f5d02fbc87c52ad2a40" category="list-text"><block ref="31ba3f744db79546f73a60bc44a81da2" prefix="" category="inline-code"></block></block>
   <block id="98d59005c67ca250b0aded3cd7b53448" category="summary">Sie müssen die Speichersysteme einrichten, bevor Sie Storage Replication Adapter \(SRA\) für Site Recovery Manager \(SRM\) ausführen.</block>
   <block id="c50f5025436d48e4a3b85a8face3e337" category="doc">Konfigurieren Sie Storage Replication Adapter für die SAN-Umgebung</block>
   <block id="fef16cb3691cc1ab2b1c978c84a447b3" category="paragraph">Sie müssen die Storage-Systeme einrichten, bevor Sie Storage Replication Adapter (SRA) für Site Recovery Manager (SRM) ausführen.</block>
@@ -1068,7 +1067,6 @@
   <block id="be280321d69d14f5dfce8709e117a691" category="list-text">Zum Root-Benutzer wechseln:<block ref="ed4421a15b86845cfea13385b427b340" prefix=" " category="inline-code"></block></block>
   <block id="9d7f1b1965b299ca0f83a93983a67fa9" category="list-text">Geben Sie im Protokollverzeichnis den Befehl ein, um die vom SRA-Docker-Andocker verwendete Docker-ID zu erhalten:<block ref="c3933049d26fccba0396e7760f0fba06" prefix=" " category="inline-code"></block></block>
   <block id="a3fbfd6ca26f7eba2deb3733ea046eb1" category="list-text">Melden Sie sich bei der Container-ID an:<block ref="1b6eefce0212551da88d489c9ed8f5e9" prefix=" " category="inline-code"></block></block>
-  <block id="c93a0f0ebeda9ccb76c7ccdb97a1b6fc" category="list-text">Konfigurieren Sie SRM mit der IP-Adresse und dem Passwort der ONTAP Tools:<block ref="31ba3f744db79546f73a60bc44a81da2" prefix=" " category="inline-code"></block>Eine Erfolgsmeldung, die bestätigt, dass die Speicher-Anmeldedaten gespeichert werden, wird angezeigt.</block>
   <block id="3849324d415efa553fdff378e6dd712e" category="section-title">SRA-Anmeldedaten werden aktualisiert</block>
   <block id="744ec7526945686620ba725a3be0778f" category="list-text">Löschen Sie den Inhalt des Verzeichnisses /srm/sra/conf mit:</block>
   <block id="9394c3b706fe8eb791b91c156fbd1c93" category="section-title">Aktivieren von VASA Provider und SRA</block>
@@ -2001,5 +1999,7 @@
   <block id="544c4e9e8bb8792201c78fc0c53ee086" category="sidebar">Storage-Funktionsprofile konfigurieren</block>
   <block id="f98484fc38c578aca640fd781e7196ae" category="sidebar">Konfigurieren von Datastores</block>
   <block id="ed2b91672ee08a221afee30153dc24a9" category="paragraph">Führen Sie zum Upgrade von ONTAP Tools 9.10 und höheren Versionen die virtuelle Appliance 9.7P1 oder höher aus. Ein Upgrade von einer früheren Version vor 9.7P1 der virtuellen Appliance wird nicht unterstützt.</block>
-  <block id="65f6fb9b3fd7c8798ba4a7010e84a65b" category="list-text">Konfigurieren Sie SRM mit der IP-Adresse und dem Passwort der ONTAP-Tools mit dem Befehl:<block ref="2ca82e2fa9750815c3356b6e1692f9ca" prefix=" " category="inline-code"></block></block>
+  <block id="a88efd6c9b7763df783d278ede79c4a6" category="list-text">Konfigurieren Sie SRM mit der IP-Adresse und dem Passwort der ONTAP Tools:<block ref="4222690b3b5a5c9afb047223bc02154e" prefix=" " category="inline-code"></block>Eine Erfolgsmeldung, die bestätigt, dass die Speicher-Anmeldedaten gespeichert werden, wird angezeigt.</block>
+  <block id="092016eb57c00c965fc19b3bff7ff343" category="list-text"><block ref="4222690b3b5a5c9afb047223bc02154e" prefix="" category="inline-code"></block></block>
+  <block id="b8e3b3982008f247b4868b6fd9b104d8" category="list-text">Konfigurieren Sie SRM mit der IP-Adresse und dem Passwort der ONTAP-Tools mit dem Befehl:<block ref="4222690b3b5a5c9afb047223bc02154e" prefix=" " category="inline-code"></block></block>
 </blocks>
