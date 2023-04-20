@@ -11,7 +11,7 @@ summary: 'Wenn Sie ONTAP® Tools für VMware vSphere in einer Umgebung verwenden
 
 
 [role="lead"]
-Wenn Sie ONTAP Tools für VMware vSphere in einer Umgebung verwenden, in der ein einzelner VMware vSphere HTML5-Client mehrere vCenter Server-Instanzen managt, müssen Sie eine Instanz von VSC mit jedem vCenter Server registrieren, sodass ein 1:1-Paarung zwischen VSC und dem vCenter Server besteht. Auf diese Weise können Sie alle Server mit vCenter 6.0 oder höher sowohl im verknüpften Modus als auch im nicht verknüpften Modus von einem einzelnen vSphere HTML5 Client aus verwalten.
+Wenn Sie ONTAP Tools für VMware vSphere in einer Umgebung verwenden, in der ein einzelner VMware vSphere HTML5-Client mehrere vCenter Server-Instanzen managt, müssen Sie eine Instanz von VSC mit jedem vCenter Server registrieren, sodass ein 1:1-Paarung zwischen VSC und dem vCenter Server besteht. Auf diese Weise können Sie alle Server mit vCenter 7.0 oder höher sowohl im verknüpften als auch im nicht verknüpften Modus von einem einzigen vSphere HTML5-Client aus verwalten.
 
 
 NOTE: Falls Sie VSC mit einem vCenter Server verwenden möchten, müssen Sie eine VSC-Instanz für jede zu verwaltende vCenter Server-Instanz eingerichtet oder registriert haben. Jede registrierte VSC Instanz muss von der gleichen Version sein.
@@ -36,7 +36,7 @@ Außerdem müssen Sie über die richtigen RBAC-Berechtigungen verfügen.
 
 
 
-Wenn Sie eine Aufgabe ausführen, bei der Sie einen vCenter-Server angeben müssen, werden im Dropdown-Feld *vCenter Server* die verfügbaren vCenter-Server in alphanumerischer Reihenfolge angezeigt. Der standardmäßige vCenter Server ist immer der erste Server in der Dropdown-Liste.
+Wenn Sie eine Aufgabe ausführen, für die Sie einen vCenter-Server angeben müssen, werden die verfügbaren vCenter-Server in alphanumerischer Reihenfolge im Auswahlfeld *INSTANCE* oben links auf dem Bildschirm angezeigt. Der standardmäßige vCenter Server ist immer der erste Server in der Dropdown-Liste.
 
 Wenn der Speicherort des Speichers bekannt ist (z. B. wenn Sie den Bereitstellungsassistenten verwenden und sich der Datastore auf einem Host befindet, der von einem bestimmten vCenter Server verwaltet wird), wird die vCenter Server-Liste als schreibgeschützte Option angezeigt. Dies geschieht nur, wenn Sie ein Element im vSphere Web Client mit der rechten Maustaste auswählen.
 

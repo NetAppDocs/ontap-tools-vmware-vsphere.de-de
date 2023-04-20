@@ -1,0 +1,41 @@
+---
+permalink: manage/task_syslog_files.html 
+sidebar: sidebar 
+keywords:  
+summary: Syslog wird verwendet, um Systemprotokolle an einen zentralen Protokollierungsserver zu senden. 
+---
+= Syslog managen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Verwenden Sie syslog, um Systemprotokolle an einen zentralen Protokollierungsserver zu senden.
+
+*Über diese Aufgabe*
+
+Die ONTAP-Tools für VMware vSphere 9.12 Version entfernt frühere 2.0 Syslog-APIs und enthält neue 3.0 Syslog-bezogene APIs, die gegenseitige Authentifizierung unterstützen. Führen Sie die folgenden Schritte aus, um syslog einzurichten.
+
+*Schritte*
+
+. Führen Sie _POST /2.0/Security/user/Login aus, um eine Sitzungs-ID zu erhalten.
+. Führen Sie _POST /3.0/Appliance-Management/Logging-Client-Certificate_ aus, indem Sie die in der obigen Antwort empfangene SessionID übergeben.
++
+Dadurch werden Zertifikate für den VP-Server sowie den VSC-Server generiert.
+
+. Kopieren Sie beide Zertifikate auf Ihren Syslog-Server und machen Sie sie auf dem Syslog-Server vertrauenswürdig.
++
+Hier ist ein Beispiel, wie es für syslog-ng Docker zu tun:
+
++
+** JSON entsperrt sowohl die Zertifikate als auch kopiert die pem-formatierten Zertifikate in das Verzeichnis Ca.d
+** `openssl x509 -noout -hash -in vsccert.pem` Das Ergebnis ist ein Hash (zum Beispiel 6d2962a8)
+** `ln -s vsccert.pem 6d2962a8.0` Dadurch wird eine symbolische Verknüpfung mit dem Zertifikat als Hash mit dem Suffix .0 erstellt
+** Starten Sie den Syslog-Server
+
+
+. Führen Sie _PATCH /3.0/Appliance-Management/syslog-config_ API aus, indem Sie die Server-IP, den Port, pattern(OPTIONAL), log_Level und das öffentliche Zertifikat des Syslog-Servers übergeben.
+
+
+Protokolle werden an den angegebenen Syslog-Server weitergeleitet.

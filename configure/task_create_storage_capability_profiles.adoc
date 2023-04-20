@@ -21,7 +21,7 @@ Nachdem Sie ein Profil eingerichtet haben, können Sie das Profil nach Bedarf be
 
 *Schritte*
 
-. Klicken Sie auf der Startseite von ONTAP Tools auf *Storage Capability Profiles*.
+. Klicken Sie auf der Homepage der ONTAP-Tools auf *Richtlinien und Profile*.
 . Erstellen Sie ein Profil oder bearbeiten Sie ein vorhandenes Profil, falls erforderlich:
 +
 |===
@@ -33,7 +33,7 @@ Nachdem Sie ein Profil eingerichtet haben, können Sie das Profil nach Bedarf be
  a| 
 Erstellen Sie ein Profil
  a| 
-Klicken Sie Auf *image:../media/create_icon.gif[""]*.
+Klicken Sie auf *CREATE*.
 
 
 
@@ -43,11 +43,18 @@ Bearbeiten Sie ein vorhandenes Profil
 Klicken Sie auf das Profil, das Sie ändern möchten, auf den Profilen auf der Seite *Storage Capability Profiles*.
 
 |===
-
-
++
 
 NOTE: Um die Werte anzuzeigen, die einem vorhandenen Profil zugeordnet sind, können Sie auf der Seite Storage Capabilities Profile auf den Profilnamen klicken. VASA Provider zeigt dann die Übersichtsseite für dieses Profil an.
 
+. Klicken Sie unter *New Datastore* > *Storage Systems* auf *Create Storage Capability Profile*.
++
+Sie erhalten die folgende Meldung, um zu bestätigen, dass Sie sich aus dem Datastore-Fenster entfernen.
+
++
+_Damit werden die eingegebenen Daten entfernt, indem der aktuelle Workflow geschlossen wird, und der Workflow zum Erstellen des Storage-Funktionsprofils wird geöffnet. Möchten Sie fortfahren?_
+
+. Klicken Sie auf *JA*, um das Fenster Create Storage Capability Profile zu öffnen.
 . Füllen Sie die Seiten im Assistenten „Storage Capability Profile erstellen“ aus, um ein Profil einzurichten oder Werte zu bearbeiten, um ein vorhandenes Profil zu ändern.
 +
 Die meisten Felder in diesem Assistenten sind selbsterklärend. In der folgenden Tabelle werden einige der Felder beschrieben, für die Sie möglicherweise eine Anleitung benötigen.

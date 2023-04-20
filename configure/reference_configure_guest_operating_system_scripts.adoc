@@ -45,6 +45,6 @@ Solaris
 \https://<appliance_ip>:8143/vsc/public/writable/solaris_gos_timeout_190-install.iso
 
 |===
-Sie sollten das Skript aus der Kopie der VSC-Instanz installieren, die beim vCenter Server registriert ist, der die Virtual Machine managt. Wenn in Ihrer Umgebung mehrere vCenter-Server enthalten sind, sollten Sie den Server auswählen, der die virtuelle Maschine enthält, für die Sie die Werte für das Speicherzeitlimit festlegen möchten.
+Sie sollten das Skript aus der Kopie der VSC-Instanz installieren, die beim vCenter Server (ELM) registriert ist, der die virtuelle Maschine verwaltet. Wenn Ihre Umgebung mehrere vCenter-Server umfasst, sollten Sie die Instanz auswählen, die die virtuelle Maschine enthält, für die Sie die Werte für das Speicher-Timeout festlegen möchten.
 
 Sie sollten sich bei der virtuellen Maschine anmelden und dann das Skript ausführen, um die Werte für die Speicherzeitüberschreitung festzulegen.

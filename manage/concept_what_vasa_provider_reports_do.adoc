@@ -13,7 +13,7 @@ summary: 'VVols Berichte enthalten detaillierte Informationen zu VMware Virtual 
 [role="lead"]
 VVols Berichte enthalten detaillierte Informationen zu VMware Virtual Volumes (VVols) Datastores und den Virtual Machines, die auf diesen Datastores erstellt werden. Über das VVols Dashboard können Sie potenzielle Probleme mit den VVols Datastores und Virtual Machines in Ihrem vCenter Server prüfen und identifizieren.
 
-Sie können Berichte anzeigen, organisieren und exportieren. Die Daten für die VVols-Datastores und den Bericht Virtual Machines werden vom ONTAP zusammen mit den OnCommand API Services bereitgestellt.
+Sie können Berichte anzeigen, organisieren und exportieren. Der Bericht Daten für VVols Datastores und Virtual Machines wird von ONTAP bereitgestellt.
 
 VVols bietet die folgenden vordefinierten Berichte:
 

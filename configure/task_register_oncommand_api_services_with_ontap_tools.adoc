@@ -18,7 +18,7 @@ Bei Verwendung von ONTAP 9.6 oder einer älteren Version können Sie über das V
 Sie müssen OnCommand API Services 2.1 oder höher von der NetApp Support-Website heruntergeladen haben.
 
 
-NOTE: Im VVols Dashboard werden die Performance-Kennzahlen nur angezeigt, wenn SAN VVols Datastores und Virtual Machines mit ONTAP 9.3 oder höher konfiguriert werden.
+NOTE: Im VVols Dashboard werden Performance-Metriken nur angezeigt, wenn SAN VVols Datastores und Virtual Machines mit ONTAP 9.7 oder höher konfiguriert wurden.
 
 *Schritte*
 

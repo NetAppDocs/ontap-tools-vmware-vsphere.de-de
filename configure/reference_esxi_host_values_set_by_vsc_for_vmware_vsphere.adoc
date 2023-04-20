@@ -35,38 +35,35 @@ Sie sollten diesen Wert auf 0 setzen.
 
 * *Net.TcpipHeapSize*
 +
-Wenn Sie vSphere 6.0 oder höher verwenden, sollten Sie diesen Wert auf 32 setzen.
+Setzen Sie diesen Wert auf 32.
 
 * *Net.TcpipHeapMax*
 +
-Sie sollten diesen Wert für vSphere 6.X Versionen auf 512 MB setzen, mit Ausnahme von 6.5U3 und 6.7U3 Versionen. Bei Versionen vSphere 6.5U3 und 6.7U3 ist dieser Wert auf 1024 MB gesetzt. Wenn Sie vSphere 7.0 oder höhere Versionen verwenden, sollten Sie diesen Wert auf 1024 MB setzen.
+Setzen Sie diesen Wert auf 1024 MB.
 
 * *NFS.MaxVolumes*
 +
-Wenn Sie vSphere 6.0 oder höher verwenden, sollten Sie diesen Wert auf 256 setzen.
+Setzen Sie diesen Wert auf 256.
 
 * *NFS41.MaxVolumes*
 +
-Wenn Sie vSphere 6.0 oder höher verwenden, sollten Sie diesen Wert auf 256 setzen.
+Setzen Sie diesen Wert auf 256.
 
 * *NFS.MaxQueueDepth*
 +
-Wenn Sie vSphere 6.0 oder höhere ESXi Host-Version verwenden, sollten Sie diesen Wert auf 128 oder höher einstellen, um Engpässe zu vermeiden, in denen es zu Warteschlangen kommt.
-
-+
-Bei vSphere-Versionen vor 6.0 sollten Sie diesen Wert auf 64 einstellen.
+Setzen Sie diesen Wert auf 128 oder höher, um Engpässe in der Warteschlange zu vermeiden.
 
 * *NFS.HeartbeatMaxFailures*
 +
-Sie sollten diesen Wert für alle NFS-Konfigurationen auf 10 setzen.
+Setzen Sie diesen Wert für alle NFS-Konfigurationen auf 10.
 
 * *NFS.HeartbeatFrequency*
 +
-Sie sollten diesen Wert für alle NFS-Konfigurationen auf 12 setzen.
+Setzen Sie diesen Wert für alle NFS-Konfigurationen auf 12.
 
 * *NFS.HeartbeatTimeout*
 +
-Sie sollten diesen Wert für alle NFS-Konfigurationen auf 5 setzen.
+Setzen Sie diesen Wert für alle NFS-Konfigurationen auf 5.
 
 
 
@@ -76,21 +73,21 @@ Sie sollten diesen Wert für alle NFS-Konfigurationen auf 5 setzen.
 
 * *Pfadauswahl-Richtlinie*
 +
-Wenn FC-Pfade mit ALUA verwendet werden, sollten Sie diesen Wert auf „`RR`“ (Round Robin) setzen.
+Setzen Sie diesen Wert auf „`RR`“ (Round Robin), wenn FC-Pfade mit ALUA verwendet werden.
 
 +
-Sie sollten diesen Wert für alle anderen Konfigurationen auf „`FIXED`“ setzen.
+Setzen Sie diesen Wert für alle anderen Konfigurationen auf „`FIXED`“.
 
 +
 Wenn Sie diesen Wert auf „`RR`“ setzen, ist für den Lastausgleich über alle aktiven/optimierten Pfade hinweg hilfreich. Der Wert „`FIXED`“ wird für ältere Konfigurationen ohne ALUA verwendet und verhindert Proxy-I/O
 
 * *Disk.QFullSampleSize*
 +
-Sie sollten diesen Wert für alle Konfigurationen auf 32 setzen. Durch die Festlegung dieses Wertes werden I/O-Fehler verhindert.
+Setzen Sie diesen Wert für alle Konfigurationen auf 32. Durch die Festlegung dieses Wertes werden I/O-Fehler verhindert.
 
 * *Disk.QFullThreshold*
 +
-Sie sollten diesen Wert für alle Konfigurationen auf 8 setzen. Durch die Festlegung dieses Wertes werden I/O-Fehler verhindert.
+Setzen Sie diesen Wert für alle Konfigurationen auf 8. Durch die Festlegung dieses Wertes werden I/O-Fehler verhindert.
 
 * * Emulex FC HBA-Timeouts*
 +
@@ -108,17 +105,17 @@ Standardwert verwenden.
 
 * *Pfadauswahl-Richtlinie*
 +
-Sie sollten diesen Wert für alle iSCSI-Pfade auf „`RR`“ setzen.
+Setzen Sie diesen Wert für alle iSCSI-Pfade auf „`RR`“.
 
 +
 Wenn Sie diesen Wert auf „`RR`“ setzen, ist für den Lastausgleich über alle aktiven/optimierten Pfade hinweg hilfreich.
 
 * *Disk.QFullSampleSize*
 +
-Sie sollten diesen Wert für alle Konfigurationen auf 32 setzen. Durch die Festlegung dieses Wertes werden I/O-Fehler verhindert.
+Setzen Sie diesen Wert für alle Konfigurationen auf 32. Durch die Festlegung dieses Wertes werden I/O-Fehler verhindert.
 
 * *Disk.QFullThreshold*
 +
-Sie sollten diesen Wert für alle Konfigurationen auf 8 setzen. Durch die Festlegung dieses Wertes werden I/O-Fehler verhindert.
+Setzen Sie diesen Wert für alle Konfigurationen auf 8. Durch die Festlegung dieses Wertes werden I/O-Fehler verhindert.
 
 

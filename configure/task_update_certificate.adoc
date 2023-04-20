@@ -1,0 +1,18 @@
+---
+permalink: configure/task_update_certificate.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen das Zertifikat aktualisieren, wenn das Zertifikat abläuft oder wenn das Zertifikat manuell geändert wird. Wenn der Client oder das Cluster-Zertifikat abläuft oder nicht übereinstimmt, wird die Kommunikation mit dem ONTAP System unterbrochen. 
+---
+= Zertifikat aktualisieren
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sie müssen das Zertifikat aktualisieren, wenn das Client- oder Cluster-Zertifikat in Kürze abläuft oder abgelaufen ist oder wenn das Cluster-Zertifikat manuell geändert wird. Wenn der Client oder das Cluster-Zertifikat abläuft oder nicht übereinstimmt, wird die Kommunikation mit dem ONTAP System unterbrochen.
+
+Cluster-Zertifikat ist das Serverzertifikat, das vom Storage Admin auf der ONTAP-Seite generiert wird. Das Clientzertifikat kann in den ONTAP-Tools generiert werden. Wenn das Cluster-Zertifikat abläuft, muss der Storage-Administrator auf der ONTAP-Seite das neue Zertifikat generieren. Im Fenster „Storage-System ändern“ wurde das Clusterzertifikat automatisch aus dem ONTAP-Speicher abgerufen, und Sie müssen das Clusterzertifikat autorisieren.
+
+Wenn das Zertifikat kurz vor dem Ablauf steht oder bereits abgelaufen ist, gehen Sie wie unter beschrieben vor link:../configure/task_modify_storage_system.html["Ändern von Speichersystemen"] Abschnitt, um das Zertifikat zu aktualisieren.

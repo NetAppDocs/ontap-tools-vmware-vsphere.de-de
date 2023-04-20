@@ -16,7 +16,7 @@ Wenn Sie zum ersten Mal Virtual Storage Console (VSC) in einem vSphere Client au
 *Was Sie brauchen*
 
 * Alle ESXi-Hosts müssen eingeschaltet und verbunden sein.
-* Alle zu entdeckenden Storage Virtual Machines (SVMs) müssen ausgeführt werden. Jeder Cluster Node muss über mindestens eine Daten-LIF verfügen, die für das verwendete Storage-Protokoll (NFS, iSCSI oder FC) konfiguriert ist.
+* Alle zu ermittelenden Storage Virtual Machines (SVMs) müssen ausgeführt werden. Jeder Cluster-Node muss für das verwendete Storage-Protokoll (NFS, iSCSI, FC oder NVMe/FC) mindestens eine Daten-LIF konfiguriert sein.
 
 
 *Über diese Aufgabe*
@@ -28,14 +28,14 @@ Bei der Erkennung der Storage-Systeme erfasst VSC Informationen von den ESXi Hos
 *Schritte*
 
 . Wählen Sie auf der vSphere Client-Startseite die Option *Hosts und Cluster* aus.
-. Klicken Sie mit der rechten Maustaste auf das gewünschte Datacenter und wählen Sie dann *NetApp VSC* > *Host aktualisieren und Speicherdaten* aus.
+. Klicken Sie mit der rechten Maustaste auf das erforderliche Rechenzentrum, und wählen Sie dann *NetApp ONTAP Tools* > *Update Host- und Speicherdaten* .
 +
-Die VSC zeigt ein Dialogfeld „Bestätigen“ an, in dem Sie darauf hingewiesen werden, dass dieser Vorgang viel Zeit in Anspruch nehmen kann.
+VSC zeigt ein Dialogfeld „Bestätigen“ an, in dem Sie darüber informiert werden, dass durch diese Aktion die Erkennung aller verbundenen Storage-Systeme neu gestartet wird und einige Minuten in Anspruch nehmen kann. Möchten Sie fortfahren?
 
-. Klicken Sie auf *OK*.
-. Wählen Sie die erkannten Speichercontroller mit dem Status „`Authentifizierungsfehler`“ aus und klicken Sie dann auf *AKTIONEN* > *Ändern*.
-. Geben Sie die erforderlichen Informationen im Dialogfeld Speichersystem ändern ein.
-. Wiederholen Sie die Schritte 4 und 5 für alle Speichercontroller mit dem Status „`Authentication Failure`“.
+. Klicken Sie auf *JA*.
+. Wählen Sie die erkannten Speicher-Controller aus, die den Status aufweisen `Authentication Failure`, Und klicken Sie dann auf *AKTIONEN* > *Ändern*.
+. Geben Sie die erforderlichen Informationen in das Dialogfeld * Speichersystem ändern* ein.
+. Wiederholen Sie die Schritte 4 und 5 für alle Speicher-Controller mit `Authentication Failure` Status:
 
 
 Nach Abschluss des Erkennungsvorgangs führen Sie folgende Schritte aus:

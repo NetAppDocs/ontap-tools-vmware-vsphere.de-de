@@ -51,17 +51,7 @@ Sie können alle Controller-Anmeldedaten an einer Stelle beibehalten.
 
 Sie können mehrere empfohlene ONTAP-Rollen für die Arbeit mit ONTAP®-Tools für VMware vSphere und rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) einrichten. Diese Rollen enthalten die ONTAP-Berechtigungen, die zur Durchführung der erforderlichen Storage-Vorgänge erforderlich sind, die von den Aufgaben der Virtual Storage Console (VSC) ausgeführt werden.
 
-Um neue Benutzerrollen zu erstellen, müssen Sie sich als Administrator auf Storage-Systemen, auf denen ONTAP ausgeführt wird, einloggen. Sie können ONTAP Rollen mit einer der folgenden Elemente erstellen:
-
-* ONTAP System Manager 9.8P1 oder höher
-+
-link:../configure/task_configure_user_role_and_privileges.html["Konfigurieren von Benutzerrollen und -Berechtigungen"]
-
-* RBAC Benutzer Creator für ONTAP Tool (bei Verwendung von ONTAP 9.6 oder früher)
-+
-https://community.netapp.com/t5/Virtualization-Articles-and-Resources/RBAC-User-Creator-tool-for-VSC-VASA-Provider-and-Storage-Replication-Adapter-7-0/ta-p/133203["RBAC Benutzer Creator Tool für VSC, VASA Provider und Storage Replication Adapter 7.0 für VMware vSphere"]
-
-
+Um neue Benutzerrollen zu erstellen, müssen Sie sich als Administrator auf Storage-Systemen, auf denen ONTAP ausgeführt wird, einloggen. Sie können ONTAP Rollen mit ONTAP System Manager 9.8P1 oder höher erstellen. Siehe link:../configure/task_configure_user_role_and_privileges.html["Konfigurieren von Benutzerrollen und -Berechtigungen"] Finden Sie weitere Informationen.
 
 Jeder ONTAP-Rolle ist ein zugehöriger Benutzername und ein Passwort zugeordnet, was die Anmeldeinformationen der Rolle darstellt. Wenn Sie sich nicht mit diesen Anmeldedaten anmelden, können Sie nicht auf die Speichervorgänge zugreifen, die der Rolle zugeordnet sind.
 

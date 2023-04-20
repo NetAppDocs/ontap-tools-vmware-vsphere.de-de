@@ -35,6 +35,7 @@ Mit der Option *Provision Datastore* können Sie ein Speicherfähigkeit-Profil f
 
 * NFSv3 und NFSv4.1
 * VMFS5 und VMFS6
+* Ab vSphere 8.0 Version wird das NVMe/FC-Protokoll unterstützt.
 
 
 VSC kann einen Datastore entweder auf einem NFS Volume oder auf einer LUN erstellen:
@@ -140,9 +141,21 @@ Allgemein
  a| 
 Im Abschnitt „Allgemein“ des Dialogfelds „Bereitstellung neuer Datenspeicher“ werden Optionen zum Eingeben von Ziel, Name, Größe, Typ und Protokoll für den neuen Datenspeicher bereitgestellt.
 
-Sie können entweder *NFS* oder *VMFS* Protokolltyp auswählen, um einen herkömmlichen Datenspeicher zu konfigurieren. Für NFS können Sie entweder NFS3 oder NFS 4.1 auswählen.
+Sie können entweder den Typ *NFS*, *VMFS* oder *VVols* auswählen, um einen Datastore zu konfigurieren. Bei Auswahl von VVols wird das NVMe-/FC-Protokoll verfügbar.
 
-In diesem Release können Sie einen VMFS-Datenspeicher mit einer maximalen Größe von 64 TB konfigurieren. Sie können die Option „`Distbutle Datastore Data im ONTAP Cluster`“ auswählen, um ein FlexGroup Volume auf dem Storage-System bereitzustellen. Wenn Sie diese Option aktivieren, deaktivieren Sie automatisch das Kontrollkästchen „`Storage Capability Profile for Provisioning` verwenden“. Für die Bereitstellung von FlexGroup-Datastores werden ONTAP-Cluster mit 9.8 und höher nur zur Auswahl aufgeführt. Der VVols-Datastore-Typ wird zur Konfiguration eines VVols-Datastores verwendet. Wenn VASA Provider aktiviert ist, können Sie auch entscheiden, ob Sie die Storage-Funktionsprofile verwenden möchten. Die Option *Datastore Cluster* ist nur für traditionelle Datenspeicher verfügbar. Sie sollten die Option *Advanced* verwenden, um das Dateisystem *VMFS5* oder *VMFS6* anzugeben.
+
+NOTE: Das NVMe/FC-Protokoll wird für ONTAP 9.91P3 und neuere Versionen unterstützt.
+
+** NFS: NFS-Datastore kann mit den Protokollen NFS3 und NFS4.1 bereitgestellt werden.
++
+Sie können die Option *Datastore-Daten über den ONTAP-Cluster verteilen* auswählen, um ein FlexGroup-Volume auf dem Speichersystem bereitzustellen. Wenn Sie diese Option aktivieren, wird das Kontrollkästchen *Speicherfähigkeitsprofil für Provisioning verwenden* automatisch deaktiviert.
+
+** VMFS: Sie können einen VMFS-Datenspeicher für den Filesystem-Typ VMFS5 oder VMFS6 mit iSCSI- oder FC/FCoE-Protokollen bereitstellen.
++
+
+NOTE: Wenn VASA Provider aktiviert ist, können Sie die Profile der Storage-Funktionen verwenden.
+
+
 
 
 
@@ -191,10 +204,12 @@ Sie können die Zusammenfassung der Parameter, die Sie für den neuen Datastore 
 Das Feld „`Volume Style`“ ermöglicht es Ihnen, den Typ des erstellten Datastore zu differenzieren. Der „`Volume Style`“ kann entweder „`FlexVol`“ oder „`FlexGroup`“ lauten.
 
 |===
++
 
+NOTE: Ein FlexGroup, der Teil eines herkömmlichen Datastores ist, kann die vorhandene Größe nicht unter die bestehende verkleinern, dieses Wachstum kann jedoch um bis zu 120 % steigen. Auf diesen FlexGroup Volumes sind Standard-Snapshots aktiviert.
 
+. Klicken Sie im Abschnitt Zusammenfassung auf *Fertig stellen*.
 
-NOTE: Ein FlexGroup, der Teil eines herkömmlichen Datastores ist, kann die vorhandene Größe nicht unter die bestehende verkleinern, dieses Wachstum kann jedoch um bis zu 120 % steigen. Auf diesen FlexGroup Volumes sind Standard-Snapshots aktiviert. . Klicken Sie im Abschnitt Zusammenfassung auf *Fertig stellen*.
 
 *Verwandte Informationen*
 

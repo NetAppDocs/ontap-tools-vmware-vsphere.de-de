@@ -15,13 +15,13 @@ Sie können die von ONTAP®-Tools für VMware vSphere bereitgestellte Update-Fun
 
 *Über diese Aufgabe*
 
-Die Option „`reFresh`“ ist nützlich, wenn Sie die Standardanmeldeinformationen für die Speichersysteme nach Erhalt eines Authentifizierungsfehlers geändert haben. Sie sollten immer einen Aktualisierungsvorgang durchführen, wenn Sie die Anmeldedaten des Speichersystems geändert haben, nachdem das Speichersystem „`Authentifizierungsfehler`“ gemeldet hat. Während des Updates versucht VSC, mithilfe der neuen Zugangsdaten eine Verbindung zum Storage-System herzustellen.
+Der `refresh` Die Option ist nützlich, wenn Sie die Standardanmeldeinformationen für die Speichersysteme nach Erhalt eines Authentifizierungsfehlers geändert haben. Sie sollten immer einen Aktualisierungsvorgang durchführen, wenn Sie die Anmeldedaten des Speichersystems geändert haben, nachdem das Speichersystem einen gemeldet hat `Authentication Failure Status`. Während des Updates versucht VSC, mithilfe der neuen Zugangsdaten eine Verbindung zum Storage-System herzustellen.
 
 Je nach System-Setup kann dieser Vorgang viel Zeit in Anspruch nehmen.
 
 *Schritte*
 
-. Klicken Sie auf der Startseite des VMware vSphere Clients auf *Storage Systems*.
+. Klicken Sie auf der VMware vSphere Client-Startseite auf *Storage*.
 . Starten Sie das Update:
 +
 |===
@@ -40,7 +40,7 @@ Das Symbol * ALLE WIEDERENTDECKEN*.
  a| 
 Rechenzentrum
  a| 
-Klicken Sie mit der rechten Maustaste auf das Datacenter und dann auf *NetApp VSC* > *Host aktualisieren und Speicherdaten*.
+Klicken Sie mit der rechten Maustaste auf das Rechenzentrum, und klicken Sie dann auf *NetApp ONTAP Tools* > *Host- und Speicherdaten aktualisieren*.
 
 |===
 . Klicken Sie im Dialogfeld Host- und Speicherdaten aktualisieren auf *OK*.

@@ -23,6 +23,7 @@ Virtual Storage Console (VSC) bietet die folgenden vordefinierten Berichte:
 * Virtual Machine Report
 * VVols-Datastore-Bericht
 * VVols Virtual Machine Report
+* Integritätsbericht Protokollieren
 
 
 
@@ -47,7 +48,7 @@ Der Datastore bietet die folgenden vordefinierten Berichte:
 Das Menü Datastore Report enthält Informationen zu den folgenden Parametern für Datenspeicher:
 
 * Name des Datenspeichers
-* Datenspeichertyp: NFS oder VMFS
+* Typ des Datenspeichers: NFS und VMFS
 * Volume-Stil
 +
 Der Volume-Stil kann entweder ein FlexVol Volume oder ein FlexGroup Volume sein.
@@ -118,7 +119,7 @@ Bei Virtual Machines, die durch FlexGroup Volumes gesichert werden, werden Datei
 
 VVols Berichte enthalten detaillierte Informationen zu VMware Virtual Volumes (VVols) Datastores und den Virtual Machines, die auf diesen Datastores erstellt werden. Über das VVols Dashboard können Sie potenzielle Probleme mit den VVols Datastores und Virtual Machines in Ihrem vCenter Server prüfen und identifizieren.
 
-Sie können Berichte anzeigen, organisieren und exportieren. Die Daten für die VVols-Datastores und den Bericht Virtual Machines werden vom ONTAP zusammen mit den OnCommand API Services bereitgestellt.
+Sie können Berichte anzeigen, organisieren und exportieren. Der Bericht Daten für VVols Datastores und Virtual Machines wird von ONTAP bereitgestellt.
 
 VVols bietet die folgenden vordefinierten Berichte:
 
@@ -162,3 +163,40 @@ Der Bericht zeigt die Latenz für Virtual Machines über alle VVols Datastores a
 
 
 Jeder Name der virtuellen Maschine im Bericht ist ein Link zur Registerkarte Überwachung der ausgewählten virtuellen Maschine. Sie können den Bericht der virtuellen Maschine gemäß Ihren Anforderungen organisieren und den Bericht in exportieren `.CSV` Formatieren Sie den Bericht und speichern Sie ihn dann auf Ihrem lokalen System. Der Zeitstempel des Berichts wird an den gespeicherten Bericht angehängt.
+
+*Protokoll Integritätsbericht*
+
+Der Protokollintegritätsbericht zeigt den Integritätsstatus der Datei an. Die Protokollintegrität wird in geplanten Intervallen überprüft, und der Bericht wird auf der Registerkarte Integritätsbericht des Protokolls angezeigt. Außerdem wird der Status der verschiedenen Überwachungsdateien angezeigt, die überrollt werden.
+
+Die verfügbaren Protokolldateistatus sind:
+
+* AKTIV: Gibt die aktuelle aktive Datei an, in die die Protokolle geschrieben werden.
+* NORMAL: Zeigt an, dass die Archivdatei nicht manipuliert oder gelöscht wurde.
+* MANIPULIERT: Zeigt an, dass die Datei nach der Archivierung geändert wurde
+* ROLLOVER_DELETE: Zeigt an, dass die Datei im Rahmen der log4j-Aufbewahrungsrichtlinie gelöscht wurde.
+* UNEXPECTED_DELETE: Zeigt an, dass die Datei manuell gelöscht wurde.
+
+
+Die ONTAP-Tools für VMware vSphere erzeugen Audit-Protokollierung für Folgendes:
+
+* VSC Service
++
+Speicherort der Prüfprotokolle für vscservice: _/opt/netapp/vscservice/vsc-Audit.log_. Sie können die folgenden Parameter des Integritätsberichts für Protokolle in der Datei _/opt/netapp/vscserver/etc/log4j2.properties_ ändern:
+
++
+** Max. Protokollgröße für Rollover.
+** Aufbewahrungsrichtlinie, der Standardwert dieses Parameters ist 10 Dateien.
+** Dateigröße, der Standardwert dieses Parameters ist 10 MB, bevor die Dateien archiviert werden. Sie müssen die Dienste neu starten, damit die neuen Werte wirksam werden.
+
+
+* VP-Service
++
+Speicherort des Prüfprotokolls für den VP-Service: _/opt/netapp/vpservice/vp-Audit.log_ die Audit-Protokolle der VP können in der Datei _/opt/netapp/vpserver/conf/log4j2.properties_ geändert werden. Sie müssen die Dienste neu starten, damit die neuen Werte wirksam werden.
+
+* Instandhaltungsbefehle
++
+Speicherort des Revisionsprotokolls für Wartungsdienste: _/opt/netapp/vscservice/maint-Audit.log_ IH-Log-Dateien können in der Datei _/opt/netapp/vscserver/etc/maint_logger.properties_ geändert werden. Wenn Sie die Standardwerte ändern, starten Sie den Server neu, damit die neuen Werte wirksam werden.
+
+
+
+Der Planer kann so eingerichtet werden, dass er die Audit-Protokolle regelmäßig prüft. Der Standardwert für den Scheduler ist ein Tag. Sie können den Wert in der Datei _/opt/netapp/vscserver/etc/maint_logger.properties_ ändern.

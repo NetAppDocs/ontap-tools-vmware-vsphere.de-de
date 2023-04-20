@@ -2,7 +2,7 @@
 permalink: deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords: Virtual Storage Console, Storage Replication Adapter 
-summary: Sie können gemäß den hier angegebenen Anweisungen ein Upgrade auf die neueste Version von ONTAP Tools von Ihrem bestehenden 9.7.1 oder höher durchführen. 
+summary: Sie können ein Upgrade auf die aktuelle Version der ONTAP-Tools von Ihrem bestehenden Setup ab Version 9.10 durchführen. Befolgen Sie dazu die hier angegebenen Anweisungen. 
 ---
 = Upgraden auf die aktuelle Version von ONTAP-Tools
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Sie können gemäß den hier angegebenen Anweisungen ein Upgrade auf di
 
 
 [role="lead"]
-Sie können gemäß den hier angegebenen Anweisungen ein Upgrade auf die aktuelle Version von ONTAP Tools von Ihrem 9.7P1 oder einer neueren Version durchführen.
+Sie können ein Upgrade auf die aktuelle Version der ONTAP Tools von Ihrer vorhandenen Version 9.10 oder höher durchführen. Befolgen Sie dazu die hier angegebenen Anweisungen.
 
 *Was Sie brauchen*
 
@@ -23,10 +23,37 @@ link:../deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html["L
 
 
 
+Führen Sie die folgenden Schritte aus, um die _.iso_-Datei zu validieren, falls erforderlich. Dies ist ein optionaler Schritt:
+
+. Extrahieren Sie den öffentlichen Schlüssel aus dem Code-Signaturzertifikat, das Sie von Entrust erhalten haben (OTV_ISO_CERT.pem) openssl x509 -in OTV_ISO_CERT.pem -pubkey -noout > csc-prod-OTV-SRA-TGZ.Pub
+. Überprüfen Sie die Signatur im Digest mit dem öffentlichen Schlüssel (dieser Schritt sollte im Endbenutzersystem vor der Installation der Binärdatei erfolgen. Zertifikatspaket sollte im Bereitstellungspaket enthalten sein.)
++
+openssl dgst -sha256 -verify csc-prod-OTV-SRA-TGZ.Pub -Signature netapp-ontap-Tools-for-vmware-vsphere-9.12-9327-Upgrade-iso.SIG netapp-ontap-tools-for-vmware-vsphere-9.12-9327-upgrade.iso
+
+
+
 Nach dem Upgrade bleibt der Status von VASA Provider aus der vorhandenen Implementierung erhalten. Sie sollten VASA Provider anhand der Anforderungen nach dem Upgrade manuell aktivieren oder deaktivieren. VASA Provider sollte jedoch auch dann aktiviert werden, wenn nicht VMware Virtual Volumes (VVols) verwendet werden sollen, da damit Storage-Funktionsprofile für die herkömmliche Datastore-Bereitstellung und Storage-Alarme aktiviert werden können.
 
 
-NOTE: Sie können ein Upgrade auf die aktuelle Version von ONTAP Tools ohne bestehende Version 9.7P1 oder höhere Version durchführen. Wenn Sie auf Version 9.7.1 von ONTAP-Tools aktualisieren und die VVols Replizierung verwenden möchten, müssen Sie einen weiteren vCenter Server mit installierten ONTAP-Tools (Site Recovery Manager, SRM) einrichten.
+NOTE: Sie können ein Upgrade auf die neueste Version der ONTAP Tools nur von Ihren bestehenden Versionen 9.10 oder höher durchführen.
+
+
+NOTE: Als Teil der ONTAP Tools 9.12 wird die Authentifizierung und der Kommunikationsprozess des Storage-Systems von der grundlegenden Authentifizierung in die zertifikatbasierte Authentifizierung geändert, indem automatisch die ONTAP Storage-Zertifikate anvertrauen. Vom Benutzer ist keine Aktion erforderlich.
+
+Das Hinzufügen eines Speichersystems ohne Zertifikatauthentifizierung ist eingeschränkt.
+
+Wenn das Storage-System mit einem benutzerdefinierten erstellten Cluster-Scoped-Benutzer mithilfe der json-Datei hinzugefügt wird und Sie ein Upgrade auf 9.12 durchführen möchten, führen Sie vor dem Upgrade die folgenden Befehle auf der ONTAP-CLI aus, um die zertifikatbasierte Kommunikation zwischen den ONTAP-Tools für VMware vSphere und ONTAP zu aktivieren:
+
+. _Security Login role create -role <role-name> -cmddirname „Security Login show“ -Access all_
+. _Security Login role create -role <role-name> -cmddirname „Security Certificate show“ -Access all_
+. _Security Login role create -role <role-name> -cmddirname „Security Certificate install“ -Access all_
+
+
+Wenn das Storage-System mit vom Kunden erstellten SVM-Scoped-Benutzern unter Verwendung der json-Datei hinzugefügt wird und Sie ein Upgrade auf 9.12 durchführen möchten, Führen Sie dann die folgenden Befehle auf der ONTAP-CLI mit Cluster-Administratorzugriff vor dem Upgrade aus, um die zertifikatbasierte Kommunikation zwischen ONTAP Tools für VMware vSphere und ONTAP zu aktivieren:
+
+. _Security Login role create -role <role-name> -cmddirname „Security Certificate install“ -Access all -vserver <vserver-name>_
+. _Security Login role create -role <role-name> -cmddirname „Security Certificate show“ -Access all -vserver <vserver-name>_
+
 
 *Schritte*
 
@@ -72,7 +99,7 @@ Es kann ein paar Minuten dauern, bis das Plug-in im vSphere Client aktualisiert 
 +
 Der Standardwert der Eigenschaft ist 85 %.
 
-* Nach einem Upgrade auf die aktuelle OTV(9.10)-Version, die FIPS-aktiviert hat, aber eine ältere Version von vCenter, in der FIPS nicht unterstützt wird, funktioniert die Bereitstellung weiterhin. Wenn Sie jedoch ein Upgrade Ihres vCenter auf die neueste von FIPS unterstützte Version durchführen und zudem eine frühere Version von ONTAP Tools verwenden, funktioniert die Implementierung nur dann, wenn FIPS im vCenter deaktiviert ist.
+* Nachdem Sie ein Upgrade auf die neueste Version der ONTAP-Tools mit FIPS-Aktivierung durchgeführt haben, jedoch eine ältere Version von vCenter verwenden, für die FIPS nicht unterstützt wird, funktioniert die Implementierung weiterhin. Wenn Sie jedoch ein Upgrade Ihres vCenter auf die neueste von FIPS unterstützte Version durchführen und zudem eine frühere Version von ONTAP Tools verwenden, funktioniert die Implementierung nur dann, wenn FIPS im vCenter deaktiviert ist.
 
 
 ====

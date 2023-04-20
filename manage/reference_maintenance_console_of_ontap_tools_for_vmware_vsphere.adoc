@@ -13,10 +13,10 @@ summary: Sie können Ihre Applikations-, System- und Netzwerkkonfigurationen mit
 [role="lead"]
 Sie können Ihre Applikations-, System- und Netzwerkkonfigurationen mithilfe der Wartungskonsole der ONTAP Tools managen. Sie können Ihr Administratorkennwort und Ihr Wartungskennwort ändern. Außerdem können Sie Supportpakete generieren, verschiedene Protokollebenen festlegen, TLS-Konfigurationen anzeigen und verwalten und die Remote-Diagnose starten.
 
-Sie müssen VMware-Tools installiert haben, nachdem Sie ONTAP-Tools implementiert haben, um auf die Wartungskonsole zuzugreifen. Sie sollten „`maint`“ als Benutzernamen und das Passwort verwenden, das Sie während der Bereitstellung konfiguriert haben, um sich an der Wartungskonsole der ONTAP-Tools anzumelden.
+Sie müssen VMware-Tools installiert haben, nachdem Sie ONTAP-Tools implementiert haben, um auf die Wartungskonsole zuzugreifen. Sie sollten verwenden `maint` Als Benutzername und Passwort, das Sie bei der Bereitstellung für die Anmeldung bei der Wartungskonsole der ONTAP Tools konfiguriert haben. Sie sollten *nano* zum Bearbeiten der Dateien in maint oder root Login Console verwenden.
 
 
-NOTE: Sie müssen ein Passwort für den Benutzer „`diag`“ festlegen, während Sie die Ferndiagnose aktivieren.
+NOTE: Sie müssen ein Kennwort für das festlegen `diag` Benutzer, während die Ferndiagnose aktiviert wird.
 
 Sie können über die Registerkarte *Zusammenfassung* der bereitgestellten ONTAP-Tools auf die Wartungskonsole zugreifen. Wenn Sie auf klicken image:../media/launch_maintenance_console.gif[""], Die Wartungskonsole wird gestartet.
 
@@ -36,11 +36,16 @@ Anwendungskonfiguration
 . Beenden Sie den VASA Provider und den SRA Service
 . Ändern Sie das Benutzerpasswort „Administrator“
 . Zertifikate erneut generieren
-. Hard Reset Key Store und Zertifikate
 . Hard Reset-Datenbank
 . ÄNDERN SIE DAS PROTOKOLL-Level für den Virtual Storage Console-Service
 . Ändern Sie DIE PROTOKOLLEBENE für den VASA Provider und den SRA Service
 . Anzeigen der TLS-Konfiguration
+. Erstellen Sie ein Token für die Web-CLI-Authentifizierung
+. Starten Sie den ONTAP Tools Plug-in Service
+. Stoppen Sie den Plug-in-Service für ONTAP Tools
+. Starten Sie die Protokollintegritätsservices
+. Beenden Sie die Protokollintegritätsdienste
+. Ändern Sie das Datenbankpasswort
 
 
 

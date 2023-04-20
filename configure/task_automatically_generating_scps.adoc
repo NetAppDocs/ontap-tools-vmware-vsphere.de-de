@@ -25,7 +25,7 @@ Nachdem Sie ein Storage-Funktionsprofil erstellt haben, können Sie das Profil m
 
 *Schritte*
 
-. Klicken Sie auf der Startseite der ONTAP Tools auf *Speicherzuordnung*.
+. Klicken Sie auf der Homepage der NetApp ONTAP-Tools auf *Storage Mapping*.
 . Wählen Sie den Datenspeicher aus der Liste verfügbar aus.
 . Wählen Sie im Menü Aktionen die Option *automatisch generieren* aus.
 . Wenn der Vorgang zum automatischen Generieren abgeschlossen ist, aktualisieren Sie den Bildschirm, um Informationen zum neuen Profil anzuzeigen.

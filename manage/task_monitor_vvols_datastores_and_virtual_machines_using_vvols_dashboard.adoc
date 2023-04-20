@@ -15,38 +15,22 @@ Sie können die Performance überwachen und die fünf wichtigsten SAN- und NAS-D
 
 *Was Sie brauchen*
 
-* Sie sollten OnCommand API Services 2.1 oder höher aktiviert haben, wenn Sie ONTAP 9.6 oder älter verwenden.
-+
-Sie müssen OnCommand API Services beim VASA Provider nicht registrieren, um Details zum SAN VVols Datastore oder SAN VVols VM Datastore-Bericht für ONTAP 9.7 oder höher zu erhalten.
-
-+
-https://mysupport.netapp.com/site/global/dashboard[]
-
-* Sie sollten ONTAP 9.3 oder höher für Ihr Storage-System verwenden.
+* Sie sollten ONTAP 9.7 oder höher für Ihr Storage-System verwenden.
 
 
 Die IOPS-Daten von ONTAP werden abgerundet und auf dem VVols Dashboard angezeigt. Es kann zwischen dem tatsächlichen IOPS-Wert, der von ONTAP bereitgestellt wird, und dem IOPS-Wert im VVols Dashboard Unterschiede geben. ONTAP Tools ermöglichen Performance-Monitoring für NFS-basierte VVols-Datastores.
 
-
-NOTE: Wenn Sie OnCommand API Services zum ersten Mal registrieren, können Sie alle Performance-Metriken für SAN VVols Datastores auf dem VVols Dashboard nur nach 15 bis 30 Minuten anzeigen.
-
 * Die VVols Dashboard-Daten werden regelmäßig in einem Intervall von 10 Minuten aktualisiert.
 * Wenn Sie ein Storage-System über Ihre vCenter Server Instanz hinzugefügt, geändert oder gelöscht haben, werden diese möglicherweise bereits seit einiger Zeit nicht mehr geändert.
-+
-Dies liegt daran, dass OnCommand API Services Zeit benötigt, um aktualisierte Metriken von ONTAP zu erhalten.
-
 * Der im Portlet „Übersicht“ des VVols Dashboards angezeigte Wert für IOPS-Gesamtkosten ist kein kumulativer Wert des Werts für Lese-IOPS und Schreib-IOPS.
-+
-Lese-IOPS, Schreib-IOPS und IOPS insgesamt sind separate Metriken, die von OnCommand API Services bereitgestellt werden. Wenn der IOPS-Wert insgesamt und der durch die OnCommand API Services bereitgestellte kumulative IOPS-Wert (IOPS-Wert für Lesen + IOPS-Schreiben-Wert) sich unterscheiden, wird dieselbe Differenz in den IOPS-Werten auf dem VVols Dashboard beobachtet.
-
 * NFS-basierte Daten, die auf ONTAP 9.8 und höher bereitgestellt werden, werden automatisch für das Performance-Monitoring im VVols Dashboard registriert.
 
 
 *Schritte*
 
 . Klicken Sie auf der Startseite des vSphere Clients auf *ONTAP Tools*.
-. Wählen Sie den gewünschten vCenter Server aus, indem Sie das Dropdown-Menü *vCenter Server* verwenden, um die Datenspeicher anzuzeigen.
-. Klicken Sie auf *VVols Dashboard*.
+. Wählen Sie den erforderlichen vCenter-Server mit dem Selektor *INSTANCE* aus, um die Datastores anzuzeigen.
+. Klicken Sie auf *Übersicht > VVols-Dashboard*.
 +
 Das Portlet „Datastores“ enthält folgende Details:
 
@@ -75,32 +59,13 @@ Sie müssen einige wichtige Anforderungen des VVols Dashboards überprüfen, um 
 Die folgende Tabelle gibt einen Überblick darüber, was Sie überprüfen sollten, ob das VVols Dashboard nicht die Performance-Metriken für die bereitgestellten SAN VVols Datastores und Virtual Machines anzeigt.
 
 |===
-
-
 | *Überlegungen* | *Beschreibung* 
-
-
- a| 
-Erstmalige Implementierung von OnCommand API Services
- a| 
-* Wenn Sie ONTAP Cluster 9.6 oder früher haben, dann verwenden Sie OnCommand API Services 2.1 oder höher.
-+
-Sie müssen bei VASA Provider keine Registrierung von OnCommand API Services durchführen, wenn Sie ONTAP 9.7 oder höher verwenden.
-
-* Nach dem Herunterladen und Installieren der OnCommand API Services von der NetApp Support-Website müssen Sie die Installationsanweisungen befolgen, die Sie im Installations- und Setup-Leitfaden „ _OnCommand API Services Installation and Setup_“ erhalten haben.
-* Jede VASA Provider-Instanz muss über eine dedizierte OnCommand API Services Instanz verfügen.
-+
-OnCommand API Services dürfen nicht zwischen mehreren VASA Provider-Instanzen oder vCenter Servern gemeinsam genutzt werden.
-
-* OnCommand API Services wird ausgeführt und ist zugänglich.
-
-
 
 
  a| 
 Storage-System
  a| 
-* Sie verwenden ONTAP 9.3 oder höher.
+* Sie verwenden ONTAP 9.7 oder höher.
 * Sie verwenden die entsprechenden Anmeldedaten für das Speichersystem.
 * Das Storage-System ist aktiv und kann aufgerufen werden.
 * Die ausgewählte virtuelle Maschine muss mindestens einen VVols-Datastore verwenden, und I/O-Vorgänge werden auf der Festplatte der virtuellen Maschine ausgeführt.

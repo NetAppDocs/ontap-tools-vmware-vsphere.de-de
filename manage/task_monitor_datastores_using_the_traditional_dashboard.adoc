@@ -29,8 +29,8 @@ Die herkömmliche Konsole der ONTAP-Tools ermöglicht die Anzeige von NFS-Datens
 *Schritte*
 
 . Klicken Sie auf der Startseite des vSphere Clients auf *ONTAP Tools für VMware vSphere*.
-. Wählen Sie den erforderlichen vCenter Server aus, indem Sie das vCenter Server-Dropdown-Menü verwenden, um die Datenspeicher anzuzeigen.
-. Klicken Sie Auf *Traditionelles Dashboard*.
+. Wählen Sie den erforderlichen vCenter-Server mit dem Selektor *INSTANCE* aus, um die Datastores anzuzeigen.
+. Klicken Sie Auf *Übersicht > Traditional Dashboard*.
 +
 Das Portlet „Datastores“ enthält folgende Details:
 

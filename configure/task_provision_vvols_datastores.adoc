@@ -54,21 +54,21 @@ NOTE: Die Version 9.10 von ONTAP Tools unterstützt das Erstellen von VVols-Data
  a| 
 Alle Hosts in einem Datacenter
  a| 
-Klicken Sie mit der rechten Maustaste auf ein Datacenter und wählen Sie dann *NetApp VSC* > *Provisionieren Sie Datastore* aus.
+Klicken Sie mit der rechten Maustaste auf ein Datacenter und wählen Sie dann *NetApp ONTAP-Tools* > *Datastore bereitstellen* aus.
 
 
 
  a| 
 Alle Hosts in einem Cluster
  a| 
-Klicken Sie mit der rechten Maustaste auf einen Cluster und wählen Sie dann *NetApp VSC* > *Provision Datastore* aus.
+Klicken Sie mit der rechten Maustaste auf einen Cluster und wählen Sie dann *NetApp ONTAP Tools* > *Datenspeicher bereitstellen* aus.
 
 
 
  a| 
 Einem einzelnen Host aus
  a| 
-Klicken Sie mit der rechten Maustaste auf einen Host und wählen Sie dann *NetApp VSC* > *Provisionieren Sie Datastore* aus.
+Klicken Sie mit der rechten Maustaste auf einen Host, und wählen Sie dann *NetApp ONTAP Tools* > *Datenspeicher bereitstellen* aus.
 
 |===
 . Füllen Sie die Felder im Dialogfeld Neuer Datenspeicher aus, um den Datenspeicher zu erstellen.
@@ -86,6 +86,11 @@ Die meisten Felder im Dialogfeld sind selbsterklärend. In der folgenden Tabelle
 Allgemein
  a| 
 Im Abschnitt „Allgemein“ des Dialogfelds „Neuer Datenspeicher“ können Sie den Speicherort, den Namen, die Beschreibung, den Typ und das Protokoll für den neuen Datenspeicher eingeben. Der VVols-Datastore-Typ wird zur Konfiguration eines VVols-Datastores verwendet.
+
+Sie können den VVols Datastore bereitstellen, wenn die VASA Provider-Funktion aktiviert ist. Siehe, link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html["Aktivieren Sie VASA Provider zur Konfiguration von virtuellen Datastores"] Entsprechende Details. Der VVols Datastore unterstützt NFS-, iSCSI-, FC/FEoE- und NVMe/FC-Protokolle.
+
+
+NOTE: Das NVMe/FC-Protokoll für VVols Datastore ist verfügbar, wenn ONTAP Tools für vCenter 8.0 und höher registriert sind und wenn die ONTAP-Version ONTAP 9.91P3 oder höher lautet.
 
 
 NOTE: Wenn Sie iSCSI VVols-Datastore für die VVols-Replizierung bereitstellen, müssen Sie vor der Erstellung des VVols-Datastores am Zielstandort SnapMirror Update und Cluster-Neuerkennung durchführen.
@@ -115,7 +120,7 @@ Sie sollten den Zeitplan für SnapMirror und das erforderliche FlexVol Volume au
 
 
 |===
-. Klicken Sie im Abschnitt Zusammenfassung auf **Fertig stellen**.
+. Klicken Sie im Abschnitt Zusammenfassung auf *Fertig stellen*.
 
 
 *Ergebnis*

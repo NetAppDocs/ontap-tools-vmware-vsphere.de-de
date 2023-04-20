@@ -19,22 +19,7 @@ VASA Provider kann nur auf Cluster-Ebene auf Storage-Systeme zugreifen. Wenn VAS
 
 Um einen neuen Benutzer zu erstellen und ein Cluster oder eine SVM mit ONTAP-Tools zu verbinden, sollten Sie Folgendes durchführen:
 
-* Cluster-Administrator oder SVM-Administratorrolle erstellen
-+
-
-NOTE: Sie können eine der folgenden Funktionen verwenden, um diese Rollen zu erstellen:
-
-+
-** ONTAP System Manager 9.8P1 oder höher
-+
-link:../configure/task_configure_user_role_and_privileges.html["Konfigurieren von Benutzerrollen und -Berechtigungen"]
-
-** RBAC Benutzer Creator für ONTAP Tool (bei Verwendung von ONTAP 9.6 oder früher)
-+
-https://community.netapp.com/t5/Virtualization-Articles-and-Resources/RBAC-User-Creator-tool-for-VSC-VASA-Provider-and-Storage-Replication-Adapter-7-0/ta-p/133203/t5/Virtualization-Articles-and-Resources/How-to-use-the-RBAC-User-Creator-for-Data-ONTAP/ta-p/86601["RBAC Benutzer Creator Tool für VSC, VASA Provider und Storage Replication Adapter 7.0 für VMware vSphere"]
-
-
-
+* Erstellen Sie einen Cluster-Administrator oder eine SVM-Administratorrolle mit ONTAP System Manager 9.8P1 oder höher. Siehe link:../configure/task_configure_user_role_and_privileges.html["Konfigurieren von Benutzerrollen und -Berechtigungen"] Finden Sie weitere Informationen.
 * Erstellen Sie Benutzer mit der zugewiesenen Rolle und dem entsprechenden Anwendungssatz mithilfe von ONTAP
 +
 Sie benötigen diese Storage-System-Anmeldedaten, um die Storage-Systeme für VSC zu konfigurieren. Sie können Storage-Systeme für VSC konfigurieren, indem Sie die Anmeldedaten in der VSC eingeben. Jedes Mal, wenn Sie sich mit diesen Anmeldedaten in einem Storage-System anmelden, erhalten Sie Berechtigungen für die VSC Funktionen, die Sie bei der Erstellung der Anmeldedaten in ONTAP eingerichtet hatten.

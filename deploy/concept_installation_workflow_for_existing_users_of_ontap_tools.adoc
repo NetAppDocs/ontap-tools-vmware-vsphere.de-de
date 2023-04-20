@@ -36,19 +36,17 @@ link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["Upgr
 
 * Bei Verwendung von SRA 2.1 oder 3.0 sollten Sie zunächst die vorhandenen Standortkonfigurationsdetails beachten.
 +
-_Installations- und Setup-Leitfaden für Storage Replication Adapter 4.0 für ONTAP_ enthält die detaillierten Anweisungen im Abschnitt „Upgrade-Übersicht“. Diese SRA Versionen nutzen auch den VASA Provider. Das Registrieren von VASA Provider muss also aufgehoben und die aktuelle Version der ONTAP Tools implementiert werden. Die vorherige Version des Servers (`.ova`) Kann entfernt werden, wenn die Aktualisierung abgeschlossen ist.
+Storage Replication Adapter (SRA) 4.0 für ONTAP Versionen verwenden ebenfalls VASA Provider. Sie müssen daher die Registrierung von VASA Provider aufheben und anschließend die neueste Version der ONTAP Tools implementieren. Die vorherige Version des Servers (`.ova`) Kann entfernt werden, wenn die Aktualisierung abgeschlossen ist.
 
 
-
-Bei jedem SRA-Upgrade die SRA-Software (der Adapter auf dem Site Recovery Manager-Server, installiert vom `.msi` Datei) sollte vom Site Recovery Manager-Server entfernt werden. Sie können die Windows-Systemsteuerung verwenden, um die Software zu deinstallieren und dann die neueste SRA-Software auf dem SRA-Server mithilfe der zu installieren `.msi` Datei:
 
 Bei der VASA Provider Implementierung müssen Sie nach dem Upgrade aus der bestehenden Einrichtung die Speichergröße für Ihre ONTAP Tools unter Verwendung der 12 GB konfigurieren `Edit Settings` Option. Sie müssen auch die virtuelle Speicherreservierung ändern. Die virtuelle Maschine muss ausgeschaltet sein, um die Speichergröße zu ändern.
 
 Wenn Sie 7.2 oder 7.2.1 Versionen der virtuellen Appliance für VSC, VASA Provider und SRA haben, können Sie kein direktes Upgrade auf 9.7P1 oder eine neuere Version der Unified Appliance durchführen. Sie müssen zuerst Ihr vorhandenes Setup auf Version 9.7 der virtuellen Appliance aktualisieren und dann auf die neueste Version aktualisieren.
 
-Führen Sie zum Upgrade von ONTAP Tools 9.10 und höheren Versionen die virtuelle Appliance 9.7P1 oder höher aus. Ein Upgrade von einer früheren Version vor 9.7P1 der virtuellen Appliance wird nicht unterstützt.
+Um ein Upgrade auf ONTAP Tools 9.10 und höher durchzuführen, sollten Sie die Virtual Appliance 9.7P1 oder höher verwenden. Ein Upgrade von einer früheren Version vor 9.7P1 der virtuellen Appliance wird nicht unterstützt.
 
-Wenn Sie die neueste Version von ONTAP Tools implementieren, müssen Sie das Thema sehen `Requirements for deploying the ONTAP tools.` Das Thema `Upgrading to the latest release of ONTAP tools` Verfügt über Informationen zur Durchführung eines vorhandenen Upgrades.
+Wenn Sie die neueste Version von ONTAP Tools implementieren, müssen Sie das Thema sehen link:..deploy/concept_requirements_for_deploying_ontap_tools_for_vmware_vsphere.html["Anforderungen für die Implementierung der ONTAP Tools"]. Das Thema link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["Upgraden auf die aktuelle Version von ONTAP-Tools"] Verfügt über Informationen zur Durchführung eines vorhandenen Upgrades.
 
 *Verwandte Informationen*
 

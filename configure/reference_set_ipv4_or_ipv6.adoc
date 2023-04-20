@@ -19,7 +19,7 @@ Die VSC enthält verschiedene Voreinstellungsdateien. Diese Dateien enthalten Ei
 
 `/opt/netapp/vscserver/etc/vsc/vscPreferences.xml`
 
-Möglicherweise müssen Sie die Voreinpräferenzen-Dateien in bestimmten Situationen ändern. Wenn Sie beispielsweise iSCSI oder NFS verwenden und das Subnetz zwischen Ihren ESXi Hosts und Ihrem Speichersystem unterschiedlich ist, müssen Sie die Voreinstellungen ändern. Falls Sie die Einstellungen in der Voreinstellungsdatei nicht ändern, schlägt die Datastore-Bereitstellung fehl, da VSC den Datastore nicht mounten kann.
+Möglicherweise müssen Sie die Voreinpräferenzen-Dateien in bestimmten Situationen ändern. Wenn Sie beispielsweise iSCSI oder NFS verwenden und das Subnetz zwischen Ihren ESXi-Hosts und Ihrem Speichersystem nicht übereinstimmt, müssen Sie die Einstellungsdateien ändern. Falls Sie die Einstellungen in der Voreinstellungsdatei nicht ändern, schlägt die Datastore-Bereitstellung fehl, da VSC den Datastore nicht mounten kann.
 
 Der Vorzugsdatei wurde eine neue Option hinzugefügt `kaminoprefs.xml` Die Sie einstellen können, dass IPv4 oder IPv6 für alle Storage-Systeme, die der VSC hinzugefügt werden, aktiviert werden.
 

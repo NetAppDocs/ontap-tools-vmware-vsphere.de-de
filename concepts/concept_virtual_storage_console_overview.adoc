@@ -2,7 +2,7 @@
 permalink: concepts/concept_virtual_storage_console_overview.html 
 sidebar: sidebar 
 keywords:  
-summary: Die ONTAP Tools für VMware vSphere ermöglichen ein lückenloses Lifecycle Management für Virtual Machines in VMware Umgebungen, die NetApp Storage-Systeme verwenden. Es vereinfacht das Storage- und Datenmanagement für VMware Umgebungen, da Administratoren Storage direkt innerhalb des vCenter Server managen können. 
+summary: Die ONTAP Tools für VMware vSphere ermöglichen ein lückenloses Lifecycle Management für Virtual Machines in VMware Umgebungen, die NetApp Storage-Systeme verwenden. So können Administratoren den Storage direkt innerhalb von vCenter Server managen und vereinfachen somit das Storage- und Datenmanagement für VMware Umgebungen. 
 ---
 = ONTAP-Tools im Überblick
 :allow-uri-read: 
@@ -11,11 +11,13 @@ summary: Die ONTAP Tools für VMware vSphere ermöglichen ein lückenloses Lifec
 
 
 [role="lead"]
-Die ONTAP Tools für VMware vSphere ermöglichen ein lückenloses Lifecycle Management für Virtual Machines in VMware Umgebungen, die NetApp Storage-Systeme verwenden. Es vereinfacht das Storage- und Datenmanagement für VMware Umgebungen, da Administratoren Storage direkt innerhalb des vCenter Server managen können.
+Die ONTAP Tools für VMware vSphere ermöglichen ein lückenloses Lifecycle Management für Virtual Machines in VMware Umgebungen, die NetApp Storage-Systeme verwenden. So können Administratoren den Storage direkt innerhalb von vCenter Server managen und vereinfachen somit das Storage- und Datenmanagement für VMware Umgebungen.
 
-Mit vSphere 6.5 hat VMware einen neuen HTML5-basierten Client namens vSphere Client eingeführt. Die 9.6 und höher Versionen von ONTAP-Tools unterstützen nur vSphere Client. Die ONTAP Tools lassen sich in vSphere Client integrieren und ermöglichen die Verwendung von SSO-Services (Single Sign On). In einer Umgebung mit mehreren vCenter Serverinstanzen muss jede vCenter Server-Instanz, die Sie managen möchten, eine eigene, registrierte VSC-Instanz aufweisen.
+Die ONTAP Tools lassen sich in vSphere Client integrieren und ermöglichen die Verwendung von SSO-Services (Single Sign On). In einer Umgebung mit mehreren vCenter Server-Instanzen muss jede vCenter Server-Instanz, die Sie managen möchten, über eine eigene registrierte Instanz von ONTAP-Tools verfügen.
 
 Jede Komponente der ONTAP Tools verfügt über Funktionen zur effizienteren Verwaltung Ihres Storage.
+
+Das Remote-Plug-in-Tool für VMware vSphere Client wurde entwickelt, um Plug-in-Funktionen in den vSphere Client zu integrieren, ohne dass es in vCenter Server ausgeführt werden muss. Dies sorgt für eine Isolierung von Plug-ins und ermöglicht die horizontale Skalierung von Plug-ins in großen vSphere Umgebungen.
 
 
 
@@ -57,11 +59,6 @@ VASA Provider für ONTAP sendet Informationen über den von VMware vSphere APIs 
 * Legen Sie Alarme fest, um zu warnen, wenn Volumes und Aggregate sich den Schwellenwerten nähern
 * Überwachen Sie die Performance von Virtual Machine Disks (VMDKs) und den Virtual Machines, die auf VVols Datastores erstellt werden
 
-
-Wenn Sie ONTAP 9.6 oder früher verwenden, kommuniziert VASA Provider über VASA APIs mit dem vCenter Server und kommuniziert über die NetApp APIs, Zapis, mit ONTAP. Um das VVols Dashboard für ONTAP 9.6 und eine frühere Version anzuzeigen, müssen Sie OnCommand API Services zusammen mit Ihrem vCenter Server installiert und registriert haben. Wenn Sie ONTAP 9.7 und höhere Versionen verwenden, müssen Sie zum Anzeigen des VVols Dashboards keine OnCommand API Services bei VASA Provider registrieren.
-
-
-NOTE: Für ONTAP 9.6 oder früher benötigt VASA Provider eine dedizierte Instanz von OnCommand API Services. Eine Instanz der OnCommand API Services kann nicht mit mehreren VASA-Provider-Instanzen gemeinsam genutzt werden.
 
 
 

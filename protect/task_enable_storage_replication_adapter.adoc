@@ -17,7 +17,7 @@ Die ONTAP Tools für VMware vSphere bieten die Möglichkeit, die SRA-Funktionen 
 
 * Sie müssen Ihre vCenter Server-Instanz eingerichtet und ESXi konfiguriert haben.
 * Sie müssen ONTAP Tools implementiert haben.
-* Sie müssen das heruntergeladen haben `.msi` Datei für das SRA Plug-in oder das `.tar.gz` Datei für die SRM-Appliance nur dann, wenn Sie die Disaster-Recovery-Lösung von Site Recovery Manager (SRM) konfigurieren möchten.
+* Sie müssen das heruntergeladen haben `.tar.gz` Datei für die SRM-Appliance nur dann, wenn Sie die Disaster-Recovery-Lösung von Site Recovery Manager (SRM) konfigurieren möchten.
 +
 https://docs.vmware.com/en/Site-Recovery-Manager/8.2/com.vmware.srm.install_config.doc/GUID-B3A49FFF-E3B9-45E3-AD35-093D896596A0.html["Site Recovery Manager Installation und Konfiguration Site Recovery Manager 8.2"] Bietet weitere Informationen.
 
@@ -30,38 +30,25 @@ Dank der Flexibilität, VASA Provider und SRA Funktionen zu aktivieren, können 
 *Schritte*
 
 . Melden Sie sich bei der Web-Benutzeroberfläche von VMware vSphere an.
-. Klicken Sie im vSphere-Client auf *Menü* > *ONTAP-Tools-Konsole*.
+. Klicken Sie im vSphere Client auf *Menü* > *NetApp ONTAP Tools* Konsole.
 . Klicken Sie Auf *Einstellungen*.
 . Klicken Sie auf der Registerkarte *Administrative Einstellungen* auf *Funktionen verwalten*.
 . Wählen Sie im Dialogfeld *Funktionen verwalten* die SRA-Erweiterung aus, die aktiviert werden soll.
 . Geben Sie die IP-Adresse der ONTAP-Tools und das Administratorpasswort ein, und klicken Sie dann auf *Apply*.
 . Nutzen Sie für die Implementierung von SRA eine der folgenden Methoden:
 +
-|===
+* Für SRM-Gerät*
 
-
- a| 
-* Für Windows SRM*
-| * Für SRM-Gerät* 
-
-
- a| 
-.. Doppelklicken Sie auf das heruntergeladene `.msi` Installationsprogramm für das SRA-Plug-in.
-.. Befolgen Sie die Anweisungen auf dem Bildschirm.
-.. Geben Sie die IP-Adresse und das Passwort der implementierten ONTAP Tools ein.
-
- a| 
++
 .. Rufen Sie die SRM-Appliance-Seite auf und wechseln Sie zur Seite Storage Replication Adapter der SRM-Appliance.
 .. Klicken Sie Auf *Neuer Adapter*.
 .. Laden Sie das Installationsprogramm für _.tar.gz_ für das SRA-Plug-in auf SRM hoch.
 .. Überprüfen Sie die Adapter erneut, ob die Details auf der Seite SRM Storage Replication Adapter aktualisiert werden.
 
 
-|===
-+
+
+
 Sie müssen sich vom vSphere Client abmelden und dann erneut anmelden, um zu überprüfen, ob die ausgewählte Erweiterung für die Konfiguration verfügbar ist.
-
-
 
 *Verwandte Informationen*
 

@@ -26,8 +26,6 @@ Erstmalige Implementierung von ONTAP-Tools
  a| 
 Durch die Implementierung der ONTAP Tools werden die VSC Funktionen automatisch installiert.
 
-link:../deploy/concept_deploy_or_upgrade_ontap_tools.html["Implementierung und Upgrade von ONTAP Tools"]
-
 link:../deploy/concept_installation_workflow_for_new_users.html["Implementierungs-Workflow für neue Benutzer von ONTAP Tools für VMware vSphere"]
 
 
@@ -107,7 +105,7 @@ Wenn ein Benutzer versucht, eine Aufgabe ohne die entsprechenden Berechtigungen 
  a| 
 ONTAP-Version
  a| 
-Ihre Storage-Systeme müssen mit ONTAP 9.3, 9.5, 9.6, 9.7, 9.8P1 oder höher ausgeführt werden.
+Auf Ihren Storage-Systemen muss ONTAP 9.7, 9.8P1 oder höher ausgeführt werden.
 
 
 
@@ -125,9 +123,9 @@ Sie müssen bei der Anpassung der ONTAP Tools an die Implementierung nur wenige 
 
 
 
-=== Benutzerpasswort für den Appliance-Administrator
+=== Benutzerkennwort der Anwendung
 
-Sie dürfen keine Leerzeichen im Administratorpasswort verwenden.
+Dies ist das dem Administratorkonto zugewiesene Kennwort. Aus Sicherheitsgründen wird empfohlen, dass das Passwort acht bis dreißig Zeichen lang ist und mindestens ein oberes, ein unteres, eine Ziffer und ein Sonderzeichen enthält. Passwort läuft nach 90 Tagen ab.
 
 
 
@@ -142,6 +140,12 @@ Sie müssen über den Benutzernamen „`maint`“ auf die Wartungskonsole zugrei
 Sie können die Administratoranmeldeinformationen für den vCenter Server festlegen, während Sie ONTAP-Tools bereitstellen.
 
 Wenn sich das Kennwort für den vCenter Server ändert, können Sie das Kennwort für den Administrator mithilfe der folgenden URL aktualisieren: ``\https://<IP>:8143/Register.html` Wobei die IP-Adresse aus ONTAP Tools besteht, die Sie während der Implementierung bereitstellen.
+
+
+
+=== Derby-Datenbankkennwort
+
+Aus Sicherheitsgründen wird empfohlen, dass das Passwort acht bis dreißig Zeichen lang ist und mindestens ein oberes, ein unteres, eine Ziffer und ein Sonderzeichen enthält. Passwort läuft nach 90 Tagen ab.
 
 
 

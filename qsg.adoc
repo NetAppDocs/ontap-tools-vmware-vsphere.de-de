@@ -80,7 +80,7 @@ Minimale Storage- und Applikationsanforderungen:
 | *Speicher, Host und Anwendungen* | *Versionsvoraussetzungen* 
 
 
-| ONTAP | ONTAP 9.3, 9.5, 9.6, 9.7, 9.8P1 oder höher. 
+| ONTAP | ONTAP 9.7, 9.8P1 oder höher 
 
 
 | VMware vSphere, vCenter Server, ESXi Hosts, Site Recovery Manager (SRM), Plug-in-Applikationen und Datenbanken, Spalte 1 | Siehe https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^] 
@@ -95,51 +95,67 @@ Minimale Storage- und Applikationsanforderungen:
 * Löschen Sie den Browser-Cache, um Probleme mit dem Browser-Cache während der Bereitstellung der ONTAP-Tools zu vermeiden.
 * Konfigurieren Sie das Standard-Gateway, das von der virtuellen Appliance verwendet werden soll, um auf ICMP-Pings zu reagieren.
 * Ein gültiger DNS-Hostname für die virtuelle Appliance.
-* Wenn das VVols Dashboard angezeigt werden soll, können Sie die OnCommand API Services für ONTAP 9.6 oder eine frühere Version herunterladen und installieren. Sie müssen OnCommand API Services nicht beim VASA Provider registrieren, wenn Sie ONTAP 9.7 oder höher verwenden.
 
 
 
 
 === Optionale Anforderungen an SRA
 
-Wenn Sie die virtuelle Appliance zur Verwendung mit VMware Site Recovery Manager implementieren, müssen Sie: * Heruntergeladen haben `.msi` Datei für das SRA Plug-in nur dann, wenn Sie die Disaster-Recovery-Lösung (SRM) von Site Recovery Manager konfigurieren möchten. Spalte 1 * hat das heruntergeladen `.tar.gz` Datei für SRA, wenn Sie die SRM-Appliance nutzen.
+Wenn Sie die virtuelle Appliance zur Verwendung mit VMware Site Recovery Manager implementieren, müssen Sie: * Heruntergeladen haben `.tar.gz` Datei für SRA, wenn Sie die SRM-Appliance nutzen.
 
 
 
 == Einsatz von ONTAP Tools
 
 .Schritte
-. Laden Sie die herunter `.ova` Datei von https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Website"^] Auf einem vSphere Client System zur Bereitstellung der ONTAP Tools.
+. Download `.zip` Datei, die Binärdateien und signierte Zertifikate vom enthält https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["NetApp Support Website"^] Auf einem vSphere Client System zur Bereitstellung der ONTAP Tools.
+. Extrahieren Sie die `.zip` Datei und implementieren Sie die `.ova` Datei:
 +
 Sie müssen die bereitstellen `.ova` Datei auf den Quell- und Zielstandorten, wenn Sie SRA implementieren.
 
-. Melden Sie sich beim vSphere Web Client an, und wählen Sie *Startseite* > *Host & Cluster*.
+. Melden Sie sich beim vSphere Web Client an, wählen Sie *Home* > *Host und Cluster*.
 . Klicken Sie mit der rechten Maustaste auf das gewünschte Rechenzentrum und klicken Sie dann auf *OVF-Vorlage bereitstellen*.
++
+Wenn Sie vCenter7.0u3e und neuere Versionen verwenden, führen Sie die folgenden Aktionen durch, andernfalls fahren Sie mit Schritt 5 fort. Dies ist ein optionaler Schritt, um zu überprüfen, ob die OVA-Binärintegrität nicht manipuliert wird.
+
++
+** Laden Sie die Datei _OTV_INTER_ROOT_CERT_CHAIN.pem_ von der NetApp Support-Website herunter.
+** Navigieren Sie zu *vcenter* > *Administration* > *Certificate Management*.
+** Klicken Sie auf die Option *vertrauenswürdiges Stammzertifikat hinzufügen*.
+** Klicken Sie auf *Browse* und geben Sie den Pfad für die Datei _OTV_INTER_ROOT_CERT_CHAIN.pem_ an.
+** Klicken Sie Auf *Hinzufügen*.
++
+
+NOTE: Die Meldung Code Signing anvertrauen - OVCS2 (vertrauenswürdiges Zertifikat) bestätigt die Integrität der heruntergeladenen OVA-Datei. Wenn die Meldung Code Signing anvertrauen - OVCS2 (ungültiges Zertifikat) angezeigt wird, aktualisieren Sie den VMware vCenter Server auf die Version 7.0U3E oder höher.
+
+
+
 . Sie können entweder die URL für die .ova-Datei eingeben oder in den Ordner navigieren, in dem die .ova-Datei gespeichert ist, und dann auf *Next* klicken.
 . Geben Sie die erforderlichen Details ein, um die Implementierung abzuschließen.
-+
+
+
 
 NOTE: (Optional) Wenn Sie Container erstellen möchten, ohne sich bei vCenter Server zu registrieren, aktivieren Sie im Abschnitt vCenter konfigurieren oder VCF aktivieren das Kontrollkästchen VMware Cloud Foundation (VCF) aktivieren.
 
-
-
 Sie können den Fortschritt der Bereitstellung über die Registerkarte *Tasks* anzeigen und warten, bis die Bereitstellung abgeschlossen ist.
+
+Im Rahmen der Implementierung werden Prüfsummenverifizierungen durchgeführt. Wenn die Bereitstellung fehlschlägt, gehen Sie wie folgt vor:
+
+. Überprüfen Sie vpserver/logs/checksum.log. Wenn dort die Meldung „Prüfsummenverifikation fehlgeschlagen“ steht, können Sie die fehlgeschlagene JAR-Verifizierung im gleichen Protokoll sehen.
++
+Die Protokolldatei enthält die Ausführung von _sha256sum -c /opt/netapp/vpserver/conf/Checksummen_.
+
+. Überprüfen Sie vscserver/log/checksum.log. Wenn dort die Meldung „Prüfsummenverifikation fehlgeschlagen“ steht, können Sie die fehlgeschlagene JAR-Verifizierung im gleichen Protokoll sehen.
++
+Die Protokolldatei enthält die Ausführung von _sha256sum -c /opt/netapp/vscerver/etc/Prüfsummen_.
+
+
 
 
 
 === SRA auf SRM implementieren
 
 SRA kann entweder auf Windows SRM Server oder auf 8.2 SRM Appliance implementiert werden.
-
-
-
-==== Installieren von SRA auf dem Windows SRM Server
-
-.Schritte
-. Laden Sie die herunter `.msi` Installationsprogramm für das SRA Plug-in von der NetApp Support-Website.
-. Doppelklicken Sie auf das heruntergeladene `.msi` Installer für das SRA-Plug-in und befolgen Sie die Anweisungen auf dem Bildschirm.
-. Geben Sie die IP-Adresse und das Passwort der bereitgestellten virtuellen Appliance ein, um die Installation des SRA-Plug-ins auf dem SRM-Server abzuschließen.
-
 
 
 
@@ -181,9 +197,9 @@ SRA kann entweder auf Windows SRM Server oder auf 8.2 SRM Appliance implementier
 ==== Aktivieren von VASA Provider und SRA
 
 .Schritte
-. Melden Sie sich beim vSphere Web-Client mithilfe der IP-Adresse an, die Sie während der Bereitstellung angegeben haben.
-. Klicken Sie auf das Symbol *OTV* und geben Sie den Benutzernamen und das Passwort ein, die während der Bereitstellung angegeben wurden. Klicken Sie auf *Anmelden*.
-. Im linken Bereich von OTV, *Einstellungen > Administratoreinstellungen > Funktionen verwalten*, und aktivieren Sie die erforderlichen Funktionen.
+. Melden Sie sich beim vSphere-Web-Client mit der vCenter-IP an, die während der Bereitstellung der OVA-ONTAP-Tools bereitgestellt wurde.
+. Klicken Sie auf der Shortcuts-Seite unter Plug-ins auf *NetApp ONTAP Tools*.
+. Im linken Bereich der ONTAP-Tools, *Einstellungen > Verwaltungseinstellungen > Funktionen verwalten*, und aktivieren Sie die erforderlichen Funktionen.
 +
 
 NOTE: VASA Provider ist standardmäßig aktiviert. Wenn Sie die Replizierungsfunktion für VVols-Datastores verwenden möchten, aktivieren Sie die Kippschaltfläche zum Aktivieren der VVols-Replizierung.

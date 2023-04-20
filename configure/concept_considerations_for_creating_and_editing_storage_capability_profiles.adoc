@@ -11,7 +11,7 @@ summary: Beachten Sie bei der Erstellung und Bearbeitung von Storage-Funktionspr
 
 
 [role="lead"]
-Beachten Sie bei der Erstellung und Bearbeitung von Storage-Funktionsprofilen die Überlegungen.
+Im Folgenden werden die Überlegungen zum Erstellen und Bearbeiten von Storage-Funktionsprofilen aufgeführt.
 
 * Sie können Minimum-IOPS nur für AFF Systeme konfigurieren.
 * Sie können QoS-Kennzahlen auf Datastore-Ebene eines virtuellen Volumes (VVol) konfigurieren.

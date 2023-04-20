@@ -27,9 +27,7 @@ Nach einem Upgrade von ONTAP-Tools oder der Implementierung der neuesten Version
 Windows
  a| 
 .. Melden Sie sich beim SRM Windows Server an.
-.. Deinstallieren Sie das vorhandene SRA _.msi_ -Installationsprogramm vom SRM-Server.
 .. Ändern Sie den Systempfad in `C:\Program Files\VMware\VMware vCenter Site Recovery Manager\external\perl\c\bin`
-.. Doppelklicken Sie auf das Installationsprogramm für _.msi_, das Sie von der NetApp Support-Website heruntergeladen haben, und befolgen Sie die Anweisungen auf dem Bildschirm.
 .. Geben Sie die IP-Adresse und das Passwort Ihrer bereitgestellten ONTAP-Tools ein.
 
 

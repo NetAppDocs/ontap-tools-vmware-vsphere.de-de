@@ -17,16 +17,14 @@ Wenn Sie iSCSI oder NFS verwenden und sich das Subnetz zwischen Ihren ESXi Hosts
 
 Wenn die Bereitstellung von Datenspeichern fehlschlägt, protokolliert VSC die folgenden Fehlermeldungen:
 
-`fortfahren nicht möglich. Keine ip-Adressen gefunden, wenn auf dem Controller Cross referierende Kernel-ip-Adressen und -Adressen referenziert werden.
-
-Es wurde kein passendes Netzwerk zum NFS-Mount-Volume zu diesen Hosts gefunden.`
+'Fortfahren nicht möglich. Keine ip-Adressen gefunden, wenn auf dem Controller Cross referierende Kernel-ip-Adressen und -Adressen referenziert werden. Es wurde kein passendes Netzwerk zum NFS-Mount-Volume für diese Hosts gefunden.'
 
 *Schritte*
 
 . Melden Sie sich bei Ihrer vCenter Server-Instanz an.
 . Starten Sie die Wartungskonsole mit der virtuellen Maschine Ihrer vereinheitlichten Appliance.
 +
-link:reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html["Maintenance Console of ONTAP Tools for VMware vSphere"]
+link:../manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html["Maintenance Console of ONTAP Tools for VMware vSphere"]
 
 . Eingabe `4` Um auf die Option „Support and Diagnostics“ zuzugreifen.
 . Eingabe `2` Um auf die Option Access Diagnostic Shell zuzugreifen.

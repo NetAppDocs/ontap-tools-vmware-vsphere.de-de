@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: 'Sie können Storage-System manuell zur Virtual Storage Console \(VSC\) hinzufügen.' 
 ---
-= Fügen Sie Storage-Systeme zur VSC hinzu
+= Storage-Systeme hinzufügen
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -13,24 +13,53 @@ summary: 'Sie können Storage-System manuell zur Virtual Storage Console \(VSC\)
 [role="lead"]
 Sie können Storage-System manuell zur Virtual Storage Console (VSC) hinzufügen.
 
+
+NOTE: Wenn ONTAP Cluster SAML-aktiviert ist, erfolgt die Kommunikation mit ONTAP über eine Basisauthentifizierung.
+
 *Über diese Aufgabe*
 
 Jedes Mal, wenn Sie die Virtual Storage Console (VSC) starten oder die *ALLE* Option WIEDERENTDECKEN, erkennt VSC die verfügbaren Speichersysteme automatisch.
 
 *Schritte*
 
-. Fügen Sie ein Storage-System zur VSC mithilfe der Startseite der ONTAP Tools hinzu:
+. Fügen Sie VSC mithilfe einer der Optionen auf der Startseite der ONTAP Tools um ein Storage-System hinzu:
 +
-** Klicken Sie Auf *Speichersysteme* > *Hinzufügen*.
+** Klicken Sie Auf *Speichersysteme* > *Hinzufügen*. Oder
 ** Klicken Sie auf *Übersicht* > *erste Schritte* und dann auf die Schaltfläche *HINZUFÜGEN* unter Speichersystem hinzufügen.
 
 
 . Geben Sie im Dialogfeld *Storage-System hinzufügen* die Management-IP-Adresse und die Anmeldeinformationen für dieses Speichersystem ein.
 +
-Sie können auch Storage-Systeme mit der IPv6-Adresse des Clusters oder der SVM hinzufügen. In diesem Dialogfeld können Sie außerdem die Standardwerte für TLS und die Portnummer ändern.
+Wenn Sie ein Storage-System hinzufügen, sollte jede Kommunikation zwischen dem ONTAP Tools Plug-in und dem Storage-System gegenseitig authentifiziert werden.
 
 +
-Wenn Sie Storage von der Seite VSC Storage System hinzufügen, müssen Sie auch die vCenter Server-Instanz angeben, in der sich der Speicher befindet. Das Dialogfeld Add Storage System enthält eine Dropdown-Liste der verfügbaren vCenter Server-Instanzen. Die VSC zeigt diese Option nicht an, wenn Sie einem Rechenzentrum Storage hinzufügen, das bereits einer vCenter Server-Instanz zugeordnet ist.
+Sie können auch Storage-Systeme mit der IPv6-Adresse des Clusters oder der SVM hinzufügen.
+
++
+Wenn Sie Speicher auf der Seite VSC Storage System hinzufügen, geben Sie die vCenter Server-Instanz an, in der sich der Speicher befindet. Das Dialogfeld Add Storage System enthält eine Dropdown-Liste der verfügbaren vCenter Server-Instanzen. Die VSC zeigt diese Option nicht an, wenn Sie einem Rechenzentrum Storage hinzufügen, das bereits einer vCenter Server-Instanz zugeordnet ist.
+
++
+HINWEIS:
+
++
+** Ab der Version ONTAP Tools 9.12 erfolgt die Kommunikation der ONTAP Storage-Systeme durch zertifikatbasierte Authentifizierung.
+** Die herkömmlichen Datastore-Aktionen wie Löschen, Ändern der Größe und Mounten sind nicht zulässig, wenn eines der Client- oder Cluster-Zertifikate ungültig ist.
+** Die vVol Datastore-Aktionen wie „Speicher erweitern“, „Datastore mounten“ sind nicht zulässig, wenn eines der Client- oder Clusterzertifikate ungültig ist.
+** Aktionen wie Löschen, Speicher entfernen und Eigenschaften bearbeiten sind zulässig, da für diese Aktionen keine ONTAP-Kommunikation erforderlich ist.
+** Um ein Storage-System mit dem im SVM-Umfang enthaltenen Benutzer hinzuzufügen, muss der Storage-System-Cluster-Administrator den Benutzer bearbeiten und die Authentifizierungsmethode *Certificate* zu den Applikationen HTTP und ONTAPI hinzufügen.
++
+In den erweiterten Optionen gibt es zwei Möglichkeiten, das *ONTAP-Cluster-Zertifikat* hochzuladen:
+
++
+... *Automatisch abrufen* - ruft die Zertifikate automatisch ab.
+... *Manuelles Hochladen* - Sie müssen manuell zu dem Ort navigieren, wo sich das Zertifikat befindet und das Zertifikat hochladen.
+
+
+
 
 . Klicken Sie auf *OK*, nachdem Sie alle erforderlichen Informationen hinzugefügt haben.
++
+Das Popup-Fenster „Clusterzertifikat autorisieren“ wird angezeigt.
+
+. Klicken Sie auf *Zertifikat anzeigen*, um die Zertifikatdetails anzuzeigen. Klicken Sie auf *Ja*, um das Speichersystem hinzuzufügen
 

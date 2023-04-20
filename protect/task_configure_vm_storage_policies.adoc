@@ -19,8 +19,8 @@ Der vSphere Web-Client bietet Standard-Storage-Richtlinien. Sie können jedoch R
 
 *Schritte*
 
-. Klicken Sie auf der Seite vSphere Client auf *Menü* > *Richtlinien und Profile*.
-. Klicken Sie auf *VM Storage Policies* > *Create VM Storage Policy*.
+. Klicken Sie auf der Seite vSphere Client auf *Richtlinien und Profile*.
+. Klicken Sie auf der Seite VM Storage Policies auf *CREATE*.
 . Geben Sie auf der Seite Create VM Storage Policy folgende Details ein:
 +
 .. Geben Sie einen Namen und eine Beschreibung für die VM-Speicherrichtlinie ein.

@@ -11,7 +11,7 @@ summary: MIT VASA Provider for ONTAP können Sie Storage-Funktionsprofile erstel
 
 
 [role="lead"]
-MIT VASA Provider for ONTAP können Sie Storage-Funktionsprofile erstellen und diesen Ihrem Storage zuordnen. Auf diese Weise können Sie die Konsistenz im gesamten Storage gewährleisten. Mit VASA Provider können Sie auch die Compliance zwischen dem Storage und den Storage-Funktionsprofilen prüfen.
+MIT VASA Provider for ONTAP können Sie Storage-Funktionsprofile erstellen und diesen Ihrem Storage zuordnen. Dadurch wird die Konsistenz des gesamten Storage gewährleistet. Mit VASA Provider können Sie auch die Compliance zwischen dem Storage und den Storage-Funktionsprofilen prüfen.
 
 Eine Storage-Funktion ist eine Reihe von Attributen von Storage-Systemen. Dadurch wird ein bestimmter Level an Storage-Performance, Storage-Effizienz und anderen Funktionen identifiziert, wie z. B. die Verschlüsselung für das Storage-Objekt.
 
@@ -36,9 +36,6 @@ In Kombination mit VVols wird darüber hinaus das Storage-Funktionsprofil verwen
 Der vCenter Server ordnet dann die Storage-Fähigkeit einer LUN oder eines Volumes dem Datenspeicher zu, der auf dieser LUN oder diesem Volume bereitgestellt ist. Damit können Sie eine Virtual Machine in einem Datenspeicher bereitstellen, der dem Storage-Profil der Virtual Machine entspricht, und es können sichergestellt werden, dass alle Datenspeicher in einem Datastore-Cluster dieselben Storage Service Levels aufweisen.
 
 Mithilfe von ONTAP Tools können Sie jeden Datastore für virtuelle Volumes (VVols) mit einem neuen Storage-Funktionsprofil konfigurieren, in dem die Bereitstellung von Virtual Machines mit wechselnden IOPS-Anforderungen auf demselben VVols Datastore unterstützt wird. Bei der Ausführung des VM Provisioning Workflows mit IOPS-Anforderung werden alle VVols Datastores in der Liste kompatibler Datastores aufgeführt.
-
-
-NOTE: Wenn Sie versuchen, Virtual Machines für vCenter Server vor 6.5 bereitzustellen oder zu ändern, werden in der Liste kompatibler Datastores nur die VVols Datastores aufgeführt, die Storage-Funktionsprofile mit Performance-Einstellung auf „`MAX_IOPS`“ enthalten. Die verbleibenden VVols-Datastores werden in der Liste inkompatibler Datastores aufgeführt. Sie können diese Klassifizierung ignorieren und jeden beliebigen VVols-Datastore aus der Liste inkompatibler Datastores auswählen, um die Virtual Machine bereitzustellen oder zu ändern.
 
 
 

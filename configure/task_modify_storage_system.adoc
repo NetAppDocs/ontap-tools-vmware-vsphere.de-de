@@ -1,0 +1,40 @@
+---
+permalink: configure/task_modify_storage_system.html 
+sidebar: sidebar 
+keywords:  
+summary: Sie müssen das Zertifikat aktualisieren, wenn das Zertifikat abläuft oder wenn das Zertifikat manuell geändert wird. Wenn der Client oder das Cluster-Zertifikat abläuft oder nicht übereinstimmt, wird die Kommunikation mit dem ONTAP System unterbrochen. 
+---
+= Ändern von Speichersystemen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Gehen Sie wie folgt vor, um die Speichersysteme zu ändern.
+
+*Schritte*
+
+. Wählen Sie unter *NetApp ONTAP Tools* *Storage Systems* aus.
+. Klicken Sie auf die Schaltfläche Speichersystem *Verfügbare Aktion* (drei vertikale Punkte), wo Sie das Zertifikat aktualisieren möchten.
+. Wählen Sie * Ändern*.
++
+
+NOTE: Es wird empfohlen, dass Sie vor Ablauf des Clusters oder des Client-Zertifikats das erneuerte Zertifikat von ONTAP erhalten oder das Client-Zertifikat aus den ONTAP-Tools für VMware vSphere generieren.
+
+. Navigieren Sie im Fenster *Speichersystem ändern* im Feld *Zertifikat hochladen* zu dem Speicherort, an dem das ONTAP-Zertifikat gespeichert ist, und laden Sie das Zertifikat hoch.
++
+Für Cluster-Zertifikat:
+
++
+** Wenn Sie das Cluster-Zertifikat auf der ONTAP geändert haben, müssen Sie das geänderte Zertifikat manuell in die ONTAP-Tools hochladen. Dies ist ein obligatorischer Schritt.
+** Wenn das Clusterzertifikat abgelaufen ist, ändert sich der Status des Speichersystems in Clusterzertifikat abgelaufen. Wenn das Cluster-Zertifikat abläuft, muss der Storage-Administrator auf der ONTAP-Seite das neue Zertifikat generieren. Das Fenster *Speichersystem ändern* ruft das Clusterzertifikat automatisch aus dem ONTAP-Speicher ab und Sie müssen das Clusterzertifikat autorisieren.
+
+
+. Wenn das Clientzertifikat abgelaufen ist, ändert sich der Status des Speichersystems in Clientzertifikat abgelaufen.
++
+Wenn das Clientzertifikat abgelaufen ist, wählen Sie im Fenster *Speichersystem ändern* die Option *ein neues Clientzertifikat für ONTAP generieren* aus, um das Zertifikat neu zu generieren.
+
+
+
+Nach der Installation der Zertifikate wird die Kommunikation mit ONTAP wiederhergestellt.
