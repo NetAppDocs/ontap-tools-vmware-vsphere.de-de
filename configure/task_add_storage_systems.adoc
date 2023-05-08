@@ -20,6 +20,9 @@ NOTE: Wenn ONTAP Cluster SAML-aktiviert ist, erfolgt die Kommunikation mit ONTAP
 
 Jedes Mal, wenn Sie die Virtual Storage Console (VSC) starten oder die *ALLE* Option WIEDERENTDECKEN, erkennt VSC die verfügbaren Speichersysteme automatisch.
 
+
+NOTE: VVol Datastores werden auf direkten SVMs nicht unterstützt.
+
 *Schritte*
 
 . Fügen Sie VSC mithilfe einer der Optionen auf der Startseite der ONTAP Tools um ein Storage-System hinzu:

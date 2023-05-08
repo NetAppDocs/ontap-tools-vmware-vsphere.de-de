@@ -8,50 +8,36 @@ summary: Wenn Plug-ins nach der Bereitstellung oder Aktualisierung von ONTAP Too
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
+:revnumber: 
+:revdate: you should clean up the cached download plug-in packages on the browser and on the vCenter Server to resolve vCenter Server plug-in issues.
 
-
-[role="lead"]
-Wenn Plug-ins nach der Bereitstellung oder Aktualisierung von ONTAP Tools nicht automatisch aktualisiert werden, sollten Sie die im Cache gespeicherten Download-Plug-in-Pakete im Browser und auf dem vCenter Server aufräumen, um Probleme mit dem vCenter Server Plug-in zu lösen.
 
 *Schritte*
 
-. Abmelden von Ihrem vorhandenen vSphere-Webclient oder vSphere-Client.
+. Melden Sie sich von Ihrem vorhandenen vSphere Web-Client oder vSphere-UI ab.
 . Entfernen Sie den Browser-Cache.
-. Entfernen Sie die im Cache gespeicherten Plug-in-Pakete von vSphere Client.
+. Entfernen Sie die im Cache gespeicherten Plug-in-Pakete von vSphere Client. Führen Sie für VCSA die folgenden Schritte aus:
 +
-|===
-
-
-| *Wenn Sie verwenden...* | *Ausführen des folgenden...* 
-
-
- a| 
-Windows vCenter Server
- a| 
-Entfernen Sie die folgenden Ordner `com.netapp.vasa.vvol.webclient-x.x.x.xxxx`, `com.netapp.nvpf.webclient-x.x.x.xxxx`, und `com.netapp.vsch5-x.x.x.xxxx` Sie befinden sich unter:
-
-** VSphere Web Client-Pfad: `C:\ProgramData\VMware\vCenterServer\cfg\vsphere-client\vc-packages\vsphere-client-serenity`
-** VSphere Client(HTML5)-Pfad: `C:\ProgramData\VMware\vCenterServer\cfg\vsphere-ui\vc-packages\vsphere-client-serenity`
-
-
-
-
- a| 
-VCSA
- a| 
 .. SSH in die VCSA Appliance einbinden.
-.. Ändern Sie Verzeichnisse in das vCenter Web-Client-UI-Verzeichnis Erweiterungen mit `cd /etc/vmware/vsphere-client/vc-packages/vsphere-client-serenity`
-.. Entfernen Sie die zwischengespeicherten Plug-in-Pakete, die NetApp spezifisch sind, mithilfe des `rm -rf` Befehle: Beispiel: Hier x.x.x.xxxx ist die Version Ihres Plug-ins. ---- RM -rf com.netapp.vasa.vvol.webclient-x.x.x.xxxx RM -rf com.netapp.nvpf.webclient-x.x.x.xxxx RM -rf com.netapp.vsch5-x.x.x.xxxx ----
-.. Ändern Sie Verzeichnisse in das vCenter-Client(HTML5)-UI-Extensions-Verzeichnis mit `cd /etc/vmware/vsphere-ui/vc-packages/vsphere-client-serenity`
-.. Entfernen Sie die zwischengespeicherten Plug-ins-Pakete, die speziell für NetApp Plug-in verwendet werden, mit dem `rm -rf` Befehle: Beispiel: Hier x.x.x.xxxx ist die Version Ihres Plug-ins ---- RM -rf com.netapp.vasa.vvol.webclient-x.x.x.xxxx RM -rf com.netapp.nvpf.webclient-x.x.x.xxxx RM -rf com.netapp.vsch5-x.x.x.xxxx -----
-
-
-|===
-. Melden Sie sich bei vSphere an und starten Sie vSphere Web Client und vSphere Client Services mit den folgenden Befehlen neu:
+.. Beenden Sie den VMware vSphere Client-Dienst:
+`service-control --stop vsphere-ui`
+.. Ändern Sie die Verzeichnisse in das Verzeichnis vCenter Client UI extensions: `cd /etc/vmware/vsphere-ui/vc-packages/vsphere-client-serenity`
+.. Entfernen Sie die zwischengespeicherten Plug-in-Pakete, die NetApp spezifisch sind, mithilfe des `rm -rf` Befehl:
 +
-[listing]
-----
-service-control --stop vsphere-client vsphere-ui
-service-control --start vsphere-client vsphere-ui
-----
+`rm -rf com.netapp.nvpf.webclient-*`
+
++
+`rm -rf com.netapp.vasa.vvol.webclient-*`
+
++
+`rm -rf com.netapp.vsch5-*`
+
+.. Starten Sie den VMware vSphere Client-Dienst:
+`service-control --start vsphere-ui`
+
+
 
