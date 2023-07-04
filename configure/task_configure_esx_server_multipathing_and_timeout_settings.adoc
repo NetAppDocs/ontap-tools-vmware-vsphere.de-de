@@ -26,7 +26,7 @@ Dieser Prozess kann je nach Konfiguration und Systemlast sehr viel Zeit in Anspr
 Standardmäßig werden die empfohlenen Standardwerte festgelegt.
 
 +
-image::../media/vsc_recommended_hosts_settings.gif[die von vsc empfohlenen Hosteinstellungen sind]
+image::../media/vsc_recommended_hosts_settings.gif[Bildschirm „Empfohlene Werte festlegen“]
 
 . Klicken Sie auf *OK*.
 

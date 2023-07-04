@@ -15,7 +15,7 @@ Wenn Sie iSCSI oder NFS verwenden und sich das Subnetz zwischen Ihren ESXi Hosts
 
 *Über diese Aufgabe*
 
-Wenn die Bereitstellung von Datenspeichern fehlschlägt, protokolliert VSC die folgenden Fehlermeldungen:
+Wenn die Datastore-Bereitstellung fehlschlägt, protokolliert ONTAP-Tools für VMware vSphere die folgenden Fehlermeldungen:
 
 'Fortfahren nicht möglich. Keine ip-Adressen gefunden, wenn auf dem Controller Cross referierende Kernel-ip-Adressen und -Adressen referenziert werden. Es wurde kein passendes Netzwerk zum NFS-Mount-Volume für diese Hosts gefunden.'
 

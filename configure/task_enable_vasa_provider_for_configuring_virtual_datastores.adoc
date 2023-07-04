@@ -26,7 +26,7 @@ Wenn die VASA Provider-Funktion deaktiviert ist, bevor ein Upgrade auf die Versi
 *Schritte*
 
 . Melden Sie sich bei der Web-Benutzeroberfläche von VMware vSphere an.
-. Klicken Sie im vSphere Client auf *Menü* > *NetApp ONTAP Tools* Konsole.
+. Wählen Sie im vSphere-Client *Menü* > *NetApp ONTAP-Tools* aus.
 . Klicken Sie Auf *Einstellungen*.
 . Klicken Sie auf der Registerkarte Verwaltungseinstellungen auf *Funktionen verwalten*.
 . Wählen Sie im Dialogfeld Funktionen managen die VASA Provider-Erweiterung aus, um sie zu aktivieren.

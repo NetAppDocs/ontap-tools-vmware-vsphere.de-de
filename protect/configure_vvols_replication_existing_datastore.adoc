@@ -45,7 +45,7 @@ NOTE: Wenn Sie mit System Manager zum Schutz des FlexVol Volumes und des Storage
 . Fügen Sie die Replikationsgruppe der ungeschützten virtuellen Maschine hinzu.
 
 
-image::../media/vvols_replication_existing_datastore.png[vvols Replizierung vorhandener Datastore]
+image::../media/vvols_replication_existing_datastore.png[Neuer Benutzer und vorhandener Benutzer-Workflow]
 
 *HINWEIS:*
 

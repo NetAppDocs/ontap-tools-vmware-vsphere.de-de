@@ -19,11 +19,11 @@ Wenn Sie VASA Provider-Protokolldateien benötigen, können Sie über das Bedien
 
 `\https://vm_ip:9083`
 
-Sie können die VSC Protokolldateien mithilfe der Funktion „`VSC Logs` exportieren“ in der VSC GUI erfassen. Wenn Sie ein VSC-Protokollpaket mit aktiviertem VASA Provider erfassen, werden im VSC-Protokollpaket auch die VP-Protokolle enthalten. Mit den folgenden Schritten erfahren Sie, wie Sie die VSC Protokolldateien sammeln können:
+Sie können die ONTAP Tools für VMware vSphere Log-Dateien mithilfe der Funktion „`Export ONTAP Tools for VMware vSphere Logs`“ in der VSC GUI sammeln. Wenn Sie ein Paket aus ONTAP Tools für VMware vSphere Log mit aktiviertem VASA Provider sammeln, werden die VP-Protokolle auch in den ONTAP Tools für das Paket VMware vSphere Log enthalten sein. Im Folgenden erfahren Sie, wie Sie die ONTAP-Tools für VMware vSphere-Protokolldateien erfassen:
 
 *Schritte*
 
-. Klicken Sie auf der Startseite der ONTAP Tools auf *Konfiguration* > *VSC-Protokolle exportieren*.
+. Klicken Sie auf der Startseite der ONTAP-Tools auf *Konfiguration* > *ONTAP-Tools für VMware vSphere-Protokolle exportieren*.
 +
 Dieser Vorgang kann mehrere Minuten dauern.
 

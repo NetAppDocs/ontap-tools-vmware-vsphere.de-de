@@ -24,7 +24,7 @@ Sie müssen einen Platzhalterdatenspeicher konfigurieren, um einen Platz im vCen
 . Melden Sie sich bei Ihrem vCenter Server an und klicken Sie auf *Site Recovery* > *Sites*.
 . Wählen Sie Ihre geschützte Seite aus, und klicken Sie dann auf *Verwalten*.
 . Wählen Sie auf der Registerkarte Verwalten die Option *Platzhalter-Datenspeicher* aus.
-. Klicken Sie auf das image:../media/new_placeholder_datastore.gif[""] Symbol, um einen neuen Platzhalter-Datenspeicher zu erstellen.
+. Klicken Sie auf das image:../media/new_placeholder_datastore.gif["suchen und Hinzufügen von Symbolen"] Symbol, um einen neuen Platzhalter-Datenspeicher zu erstellen.
 . Wählen Sie den entsprechenden Datenspeicher aus, und klicken Sie dann auf *OK*.
 +
 

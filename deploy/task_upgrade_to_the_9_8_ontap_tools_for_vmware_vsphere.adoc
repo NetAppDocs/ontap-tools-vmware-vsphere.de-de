@@ -42,17 +42,20 @@ NOTE: Als Teil der ONTAP Tools 9.12 wird die Authentifizierung und der Kommunika
 
 Das Hinzufügen eines Speichersystems ohne Zertifikatauthentifizierung ist eingeschränkt.
 
-Wenn das Storage-System mit einem benutzerdefinierten erstellten Cluster-Scoped-Benutzer mithilfe der json-Datei hinzugefügt wird und Sie ein Upgrade auf 9.12 durchführen möchten, führen Sie vor dem Upgrade die folgenden Befehle auf der ONTAP-CLI aus, um die zertifikatbasierte Kommunikation zwischen den ONTAP-Tools für VMware vSphere und ONTAP zu aktivieren:
+Wenn das Speichersystem mit einem Benutzer mit benutzerdefiniertem Cluster-Umfang unter Verwendung der json-Datei hinzugefügt wird und Sie ein Upgrade auf 9.12 durchführen möchten, dann
+Führen Sie vor dem Upgrade die folgenden Befehle auf der ONTAP-CLI aus, um die zertifikatbasierte Kommunikation zwischen ONTAP-Tools für VMware vSphere und ONTAP zu aktivieren.
 
-. _Security Login role create -role <role-name> -cmddirname „Security Login show“ -Access all_
-. _Security Login role create -role <role-name> -cmddirname „Security Certificate show“ -Access all_
-. _Security Login role create -role <role-name> -cmddirname „Security Certificate install“ -Access all_
+. _Security Login role create -role <existing-role-name> -cmddirname „Security Login show“ -Access all_
+. _Security Login role create -role <existing-role-name> -cmddirname „Security Certificate show“ -Access all_
+. _Security Login role create -role <existing-role-name> -cmddirname „Security Certificate install“ -Access all_
 
 
 Wenn das Storage-System mit vom Kunden erstellten SVM-Scoped-Benutzern unter Verwendung der json-Datei hinzugefügt wird und Sie ein Upgrade auf 9.12 durchführen möchten, Führen Sie dann die folgenden Befehle auf der ONTAP-CLI mit Cluster-Administratorzugriff vor dem Upgrade aus, um die zertifikatbasierte Kommunikation zwischen ONTAP Tools für VMware vSphere und ONTAP zu aktivieren:
 
-. _Security Login role create -role <role-name> -cmddirname „Security Certificate install“ -Access all -vserver <vserver-name>_
-. _Security Login role create -role <role-name> -cmddirname „Security Certificate show“ -Access all -vserver <vserver-name>_
+. _Security Login role create -role <existing-role-name> -cmddirname „Security Certificate install“ -Access all -vserver <vserver-name>_
+. _Security Login role create -role <existing-role-name> -cmddirname „Security Certificate show“ -Access all -vserver <vserver-name>_
+. _Security Login create -user-or-Group-Name <user> -Application http -Authentication-method cert -role <existing-role-name> -vserver <vserver-name>_
+. _Sicherheits-Login create -user-or-Group-Name <user> -Application ontapi -Authentication-method cert -role <existing-role-name> -vserver <vserver-name>_
 
 
 *Schritte*
@@ -65,7 +68,7 @@ Wenn das Storage-System mit vom Kunden erstellten SVM-Scoped-Benutzern unter Ver
 
 
 . Rufen Sie die Registerkarte „Summary“ Ihrer implementierten ONTAP Tools auf.
-. Klicken Sie Auf *image:../media/launch_maintenance_console.gif[""]* Um die Wartungskonsole zu starten.
+. Starten Sie die Wartungskonsole.
 . Geben Sie an der Eingabeaufforderung „`Main Menu`“ die Option ein `2` Geben Sie für *Systemkonfiguration* die Option ein `8` Für *Upgrade*.
 +
 Nach Abschluss des Upgrades werden die ONTAP-Tools neu gestartet. ONTAP-Tools werden auf dem vCenter-Server mit derselben IP-Adresse wie vor dem Upgrade registriert.

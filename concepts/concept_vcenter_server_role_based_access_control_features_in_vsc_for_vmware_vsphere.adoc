@@ -2,7 +2,7 @@
 permalink: concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: 'VCenter Server bietet eine rollenbasierte Zugriffssteuerung \(RBAC\), mit der Sie den Zugriff auf vSphere Objekte steuern können. In ONTAP Tools für VMware vSphere arbeitet die vCenter Server RBAC mit der ONTAP RBAC. So können Sie ermitteln, welche VSC-Aufgaben ein bestimmter Benutzer auf Objekten auf einem bestimmten Storage-System ausführen kann.' 
+summary: 'VCenter Server bietet eine rollenbasierte Zugriffssteuerung \(RBAC\), mit der Sie den Zugriff auf vSphere Objekte steuern können. In ONTAP Tools für VMware vSphere arbeitet die rollenbasierte Zugriffssteuerung von vCenter Server mit ONTAP RBAC zusammen, um festzulegen, welche ONTAP-Tools ein bestimmter Benutzer an Objekten auf einem spezifischen Storage-System ausführen kann.' 
 ---
 = Übersicht über die rollenbasierte Zugriffssteuerung in den ONTAP Tools
 :allow-uri-read: 
@@ -11,8 +11,8 @@ summary: 'VCenter Server bietet eine rollenbasierte Zugriffssteuerung \(RBAC\), 
 
 
 [role="lead"]
-VCenter Server bietet rollenbasierte Zugriffssteuerung (RBAC), über die Sie den Zugriff auf vSphere Objekte kontrollieren können. In ONTAP Tools für VMware vSphere arbeitet die vCenter Server RBAC mit der ONTAP RBAC. So können Sie ermitteln, welche VSC-Aufgaben ein bestimmter Benutzer auf Objekten auf einem bestimmten Storage-System ausführen kann.
+VCenter Server bietet rollenbasierte Zugriffssteuerung (RBAC), über die Sie den Zugriff auf vSphere Objekte kontrollieren können. In ONTAP® Tools für VMware vSphere arbeitet vCenter Server RBAC mit ONTAP RBAC zusammen, um zu bestimmen, welche ONTAP-Tools ein bestimmter Benutzer an Objekten auf einem bestimmten Speichersystem ausführen kann.
 
-Zum erfolgreichen Abschluss einer Aufgabe müssen Sie über die entsprechenden Berechtigungen für die rollenbasierte Zugriffssteuerung von vCenter Server verfügen. Während einer Aufgabe überprüft VSC die Berechtigungen eines Benutzers im vCenter Server, bevor sie die ONTAP-Berechtigungen des Benutzers überprüfen.
+Zum erfolgreichen Abschluss einer Aufgabe müssen Sie über die entsprechenden Berechtigungen für die rollenbasierte Zugriffssteuerung von vCenter Server verfügen. Während einer Aufgabe prüfen ONTAP-Tools die vCenter Server-Berechtigungen eines Benutzers, bevor die ONTAP-Berechtigungen des Benutzers überprüft werden.
 
 Sie können die vCenter Server-Berechtigungen auf dem Root-Objekt (auch als Stammordner bekannt) festlegen. Sie können dann die Sicherheit verbessern, indem Sie untergeordnete Entitäten, die diese Berechtigungen nicht benötigen, einschränken.

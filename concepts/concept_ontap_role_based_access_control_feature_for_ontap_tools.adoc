@@ -1,8 +1,8 @@
 ---
-permalink: concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html 
+permalink: concepts/concept_ontap_role_bastoolsed_access_control_feature_for_ontap_tools.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Mit der rollenbasierten Zugriffssteuerung \(RBAC\) von ONTAP können Sie den Zugriff auf spezifische Storage-Systeme steuern und die Aktionen steuern, die ein Benutzer auf diesen Storage-Systemen durchführen kann. In ONTAP® Tools für VMware vSphere arbeitet ONTAP RBAC mit vCenter Server RBAC, um festzulegen, welche Aufgaben der virtuellen Speicherkonsole \(VSC\) ein bestimmter Benutzer auf den Objekten auf einem bestimmten Speichersystem ausführen kann.' 
+summary: 'Mit der rollenbasierten Zugriffssteuerung \(RBAC\) von ONTAP können Sie den Zugriff auf spezifische Storage-Systeme steuern und die Aktionen steuern, die ein Benutzer auf diesen Storage-Systemen durchführen kann. In ONTAP® Tools für VMware vSphere arbeitet ONTAP RBAC mit vCenter Server RBAC zusammen, um zu bestimmen, welche ONTAP-Tools ein bestimmter Benutzer an den Objekten eines bestimmten Speichersystems ausführen kann.' 
 ---
 = Berechtigungen für ONTAP Storage-Systeme und vSphere-Objekte
 :allow-uri-read: 
@@ -11,21 +11,21 @@ summary: 'Mit der rollenbasierten Zugriffssteuerung \(RBAC\) von ONTAP können S
 
 
 [role="lead"]
-Mit der rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC) von ONTAP können Sie den Zugriff auf bestimmte Storage-Systeme steuern und die Aktionen steuern, die ein Benutzer auf diesen Storage-Systemen durchführen kann. In ONTAP Tools für VMware vSphere arbeitet die ONTAP RBAC mit der vCenter Server RBAC zusammen, um festzulegen, welche Aufgaben der virtuellen Speicherkonsole (VSC) ein bestimmter Benutzer auf den Objekten auf einem bestimmten Speichersystem ausführen kann.
+Mit der rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC) von ONTAP können Sie den Zugriff auf bestimmte Storage-Systeme steuern und die Aktionen steuern, die ein Benutzer auf diesen Storage-Systemen durchführen kann. In ONTAP® Tools für VMware vSphere arbeitet ONTAP RBAC mit vCenter Server RBAC zusammen, um zu bestimmen, welche ONTAP-Tools ein bestimmter Benutzer an den Objekten eines bestimmten Speichersystems ausführen kann.
 
-VSC verwendet die in VSC festgelegten Anmeldedaten (Benutzername und Passwort) zur Authentifizierung jedes Storage-Systems und zur Bestimmung der Storage-Vorgänge auf diesem Storage-System. VSC verwendet einen Satz Credentials für jedes Storage-System. Mit diesen Anmeldedaten wird festgelegt, welche VSC Aufgaben auf dem Storage-System ausgeführt werden können. Das heißt, die Anmeldedaten gelten für die VSC, nicht für einen individuellen VSC Benutzer.
+ONTAP Tools verwenden die innerhalb der ONTAP Tools festgelegten Anmeldedaten (Benutzername und Passwort), um jedes Storage-System zu authentifizieren und um zu ermitteln, welche Storage-Vorgänge auf diesem Storage-System ausgeführt werden können. Die ONTAP Tools verwenden für jedes Storage-System einen Satz an Zugangsdaten. Diese Referenzen legen fest, welche Aufgaben der ONTAP Tools auf diesem Storage-System ausgeführt werden können. Anders ausgedrückt: Die Zugangsdaten gelten für ONTAP Tools und nicht für einzelne Benutzer von ONTAP Tools.
 
-ONTAP RBAC gilt nur für den Zugriff auf Storage-Systeme und die Durchführung von VSC-Aufgaben, die mit dem Storage zusammenhängen, beispielsweise für die Bereitstellung von Virtual Machines. Wenn Sie nicht über die entsprechenden ONTAP RBAC-Berechtigungen für ein bestimmtes Storage-System verfügen, können Sie auf einem vSphere Objekt, das auf diesem Storage-System gehostet wird, keine Aufgaben ausführen. Sie können die ONTAP RBAC zusammen mit den VSC-spezifischen Berechtigungen verwenden, um zu steuern, welche VSC Aufgaben ein Benutzer ausführen kann:
+Die rollenbasierte Zugriffssteuerung von ONTAP gilt nur für den Zugriff auf Storage-Systeme und die Durchführung von Aufgaben mit ONTAP-Tools, die im Zusammenhang mit Storage stehen, beispielsweise zur Bereitstellung von Virtual Machines. Wenn Sie nicht über die entsprechenden ONTAP RBAC-Berechtigungen für ein bestimmtes Storage-System verfügen, können Sie auf einem vSphere Objekt, das auf diesem Storage-System gehostet wird, keine Aufgaben ausführen. Sie können die rollenbasierte Zugriffssteuerung von ONTAP in Verbindung mit spezifischen Berechtigungen der ONTAP-Tools verwenden, um zu steuern, welche Aufgaben für ONTAP-Tools ein Benutzer ausführen kann:
 
 * Überwachung und Konfiguration von Storage- oder vCenter Server-Objekten in einem Storage-System
 * Bereitstellung von vSphere Objekten in einem Storage-System
 
 
-Durch den Einsatz der ONTAP RBAC mit den VSC-spezifischen Berechtigungen wird eine Storage-orientierte Sicherheitsebene bereitgestellt, die der Storage-Administrator managen kann. Somit verfügen Sie über eine feingranulare Zugriffssteuerung als nur die ONTAP RBAC oder die alleine vCenter Server RBAC unterstützt. So können Sie mit vCenter Server RBAC z. B. vCenterUserB die Bereitstellung eines Datenspeichers auf NetApp Storage zulassen und zugleich verhindern, dass vCenterUserA Datenspeicher bereitstellt. Wenn die Anmeldeinformationen des Speichersystems für ein bestimmtes Speichersystem die Erstellung von Speicher nicht unterstützen, können weder vCenterUserB noch vCenterUserA einen Datenspeicher auf diesem Speichersystem bereitstellen.
+Die Nutzung der rollenspezifischen Berechtigungen für ONTAP mit den ONTAP Tools verschafft dem Storage-Administrator eine Storage-orientierte Sicherheitsebene, die er managen kann. Somit verfügen Sie über eine feingranulare Zugriffssteuerung als nur die ONTAP RBAC oder die alleine vCenter Server RBAC unterstützt. So können Sie mit vCenter Server RBAC z. B. vCenterUserB die Bereitstellung eines Datenspeichers auf NetApp Storage zulassen und zugleich verhindern, dass vCenterUserA Datenspeicher bereitstellt. Wenn die Anmeldeinformationen des Speichersystems für ein bestimmtes Speichersystem die Erstellung von Speicher nicht unterstützen, können weder vCenterUserB noch vCenterUserA einen Datenspeicher auf diesem Speichersystem bereitstellen.
 
-Beim Starten einer VSC Aufgabe überprüft die VSC zunächst, ob Sie über die richtige vCenter Server-Berechtigung für diese Aufgabe verfügen. Wenn die Berechtigung des vCenter Servers nicht ausreicht, um eine Aufgabe ausführen zu können, muss die VSC die ONTAP-Berechtigungen für dieses Speichersystem nicht überprüfen, da Sie die erste Sicherheitsüberprüfung des vCenter Servers nicht bestanden haben. So kann nicht auf das Storage-System zugegriffen werden.
+Wenn Sie eine ONTAP-Tool-Aufgabe starten, überprüft ONTAP-Tools zunächst, ob Sie die richtige vCenter-Server-Berechtigung für diese Aufgabe haben. Wenn die vCenter Server-Berechtigung nicht ausreicht, um die Ausführung der Aufgabe zu ermöglichen, müssen ONTAP-Tools die ONTAP-Berechtigungen für dieses Speichersystem nicht überprüfen, da Sie die erste vCenter Server-Sicherheitsprüfung nicht bestanden haben. So kann nicht auf das Storage-System zugegriffen werden.
 
-Falls die Berechtigung zum vCenter Server ausreichend ist, prüft VSC die ONTAP RBAC-Berechtigungen (Ihre ONTAP Rolle), die mit den Anmeldedaten des Storage-Systems verknüpft sind (Benutzername und Passwort). Um zu ermitteln, ob Sie über ausreichende Berechtigungen zur Durchführung der Storage-Operationen verfügen, die von dieser VSC Aufgabe auf diesem Storage-System benötigt werden. Wenn Sie die richtigen ONTAP-Rechte haben, können Sie auf das Storage-System zugreifen und die VSC-Aufgabe ausführen. Die ONTAP-Rollen bestimmen die VSC-Aufgaben, die Sie auf dem Storage-System durchführen können.
+Wenn die Berechtigungen für vCenter Server ausreichend sind, prüfen ONTAP-Tools dann die RBAC-Berechtigungen von ONTAP (Ihre ONTAP-Rolle), die mit den Anmeldedaten des Storage-Systems (Benutzername und Passwort) verknüpft sind. Um zu ermitteln, ob Sie über ausreichende Berechtigungen verfügen, um die Speichervorgänge auszuführen, die für die Aufgabe „ONTAP-Tools“ auf diesem Speichersystem erforderlich sind. Wenn Sie über die richtigen ONTAP-Berechtigungen verfügen, können Sie auf das Speichersystem zugreifen und die Aufgabe „ONTAP-Tools“ ausführen. Die ONTAP-Rollen bestimmen die Aufgaben der ONTAP-Tools, die Sie auf dem Storage-System durchführen können.
 
 Jedem Speichersystem ist ein Satz von ONTAP-Berechtigungen zugeordnet.
 
@@ -37,7 +37,7 @@ Der Administrator kann steuern, welche Benutzer welche Aufgaben auf feingranular
 
 * Audit-Informationen
 +
-In vielen Fällen bietet VSC ein Audit-Trail im Storage-System, anhand dessen Sie Ereignisse zurück an den vCenter Server Benutzer verfolgen können, der die Storage-Änderungen durchgeführt hat.
+In vielen Fällen bieten ONTAP Tools ein Prüfprotokoll auf dem Storage-System, mit dem Sie Ereignisse an den vCenter Server-Benutzer zurückverfolgen können, der die Storage-Änderungen durchgeführt hat.
 
 * Benutzerfreundlichkeit
 +
@@ -49,15 +49,15 @@ Sie können alle Controller-Anmeldedaten an einer Stelle beibehalten.
 
 == Empfohlene ONTAP-Rollen bei der Verwendung von ONTAP Tools für VMware vSphere
 
-Sie können mehrere empfohlene ONTAP-Rollen für die Arbeit mit ONTAP®-Tools für VMware vSphere und rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) einrichten. Diese Rollen enthalten die ONTAP-Berechtigungen, die zur Durchführung der erforderlichen Storage-Vorgänge erforderlich sind, die von den Aufgaben der Virtual Storage Console (VSC) ausgeführt werden.
+Sie können mehrere empfohlene ONTAP-Rollen für die Arbeit mit ONTAP®-Tools für VMware vSphere und rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) einrichten. Diese Rollen verfügen über die ONTAP-Berechtigungen, die zur Durchführung der erforderlichen Storage-Vorgänge erforderlich sind, die von den ONTAP-Tools-Aufgaben ausgeführt werden.
 
 Um neue Benutzerrollen zu erstellen, müssen Sie sich als Administrator auf Storage-Systemen, auf denen ONTAP ausgeführt wird, einloggen. Sie können ONTAP Rollen mit ONTAP System Manager 9.8P1 oder höher erstellen. Siehe link:../configure/task_configure_user_role_and_privileges.html["Konfigurieren von Benutzerrollen und -Berechtigungen"] Finden Sie weitere Informationen.
 
 Jeder ONTAP-Rolle ist ein zugehöriger Benutzername und ein Passwort zugeordnet, was die Anmeldeinformationen der Rolle darstellt. Wenn Sie sich nicht mit diesen Anmeldedaten anmelden, können Sie nicht auf die Speichervorgänge zugreifen, die der Rolle zugeordnet sind.
 
-Die VSC-spezifischen ONTAP-Rollen werden in hierarchischen Anordnung angeordnet. Das bedeutet, dass die erste Rolle die restriktivsten Rollen ist und nur die Berechtigungen besitzt, die mit dem Basissatz von VSC-Storage-Vorgängen verknüpft sind. Die nächste Rolle umfasst sowohl eigene Berechtigungen als auch alle Berechtigungen, die mit der vorherigen Rolle verknüpft sind. Jede zusätzliche Rolle ist hinsichtlich des unterstützten Storage-Betriebs weniger restriktiv.
+Als Sicherheitsmaßnahme werden die ONTAP-Tools-spezifischen ONTAP-Rollen hierarchisch geordnet. Dies bedeutet, dass die erste Rolle die restriktivste Rolle ist und nur über die Berechtigungen verfügt, die mit dem grundlegendsten Satz von ONTAP-Tools-Speichervorgängen verknüpft sind. Die nächste Rolle umfasst sowohl eigene Berechtigungen als auch alle Berechtigungen, die mit der vorherigen Rolle verknüpft sind. Jede zusätzliche Rolle ist hinsichtlich des unterstützten Storage-Betriebs weniger restriktiv.
 
-Nachstehend finden Sie einige der empfohlenen ONTAP RBAC-Rollen beim Einsatz von VSC. Nachdem Sie diese Rollen erstellt haben, können Sie sie Benutzern zuweisen, die Storage-Aufgaben ausführen müssen, z. B. Virtual Machines bereitstellen.
+Im Folgenden finden Sie einige der empfohlenen ONTAP RBAC-Rollen bei der Verwendung von ONTAP Tools. Nachdem Sie diese Rollen erstellt haben, können Sie sie Benutzern zuweisen, die Storage-Aufgaben ausführen müssen, z. B. Virtual Machines bereitstellen.
 
 . Ermitteln
 +

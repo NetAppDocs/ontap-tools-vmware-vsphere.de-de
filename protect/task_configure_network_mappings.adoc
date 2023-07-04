@@ -30,7 +30,7 @@ Sie müssen die geschützten und die Recovery-Standorte miteinander verbunden ha
 . Melden Sie sich bei Ihrem vCenter Server an und klicken Sie auf *Site Recovery* > *Sites*.
 . Wählen Sie Ihre geschützte Seite aus, und klicken Sie dann auf *Verwalten*.
 . Wählen Sie auf der Registerkarte Verwalten die Option *Netzwerkzuordnungen* aus.
-. Klicken Sie auf das image:../media/new_network_mappings.gif[""] Symbol, um eine neue Netzwerkzuordnung zu erstellen.
+. Klicken Sie auf das image:../media/new_network_mappings.gif["Globe-Symbol"] Symbol, um eine neue Netzwerkzuordnung zu erstellen.
 +
 Der Assistent „Netzwerkzuordnung erstellen“ wird angezeigt.
 

@@ -23,6 +23,6 @@ Replizierungsgruppen werden während der Erstellung des VVols-Datastores für je
 
 NOTE: Wenn Sie Disaster Recovery für VVols Datastores verwenden, müssen Sie den Storage Replication Adapter (SRA) nicht separat konfigurieren, da die VASA Provider-Funktion erweitert wird und VVols-Replizierung ermöglicht.
 
-image::../media/vvols_replication.png[vvols Replizierung]
+image::../media/vvols_replication.png[ONTAP System-Workflow konfigurieren]
 
 link:../protect/configure_vvols_replication_existing_datastore.html["Konfigurieren Sie die VVols Replizierung für vorhandene Datastores"]

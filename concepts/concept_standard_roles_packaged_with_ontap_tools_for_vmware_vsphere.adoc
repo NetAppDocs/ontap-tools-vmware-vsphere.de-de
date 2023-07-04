@@ -2,7 +2,7 @@
 permalink: concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Zur Vereinfachung der Arbeit mit vCenter Server-Berechtigungen und rollenbasierter Zugriffssteuerung \ (RBAC\) bietet die Virtual Storage Console \(VSC\) standardmäßige VSC-Rollen, mit denen Sie wichtige VSC-Aufgaben ausführen können. Es gibt auch eine schreibgeschützte Rolle, mit der Sie VSC Informationen anzeigen, aber keine Aufgaben ausführen können.' 
+summary: 'Um die Arbeit mit vCenter Server-Berechtigungen und rollenbasierter Zugriffssteuerung \ (RBAC\) zu vereinfachen, bieten ONTAP Tools standardmäßige ONTAP Tools, mit denen Sie wichtige Aufgaben im Zusammenhang mit ONTAP Tools ausführen können. Es gibt auch eine schreibgeschützte Rolle, mit der Sie die Informationen anzeigen, aber keine Aufgaben ausführen können.' 
 ---
 = Standardrollen in Paket mit ONTAP Tools
 :allow-uri-read: 
@@ -11,18 +11,18 @@ summary: 'Zur Vereinfachung der Arbeit mit vCenter Server-Berechtigungen und rol
 
 
 [role="lead"]
-Zur Vereinfachung der Arbeit mit vCenter Server-Berechtigungen und rollenbasierter Zugriffssteuerung (Role Based Access Control, RBAC) bietet die Virtual Storage Console (VSC) standardmäßige VSC-Rollen, mit denen Sie wichtige VSC Aufgaben ausführen können. Es gibt auch eine schreibgeschützte Rolle, mit der Sie VSC Informationen anzeigen, aber keine Aufgaben ausführen können.
+Um die Arbeit mit vCenter Server-Berechtigungen und rollenbasierter Zugriffssteuerung (Role Based Access Control, RBAC) zu vereinfachen, bieten die ONTAP Tools standardmäßige ONTAP-Tools, mit denen Sie wichtige ONTAP-Tools-Aufgaben ausführen können. Es gibt auch eine schreibgeschützte Rolle, mit der Sie die Informationen anzeigen, aber keine Aufgaben ausführen können.
 
-Die VSC Standardrollen verfügen sowohl über die erforderlichen VSC-spezifischen Berechtigungen als auch über die nativen vCenter Server-Berechtigungen, die für Benutzer zur Ausführung von VSC Aufgaben erforderlich sind. Darüber hinaus werden die Rollen so eingerichtet, dass sie über die erforderlichen Berechtigungen für alle unterstützten Versionen des vCenter Servers verfügen.
+Die Standard-ONTAP-Tool-Rollen verfügen sowohl über die erforderlichen spezifischen Berechtigungen für ONTAP-Tools als auch über die nativen vCenter Server-Berechtigungen, die Benutzer zum Ausführen von ONTAP-Tools-Aufgaben benötigen. Darüber hinaus werden die Rollen so eingerichtet, dass sie über die erforderlichen Berechtigungen für alle unterstützten Versionen des vCenter Servers verfügen.
 
 Als Administrator können Sie diese Rollen bei Bedarf Benutzern zuweisen.
 
 
-NOTE: Wenn Sie die VSC auf die neueste Version aktualisieren, werden die Standardrollen automatisch aktualisiert, um sie mit der neuen Version von VSC zu verwenden.
+NOTE: Wenn Sie ONTAP-Tools auf die neueste Version aktualisieren, werden die Standardrollen automatisch aktualisiert, um mit der neuen Version des Tools zu arbeiten.
 
-Sie können die VSC Standardrollen anzeigen, indem Sie auf der vSphere Client Startseite auf *Rollen* klicken.
+Sie können die Standardrollen der ONTAP-Tools anzeigen, indem Sie auf der vSphere Client-Startseite auf *Rollen* klicken.
 
-Die Rollen der VSC ermöglichen Ihnen, die folgenden Aufgaben auszuführen:
+Mit den Rollen, die ONTAP-Tools zur Verfügung stellen, können Sie die folgenden Aufgaben ausführen:
 
 |===
 
@@ -33,21 +33,21 @@ Die Rollen der VSC ermöglichen Ihnen, die folgenden Aufgaben auszuführen:
  a| 
 VSC Administrator
  a| 
-Bietet alle nativen vCenter Server-Berechtigungen und VSC-spezifische Berechtigungen, die zur Durchführung aller VSC-Aufgaben erforderlich sind.
+Bietet alle nativen vCenter Server-Berechtigungen und ONTAP-Tools-spezifischen Berechtigungen, die für die Ausführung aller ONTAP-Tools-Aufgaben erforderlich sind.
 
 
 
  a| 
 VSC schreibgeschützt
  a| 
-Bietet schreibgeschützten Zugriff auf VSC Diese Benutzer können keine VSC Aktionen ausführen, die durch den Zugriff gesteuert werden.
+Bietet schreibgeschützten Zugriff auf ONTAP Tools. Diese Benutzer können keine ONTAP-Tools-Aktionen ausführen, die über Zugriffskontrollmöglichkeiten verfügen.
 
 
 
  a| 
 VSC Provisionierung
  a| 
-Bietet alle nativen vCenter Server-Berechtigungen und VSC-spezifische Berechtigungen, die für die Bereitstellung von Storage erforderlich sind. Sie können die folgenden Aufgaben ausführen:
+Bietet alle nativen vCenter Server-Berechtigungen und ONTAP-Tools-spezifischen Berechtigungen, die für die Bereitstellung von Speicher erforderlich sind. Sie können die folgenden Aufgaben ausführen:
 
 * Erstellen neuer Datenspeicher
 * Datastores zerstören
@@ -57,32 +57,32 @@ Bietet alle nativen vCenter Server-Berechtigungen und VSC-spezifische Berechtigu
 |===
 
 
-== Richtlinien zur Verwendung von VSC Standardrollen
+== Richtlinien zur Verwendung von Standardrollen in ONTAP-Tools
 
 Wenn Sie mit standardmäßigen ONTAP-Tools für VMware vSphere-Rollen arbeiten, gibt es bestimmte Richtlinien, die Sie befolgen sollten.
 
-Sie sollten die Standardrollen nicht direkt ändern. Wenn Sie das tun, überschreiben die Änderungen bei jedem VSC-Upgrade die VSC. Das Installationsprogramm aktualisiert bei jedem VSC-Upgrade die Standardrollendefinitionen. So wird sichergestellt, dass die Rollen sowohl für Ihre VSC-Version als auch für alle unterstützten Versionen des vCenter Server aktuell sind.
+Sie sollten die Standardrollen nicht direkt ändern. Wenn Sie dies tun, überschreiben ONTAP-Tools Ihre Änderungen bei jedem Upgrade. Das Installationsprogramm aktualisiert die Standardrollendefinitionen jedes Mal, wenn Sie ONTAP-Tools aktualisieren. Dadurch wird sichergestellt, dass die Rollen für Ihre Version von ONTAP-Tools sowie für alle unterstützten Versionen von vCenter Server aktuell sind.
 
-Sie können jedoch die Standardrollen verwenden, um Rollen zu erstellen, die auf Ihre Umgebung zugeschnitten sind. Dazu sollten Sie die VSC Standardrolle kopieren und dann die kopierte Rolle bearbeiten. Durch das Erstellen einer neuen Rolle können Sie diese Rolle auch beibehalten, wenn Sie den VSC Windows Service neu starten oder aktualisieren.
+Sie können jedoch die Standardrollen verwenden, um Rollen zu erstellen, die auf Ihre Umgebung zugeschnitten sind. Dazu sollten Sie die Standardrolle „ONTAP Tools“ kopieren und dann die kopierte Rolle bearbeiten. Wenn Sie eine neue Rolle erstellen, können Sie diese Rolle auch dann beibehalten, wenn Sie den Windows-Dienst für ONTAP-Tools neu starten oder aktualisieren.
 
-Möglicherweise verwenden Sie die VSC Standardrollen wie folgt:
+Folgende Standardrollen für ONTAP-Tools können u. a. verwendet werden:
 
-* Verwenden Sie die VSC Standardrollen für alle VSC Aufgaben.
+* Verwenden Sie die Standardrollen der ONTAP-Tools für alle Aufgaben mit ONTAP-Tools.
 +
-In diesem Szenario bieten die Standardrollen alle Berechtigungen, die ein Benutzer zur Durchführung der VSC-Aufgaben benötigt.
+In diesem Szenario bieten die Standardrollen alle Berechtigungen, die ein Benutzer zur Ausführung der Aufgaben der ONTAP-Tools benötigt.
 
 * Kombinieren Sie Rollen, um die Aufgaben zu erweitern, die ein Benutzer ausführen kann.
 +
-Wenn die VSC Standardrollen zu viel Granularität für Ihre Umgebung bieten, können Sie ihre Rollen erweitern, indem Sie Gruppen auf höherer Ebene mit mehreren Rollen erstellen.
+Wenn die Standard-ONTAP-Tools-Rollen zu viel Granularität für Ihre Umgebung bieten, können Sie die Rollen erweitern, indem Sie Gruppen auf höherer Ebene erstellen, die mehrere Rollen enthalten.
 
 +
-Wenn ein Benutzer andere Aufgaben ausführen muss, die keine VSC erfordern, die zusätzliche native Berechtigungen von vCenter Server erfordern, können Sie eine Rolle erstellen, die diese Berechtigungen bereitstellt und sie der Gruppe auch hinzufügen.
+Wenn ein Benutzer andere Aufgaben, die nicht zu ONTAP gehören, ausführen muss, für die zusätzliche native vCenter Server-Berechtigungen erforderlich sind, können Sie eine Rolle erstellen, die diese Berechtigungen bereitstellt, und diese auch der Gruppe hinzufügen.
 
 * Erstellung feingranularer Rollen
 +
-Wenn in Ihrem Unternehmen bestimmte Rollen restriktiver implementiert werden müssen als die VSC Standardrollen, können Sie mit den VSC Rollen neue Rollen erstellen.
+Wenn in Ihrem Unternehmen Rollen implementiert werden müssen, die restriktiver sind als die Standardrollen für ONTAP-Tools, können Sie mithilfe der Rollen im Bereich ONTAP-Tools neue Rollen erstellen.
 
 +
-In diesem Fall würden Sie die nötigen VSC Rollen klonen und dann die geklonte Rolle bearbeiten, damit sie nur die Berechtigungen hat, die Ihr Benutzer benötigt.
+In diesem Fall klonen Sie die erforderlichen Rollen der ONTAP-Tools und bearbeiten dann die geklonte Rolle, sodass nur die Berechtigungen zum Benutzer gehören.
 
 

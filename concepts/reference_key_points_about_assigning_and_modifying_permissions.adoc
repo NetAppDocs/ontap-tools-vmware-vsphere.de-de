@@ -19,7 +19,7 @@ Bei der Arbeit mit vCenter Server-Berechtigungen gibt es einige wichtige Punkte,
 
 Sie müssen nur vCenter Server-Berechtigungen einrichten, wenn Sie den Zugriff auf vSphere-Objekte und -Aufgaben einschränken möchten. Andernfalls können Sie sich als Administrator anmelden. Mit dieser Anmeldung können Sie automatisch auf alle vSphere Objekte zugreifen.
 
-Wenn Sie eine Berechtigung zuweisen, legt die VSC Aufgaben fest, die ein Benutzer ausführen kann.
+Wenn Sie eine Berechtigung zuweisen, bestimmt dies die Aufgaben der ONTAP-Tools, die ein Benutzer ausführen kann.
 
 Um den Abschluss einer Aufgabe zu gewährleisten, müssen Sie die Berechtigung auf einer höheren Ebene zuweisen, z. B. dem Root-Objekt. Dies ist der Fall, wenn eine Aufgabe eine Berechtigung erfordert, die nicht auf ein bestimmtes vSphere-Objekt angewendet wird (z. B. Tracking the Task), oder wenn eine erforderliche Berechtigung auf ein nicht-vSphere-Objekt (z. B. ein Storage-System) angewendet wird.
 
@@ -32,9 +32,9 @@ TIP: Sofern die Sicherheitsrichtlinien Ihres Unternehmens keine restriktiveren B
 
 == Berechtigungen und nicht vSphere Objekte
 
-Die von Ihnen erstellte Berechtigung wird auf ein nicht-vSphere-Objekt angewendet. Beispielsweise ist ein Storage-System kein vSphere-Objekt. Wenn eine Berechtigung für ein Storage-System gilt, müssen Sie dem VSC-Root-Objekt die Berechtigung mit dieser Berechtigung zuweisen, da es kein vSphere Objekt gibt, dem Sie es zuweisen können.
+Die von Ihnen erstellte Berechtigung wird auf ein nicht-vSphere-Objekt angewendet. Beispielsweise ist ein Storage-System kein vSphere-Objekt. Wenn sich eine Berechtigung auf ein Speichersystem bezieht, müssen Sie die Berechtigung, die diese Berechtigung enthält, dem Stammobjekt ONTAP Tools zuweisen, da es kein vSphere-Objekt gibt, dem Sie es zuweisen können.
 
-Beispielsweise müssen alle Berechtigungen, die ein Privileg enthalten, z. B. die VSC-Berechtigung „Storage-Systeme hinzufügen/ändern/überspringen“, auf der Root-Objektebene zugewiesen werden.
+Beispielsweise müssen alle Berechtigungen, die eine Berechtigung wie die Berechtigung „Speichersysteme hinzufügen/ändern/überspringen“ für ONTAP-Tools enthalten, auf der Root-Objektebene zugewiesen werden.
 
 
 
