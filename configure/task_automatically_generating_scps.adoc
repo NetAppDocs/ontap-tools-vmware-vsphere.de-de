@@ -15,8 +15,8 @@ VASA Provider für ONTAP ermöglicht die automatische Generierung von Storage-Fu
 
 *Was Sie brauchen*
 
-* Sie müssen Ihre VASA Provider-Instanz über die Virtual Storage Console (VSC) registriert haben.
-* VSC muss Ihren Storage erkannt haben.
+* Sie müssen Ihre VASA Provider-Instanz bei den ONTAP-Tools registriert haben.
+* ONTAP-Tools müssen Ihren Storage erkannt haben.
 
 
 *Über diese Aufgabe*

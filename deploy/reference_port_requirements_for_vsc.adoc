@@ -2,22 +2,22 @@
 permalink: deploy/reference_port_requirements_for_vsc.html 
 sidebar: sidebar 
 keywords: port requirements 
-summary: 'Standardmäßig verwendet Virtual Storage Console \(VSC\) festgelegte Ports, um die Kommunikation zwischen seinen Komponenten, einschließlich Storage-Systemen und dem VMware vCenter Server, zu ermöglichen. Wenn Firewalls aktiviert sind, müssen Sie sicherstellen, dass die Firewalls so eingestellt sind, dass Ausnahmen zugelassen werden.' 
+summary: Standardmäßig verwenden ONTAP-Tools bestimmte Ports, um die Kommunikation zwischen ihren Komponenten, zu denen Storage-Systeme und der VMware vCenter Server gehören, zu ermöglichen. Wenn Firewalls aktiviert sind, müssen Sie sicherstellen, dass die Firewalls so eingestellt sind, dass Ausnahmen zugelassen werden. 
 ---
-= Port-Anforderungen für VSC
+= Port-Anforderungen für ONTAP-Tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Standardmäßig verwendet die Virtual Storage Console (VSC) bestimmte Ports, um die Kommunikation zwischen ihren Komponenten zu ermöglichen. Dazu gehören Storage-Systeme und VMware vCenter Server. Wenn Firewalls aktiviert sind, müssen Sie sicherstellen, dass die Firewalls so eingestellt sind, dass Ausnahmen zugelassen werden.
+Standardmäßig verwenden ONTAP-Tools bestimmte Ports, um die Kommunikation zwischen ihren Komponenten, zu denen Storage-Systeme und der VMware vCenter Server gehören, zu ermöglichen. Wenn Firewalls aktiviert sind, müssen Sie sicherstellen, dass die Firewalls so eingestellt sind, dass Ausnahmen zugelassen werden.
 
-Bei Firewalls anderer als Windows sollten Sie manuell Zugriff auf bestimmte Ports gewähren, die von VSC verwendet werden. Wenn Sie diesen Ports keinen Zugriff gewähren, wird eine Fehlermeldung wie die folgende angezeigt.
+Bei Firewalls, die nicht Windows sind, sollten Sie manuell Zugriff auf bestimmte Ports gewähren, die von ONTAP-Tools verwendet werden. Wenn Sie diesen Ports keinen Zugriff gewähren, wird eine Fehlermeldung wie die folgende angezeigt.
 
 `Unable to communicate with the server.`
 
-VSC verwendet die folgenden bidirektionalen TCP-Standardports:
+ONTAP-Tools verwenden die folgenden bidirektionalen TCP-Standardports:
 
 |===
 
@@ -42,10 +42,10 @@ Je nach Konfiguration Ihrer Anmeldedaten achten VMware vCenter Server und die Sp
  a| 
 8143
  a| 
-VSC wartet auf eine sichere Kommunikation von diesem Port. Der Port wird in der Client-Server-Kommunikationsarchitektur verwendet. Der Client, der beliebige Automatisierungs-Client sein kann, der REST API verwendet, initiiert die Verbindung zum Server und den Datenaustausch mit den Endpunkten. Dieser Port ist für VSC-Dienste und für den Export der VSC-Serverprotokolle aktiviert. Die Seite register.html wird auf diesem Port gehostet. Der REST-Schwagger ist an diesem Port freigelegt.
+Die ONTAP-Tools sorgen für eine sichere Kommunikation über diesen Port. Der Port wird in der Client-Server-Kommunikationsarchitektur verwendet. Der Client, der beliebige Automatisierungs-Client sein kann, der REST API verwendet, initiiert die Verbindung zum Server und den Datenaustausch mit den Endpunkten. Dieser Port ist für ONTAP-Tools-Dienste und für den Export von Serverprotokollen der ONTAP-Tools aktiviert. Die Seite register.html wird auf diesem Port gehostet. Der REST-Schwagger ist an diesem Port freigelegt.
 
 |===
 
 NOTE: Sie sollten das Internet Control Message Protocol (ICMP) aktivieren, bevor Sie die ONTAP-Tools bereitstellen.
 
-Wenn ICMP deaktiviert ist, schlägt die Erstkonfiguration von ONTAP-Tools fehl, und VSC kann die VSC- und VASA-Provider-Services nach der Implementierung nicht starten. Nach der Implementierung müssen Sie die VSC- und VASA-Provider-Services manuell aktivieren.
+Wenn ICMP deaktiviert ist, schlägt die Erstkonfiguration der ONTAP-Tools fehl, und ONTAP-Tools können die ONTAP-Tools und VASA Provider-Dienste nach der Bereitstellung nicht starten. Sie müssen die ONTAP-Tools und VASA Provider-Services nach der Implementierung manuell aktivieren.

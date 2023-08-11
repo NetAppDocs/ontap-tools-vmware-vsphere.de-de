@@ -1,0 +1,15 @@
+---
+permalink: manage/vasa_provider_disaster_recovery.html 
+sidebar: sidebar 
+keywords: scope of guide 
+summary: 'Wenn die virtuelle VASA Provider (VP)-Appliance verloren gegangen ist, nicht mehr zugänglich gemacht wird oder anderweitig nicht funktionsfähig ist, müssen Sie möglicherweise eine VP-Disaster-Recovery durchführen. ' 
+---
+= Disaster Recovery für VASA Provider
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Wenn die virtuelle VASA Provider (VP)-Appliance verloren gegangen ist, nicht mehr zugänglich gemacht wird oder anderweitig nicht funktionsfähig ist, müssen Sie möglicherweise eine VP-Disaster-Recovery durchführen.
+Weitere Informationen finden Sie unter https://kb.netapp.com/mgmt/OTV/Virtual_Storage_Console/How_to_perform_a_VASA_Provider_Disaster_Recovery_-_Resolution_Guide["So führen Sie eine VASA Provider Disaster Recovery - Resolution Guide durch"]

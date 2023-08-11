@@ -15,7 +15,7 @@ Bei der Bereitstellung eines Datenspeichers wird ein logischer Container für Ih
 
 *Was Sie brauchen*
 
-* Um einen Datastore auf einer SVM bereitzustellen, die direkt mit der Virtual Storage Console (VSC) verbunden ist, muss die SVM zur VSC hinzugefügt werden. Dabei muss ein Benutzerkonto mit den entsprechenden Rechten, nicht jedoch das vsadmin Standardbenutzerkonto oder die vsadmin Rolle, verwendet werden.
+* Um einen Datastore auf einer SVM bereitzustellen, die direkt mit den ONTAP-Tools verbunden ist, müssen Sie die SVM zu den ONTAP-Tools hinzugefügt haben. Verwenden Sie dazu ein Benutzerkonto mit den entsprechenden Berechtigungen und nicht das standardmäßige vsadmin-Benutzerkonto oder die vsadmin-Rolle.
 +
 Sie können auch einen Datastore durch Hinzufügen eines Clusters bereitstellen.
 
@@ -25,7 +25,7 @@ Siehe „Aktivieren von Datastore-Mounting über verschiedene Subnetze“.
 
 * Wenn Sie NFS oder iSCSI verwenden und das Subnetz zwischen Ihren ESXi Hosts und Ihrem Speichersystem unterschiedlich ist, müssen die NFS- oder iSCSI-Einstellungen in der kampinoprefs Preferences-Datei ESXi Host-Subnetzmasken enthalten.
 +
-Diese Voreinstellungsdatei gilt auch für die Erstellung von VVols-Datenspeichern. Weitere Informationen finden Sie unter _Mounten von Datastores über verschiedene Subnetze aktivieren_ und _die VSC-Präferenzdateien konfigurieren_.
+Diese Voreinstellungsdatei gilt auch für die Erstellung von VVols-Datenspeichern. Weitere Informationen finden Sie unter _Enable Datastore Mounten in verschiedenen Subnetzen_ und _Configure the ONTAP Tools Preferences files_.
 
 * Wenn Sie VASA Provider aktiviert haben und Storage-Funktionsprofile für Ihre NFS-Datastores oder VMFS-Datastores angeben möchten, müssen Sie ein oder mehrere Storage-Funktionsprofile erstellt haben.
 * Um einen NFSv4.1-Datastore zu erstellen, muss NFSv4.1 auf SVM-Ebene aktiviert sein.
@@ -38,10 +38,10 @@ Mit der Option *Provision Datastore* können Sie ein Speicherfähigkeit-Profil f
 * Ab vSphere 8.0 Version wird das NVMe/FC-Protokoll unterstützt.
 
 
-VSC kann einen Datastore entweder auf einem NFS Volume oder auf einer LUN erstellen:
+ONTAP Tools können einen Datastore entweder auf einem NFS Volume oder einer LUN erstellen:
 
-* Für einen NFS-Datastore erstellt VSC ein NFS-Volume auf dem Storage-System und aktualisiert dann die Exportrichtlinien.
-* Für einen VMFS-Datenspeicher erstellt die VSC ein neues Volume (oder verwendet ein vorhandenes Volume, wenn Sie diese Option ausgewählt haben) und erstellt dann eine LUN und eine Initiatorgruppe.
+* Bei einem NFS-Datastore erstellt ONTAP Tools ein NFS-Volume auf dem Storage-System und aktualisiert anschließend die Exportrichtlinien.
+* Für einen VMFS-Datastore erstellt ONTAP-Tools ein neues Volume (oder verwendet ein vorhandenes Volume, wenn Sie diese Option ausgewählt haben) und erstellt dann eine LUN und eine Initiatorgruppe.
 
 
 [NOTE]
@@ -182,7 +182,7 @@ Sie können eines der aufgeführten Storage-Funktionsprofile auswählen, wenn Si
  a| 
 Storage-Attribute
  a| 
-Standardmäßig füllt VSC die empfohlenen Werte für *Aggregate*- und *Volumen*-Optionen aus. Sie können die Werte entsprechend Ihren Anforderungen anpassen. Die Aggregatauswahl wird bei FlexGroup-Datastores nicht unterstützt, da ONTAP die Aggregat-Auswahl managt.
+Standardmäßig füllen ONTAP-Tools die empfohlenen Werte für die Optionen *Aggregate* und *Volumes* aus. Sie können die Werte entsprechend Ihren Anforderungen anpassen. Die Aggregatauswahl wird bei FlexGroup-Datastores nicht unterstützt, da ONTAP die Aggregat-Auswahl managt.
 
 Die Option *Space Reserve*, die im Menü *Advanced* verfügbar ist, wird ebenfalls ausgefüllt, um optimale Ergebnisse zu erzielen.
 

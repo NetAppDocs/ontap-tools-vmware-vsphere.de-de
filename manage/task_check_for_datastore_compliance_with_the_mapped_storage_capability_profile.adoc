@@ -15,8 +15,8 @@ Sie können schnell überprüfen, ob Ihre Datenspeicher den Storage-Funktionspro
 
 *Was Sie brauchen*
 
-* Sie müssen Ihre VASA Provider Instanz mit ONTAP Tools für VMware vSphere (VSC) registriert haben.
-* VSC muss Ihren Storage erkannt haben.
+* Sie müssen Ihre VASA Provider Instanz mit ONTAP Tools für VMware vSphere registriert haben.
+* ONTAP-Tools müssen Ihren Storage erkannt haben.
 
 
 *Schritte*
@@ -25,7 +25,7 @@ Sie können schnell überprüfen, ob Ihre Datenspeicher den Storage-Funktionspro
 . Überprüfen Sie die Informationen in der Spalte „Compliance Status“, um nicht konforme Datastores zu identifizieren und die Warnungen aus Gründen der Nichteinhaltung zu prüfen.
 +
 
-NOTE: Wenn Sie auf die *COMPLIANCE-PRÜFUNG*-Schaltfläche klicken, führt VSC eine erneute Bestandsaufnahme für den gesamten Storage durch, was einige Minuten dauern kann.
+NOTE: Wenn Sie auf die Schaltfläche *COMPLIANCE CHECK* klicken, führt ONTAP Tools eine erneute Erkennung für den gesamten Speicher durch, was einige Minuten dauern kann.
 
 +
 Wenn ein Datastore nicht mehr mit seinem Profil kompatibel ist, wird in der Spalte „Compliance-Status“ eine Warnmeldung angezeigt, die den Grund für eine Nichteinhaltung angibt. Beispielsweise kann für ein Profil eine Komprimierung erforderlich sein. Wenn sich diese Einstellung für den Storage geändert hat, wird Komprimierung nicht mehr verwendet und der Datenspeicher ist nicht kompatibel.

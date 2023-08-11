@@ -2,7 +2,7 @@
 permalink: configure/concept_configure_storage_systems_for_ontap_tools_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: Sie sollten Storage-Systeme zu ONTAP Tools hinzufügen und bei Bedarf über die VSC Schnittstelle Standard-Anmeldedaten festlegen. 
+summary: Sie sollten Storage-Systeme zu ONTAP Tools hinzufügen und bei Bedarf über die Schnittstelle der ONTAP Tools die Standardanmeldedaten festlegen. 
 ---
 = Überblick über Storage-Systeme für ONTAP Tools
 :allow-uri-read: 
@@ -11,23 +11,23 @@ summary: Sie sollten Storage-Systeme zu ONTAP Tools hinzufügen und bei Bedarf �
 
 
 [role="lead"]
-Sie sollten Storage-Systeme zu ONTAP Tools hinzufügen und bei Bedarf über die VSC Schnittstelle Standard-Anmeldedaten festlegen.
+Sie sollten Storage-Systeme zu ONTAP Tools hinzufügen und bei Bedarf über die Schnittstelle der ONTAP Tools die Standardanmeldedaten festlegen.
 
-ONTAP Tools für VMware vSphere bietet einen einzigen Mechanismus, um Storage-Systeme zu erkennen und die Storage-Anmeldedaten festzulegen. Sie stellen die ONTAP-Berechtigungen bereit, die erforderlich sind, damit Benutzer von Virtual Storage Console (VSC) mithilfe der Storage-Systeme Aufgaben durchführen können.
+ONTAP Tools für VMware vSphere bietet einen einzigen Mechanismus, um Storage-Systeme zu erkennen und die Storage-Anmeldedaten festzulegen. Die Zugangsdaten liefern die ONTAP Berechtigungen, die erforderlich sind, um Benutzern von ONTAP Tools die Ausführung von Aufgaben mithilfe der Storage-Systeme zu ermöglichen.
 
-Bevor VSC die Storage-Ressourcen anzeigen und managen kann, muss VSC die Storage-Systeme erkennen. Im Rahmen des Erkennungsvorgangs müssen Sie die ONTAP Zugangsdaten für Ihre Storage-Systeme angeben. Hierbei handelt es sich um die Berechtigungen (oder Rollen), die mit dem Benutzernamen und dem Kennwort-Paar verknüpft sind, das jedem Speichersystem zugewiesen ist. Diese Benutzername und Passwort-Paare verwenden die rollenbasierte Zugriffssteuerung (Role-Based Access Control, RBAC) von ONTAP und müssen aus ONTAP heraus eingerichtet werden. Sie können diese Anmeldedaten nicht in VSC ändern. ONTAP RBAC-Rollen können Sie mit ONTAP System Manager definieren.
+Bevor ONTAP-Tools die Storage-Ressourcen anzeigen und verwalten können, müssen ONTAP-Tools die Storage-Systeme erkennen. Im Rahmen des Erkennungsvorgangs müssen Sie die ONTAP Zugangsdaten für Ihre Storage-Systeme angeben. Hierbei handelt es sich um die Berechtigungen (oder Rollen), die mit dem Benutzernamen und dem Kennwort-Paar verknüpft sind, das jedem Speichersystem zugewiesen ist. Diese Benutzername und Passwort-Paare verwenden die rollenbasierte Zugriffssteuerung (Role-Based Access Control, RBAC) von ONTAP und müssen aus ONTAP heraus eingerichtet werden. Sie können diese Anmeldeinformationen nicht in ONTAP Tools ändern. ONTAP RBAC-Rollen können Sie mit ONTAP System Manager definieren.
 
 
 NOTE: Wenn Sie sich als Administrator anmelden, verfügen Sie automatisch über alle Berechtigungen für dieses Speichersystem.
 
-Wenn Sie der VSC ein Storage-System hinzufügen, müssen Sie eine IP-Adresse für das Storage-System und den mit dem System verknüpften Benutzernamen und das Passwort eingeben. Sie können Standardanmeldeinformationen einrichten, die VSC während der Erkennung des Storage-Systems verwendet, oder Sie können manuell die Anmeldedaten eingeben, wenn das Speichersystem erkannt wird. Die Details des Storage-Systems, das zur VSC hinzugefügt wird, werden automatisch an die Erweiterungen weitergeleitet, die Sie bei Ihrer Implementierung aktivieren. Sie müssen nicht manuell Storage zu VASA Provider und Storage Replication Adapter (SRA) hinzufügen. VSC und SRA unterstützen das Hinzufügen von Anmeldeinformationen auf Cluster-Ebene und auf Storage Virtual Machine (SVM)-Ebene. VASA Provider unterstützt nur Cluster-Level-Anmeldeinformationen zum Hinzufügen von Storage-Systemen. Wenn Sie ein Storage-System hinzufügen, sollte jede Kommunikation zwischen dem ONTAP Tools Plug-in und dem Storage-System gegenseitig authentifiziert werden.
+Wenn Sie ONTAP Tools ein Storage-System hinzufügen, müssen Sie eine IP-Adresse für das Storage-System sowie den Benutzernamen und das Passwort-Paar angeben, die dem System zugeordnet sind. Sie können Standardanmeldeinformationen einrichten, die ONTAP-Tools während der Erkennung des Speichersystems verwenden, oder Sie können Anmeldeinformationen manuell eingeben, wenn das Speichersystem erkannt wird. Die Details des Speichersystems, das zu ONTAP Tools hinzugefügt wird, werden automatisch an die Erweiterungen weitergeleitet, die Sie in Ihrer Implementierung aktivieren. Sie müssen nicht manuell Storage zu VASA Provider und Storage Replication Adapter (SRA) hinzufügen. Sowohl ONTAP-Tools als auch SRA unterstützen das Hinzufügen von Zugangsdaten auf Cluster-Ebene und SVM-Ebene (Storage Virtual Machine). VASA Provider unterstützt nur Cluster-Level-Anmeldeinformationen zum Hinzufügen von Storage-Systemen. Wenn Sie ein Storage-System hinzufügen, sollte jede Kommunikation zwischen dem ONTAP Tools Plug-in und dem Storage-System gegenseitig authentifiziert werden.
 
-Wenn in Ihrer Umgebung mehrere vCenter Server-Instanzen enthalten sind, wird beim Hinzufügen eines Storage-Systems zur VSC von der Seite Storage Systems aus ein vCenter Server-Feld angezeigt, in dem Sie angeben können, welcher vCenter Server-Instanz das Speichersystem hinzugefügt werden soll. Wenn Sie ein Speichersystem hinzufügen, indem Sie mit der rechten Maustaste auf einen Rechenzentrumsnamen klicken, können Sie keine vCenter Server-Instanz angeben, da der Server bereits mit diesem Datacenter verknüpft ist.
+Wenn Ihre Umgebung mehrere vCenter Server-Instanzen umfasst, wird im Dialogfeld Speichersystem hinzufügen ein vCenter Server-Feld angezeigt, in dem Sie angeben können, welcher vCenter Server-Instanz das Speichersystem hinzugefügt werden soll, wenn Sie ein Speichersystem zu ONTAP-Tools hinzufügen. Wenn Sie ein Speichersystem hinzufügen, indem Sie mit der rechten Maustaste auf einen Rechenzentrumsnamen klicken, können Sie keine vCenter Server-Instanz angeben, da der Server bereits mit diesem Datacenter verknüpft ist.
 
 Die Bestandsaufnahme erfolgt auf eine der folgenden Arten. In jedem Fall müssen Sie die Anmeldeinformationen für jedes neu entdeckte Speichersystem angeben.
 
-* Sobald der VSC Service gestartet wird, beginnt die VSC den automatischen Prozess der Bestandsaufnahme.
+* Beim Start des ONTAP Tools Service starten die ONTAP Tools ihre automatische Hintergrunderkennung.
 * Sie können auf der Seite *Speichersysteme* auf die Schaltfläche Alle NEU ENTDECKEN klicken oder sie auf einem Host oder einem Rechenzentrum aus dem Menü *Aktionen* auswählen ( *Aktionen* > *NetApp ONTAP Tools* > *Host- und Speicherdaten aktualisieren* ). Sie können auch auf der Registerkarte *erste Schritte* im Abschnitt 'Übersicht' auf *ENTDECKEN* klicken.
 
 
-Für alle VSC Funktionen sind spezielle Berechtigungen zum Durchführen von Aufgaben erforderlich. Sie können festlegen, was Benutzer basierend auf den mit der ONTAP-Rolle verknüpften Anmeldeinformationen tun können. Alle Benutzer mit demselben Benutzernamen und Kennwort-Paar des Speichersystems nutzen die gleichen Anmeldeinformationen für das Speichersystem und können dieselben Vorgänge ausführen.
+Für alle Funktionen des ONTAP-Tools sind bestimmte Berechtigungen zum Ausführen von Aufgaben erforderlich. Sie können festlegen, was Benutzer basierend auf den mit der ONTAP-Rolle verknüpften Anmeldeinformationen tun können. Alle Benutzer mit demselben Benutzernamen und Kennwort-Paar des Speichersystems nutzen die gleichen Anmeldeinformationen für das Speichersystem und können dieselben Vorgänge ausführen.

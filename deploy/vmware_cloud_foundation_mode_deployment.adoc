@@ -13,7 +13,9 @@ summary: ONTAP Tools für VMware vSphere können in einer VMware Cloud-Umgebung 
 [role="lead"]
 ONTAP Tools für VMware vSphere können in VMware Cloud Foundation (VCF) Umgebung implementiert werden. Hauptziel der VCF-Implementierung ist die Verwendung von ONTAP-Tools in einem Cloud-Setup und die Erstellung von Containern ohne vCenter Server.
 
-Im VCF-Modus können Sie Container für Ihren Speicher erstellen, ohne dass ein vCenter Server benötigt wird. VASA Provider ist standardmäßig nach der Bereitstellung von ONTAP-Tools im VCF-Modus aktiviert. Nach Abschluss der Implementierung können Sie mit REST-APIs Storage-Systeme hinzufügen und Container erstellen. Es wird eine neue API zur Generierung des _Appliance-API-Tokens_ eingeführt, das API-Aufrufe authentifiziert. Einige der vorhandenen APIs wurden geändert, um den Header _Appliance-API-Token_ zu verwenden. Mit ONTAP Tools Version 9.12 unterstützt swagger 1.0 APIs nicht. Die Zeiger, die zuvor auf 1.0 waren, werden auf 2.0 oder 3.0 APIs verschoben.
+Im VCF-Modus können Sie Container für Ihren Speicher erstellen, ohne dass ein vCenter Server benötigt wird. VASA Provider ist standardmäßig nach der Bereitstellung von ONTAP-Tools im VCF-Modus aktiviert. Nach Abschluss der Implementierung können Sie mit REST-APIs Storage-Systeme hinzufügen und Container erstellen. Im folgenden Artikel werden die Verfahren zum Hinzufügen von Speicher zu ONTAP-Tools beschrieben, wenn VCF aktiviert ist, https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["Fügen Sie Speicher zu ONTAP-Tools von Swagger-UI hinzu"].
+
+Es wird eine neue API zur Generierung des _Appliance-API-Tokens_ eingeführt, das API-Aufrufe authentifiziert. Einige der vorhandenen APIs wurden geändert, um den Header _Appliance-API-Token_ zu verwenden. Mit ONTAP Tools Version 9.12 unterstützt swagger 1.0 APIs nicht. Die Zeiger, die zuvor auf 1.0 waren, werden auf 2.0 oder 3.0 APIs verschoben.
 
 Folgende APIs sind für den VCF-Bereitstellungsmodus verfügbar:
 

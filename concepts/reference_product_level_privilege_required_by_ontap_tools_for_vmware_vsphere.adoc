@@ -2,7 +2,7 @@
 permalink: concepts/reference_product_level_privilege_required_by_ontap_tools_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: Um auf die ONTAP Tools für die VMware vSphere-GUI zugreifen zu können, müssen Sie die VSC-spezifische View-Berechtigung auf Produktebene auf der richtigen vSphere-Objektebene zugewiesen haben. Wenn Sie sich ohne diese Berechtigung anmelden, zeigt die VSC eine Fehlermeldung an, wenn Sie auf das NetApp Symbol klicken und verhindert, dass Sie auf die VSC zugreifen. 
+summary: Um auf die ONTAP Tools für die VMware vSphere GUI zuzugreifen, müssen Sie über die für ONTAP Tools spezifische Produktberechtigung auf der richtigen vSphere Objektebene verfügen. Wenn Sie sich ohne diese Berechtigung anmelden, zeigt ONTAP Tools beim Klicken auf das NetApp-Symbol eine Fehlermeldung an und verhindert, dass Sie auf ONTAP-Tools zugreifen können. 
 ---
 = Product-Level-Berechtigung erforderlich, die von ONTAP Tools für VMware vSphere benötigt wird
 :allow-uri-read: 
@@ -11,10 +11,11 @@ summary: Um auf die ONTAP Tools für die VMware vSphere-GUI zugreifen zu können
 
 
 [role="lead"]
-Um auf die ONTAP Tools für die VMware vSphere-GUI zugreifen zu können, müssen Sie die VSC-spezifische View-Berechtigung auf Produktebene auf der richtigen vSphere-Objektebene zugewiesen haben. Wenn Sie sich ohne diese Berechtigung anmelden, zeigt die VSC eine Fehlermeldung an, wenn Sie auf das NetApp Symbol klicken und verhindert, dass Sie auf die VSC zugreifen. Mit der Berechtigung *Ansicht* können Sie auf die VSC GUI zugreifen. Diese Berechtigung ermöglicht Ihnen nicht, Aufgaben in der VSC auszuführen. Zum Ausführen von VSC Aufgaben müssen Sie über die richtigen VSC-spezifischen und nativen vCenter Server-Berechtigungen für diese Aufgaben verfügen.
+Für den Zugriff auf die ONTAP®-Tools für die VMware vSphere-GUI müssen Sie über die produktspezifische, für ONTAP-Tools spezifische Ansichtsberechtigung auf der richtigen vSphere-Objektebene verfügen. Wenn Sie sich ohne diese Berechtigung anmelden, zeigt ONTAP Tools beim Klicken auf das NetApp-Symbol eine Fehlermeldung an und verhindert, dass Sie auf ONTAP-Tools zugreifen können.
+Mit der Berechtigung *Ansicht* können Sie auf die Benutzeroberfläche der ONTAP-Tools zugreifen. Mit dieser Berechtigung können Sie keine Aufgaben in ONTAP-Tools ausführen. Um ONTAP-Tools-Aufgaben auszuführen, müssen Sie über die entsprechenden spezifischen und nativen Berechtigungen für ONTAP-Tools für diese Aufgaben verfügen.
 
-Die Zuweisungsebene legt fest, welche Teile der Benutzeroberfläche angezeigt werden können. Durch das Zuweisen der View-Berechtigung im Root-Objekt (Ordner) können Sie VSC durch Klicken auf das NetApp Symbol eingeben.
+Die Zuweisungsebene legt fest, welche Teile der Benutzeroberfläche angezeigt werden können. Durch Zuweisen der Berechtigung Ansicht im Stammobjekt (Ordner) können Sie ONTAP-Tools aufrufen, indem Sie auf das Symbol NetApp klicken.
 
-Sie können die View-Berechtigung einer anderen vSphere Objektebene zuweisen. Dabei ist jedoch die VSC-Menüs, die Sie anzeigen und verwenden können, beschränkt.
+Sie können die Berechtigung Ansicht einer anderen vSphere Objektebene zuweisen. Dadurch sind jedoch die Menüs der ONTAP Tools eingeschränkt, die Sie sehen und verwenden können.
 
 Das Root-Objekt ist der empfohlene Ort, um alle Berechtigungen zuzuweisen, die die View-Berechtigung enthalten.

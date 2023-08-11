@@ -16,7 +16,7 @@ Sie können die Datastores, die VASA Provider für ONTAP zugeordnet sind, den St
 *Was Sie brauchen*
 
 * Sie müssen Ihre VASA Provider Instanz mit ONTAP Tools für VMware vSphere registriert haben.
-* Virtual Storage Console (VSC) muss Ihren Storage bereits erkannt haben.
+* Die ONTAP-Tools müssen Ihren Storage bereits erkannt haben.
 
 
 Sie können herkömmlichen Datenspeicher einem Storage-Funktionsprofil zuordnen oder das Storage-Funktionsprofil, das einem Datenspeicher zugeordnet ist, ändern. VASA Provider zeigt auf der Seite Storage Mappings alle Datastores des virtuellen Volumes (VVol) an. Alle Datastores, auf die in dieser Aufgabe verwiesen wird, sind herkömmliche Datastores.
@@ -42,7 +42,7 @@ Ein Datastore kann mehrere Profile angleichen. Ein Datastore kann jedoch nur ein
 
 . Wenn Sie ein Storage-Funktionsprofil einem Datenspeicher zuordnen oder das vorhandene Profil eines Datastores ändern möchten, wählen Sie den Datenspeicher aus.
 +
-Um bestimmte Datenspeicher oder andere Informationen auf der Seite Speicherzuordnung zu finden, können Sie einen Namen oder einen Teilstring in das Suchfeld eingeben. VSC zeigt die Suchergebnisse in einem Dialogfeld an. Um zur vollständigen Anzeige zurückzukehren, sollten Sie den Text aus dem Suchfeld entfernen und dann auf *Enter* klicken.
+Um bestimmte Datenspeicher oder andere Informationen auf der Seite Speicherzuordnung zu finden, können Sie einen Namen oder einen Teilstring in das Suchfeld eingeben. ONTAP-Tools zeigt die Suchergebnisse in einem Dialogfeld an. Um zur vollständigen Anzeige zurückzukehren, sollten Sie den Text aus dem Suchfeld entfernen und dann auf *Enter* klicken.
 
 . Wählen Sie im Menü Aktionen die Option *übereinstimmendes Profil zuweisen*.
 . Wählen Sie das Profil aus, das Sie dem Datastore zuordnen möchten, aus der Liste der übereinstimmenden Profile aus, die im Dialogfeld *Profil dem Datastore zuweisen* angegeben ist, und klicken Sie dann auf *OK*, um das ausgewählte Profil dem Datastore zuzuordnen.

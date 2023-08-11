@@ -2,7 +2,7 @@
 permalink: manage/task_collect_the_log_files.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Sie können Log-Dateien für ONTAP®-Tools für VMware vSphere über die in der grafischen Benutzeroberfläche der VSC \(GUI\) verfügbare Option sammeln. Der technische Support fordert Sie möglicherweise auf, die Protokolldateien zu sammeln, damit Sie Probleme beheben können.' 
+summary: 'Sie können Protokolldateien für ONTAP®-Tools für VMware vSphere über die in der grafischen Benutzeroberfläche der ONTAP-Tools \(GUI\) verfügbare Option sammeln. Der technische Support fordert Sie möglicherweise auf, die Protokolldateien zu sammeln, damit Sie Probleme beheben können.' 
 ---
 = Sammeln Sie die Protokolldateien
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Sie können Log-Dateien für ONTAP®-Tools für VMware vSphere über d
 
 
 [role="lead"]
-Sie können Protokolldateien für ONTAP Tools für VMware vSphere von der in der grafischen Benutzeroberfläche der VSC verfügbaren Option (GUI) sammeln. Der technische Support fordert Sie möglicherweise auf, die Protokolldateien zu sammeln, damit Sie Probleme beheben können.
+Sie können Protokolldateien für ONTAP Tools für VMware vSphere über die in der grafischen Benutzeroberfläche (GUI) der ONTAP Tools verfügbare Option sammeln. Der technische Support fordert Sie möglicherweise auf, die Protokolldateien zu sammeln, damit Sie Probleme beheben können.
 
 *Über diese Aufgabe*
 
@@ -19,7 +19,7 @@ Wenn Sie VASA Provider-Protokolldateien benötigen, können Sie über das Bedien
 
 `\https://vm_ip:9083`
 
-Sie können die ONTAP Tools für VMware vSphere Log-Dateien mithilfe der Funktion „`Export ONTAP Tools for VMware vSphere Logs`“ in der VSC GUI sammeln. Wenn Sie ein Paket aus ONTAP Tools für VMware vSphere Log mit aktiviertem VASA Provider sammeln, werden die VP-Protokolle auch in den ONTAP Tools für das Paket VMware vSphere Log enthalten sein. Im Folgenden erfahren Sie, wie Sie die ONTAP-Tools für VMware vSphere-Protokolldateien erfassen:
+Sie können die ONTAP-Tools für VMware vSphere-Protokolldateien mithilfe der Funktion „`ONTAP-Tools für VMware vSphere-Protokolle exportieren`“ in der GUI der ONTAP-Tools sammeln. Wenn Sie ein Paket aus ONTAP Tools für VMware vSphere Log mit aktiviertem VASA Provider sammeln, werden die VP-Protokolle auch in den ONTAP Tools für das Paket VMware vSphere Log enthalten sein. Im Folgenden erfahren Sie, wie Sie die ONTAP-Tools für VMware vSphere-Protokolldateien erfassen:
 
 *Schritte*
 

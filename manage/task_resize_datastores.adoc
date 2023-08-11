@@ -15,7 +15,7 @@ Durch die Anpassung der Größe eines Datenspeichers können Sie den Speicher f�
 
 *Über diese Aufgabe*
 
-Wenn Sie möchten, dass die VSC die Größe des enthaltenden Volumes ändert, wenn es den VMFS-Datastore neu vergrößert, sollten Sie bei der ersten Bereitstellung des VMFS-Datastore nicht die Option *vorhandenes Volume* verwenden* unter Speicherattribut-Abschnitt verwenden, sondern es automatisch ein neues Volume für jeden Datastore erstellen lassen.
+Wenn Sie möchten, dass ONTAP-Tools die Größe des enthaltenen Volumes bei der Größenänderung des VMFS-Datenspeichers ändern, sollten Sie die Option *vorhandenes Volume verwenden* unter dem Abschnitt Speicherattribute beim ersten Provisioning des VMFS-Datenspeichers nicht verwenden, sondern es automatisch ein neues Volume für jeden Datenspeicher erstellen lassen.
 
 Sie können einen NFS-Datenspeicher vergrößern oder verkleinern, aber bei einem VMFS-Datastore ist nur eine Vergrößerung möglich. Die Größe des Datenspeichers wird auch bei FlexGroup-Datenspeichern unterstützt, bei denen die Option „Auto Grow“ und „Verkleinerung“ aktiviert ist. Ein FlexGroup, der Teil eines herkömmlichen Datastores und ein FlexVol Volume ist, das Teil eines VVols Datastores ist, kann nicht unter die vorhandene Größe sinken, er kann jedoch maximal 120 % wachsen. Standard-Snapshots sind auf diesen FlexGroup und FlexVol Volumes aktiviert.
 

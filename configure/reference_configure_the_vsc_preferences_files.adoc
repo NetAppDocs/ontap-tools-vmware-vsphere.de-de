@@ -2,21 +2,21 @@
 permalink: configure/reference_configure_the_vsc_preferences_files.html 
 sidebar: sidebar 
 keywords: preferences files 
-summary: 'Die Einstellungsdateien enthalten Einstellungen, die ONTAP®-Tools für VMware vSphere-Vorgänge steuern. In den meisten Fällen müssen Sie die Einstellungen in diesen Dateien nicht ändern. Es ist hilfreich zu wissen, welche Dateien die Virtual Storage Console \(VSC\) verwenden.' 
+summary: Die Einstellungsdateien enthalten Einstellungen, die ONTAP®-Tools für VMware vSphere-Vorgänge steuern. In den meisten Fällen müssen Sie die Einstellungen in diesen Dateien nicht ändern. Es ist hilfreich zu wissen, welche Präferenzdateien ONTAP-Tools verwenden. 
 ---
-= Konfigurieren Sie die VSC Preferences-Dateien
+= Konfigurieren Sie die Voreinstellungen für die ONTAP-Tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Die Einstellungsdateien enthalten Einstellungen, die die ONTAP-Tools für VMware vSphere Vorgänge steuern. In den meisten Fällen müssen Sie die Einstellungen in diesen Dateien nicht ändern. Es ist hilfreich zu wissen, welche Dateien die Virtual Storage Console (VSC) verwenden.
+Die Einstellungsdateien enthalten Einstellungen, die die ONTAP-Tools für VMware vSphere Vorgänge steuern. In den meisten Fällen müssen Sie die Einstellungen in diesen Dateien nicht ändern. Es ist hilfreich zu wissen, welche Präferenzdateien ONTAP-Tools verwenden.
 
-Die VSC enthält verschiedene Voreinstellungsdateien. Diese Dateien enthalten Eintragsschlüssel und Werte, die bestimmen, wie VSC verschiedene Vorgänge durchführt. Im Folgenden werden einige Präferenz-Dateien beschrieben, die VSC verwendet:
+ONTAP-Tools verfügen über mehrere Präferenzdateien. Diese Dateien enthalten Schlüssel und Werte, die bestimmen, wie ONTAP-Tools verschiedene Vorgänge durchführen. Im Folgenden finden Sie einige der Voreinstellungsdateien, die von ONTAP-Tools verwendet werden:
 
 `/opt/netapp/vscserver/etc/kamino/kaminoprefs.xml`
 
 `/opt/netapp/vscserver/etc/vsc/vscPreferences.xml`
 
-Möglicherweise müssen Sie die Voreinpräferenzen-Dateien in bestimmten Situationen ändern. Wenn Sie beispielsweise iSCSI, NFS oder NVMe/FC verwenden und das Subnetz zwischen Ihren ESXi Hosts und Ihrem Storage-System unterscheidet, müssen Sie die Voreinstellungen ändern. Falls Sie die Einstellungen in der Voreinstellungsdatei nicht ändern, schlägt die Datastore-Bereitstellung fehl, da VSC den Datastore nicht mounten kann.
+Möglicherweise müssen Sie die Voreinpräferenzen-Dateien in bestimmten Situationen ändern. Wenn Sie beispielsweise iSCSI, NFS oder NVMe/FC verwenden und das Subnetz zwischen Ihren ESXi Hosts und Ihrem Storage-System unterscheidet, müssen Sie die Voreinstellungen ändern. Wenn Sie die Einstellungen in der Einstellungsdatei nicht ändern, schlägt die Datastore-Bereitstellung fehl, da ONTAP-Tools den Datastore nicht mounten können.

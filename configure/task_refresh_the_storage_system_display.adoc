@@ -2,7 +2,7 @@
 permalink: configure/task_refresh_the_storage_system_display.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Sie können die Update-Funktion von ONTAP®-Tools für VMware vSphere verwenden, um die Informationen zu Speichersystemen zu aktualisieren und die virtuelle Speicherkonsole \(VSC\) zu zwingen, Speichersysteme zu erkennen.' 
+summary: Sie können die Update-Funktion von ONTAP® Tools für VMware vSphere verwenden, um die Informationen über Speichersysteme zu aktualisieren und ONTAP-Tools zur Erkennung von Speichersystemen zu zwingen. 
 ---
 = Aktualisieren Sie die Anzeige des Speichersystems
 :allow-uri-read: 
@@ -11,11 +11,11 @@ summary: 'Sie können die Update-Funktion von ONTAP®-Tools für VMware vSphere 
 
 
 [role="lead"]
-Sie können die von ONTAP®-Tools für VMware vSphere bereitgestellte Update-Funktion verwenden, um die Informationen zu Speichersystemen zu aktualisieren und die virtuelle Speicherkonsole (VSC) zur Erkennung von Speichersystemen zu erzwingen.
+Sie können die Update-Funktion von ONTAP® Tools für VMware vSphere verwenden, um die Informationen über Speichersysteme zu aktualisieren und ONTAP-Tools zur Erkennung von Speichersystemen zu zwingen.
 
 *Über diese Aufgabe*
 
-Der `refresh` Die Option ist nützlich, wenn Sie die Standardanmeldeinformationen für die Speichersysteme nach Erhalt eines Authentifizierungsfehlers geändert haben. Sie sollten immer einen Aktualisierungsvorgang durchführen, wenn Sie die Anmeldedaten des Speichersystems geändert haben, nachdem das Speichersystem einen gemeldet hat `Authentication Failure Status`. Während des Updates versucht VSC, mithilfe der neuen Zugangsdaten eine Verbindung zum Storage-System herzustellen.
+Der `refresh` Die Option ist nützlich, wenn Sie die Standardanmeldeinformationen für die Speichersysteme nach Erhalt eines Authentifizierungsfehlers geändert haben. Sie sollten immer einen Aktualisierungsvorgang durchführen, wenn Sie die Anmeldedaten des Speichersystems geändert haben, nachdem das Speichersystem einen gemeldet hat `Authentication Failure Status`. Während des Updates versuchen die ONTAP Tools, mithilfe der neuen Zugangsdaten eine Verbindung zum Storage-System herzustellen.
 
 Je nach System-Setup kann dieser Vorgang viel Zeit in Anspruch nehmen.
 

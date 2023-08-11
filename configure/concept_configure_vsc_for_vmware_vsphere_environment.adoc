@@ -2,7 +2,7 @@
 permalink: configure/concept_configure_vsc_for_vmware_vsphere_environment.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Virtual Storage Console \ (VSC\) unterstützt zahlreiche Umgebungen. Einige Funktionen in diesen Umgebungen erfordern möglicherweise zusätzliche Konfigurationen.' 
+summary: ONTAP Tools unterstützen eine Vielzahl an Umgebungen. Einige Funktionen in diesen Umgebungen erfordern möglicherweise zusätzliche Konfigurationen. 
 ---
 = Konfigurieren Sie ONTAP Tools für VMware vSphere
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: 'Virtual Storage Console \ (VSC\) unterstützt zahlreiche Umgebungen. E
 
 
 [role="lead"]
-Virtual Storage Console (VSC) unterstützt zahlreiche Umgebungen. Einige Funktionen in diesen Umgebungen erfordern möglicherweise zusätzliche Konfigurationen.
+ONTAP Tools unterstützen eine Vielzahl an Umgebungen. Einige Funktionen in diesen Umgebungen erfordern möglicherweise zusätzliche Konfigurationen.
 
-Möglicherweise müssen Sie einige der folgenden Aufgaben durchführen, um Ihre ESXi Hosts, Gastbetriebssysteme und VSC zu konfigurieren:
+Möglicherweise müssen Sie einige der folgenden Aufgaben ausführen, um Ihre ESXi-Hosts, Gastbetriebssysteme und ONTAP-Tools zu konfigurieren:
 
 * Überprüfen der ESXi-Hosteinstellungen, einschließlich der UNMAP-Einstellungen
 * Hinzufügen von Timeout-Werten für Gastbetriebssysteme
-* Erneutes Generieren des VSC SSL-Zertifikats
+* Erneutes Generieren des SSL-Zertifikats der ONTAP-Tools
 * Erstellung von Storage-Funktionsprofilen und Schwellenwertwarnungen
 * Ändern der Preferences-Datei, um das Mounten von Datastores über verschiedene Subnetze zu ermöglichen
 

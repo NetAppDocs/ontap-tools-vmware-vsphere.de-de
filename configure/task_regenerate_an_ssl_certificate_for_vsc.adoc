@@ -2,7 +2,7 @@
 permalink: configure/task_regenerate_an_ssl_certificate_for_vsc.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Das SSL-Zertifikat wird generiert, wenn Sie Virtual Storage Console \(VSC\) installieren. Der für das SSL-Zertifikat generierte Distinguished Name \(DN\) ist möglicherweise kein allgemeiner Name \(CN\), den die Clientcomputer erkennen. Durch Ändern der Passwörter für den Schlüsselspeicher und den privaten Schlüssel können Sie das Zertifikat erneut generieren und ein standortspezifisches Zertifikat erstellen.' 
+summary: 'Das SSL-Zertifikat wird bei der Installation von ONTAP Tools generiert. Der für das SSL-Zertifikat generierte Distinguished Name \(DN\) ist möglicherweise kein allgemeiner Name \(CN\), den die Clientcomputer erkennen. Durch Ändern der Passwörter für den Schlüsselspeicher und den privaten Schlüssel können Sie das Zertifikat erneut generieren und ein standortspezifisches Zertifikat erstellen.' 
 ---
 = Erstellen Sie ein SSL-Zertifikat für die virtuelle Speicherkonsole erneut
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Das SSL-Zertifikat wird generiert, wenn Sie Virtual Storage Console \(
 
 
 [role="lead"]
-Das SSL-Zertifikat wird generiert, wenn Sie die Virtual Storage Console (VSC) installieren. Der Distinguished Name (DN), der für das SSL-Zertifikat generiert wird, ist möglicherweise kein allgemeiner Name (CN), den die Clientcomputer erkennen. Durch Ändern der Passwörter für den Schlüsselspeicher und den privaten Schlüssel können Sie das Zertifikat erneut generieren und ein standortspezifisches Zertifikat erstellen.
+Das SSL-Zertifikat wird bei der Installation von ONTAP Tools generiert. Der Distinguished Name (DN), der für das SSL-Zertifikat generiert wird, ist möglicherweise kein allgemeiner Name (CN), den die Clientcomputer erkennen. Durch Ändern der Passwörter für den Schlüsselspeicher und den privaten Schlüssel können Sie das Zertifikat erneut generieren und ein standortspezifisches Zertifikat erstellen.
 
 *Über diese Aufgabe*
 

@@ -98,6 +98,6 @@ Berechtigungen werden mit vSphere Objekten verknüpft, z. B. vCenter Server, ESX
 Sie können Active Directory (oder den lokalen vCenter Server-Rechner) verwenden, um Benutzer und Benutzergruppen einzurichten. Sie können dann vCenter Server-Berechtigungen verwenden, um diesen Benutzern oder Gruppen Zugriff zu gewähren, damit sie bestimmte ONTAP-Tools-Aufgaben ausführen können.
 
 
-NOTE: Diese vCenter Server Berechtigungen gelten für ONTAP Tools vCenter Benutzer, nicht für VSC Administratoren. Standardmäßig haben VSC-Administratoren vollständigen Zugriff auf das Produkt und benötigen keine ihnen zugewiesenen Berechtigungen.
+NOTE: Diese vCenter Server-Berechtigungen gelten für vCenter-Benutzer von ONTAP-Tools, nicht für Administratoren von ONTAP-Tools. Standardmäßig haben Administratoren von ONTAP-Tools vollen Zugriff auf das Produkt und benötigen keine ihnen zugewiesenen Berechtigungen.
 
 Benutzern und Gruppen sind ihnen keine Rollen zugewiesen. Sie erhalten Zugriff auf eine Rolle, indem sie Teil einer vCenter Server-Berechtigung sind.

@@ -13,6 +13,10 @@ summary: 'Sie müssen die Speichersysteme einrichten, bevor Sie Storage Replicat
 [role="lead"]
 Sie müssen die Storage-Systeme einrichten, bevor Sie Storage Replication Adapter (SRA) für Site Recovery Manager (SRM) ausführen.
 
+ONTAP Tools für VMware vSphere unterstützen die Konfiguration gemeinsam genutzter SRM-Recovery-Standorte von VMware. Weitere Informationen finden Sie unter: https://docs.vmware.com/en/Site-Recovery-Manager/8.6/com.vmware.srm.install_config.doc/GUID-EBF84252-DF37-43CD-ADC8-E90F5254F315.html["Site Recovery Manager in einer Konfiguration mit gemeinsam genutzten Recovery-Standorten"].
+
+Der https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["So konfigurieren Sie SRA an einem SRM Shared Recovery Site"] Der KB-Artikel beschreibt das Verfahren zum Einrichten von SRA zur Unterstützung der Konfiguration eines gemeinsam genutzten SRM-Recovery-Standorts.
+
 *Was Sie brauchen*
 
 Sie müssen die folgenden Programme auf dem geschützten Standort und dem Wiederherstellungsstandort installiert haben:

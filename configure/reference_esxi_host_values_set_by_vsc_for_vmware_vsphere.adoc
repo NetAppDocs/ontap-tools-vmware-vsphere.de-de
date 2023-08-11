@@ -2,7 +2,7 @@
 permalink: configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Mithilfe der ONTAP-Tools für VMware vSphere können Timeouts und andere Werte auf den ESXi-Hosts festgelegt werden, um beste Leistung und erfolgreiches Failover zu gewährleisten. Die von Virtual Storage Console \(VSC\) angegebenen Werte basieren auf internen Tests von NetApp.' 
+summary: Mithilfe der ONTAP-Tools für VMware vSphere können Timeouts und andere Werte auf den ESXi-Hosts festgelegt werden, um beste Leistung und erfolgreiches Failover zu gewährleisten. Die Werte der ONTAP Tools basieren auf internen Tests von NetApp. 
 ---
 = ESXi Hostwerte werden mithilfe von ONTAP Tools gesetzt
 :allow-uri-read: 
