@@ -39,11 +39,11 @@ Wenn sich das Kennwort für den vCenter Server ändert, können Sie das Kennwort
 
 * Sie sollten die IP-Adresse (IPv4 oder IPv6) der vCenter Server-Instanz angeben, für die Sie ONTAP-Tools registrieren möchten.
 +
-Der generierte Typ von VSC- und VASA-Zertifikaten hängt von der IP-Adresse (IPv4 oder IPv6) ab, die Sie während der Bereitstellung bereitgestellt haben. Wenn Sie bei der Bereitstellung von ONTAP-Tools keine statischen IP-Details und DHCP eingegeben haben, stellt das Netzwerk sowohl IPv4- als auch IPv6-Adressen bereit.
+Die Art der generierten ONTAP-Tools und VASA-Zertifikate hängt von der IP-Adresse (IPv4 oder IPv6) ab, die Sie während der Bereitstellung angegeben haben. Wenn Sie bei der Bereitstellung von ONTAP-Tools keine statischen IP-Details und DHCP eingegeben haben, stellt das Netzwerk sowohl IPv4- als auch IPv6-Adressen bereit.
 
 * Die IP-Adresse der ONTAP-Tools, die für die Registrierung mit vCenter Server verwendet wird, hängt vom Typ der im Bereitstellungsassistenten eingegebenen vCenter Server-IP-Adresse (IPv4 oder IPv6) ab.
 +
-Sowohl VSC- als auch VASA-Zertifikate werden mit derselben IP-Adresse generiert, die bei der vCenter Server Registrierung verwendet wird.
+Sowohl die ONTAP-Tools als auch die VASA-Zertifikate werden unter Verwendung derselben IP-Adresse generiert, die bei der vCenter Server-Registrierung verwendet wird.
 
 +
 

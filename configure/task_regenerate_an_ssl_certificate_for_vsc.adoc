@@ -23,6 +23,6 @@ https://kb.netapp.com/advice_and_troubleshooting/data_storage_software/vsc_and_v
 
 . Melden Sie sich bei der Wartungskonsole an.
 . Eingabe `1` Um das Menü Anwendungskonfiguration aufzurufen.
-. Geben Sie im Menü Anwendungskonfiguration die Option ein `3` Um den VSC Service zu beenden.
+. Geben Sie im Menü Anwendungskonfiguration die Option ein `3` Um den Dienst „ONTAP Tools“ zu stoppen.
 . Eingabe `7` Um das SSL-Zertifikat erneut zu generieren.
 

@@ -30,7 +30,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 * Sie sollten alle Browser-Sitzungen des vSphere Clients abgemeldet und geschlossen haben und den Browser-Cache gelöscht haben, um Probleme mit dem Browser-Cache während der Bereitstellung von ONTAP-Tools zu vermeiden.
 * Sie müssen das Internet Control Message Protocol (ICMP) aktiviert haben.
 +
-Wenn ICMP deaktiviert ist, schlägt die Erstkonfiguration von ONTAP-Tools fehl, und VSC kann die VSC- und VASA-Provider-Services nach der Implementierung nicht starten. Nach der Implementierung müssen Sie die VSC- und VASA-Provider-Services manuell aktivieren.
+Wenn ICMP deaktiviert ist, schlägt die Erstkonfiguration der ONTAP-Tools fehl, und ONTAP-Tools können die ONTAP-Tools und VASA Provider-Dienste nach der Bereitstellung nicht starten. Sie müssen die ONTAP-Tools und VASA Provider-Services nach der Implementierung manuell aktivieren.
 
 
 
@@ -81,7 +81,7 @@ Wenn Sie auf den Abschluss der Implementierung warten, können Sie den Fortschri
 
 . Schalten Sie die ONTAP Tools Virtual Machine ein, und öffnen Sie dann eine Konsole der Virtual Machine, auf der die ONTAP Tools ausgeführt werden.
 . Überprüfen Sie, ob die ONTAP-Tools nach Abschluss der Implementierung ausgeführt werden.
-. Wenn ONTAP-Tools nicht bei vCenter-Servern registriert sind, verwenden Sie `\https://appliance_ip:8143/Register.html` Um die VSC Instanz zu registrieren. Die Register.html leitet Sie zur Seite der Schwagger um. Ab den ONTAP-Tools 9.12 erfolgt die Registrierung von ONTAP-Tools mit vCenter über die Seite „swagger“.
+. Wenn ONTAP-Tools nicht bei vCenter-Servern registriert sind, verwenden Sie `\https://appliance_ip:8143/Register.html` Um die Instanz der ONTAP-Tools zu registrieren. Die Register.html leitet Sie zur Seite der Schwagger um. Ab den ONTAP-Tools 9.12 erfolgt die Registrierung von ONTAP-Tools mit vCenter über die Seite „swagger“.
 +
 Verwenden Sie die POST-API, um ONTAP-Tools ab Version 9.12 bei vCenter zu registrieren.
 

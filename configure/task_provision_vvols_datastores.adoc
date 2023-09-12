@@ -104,7 +104,7 @@ In diesem Abschnitt können Sie auswählen, ob die Replizierung im VVols-Datasto
 
 *Hinweis:* beim Erstellen von FlexVol Volumes in ONTAP sollten Sie darauf achten, diese mit den Attributen zu erstellen, die Sie im Storage-Funktionsprofil auswählen möchten. Sowohl Lese-Schreib- als auch Datenschutz FlexVol-Volumes sollten ähnliche Attribute aufweisen.
 
-Nachdem FlexVol Volumes erstellt und SnapMirror in ONTAP initialisiert wurde, sollten Sie eine Storage-Neuerkennung in der VSC ausführen, damit Sie die neuen Volumes sehen können.
+Nachdem FlexVol Volumes erstellt und SnapMirror in ONTAP initialisiert wurde, sollten Sie eine Speicherwiedererkennung in den ONTAP-Tools ausführen, um die neuen Volumes sehen zu können.
 
 
 

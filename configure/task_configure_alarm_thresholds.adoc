@@ -2,7 +2,7 @@
 permalink: configure/task_configure_alarm_thresholds.html 
 sidebar: sidebar 
 keywords:  
-summary: Sie können VSC verwenden, um Alarme einzustellen, um Sie zu benachrichtigen, wenn die Volumenschwellenwerte und Aggregat-Schwellenwerte die festgelegten Grenzwerte erreichen. 
+summary: Mit den ONTAP Tools können Sie Alarme festlegen, um Sie darüber zu informieren, wenn Volumenschwellenwerte und aggregierte Schwellenwerte die festgelegten Grenzwerte erreichen. 
 ---
 = Konfigurieren der Alarmschwellenwerte
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Sie können VSC verwenden, um Alarme einzustellen, um Sie zu benachrich
 
 
 [role="lead"]
-Sie können VSC verwenden, um Alarme einzustellen, um Sie zu benachrichtigen, wenn die Volumenschwellenwerte und Aggregat-Schwellenwerte die festgelegten Grenzwerte erreichen.
+Mit den ONTAP Tools können Sie Alarme festlegen, um Sie darüber zu informieren, wenn Volumenschwellenwerte und aggregierte Schwellenwerte die festgelegten Grenzwerte erreichen.
 
 *Schritte*
 

@@ -15,7 +15,8 @@ Sie können die Protokolldateien im überprüfen `/opt/netapp/vscserver/log` Ver
 
 Die folgenden drei Log-Dateien können bei der Identifizierung von Problemen hilfreich sein:
 
-* `cxf.log`, Mit Informationen über API-Verkehr in und aus VASA Provider*`kaminoPrefs.xml`, Mit Informationen über VSC-Einstellungen
+* `cxf.log`, Mit Informationen über API-Verkehr in und aus VASA Provider
+*`kaminoPrefs.xml`, Mit Informationen über die Einstellungen der ONTAP-Tools
 * `vvolvp.log`, Mit allen Protokollinformationen über VASA Provider
 
 
@@ -29,7 +30,7 @@ Im Wartungsmenü der ONTAP Tools für VMware vSphere können Sie unterschiedlich
 
 Wenn Sie die Protokollebenen festlegen, werden die folgenden Dateien aktualisiert:
 
-* VSC-Server: `kamino.log` Und `vvolvp.log`
+* ONTAP-Tools-Server: `kamino.log` Und `vvolvp.log`
 * VASA Provider-Server: `vvolvp.log`, `error.log`, und `netapp.log`
 
 

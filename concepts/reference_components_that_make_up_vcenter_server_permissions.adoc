@@ -82,7 +82,7 @@ NetApp Virtual Storage Console > richtlinienbasiertes Management > Management od
  a| 
 VSC Administrator
  a| 
-VSC und VASA Provider Aufgaben bezüglich Storage-Funktionsprofilen und Schwellenwerteinstellungen.
+ONTAP Tools und VASA Provider Aufgaben in Bezug auf Storage-Funktionsprofile und Schwellwerteinstellungen.
 
 |===
 

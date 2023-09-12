@@ -35,7 +35,7 @@ Die herkömmliche Konsole der ONTAP-Tools ermöglicht die Anzeige von NFS-Datens
 Das Portlet „Datastores“ enthält folgende Details:
 
 +
-** Die Anzahl herkömmlicher Datastores mit ihren Performance-Metriken, die von VSC in Ihrer vCenter Server Instanz gemanagt werden
+** Die Anzahl der herkömmlichen Datastores und ihre Performance-Kennzahlen, die von ONTAP Tools in Ihrer vCenter Server-Instanz gemanagt werden
 ** Die fünf wichtigsten Datastores basierend auf Ressourcennutzung und Performance-Parametern, die geändert werden können. Sie können bei Bedarf die Liste der Datenspeicher basierend auf dem genutzten Speicherplatz, den IOPS oder der Latenz und der erforderlichen Reihenfolge ändern.
 
 

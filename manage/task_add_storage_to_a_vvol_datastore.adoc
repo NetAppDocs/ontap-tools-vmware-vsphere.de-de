@@ -21,7 +21,7 @@ Wenn Sie ein FlexVol Volume hinzufügen, haben Sie auch die Möglichkeit, das mi
 ====
 * Während Sie einen VVols Datastore mit Replizierungsfunktionen erweitern, können Sie nicht neue FlexVol Volumes erstellen. Sie können aber nur vorkonfigurierte FlexVol Volumes aus der bestehenden Liste auswählen.
 * Beim Klonen einer geschützten Virtual Machine, die auf einem Datastore mit VVols-Replizierung bereitgestellt wird, aufgrund von mangelhaftdem Speicherplatz ausfällt, sollte die FlexVol-Volume-Größe erhöht werden.
-* Wenn ein VVols Datastore auf einem AFF Cluster erstellt wird, können Sie den Datastore nicht mit einem anderen FlexVol Volume erweitern, bei dem das Storage-Funktionsprofil automatisch generiert wird.
+* Wenn ein VVols-Datastore auf einem AFF oder ASA-Cluster erstellt wird, können Sie den Datastore nicht mit einem anderen FlexVol-Volume erweitern, das über ein automatisches Storage-Funktionsprofil verfügt.
 +
 ** Sie können den VVols-Datastore mit FlexVol Volumes erweitern, die bereits vorab erstellte Storage-Funktionsprofile erstellen.
 

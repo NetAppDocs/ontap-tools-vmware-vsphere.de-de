@@ -1,7 +1,7 @@
 ---
 permalink: manage/concept_what_vasa_provider_reports_do.html 
 sidebar: sidebar 
-keywords: VSC, VASA Provider, and SRA 
+keywords: ONTAP tools, VASA Provider, and SRA 
 summary: 'VVols Berichte enthalten detaillierte Informationen zu VMware Virtual Volumes \(VVols\)-Datastores und den Virtual Machines, die auf diesen Datastores erstellt werden. Über das VVols Dashboard können Sie potenzielle Probleme mit den VVols Datastores und Virtual Machines in Ihrem vCenter Server prüfen und identifizieren.' 
 ---
 = VVols Berichte

@@ -29,7 +29,7 @@ Diese Werte werden automatisch auf dem ESXi-Host gesetzt, wenn das Dialogfeld Em
 
 *Schritte*
 
-. Benennen Sie den um `.vib` Datei, die Sie von der NetApp Support-Website zur NetAppNaPlug-in.vib heruntergeladen haben, um dem von der VSC vorgegebenen Namen zu entsprechen.
+. Benennen Sie den um `.vib` Datei, die Sie von der NetApp Support-Website auf NetAppNasPlugin.vib heruntergeladen haben, um den vordefinierten Namen zu entsprechen, den ONTAP Tools verwenden.
 . Klicken Sie auf der Startseite der ONTAP Tools auf *Einstellungen*.
 . Klicken Sie auf die Registerkarte * NFS VAAI Tools*.
 . Klicken Sie im Abschnitt *vorhandene Version* auf *Ändern*.
@@ -40,6 +40,6 @@ Befolgen Sie die Anweisungen auf dem Bildschirm, um die Installation abzuschlie�
 
 . Starten Sie den ESXi-Host nach Abschluss der Installation neu.
 +
-Beim Neustart des ESXi Hosts erkennt VSC automatisch das NFS VAAI Plug-in. Sie müssen keine weiteren Schritte durchführen, um das Plug-in zu aktivieren.
+Wenn Sie den ESXi Host neu starten, erkennt ONTAP Tools automatisch das NFS VAAI Plug-in. Sie müssen keine weiteren Schritte durchführen, um das Plug-in zu aktivieren.
 
 

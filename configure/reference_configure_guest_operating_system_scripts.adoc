@@ -2,7 +2,7 @@
 permalink: configure/reference_configure_guest_operating_system_scripts.html 
 sidebar: sidebar 
 keywords: Guest operating system 
-summary: 'Die ISO-Images des Gast-Betriebssystems \(OS\)-Scripts werden auf ONTAP®-Tools für VMware vSphere-Server eingebunden. Damit Sie die Speicherzeituts für virtuelle Maschinen mithilfe der Gast-BS-Skripts festlegen können, müssen Sie die Skripte vom vSphere-Client mounten.' 
+summary: 'Die ISO-Images der \(OS\)-Skripte des Gastbetriebssystems werden in ONTAP Tools für VMware vSphere Server gemountet. Damit Sie die Speicherzeituts für virtuelle Maschinen mithilfe der Gast-BS-Skripts festlegen können, müssen Sie die Skripte vom vSphere-Client mounten.' 
 ---
 = Konfigurieren von Gast-Betriebssystem-Skripten
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Die ISO-Images des Gast-Betriebssystems \(OS\)-Scripts werden auf ONTA
 
 
 [role="lead"]
-Die ISO-Images des Gastbetriebssystems (OS) Skripte werden auf ONTAP® Tools für VMware vSphere Server eingebunden. Damit Sie die Speicherzeituts für virtuelle Maschinen mithilfe der Gast-BS-Skripts festlegen können, müssen Sie die Skripte vom vSphere-Client mounten.
+Die ISO-Images der BS-Skripte (Gastbetriebssysteme) werden in Tools für den VMware vSphere Server gemountet. Damit Sie die Speicherzeituts für virtuelle Maschinen mithilfe der Gast-BS-Skripts festlegen können, müssen Sie die Skripte vom vSphere-Client mounten.
 
 |===
 
@@ -45,6 +45,6 @@ Solaris
 \https://<appliance_ip>:8143/vsc/public/writable/solaris_gos_timeout_190-install.iso
 
 |===
-Sie sollten das Skript aus der Kopie der VSC-Instanz installieren, die beim vCenter Server (ELM) registriert ist, der die virtuelle Maschine verwaltet. Wenn Ihre Umgebung mehrere vCenter-Server umfasst, sollten Sie die Instanz auswählen, die die virtuelle Maschine enthält, für die Sie die Werte für das Speicher-Timeout festlegen möchten.
+Sie sollten das Skript aus der Kopie der ONTAP-Tools-Instanz installieren, die beim vCenter-Server (ELM) registriert ist, der die virtuelle Maschine verwaltet. Wenn Ihre Umgebung mehrere vCenter-Server umfasst, sollten Sie die Instanz auswählen, die die virtuelle Maschine enthält, für die Sie die Werte für das Speicher-Timeout festlegen möchten.
 
 Sie sollten sich bei der virtuellen Maschine anmelden und dann das Skript ausführen, um die Werte für die Speicherzeitüberschreitung festzulegen.

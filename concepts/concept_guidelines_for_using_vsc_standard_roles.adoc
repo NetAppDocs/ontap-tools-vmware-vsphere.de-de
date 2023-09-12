@@ -11,7 +11,7 @@ summary: Wenn Sie mit Standard-ONTAP®-Tools für VMware vSphere-Rollen arbeiten
 
 
 [role="lead"]
-Wenn Sie mit Standard-ONTAP®-Tools für VMware vSphere-Rollen arbeiten, gibt es bestimmte Richtlinien, die Sie befolgen sollten.
+Wenn Sie mit standardmäßigen ONTAP-Tools für VMware vSphere-Rollen arbeiten, gibt es bestimmte Richtlinien, die Sie befolgen sollten.
 
 Sie sollten die Standardrollen nicht direkt ändern. Wenn dies der Fall ist, überschreiben ONTAP Tools Ihre Änderungen bei jedem Upgrade der ONTAP Tools. Das Installationsprogramm aktualisiert die Standardrollendefinitionen jedes Mal, wenn Sie ONTAP-Tools aktualisieren. Dadurch wird sichergestellt, dass die Rollen für Ihre Version von ONTAP-Tools sowie für alle unterstützten Versionen von vCenter Server aktuell sind.
 

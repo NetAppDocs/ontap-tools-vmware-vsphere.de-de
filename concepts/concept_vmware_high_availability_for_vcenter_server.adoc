@@ -1,7 +1,7 @@
 ---
 permalink: concepts/concept_vmware_high_availability_for_vcenter_server.html 
 sidebar: sidebar 
-keywords: VSC 
+keywords: ONTAP tools 
 summary: 'Sie können Ihre vSphere Umgebung konfigurieren, in der ONTAP Tools für VMware vSphere für Hochverfügbarkeit \(HA\) implementiert werden. Die VMware HA-Funktion bietet Failover-Schutz vor Hardware-Ausfällen und Ausfällen des Betriebssystems in virtuellen Umgebungen.' 
 ---
 = VMware vSphere HA

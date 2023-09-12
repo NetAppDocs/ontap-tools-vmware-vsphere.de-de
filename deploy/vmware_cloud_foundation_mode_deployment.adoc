@@ -15,7 +15,10 @@ ONTAP Tools für VMware vSphere können in VMware Cloud Foundation (VCF) Umgebun
 
 Im VCF-Modus können Sie Container für Ihren Speicher erstellen, ohne dass ein vCenter Server benötigt wird. VASA Provider ist standardmäßig nach der Bereitstellung von ONTAP-Tools im VCF-Modus aktiviert. Nach Abschluss der Implementierung können Sie mit REST-APIs Storage-Systeme hinzufügen und Container erstellen. Im folgenden Artikel werden die Verfahren zum Hinzufügen von Speicher zu ONTAP-Tools beschrieben, wenn VCF aktiviert ist, https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["Fügen Sie Speicher zu ONTAP-Tools von Swagger-UI hinzu"].
 
-Es wird eine neue API zur Generierung des _Appliance-API-Tokens_ eingeführt, das API-Aufrufe authentifiziert. Einige der vorhandenen APIs wurden geändert, um den Header _Appliance-API-Token_ zu verwenden. Mit ONTAP Tools Version 9.12 unterstützt swagger 1.0 APIs nicht. Die Zeiger, die zuvor auf 1.0 waren, werden auf 2.0 oder 3.0 APIs verschoben.
+Es wird eine neue API zur Generierung des _Appliance-API-Tokens_ eingeführt, das API-Aufrufe authentifiziert. Einige der vorhandenen APIs wurden geändert, um den Header _Appliance-API-Token_ zu verwenden. Ab Version 9.12 der ONTAP-Tools unterstützt swagger keine 1.0 APIs. Die Zeiger, die zuvor auf 1.0 waren, werden auf 2.0 oder 3.0 APIs verschoben.
+
+
+NOTE: Über die ONTAP Tools der Version VMware vSphere 9.13 2.0 sind keine APIs mehr für Storage-Funktionsprofil verfügbar.
 
 Folgende APIs sind für den VCF-Bereitstellungsmodus verfügbar:
 
@@ -143,13 +146,11 @@ Storage/Volumes
 Beim Ausführen der API zur Erstellung von Containern können Sie dem Container vorhandene Volumes hinzufügen. Sie sollten jedoch sicherstellen, dass die Komprimierungs- und Deduplizierungswerte der vorhandenen Volumes der Storage-Fähigkeit des Containers entsprechen. Die Erstellung der virtuellen Maschine schlägt fehl, wenn die Werte nicht übereinstimmen. Die folgende Tabelle enthält Einzelheiten zu den Werten, die vorhandene Volumes für die entsprechenden Storage-Funktionsprofile haben sollten.
 
 |===
-
-
 | *Container Storage Capability Profile* | *Deduplizierung* | *Komprimierung* 
 
 
  a| 
-Platin
+Platinum_AFF_A
  a| 
 Beides
  a| 
@@ -158,7 +159,7 @@ Beides
 
 
  a| 
-All Flash FAS_dick
+Platinum_AFF_C
  a| 
 Beides
  a| 
@@ -167,7 +168,7 @@ Beides
 
 
  a| 
-All Flash FAS_Standard
+Platinum_ASA_A
  a| 
 Beides
  a| 
@@ -176,7 +177,7 @@ Beides
 
 
  a| 
-All Flash FAS_Tiering
+AFF_NVME_AFF_A
  a| 
 Beides
  a| 
@@ -185,7 +186,7 @@ Beides
 
 
  a| 
-All Flash FAS_verschlüsselt
+AFF_NVME_AFF_C
  a| 
 Beides
  a| 
@@ -194,7 +195,7 @@ Beides
 
 
  a| 
-AFF_verschlüsseltes_Tiering
+AFF_NVME_ASA_A
  a| 
 Beides
  a| 
@@ -203,7 +204,7 @@ Beides
 
 
  a| 
-All Flash FAS_Encrypted_Min50
+AFF_THICK_AFF_A
  a| 
 Beides
  a| 
@@ -212,7 +213,25 @@ Beides
 
 
  a| 
-FAS_Standard
+AFF_THICK_AFF_C
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+AFF_THICK_ASA_A
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+ALL FLASH FAS_DEFAULT_AFF_A
  a| 
 Hintergrund
  a| 
@@ -221,11 +240,128 @@ Keine
 
 
  a| 
-FAS_Max20
+ALL FLASH FAS_DEFAULT_AFF_C
  a| 
 Hintergrund
  a| 
 Keine
+
+
+
+ a| 
+AFF_DEFAULT_ASA_A
+ a| 
+Hintergrund
+ a| 
+Keine
+
+
+
+ a| 
+AFF_TIERING_AFF_A
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+AFF_TIERING_AFF_C
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+AFF_TIERING_ASA_A
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+ALL FLASH FAS_ENCRYPTED_AFF_A
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+ALL FLASH FAS_ENCRYPTED_AFF_C
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+AFF_ENCRYPTED_ASA_A
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+AFF_Encrypted_Tiering_AFF_A
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+AFF_Encrypted_Tiering_AFF_C
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+AFF_Encrypted_Tiering_ASA_A
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+All Flash FAS_Encrypted_Min50_AFF_A
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+All Flash FAS_Encrypted_Min50_AFF_C
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+AFF_Encrypted_Min50_ASA_A
+ a| 
+Beides
+ a| 
+Beides
 
 
 

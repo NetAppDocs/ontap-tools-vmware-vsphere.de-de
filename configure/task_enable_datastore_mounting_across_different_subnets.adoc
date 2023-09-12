@@ -2,7 +2,7 @@
 permalink: configure/task_enable_datastore_mounting_across_different_subnets.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Wenn Sie iSCSI oder NFS verwenden und sich das Subnetz zwischen Ihren ESXi Hosts und Ihrem Storage-System unterscheidet, müssen Sie die ONTAP Tools für VMware vSphere Voreinpräferenzen ändern. Wenn Sie die Voreinferenzdatei nicht ändern, schlägt die Bereitstellung von Datastore fehl, da die Virtual Storage Console \(VSC\) den Datastore nicht mounten kann.' 
+summary: Wenn Sie iSCSI oder NFS verwenden und sich das Subnetz zwischen Ihren ESXi Hosts und Ihrem Storage-System unterscheidet, müssen Sie die ONTAP Tools für VMware vSphere Voreinpräferenzen ändern. Wenn Sie die Einstellungsdatei nicht ändern, schlägt die Bereitstellung des Datastore fehl, da ONTAP-Tools den Datastore nicht mounten können. 
 ---
 = Aktivieren Sie das Mounten von Datenspeichern in unterschiedlichen Subnetzen
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Wenn Sie iSCSI oder NFS verwenden und sich das Subnetz zwischen Ihren 
 
 
 [role="lead"]
-Wenn Sie iSCSI oder NFS verwenden und sich das Subnetz zwischen Ihren ESXi Hosts und Ihrem Storage-System unterscheidet, müssen Sie die ONTAP Tools für VMware vSphere Voreinpräferenzen ändern. Falls Sie die Voreinpräferenzen-Datei nicht ändern, schlägt die Bereitstellung von Datastores fehl, da die Virtual Storage Console (VSC) den Datastore nicht mounten kann.
+Wenn Sie iSCSI oder NFS verwenden und sich das Subnetz zwischen Ihren ESXi Hosts und Ihrem Storage-System unterscheidet, müssen Sie die ONTAP Tools für VMware vSphere Voreinpräferenzen ändern. Wenn Sie die Einstellungsdatei nicht ändern, schlägt die Bereitstellung des Datastore fehl, da ONTAP-Tools den Datastore nicht mounten können.
 
 *Über diese Aufgabe*
 

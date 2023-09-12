@@ -13,18 +13,18 @@ summary: Dieser Leitfaden bietet Informationen zu Aufgaben, die beim Bereitstell
 [role="lead"]
 Dieser Leitfaden bietet Informationen zu Aufgaben, die beim Bereitstellen und Optimieren von Storage und beim Monitoring von Datastores und Virtual Machines anfallen.
 
-Die Informationen in diesem Handbuch beziehen sich auf den VSC-Benutzer, nicht auf den Systemadministrator. Dieses Handbuch enthält Informationen zu allen Aufgaben nach der Implementierung für die ONTAP®-Tools für VMware vSphere.
+Die Informationen in diesem Handbuch beziehen sich auf Benutzer von ONTAP Tools und nicht auf den Systemadministrator. Dieses Handbuch enthält Informationen zu allen Aufgaben nach der Implementierung für die ONTAP®-Tools für VMware vSphere.
 
 *Voraussetzungen für die Verwendung dieses Leitfadens*
 
 Dieser Leitfaden basiert auf folgenden Annahmen:
 
-* Sie haben VSC installiert und konfiguriert.
+* Sie haben ONTAP-Tools installiert und konfiguriert.
 * Die Funktionen, die Sie für die Aufgaben benötigen, die Sie ausführen, wurden installiert.
 +
 Zu diesen Funktionen zählen beispielsweise das NFS-Plug-in für VMware VAAI, der VASA Provider für ONTAP und der Storage Replication Adapter.
 
-* VSC hat alle verwendeten Storage-Systeme erkannt.
+* ONTAP-Tools haben alle von Ihnen verwendeten Storage-Systeme erkannt.
 * Die rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) sowohl für vCenter Server als auch für ONTAP wurde eingerichtet.
 +
 Wenn Sie nicht über alle erforderlichen Berechtigungen und Berechtigungen verfügen, kann die Aufgabe, die Sie ausführen, während Sie den Assistenten durchlaufen, funktionieren, aber dennoch nicht erfolgreich abgeschlossen werden.
@@ -33,6 +33,6 @@ Wenn Sie nicht über alle erforderlichen Berechtigungen und Berechtigungen verf�
 
 Bei den meisten in diesem Leitfaden vorgestellten Aufgaben muss zudem nur jeweils ein Vorgang auf dem Ziel-Datastore oder der Virtual Machine ausgeführt werden.
 
-Wenn Sie Fragen zur VSC haben oder Informationen mit anderen VSC Benutzern teilen möchten, können Sie das NetApp Communities Forum besuchen.
+Wenn Sie Fragen zu ONTAP-Tools haben oder Informationen mit anderen Benutzern von ONTAP-Tools austauschen möchten, können Sie das NetApp-Community-Forum besuchen.
 
 https://community.netapp.com/t5/Products-and-Services/ct-p/products-and-solutions["NetApp Community: Virtual Storage Console für VMware vSphere"]

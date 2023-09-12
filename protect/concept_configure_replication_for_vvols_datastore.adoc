@@ -13,6 +13,9 @@ summary: 'Die Replizierung für Ihren VVols-Datastore kann mithilfe von ONTAP To
 [role="lead"]
 Die Replizierung für Ihren VVols-Datastore kann mithilfe von ONTAP Tools konfiguriert werden. Hauptziel der VVols Replizierung ist die Sicherung kritischer Virtual Machines während des Disaster Recovery mit VMware Site Recovery Manager (SRM).
 
+
+NOTE: Site Recovery Manager (SRM) Workflows schlagen in vCenter 8.0 mit einer Fehlermeldung fehl. Vvol-Replizierung funktioniert wie erwartet in vCenter 7.0u3-Version.
+
 Um die VVols Replizierung für ONTAP Tools zu konfigurieren, müssen jedoch die VASA Provider-Funktion und die VVols Replizierung aktiviert werden. VASA-Provider ist standardmäßig in ONTAP-Tools aktiviert. Die Array-basierte Replikation wird auf FlexVol-Ebene durchgeführt. Jeder VVols Datastore wird einem Storage-Container zugewiesen, der aus einem oder mehreren FlexVol-Volumes besteht. Die FlexVol Volumes sollten mit SnapMirror von ONTAP vorkonfiguriert sein.
 
 

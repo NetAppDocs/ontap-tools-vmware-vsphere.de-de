@@ -15,14 +15,15 @@ Verwenden Sie syslog, um Systemprotokolle an einen zentralen Protokollierungsser
 
 *Über diese Aufgabe*
 
-Die ONTAP-Tools für VMware vSphere 9.12 Version entfernt frühere 2.0 Syslog-APIs und enthält neue 3.0 Syslog-bezogene APIs, die gegenseitige Authentifizierung unterstützen. Führen Sie die folgenden Schritte aus, um syslog einzurichten.
+Ab ONTAP-Tools für VMware vSphere 9.12 entfernt die ONTAP-Tools die früheren 2.0 Syslog-APIs. Sie enthalten neue 3.0 Syslog-bezogene APIs, die gegenseitige Authentifizierung unterstützen.
+Führen Sie die folgenden Schritte aus, um syslog einzurichten.
 
 *Schritte*
 
 . Führen Sie _POST /2.0/Security/user/Login aus, um eine Sitzungs-ID zu erhalten.
 . Führen Sie _POST /3.0/Appliance-Management/Logging-Client-Certificate_ aus, indem Sie die in der obigen Antwort empfangene SessionID übergeben.
 +
-Dadurch werden Zertifikate für den VP-Server sowie den VSC-Server generiert.
+Dadurch werden Zertifikate für den VP-Server sowie den ONTAP-Tools-Server generiert.
 
 . Kopieren Sie beide Zertifikate auf Ihren Syslog-Server und machen Sie sie auf dem Syslog-Server vertrauenswürdig.
 +

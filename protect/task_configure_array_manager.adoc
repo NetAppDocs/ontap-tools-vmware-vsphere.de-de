@@ -39,7 +39,7 @@ NOTE: VMware unterstützt das NFS4.1 Protokoll für SRM nicht.
 *** Wenn Sie eine direkte Verbindung zu einer SVM herstellen, sollten Sie die IP-Adresse der SVM Management LIF eingeben.
 +
 
-NOTE: Wenn Sie den Array-Manager konfigurieren, müssen Sie die gleiche Verbindung und die gleichen Anmeldeinformationen für das Speichersystem verwenden, das zum Hinzufügen des Speichersystems im Menü Storage-Systeme der virtuellen Speicherkonsole verwendet wurde. Wenn beispielsweise die Konfiguration des Array Managers auf SVM-Umfang festgelegt ist, muss der Storage unter VSC auf SVM-Ebene hinzugefügt werden.
+NOTE: Wenn Sie den Array-Manager konfigurieren, müssen Sie die gleiche Verbindung und die gleichen Anmeldeinformationen für das Speichersystem verwenden, das zum Hinzufügen des Speichersystems im Menü Storage-Systeme der virtuellen Speicherkonsole verwendet wurde. Wenn beispielsweise die Array Manager-Konfiguration im Umfang der SVM konfiguriert ist, muss der Storage unter den ONTAP Tools auf SVM-Ebene hinzugefügt werden.
 
 
 

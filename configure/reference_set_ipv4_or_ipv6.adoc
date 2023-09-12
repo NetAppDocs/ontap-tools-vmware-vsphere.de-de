@@ -2,7 +2,7 @@
 permalink: configure/reference_set_ipv4_or_ipv6.html 
 sidebar: sidebar 
 keywords:  
-summary: Die Vorzugsdatei kaminoprefs.xmlls wurde um eine neue Option ergänzt, die Sie so einstellen können, dass die Unterstützung für IPv4 oder IPv6 für alle Storage-Systeme, die VSC hinzugefügt wurden, aktiviert wird. 
+summary: Es gibt eine neue Option, die der Präferenzdatei kaminoprefs.xmlhinzugefügt wird, die Sie einstellen können, um Unterstützung für IPv4 oder IPv6 für alle Speichersysteme zu aktivieren, die ONTAP-Tools hinzugefügt werden. 
 ---
 = Legen Sie IPv4 oder IPv6 mithilfe der Voreinferenzdatei fest
 :allow-uri-read: 
@@ -11,21 +11,21 @@ summary: Die Vorzugsdatei kaminoprefs.xmlls wurde um eine neue Option ergänzt, 
 
 
 [role="lead"]
-Die Einstellungsdateien enthalten Einstellungen, die die ONTAP-Tools für VMware vSphere Vorgänge steuern. In den meisten Fällen müssen Sie die Einstellungen in diesen Dateien nicht ändern. Es ist hilfreich zu wissen, welche Dateien die Virtual Storage Console (VSC) verwenden.
+Die Einstellungsdateien enthalten Einstellungen, die die ONTAP-Tools für VMware vSphere Vorgänge steuern. In den meisten Fällen müssen Sie die Einstellungen in diesen Dateien nicht ändern. Es ist hilfreich zu wissen, welche Präferenzdateien ONTAP-Tools verwenden.
 
-Die VSC enthält verschiedene Voreinstellungsdateien. Diese Dateien enthalten Eintragsschlüssel und Werte, die bestimmen, wie VSC verschiedene Vorgänge durchführt. Im Folgenden werden einige Präferenz-Dateien beschrieben, die VSC verwendet:
+ONTAP-Tools verfügen über mehrere Präferenzdateien. Diese Dateien enthalten Schlüssel und Werte, die bestimmen, wie ONTAP-Tools verschiedene Vorgänge durchführen. Im Folgenden finden Sie einige der Voreinstellungsdateien, die von ONTAP-Tools verwendet werden:
 
 `/opt/netapp/vscserver/etc/kamino/kaminoprefs.xml`
 
 `/opt/netapp/vscserver/etc/vsc/vscPreferences.xml`
 
-Möglicherweise müssen Sie die Voreinpräferenzen-Dateien in bestimmten Situationen ändern. Wenn Sie beispielsweise iSCSI oder NFS verwenden und das Subnetz zwischen Ihren ESXi-Hosts und Ihrem Speichersystem nicht übereinstimmt, müssen Sie die Einstellungsdateien ändern. Falls Sie die Einstellungen in der Voreinstellungsdatei nicht ändern, schlägt die Datastore-Bereitstellung fehl, da VSC den Datastore nicht mounten kann.
+Möglicherweise müssen Sie die Voreinpräferenzen-Dateien in bestimmten Situationen ändern. Wenn Sie beispielsweise iSCSI oder NFS verwenden und das Subnetz zwischen Ihren ESXi-Hosts und Ihrem Speichersystem nicht übereinstimmt, müssen Sie die Einstellungsdateien ändern. Wenn Sie die Einstellungen in der Einstellungsdatei nicht ändern, schlägt die Datastore-Bereitstellung fehl, da ONTAP-Tools den Datastore nicht mounten können.
 
-Der Vorzugsdatei wurde eine neue Option hinzugefügt `kaminoprefs.xml` Die Sie einstellen können, dass IPv4 oder IPv6 für alle Storage-Systeme, die der VSC hinzugefügt werden, aktiviert werden.
+Der Vorzugsdatei wurde eine neue Option hinzugefügt `kaminoprefs.xml` Sie können festlegen, dass die Unterstützung für IPv4 oder IPv6 für alle Speichersysteme aktiviert wird, die zu den ONTAP-Tools hinzugefügt werden.
 
 * Der `default.override.option.provision.mount.datastore.address.family` Der Parameter wurde dem hinzugefügt `kaminoprefs.xml` Bevorzugte Datei zur Festlegung eines bevorzugten LIF-Protokolls für die Bereitstellung von Datenspeichern.
 +
-Diese Präferenz gilt für alle neu zu VSC hinzugefügten Storage-Systeme.
+Diese Präferenz gilt für alle Storage-Systeme, die zu ONTAP Tools hinzugefügt wurden.
 
 * Die Werte für die neue Option sind `IPv4`, `IPv6`, und `NONE`.
 * Der Wert ist standardmäßig auf festgelegt `NONE`.

@@ -18,9 +18,9 @@ Im Folgenden werden die Überlegungen zum Erstellen und Bearbeiten von Storage-F
 +
 Diese Funktion bietet größere Flexibilität bei der Zuweisung unterschiedlicher QoS-Metriken für unterschiedliche VMDKs derselben Virtual Machine, die in einem virtuellen Datastore bereitgestellt wird.
 
-* Sie können Storage-Funktionsprofile für FAS- und AFF-Datastores konfigurieren.
+* Sie können Storage-Funktionsprofile für Flash-Array-Hybrid-, ASA- und AFF-Datastores konfigurieren.
 +
-Bei FAS AFF-Systemen können Sie die Speicherplatzreserve als Thick oder Thin Provisioning konfigurieren.
+Bei Flash-Array-Hybridsystemen, ASA- und AFF-Systemen können Sie die Speicherplatzreserve als Thick oder Thin Provisioning konfigurieren.
 
 * Sie können Storage-Funktionsprofile zur Verschlüsselung Ihrer Datenspeicher nutzen.
 * Vorhandene Storage-Funktionsprofile, die vor der Version 7.2 erstellt wurden, können nach dem Upgrade von einer früheren Version der ONTAP Tools für VMware vSphere auf die aktuelle Version der ONTAP Tools nicht geändert werden.

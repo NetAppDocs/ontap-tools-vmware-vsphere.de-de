@@ -2,7 +2,7 @@
 permalink: configure/task_discover_storage_systems_and_hosts.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Wenn Sie zum ersten Mal Virtual Storage Console \ (VSC\) in einem vSphere Client ausführen, erkennt VSC die ESXi Hosts, ihre LUNs und NFS Exporte sowie die NetApp Storage-Systeme, die über diese LUNs und Exporte verfügen.' 
+summary: Wenn Sie ONTAP-Tools zum ersten Mal in einem vSphere Client ausführen, erkennt ONTAP-Tools die ESXi-Hosts, ihre LUNs und NFS-Exporte und die NetApp Storage-Systeme, die Eigentümer dieser LUNs und Exporte sind. 
 ---
 = Erkennen von Storage-Systemen und Hosts
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Wenn Sie zum ersten Mal Virtual Storage Console \ (VSC\) in einem vSph
 
 
 [role="lead"]
-Wenn Sie zum ersten Mal Virtual Storage Console (VSC) in einem vSphere Client ausführen, erkennt VSC die ESXi Hosts, ihre LUNs und NFS Exporte sowie die NetApp Storage-Systeme, die im Besitz dieser LUNs und Exporte sind.
+Wenn Sie ONTAP-Tools zum ersten Mal in einem vSphere Client ausführen, erkennt ONTAP-Tools die ESXi-Hosts, ihre LUNs und NFS-Exporte und die NetApp Storage-Systeme, die Eigentümer dieser LUNs und Exporte sind.
 
 *Was Sie brauchen*
 
@@ -21,16 +21,16 @@ Wenn Sie zum ersten Mal Virtual Storage Console (VSC) in einem vSphere Client au
 
 *Über diese Aufgabe*
 
-Sie können jederzeit neue Storage-Systeme ermitteln oder Informationen zu vorhandenen Storage-Systemen aktualisieren, um die aktuellsten Kapazitäts- und Konfigurationsinformationen zu erhalten. Sie können auch die Zugangsdaten, die VSC zur Anmeldung bei den Storage-Systemen verwendet, ändern.
+Sie können jederzeit neue Storage-Systeme ermitteln oder Informationen zu vorhandenen Storage-Systemen aktualisieren, um die aktuellsten Kapazitäts- und Konfigurationsinformationen zu erhalten. Sie können auch die Anmeldeinformationen ändern, die die ONTAP Tools zur Anmeldung bei den Storage-Systemen verwenden.
 
-Bei der Erkennung der Storage-Systeme erfasst VSC Informationen von den ESXi Hosts, die von der vCenter Server Instanz gemanagt werden.
+Bei der Erkennung der Speichersysteme erfasst ONTAP-Tools Informationen von den ESXi-Hosts, die von der vCenter Server-Instanz gemanagt werden.
 
 *Schritte*
 
 . Wählen Sie auf der vSphere Client-Startseite die Option *Hosts und Cluster* aus.
 . Klicken Sie mit der rechten Maustaste auf das erforderliche Rechenzentrum, und wählen Sie dann *NetApp ONTAP Tools* > *Update Host- und Speicherdaten* .
 +
-VSC zeigt ein Dialogfeld „Bestätigen“ an, in dem Sie darüber informiert werden, dass durch diese Aktion die Erkennung aller verbundenen Storage-Systeme neu gestartet wird und einige Minuten in Anspruch nehmen kann. Möchten Sie fortfahren?
+Das ONTAP-Tool zeigt ein Dialogfeld „Bestätigen“ an, in dem Sie darüber informiert werden, dass durch diese Aktion die Erkennung aller verbundenen Speichersysteme neu gestartet wird und einige Minuten in Anspruch nehmen kann. Möchten Sie fortfahren?
 
 . Klicken Sie auf *JA*.
 . Wählen Sie die erkannten Speicher-Controller aus, die den Status aufweisen `Authentication Failure`, Und klicken Sie dann auf *AKTIONEN* > *Ändern*.
@@ -40,6 +40,6 @@ VSC zeigt ein Dialogfeld „Bestätigen“ an, in dem Sie darüber informiert we
 
 Nach Abschluss des Erkennungsvorgangs führen Sie folgende Schritte aus:
 
-* Verwenden Sie VSC, um ESXi Host-Einstellungen für Hosts zu konfigurieren, die in der Spalte Adaptereinstellungen, in der Spalte MPIO-Einstellungen oder in der Spalte NFS-Einstellungen das Symbol Alert anzeigen.
+* Verwenden Sie ONTAP-Tools, um ESXi-Hosteinstellungen für Hosts zu konfigurieren, die das Warnsymbol in der Spalte Adaptereinstellungen, in der Spalte MPIO-Einstellungen oder in der Spalte NFS-Einstellungen anzeigen.
 * Geben Sie die Anmeldeinformationen des Speichersystems an.
 

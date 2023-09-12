@@ -2,7 +2,7 @@
 permalink: configure/task_add_storage_systems.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Sie können Storage-System manuell zur Virtual Storage Console \(VSC\) hinzufügen.' 
+summary: Sie können ONTAP Tools Storage-Systeme manuell hinzufügen. 
 ---
 = Storage-Systeme hinzufügen
 :allow-uri-read: 
@@ -11,21 +11,21 @@ summary: 'Sie können Storage-System manuell zur Virtual Storage Console \(VSC\)
 
 
 [role="lead"]
-Sie können Storage-System manuell zur Virtual Storage Console (VSC) hinzufügen.
+Sie können ONTAP Tools Storage-Systeme manuell hinzufügen.
 
 
 NOTE: Wenn ONTAP Cluster SAML-aktiviert ist, erfolgt die Kommunikation mit ONTAP über eine Basisauthentifizierung.
 
 *Über diese Aufgabe*
 
-Jedes Mal, wenn Sie die Virtual Storage Console (VSC) starten oder die *ALLE* Option WIEDERENTDECKEN, erkennt VSC die verfügbaren Speichersysteme automatisch.
+Jedes Mal, wenn Sie ONTAP-Tools starten oder die Option *NEU ENTDECKEN* auswählen, erkennt ONTAP-Tools automatisch die verfügbaren Speichersysteme.
 
 
 NOTE: VVol Datastores werden auf direkten SVMs nicht unterstützt.
 
 *Schritte*
 
-. Fügen Sie VSC mithilfe einer der Optionen auf der Startseite der ONTAP Tools um ein Storage-System hinzu:
+. Sie können ONTAP Tools ein Storage-System hinzufügen, indem Sie eine der Optionen auf der Homepage der ONTAP Tools wählen:
 +
 ** Klicken Sie Auf *Speichersysteme* > *Hinzufügen*. Oder
 ** Klicken Sie auf *Übersicht* > *erste Schritte* und dann auf die Schaltfläche *HINZUFÜGEN* unter Speichersystem hinzufügen.
@@ -39,7 +39,7 @@ Wenn Sie ein Storage-System hinzufügen, sollte jede Kommunikation zwischen dem 
 Sie können auch Storage-Systeme mit der IPv6-Adresse des Clusters oder der SVM hinzufügen.
 
 +
-Wenn Sie Speicher auf der Seite VSC Storage System hinzufügen, geben Sie die vCenter Server-Instanz an, in der sich der Speicher befindet. Das Dialogfeld Add Storage System enthält eine Dropdown-Liste der verfügbaren vCenter Server-Instanzen. Die VSC zeigt diese Option nicht an, wenn Sie einem Rechenzentrum Storage hinzufügen, das bereits einer vCenter Server-Instanz zugeordnet ist.
+Wenn Sie Speicher auf der Seite ONTAP Tools Storage System hinzufügen, geben Sie die vCenter Server-Instanz an, in der sich der Speicher befindet. Das Dialogfeld Add Storage System enthält eine Dropdown-Liste der verfügbaren vCenter Server-Instanzen. ONTAP-Tools zeigen diese Option nicht an, wenn Sie Speicher zu einem Rechenzentrum hinzufügen, das bereits mit einer vCenter Server-Instanz verknüpft ist.
 
 +
 HINWEIS:
