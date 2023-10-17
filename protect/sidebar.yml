@@ -10,6 +10,9 @@ entries:
     url: "/protect/task_configure_storage_replication_adapter_for_san_environment.html"
   - title: Konfigurieren Sie Storage für Umgebungen mit hoher Skalierbarkeit
     url: "/protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html"
+  - title: Konfigurieren Sie SRA mit SRM in einer Konfiguration mit einem gemeinsam
+      genutzten Recovery-Standort
+    url: "/protect/configure_sra_with_srm_shared_site.html"
 - title: Konfigurieren Sie SRA auf der SRM Appliance
   url: "/protect/task_configure_sra_on_srm_appliance.html"
 - title: SRA-Anmeldedaten aktualisieren

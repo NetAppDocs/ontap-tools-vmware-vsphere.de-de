@@ -15,9 +15,16 @@ Mit der JSON-Datei, die mit ONTAP Tools und ONTAP System Manager bereitgestellt 
 
 *Was Sie brauchen*
 
-* Sie sollten die ONTAP-Berechtigungsdatei unter Verwendung von \https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip von ONTAP-Tools heruntergeladen haben.
+* Sie sollten die ONTAP-Berechtigungsdatei von ONTAP-Tools wie folgt heruntergeladen haben:
++
+** Navigieren Sie zu https://{virtual_appliance_IP}:9083/vsc/config/[]
+** Laden Sie die Datei VSC_ONTAP_User_Privileges.zip herunter
+** Extrahieren Sie die heruntergeladene Datei VSC_ONTAP_User_Privileges.zip
+** Greifen Sie Auf System Manager Zu
 +
 Siehe KB-Artikel - https://kb.netapp.com/mgmt/OTV/Virtual_Storage_Console/Virtual_Storage_Console%3A_How_to_retrieve_the_JSON_file_to_configure_user_roles_and_privileges["Virtual Storage Console: So rufen Sie die JSON-Datei ab, um Benutzerrollen und -Berechtigungen zu konfigurieren"] Anweisungen zum Herunterladen der ONTAP-Berechtigungsdatei von WebCLI.
+
+
 
 * Sie sollten ONTAP 9.8P1 oder höher Storage konfiguriert haben.
 * Sie sollten sich mit Administratorrechten für das Speichersystem angemeldet haben.

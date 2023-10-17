@@ -14,9 +14,6 @@ summary: Die ONTAP Tools für VMware vSphere unterstützen Umgebungen, die Metro
 Die ONTAP Tools für VMware vSphere unterstützen Umgebungen, die MetroCluster IP- und FC-Konfigurationen für ONTAP verwenden. Der Support erfolgt meistens automatisch. Bei der Verwendung einer MetroCluster Umgebung mit ONTAP Tools und VASA Provider können Sie jedoch auch einige Unterschiede erkennen.
 
 
-NOTE: SRA unterstützt keine MetroCluster-Konfigurationen.
-
-
 
 == MetroCluster Konfigurationen und ONTAP Tools
 
@@ -37,3 +34,17 @@ VASA-Provider unterstützt automatisch Umgebungen, die MetroCluster-Konfiguratio
 
 
 NOTE: VASA Provider fügt nach einem Switchover das Suffix „`-mc`“ nicht an die Namen der SVMs am sekundären Standort an.
+
+
+
+== MetroCluster-Konfigurationen und SRA
+
+Der Storage Replication Adapter (SRA) unterstützt Umgebungen, die MetroCluster-Konfigurationen (MCC) mit FC-Protokoll verwenden.
+
+Als Voraussetzung für die MCC- und SRA-Konfiguration sollten alle SVM-Namen (Storage Virtual Machine) auf den MCC-Clustern eindeutig sein. Wenn die Namen nicht eindeutig sind, verursacht dies Konflikte und die SRA-Workflows scheitern.
+
+Erforderliche Aktionen:
+
+. Stellen Sie nach einer MCC-Umschaltung oder einem Switchback sicher, dass der Befehl „_snapmirror list-destinations_“ auf dem Quell-Cluster die richtige Ausgabe mit dem neuen SVM-Namen (<vserver_name>-mc) anzeigt. Die Ausführung des Befehls kann bis zu 30 Minuten dauern.
+. Führen Sie DiscoverDevices über die SRM-Benutzeroberfläche aus, bevor Sie mit anderen SRA-Workflows fortfahren. Durch diesen Vorgang wird sichergestellt, dass SRM die Änderungen an den SVM-Namen nach einem Switchover oder Switchback erkennt.
+

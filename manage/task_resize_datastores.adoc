@@ -26,7 +26,7 @@ NOTE: Wenn Sie All-SAN-Array (ASA) Typ Storage-Plattformen mit ONTAP 9.9.1 oder 
 
 . Klicken Sie auf der vSphere Client-Startseite auf *Hosts und Cluster*.
 . Wählen Sie im Navigationsbereich das Rechenzentrum aus, das den Datastore enthält.
-. Klicken Sie mit der rechten Maustaste auf den Datastore und wählen Sie *NetApp ONTAP Tools* > *QoS zuweisen* aus.
+. Klicken Sie mit der rechten Maustaste auf den Datastore, und wählen Sie *NetApp ONTAP Tools* > *Größe des Datastore ohne VVols* aus.
 . Geben Sie im Dialogfeld Größe ändern eine neue Größe für den Datastore an, und klicken Sie dann auf *OK*.
 +
 Sie können die Option *RECOVER ALL* im Menü Storage Systems ausführen, um die Speicherliste unter Storage Systems und Dashboard manuell zu aktualisieren oder auf die nächste geplante Aktualisierung zu warten.

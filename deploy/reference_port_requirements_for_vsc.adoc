@@ -44,6 +44,21 @@ Je nach Konfiguration Ihrer Anmeldedaten achten VMware vCenter Server und die Sp
  a| 
 Die ONTAP-Tools sorgen für eine sichere Kommunikation über diesen Port. Der Port wird in der Client-Server-Kommunikationsarchitektur verwendet. Der Client, der beliebige Automatisierungs-Client sein kann, der REST API verwendet, initiiert die Verbindung zum Server und den Datenaustausch mit den Endpunkten. Dieser Port ist für ONTAP-Tools-Dienste und für den Export von Serverprotokollen der ONTAP-Tools aktiviert. Die Seite register.html wird auf diesem Port gehostet. Der REST-Schwagger ist an diesem Port freigelegt.
 
+
+
+ a| 
+8443
+ a| 
+Dieser Port wird für den Remote-Plugin-Dienst verwendet.
+
+
+
+ a| 
+7
+ a| 
+ONTAP-Tools senden eine Echo-Anfrage an ONTAP zur Überprüfung der Erreichbarkeit und sind nur beim Hinzufügen von Speicher erforderlich
+System und kann später deaktiviert werden.
+
 |===
 
 NOTE: Sie sollten das Internet Control Message Protocol (ICMP) aktivieren, bevor Sie die ONTAP-Tools bereitstellen.

@@ -60,13 +60,37 @@ Sie sollten die folgenden Lizenzen kennen:
 ONTAP-Tools verwenden die folgenden bidirektionalen TCP-Standardports:
 
 |===
+
+
 | *Zusätzliche Anforderungen* | *Beschreibung Spalte* 
 
 
-| 9083 | Bei Aktivierung verwenden sowohl VASA Provider als auch Storage Replication Adapter (SRA) diesen Port zur Kommunikation mit dem vCenter Server. Dieser Port wird auch zum Abrufen der TCP/IP-Einstellungen benötigt. Dieser Port unterstützt Bundle-Download, Web-CLI-Benutzeroberfläche und die Kommunikation des Kontrollpfads von VMware zu VP. SRA kommuniziert auf dieser PORTNUMMER mit dem Back-End-SRA-Dienst. 
+ a| 
+9083
+ a| 
+Bei Aktivierung verwenden sowohl VASA Provider als auch Storage Replication Adapter (SRA) diesen Port zur Kommunikation mit dem vCenter Server. Dieser Port wird auch zum Abrufen der TCP/IP-Einstellungen benötigt. Dieser Port dient zum Herunterladen des VP-Support-Pakets, zum Zugriff auf die Web-CLI-Benutzeroberfläche und zur Steuerung der Pfadkommunikation von VMware zu VP.
 
 
-| 8143 | Die ONTAP-Tools sorgen für eine sichere Kommunikation über diesen Port. 
+
+ a| 
+443
+ a| 
+Je nach Konfiguration Ihrer Anmeldedaten achten VMware vCenter Server und die Speichersysteme auf die sichere Kommunikation auf diesem Port. Der Port wird in der Client-Server-Kommunikationsarchitektur verwendet. Der Port 443 ist standardmäßig für sichere Verbindungen aktiviert. Der Client, der beliebige Automatisierungs-Client sein kann, der REST API verwendet, initiiert die Verbindung zum Server und den Datenaustausch mit den Endpunkten.
+
+
+
+ a| 
+8143
+ a| 
+Die ONTAP-Tools sorgen für eine sichere Kommunikation über diesen Port. Der Port wird in der Client-Server-Kommunikationsarchitektur verwendet. Der Client, der beliebige Automatisierungs-Client sein kann, der REST API verwendet, initiiert die Verbindung zum Server und den Datenaustausch mit den Endpunkten. Dieser Port ist für ONTAP-Tools-Dienste und für den Export von Serverprotokollen der ONTAP-Tools aktiviert. Die Seite register.html wird auf diesem Port gehostet. Der REST-Schwagger ist an diesem Port freigelegt.
+
+
+
+ a| 
+8443
+ a| 
+Dieser Port wird für den Remote-Plugin-Dienst verwendet.
+
 |===
 Minimale Storage- und Applikationsanforderungen:
 

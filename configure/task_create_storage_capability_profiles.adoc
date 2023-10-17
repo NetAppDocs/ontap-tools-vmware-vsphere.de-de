@@ -81,7 +81,20 @@ Wenn Sie den Modus „`Linked`“ für Ihre vCenter Server aktiviert haben, müs
  a| 
 Plattform
  a| 
-Sie können Storage-Funktionsprofil mit Plattformtypen erstellen – Performance, Kapazität, Flash Array Hybrid und einer neuen Storage-Funktion mit asymmetrischem Flag. Die Optionen auf den nachfolgenden Bildschirmen werden basierend auf Ihrer Auswahl des Speichersystems aktualisiert.
+Ab ONTAP Tools für VMware vSphere 9.13 können Sie Storage-Funktionsprofile mithilfe der folgenden Optionen erstellen:
+
+.. Plattformtyp: Performance, Kapazität und Flash Array Hybrid
+.. Asymmetrisches Flag: Zeigt den SAN-optimierten (All-SAN-Array) Status des Speichersystems an.
++
+*** Wenn der Plattformtyp *Performance* ist und das Asymmetric Flag *TRUE* ist, wird ein Speichersystem vom Typ AFF-A berücksichtigt
+*** Wenn der Plattformtyp *Performance* ist und Asymmetric Flag *False* ist, wird das Speichersystem vom Typ ASA-A berücksichtigt
+*** Wenn der Plattformtyp *capacity* ist und das Asymmetric-Flag *true* ist, wird das Speichersystem vom Typ AFF-C berücksichtigt
+*** Wenn der Plattformtyp *Flash Hybrid Array* ist und Asymmetric Flag „NA“ ist, wird das Speichersystem vom Typ FAS berücksichtigt
+
+
+
+
+Die Optionen auf den nachfolgenden Bildschirmen werden basierend auf Ihrer Auswahl des Speichersystems aktualisiert.
 
 
 

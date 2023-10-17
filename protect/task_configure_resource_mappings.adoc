@@ -25,7 +25,7 @@ NOTE: Im Site Recovery Manager (SRM) können Ressourcen in Ressourcen-Pools, ESX
 . Melden Sie sich bei Ihrem vCenter Server an und klicken Sie auf *Site Recovery* > *Sites*.
 . Wählen Sie Ihre geschützte Seite aus, und klicken Sie dann auf *Verwalten*.
 . Wählen Sie auf der Registerkarte Verwalten die Option *Ressourcenzuordnungen* aus.
-. Klicken Sie auf das image:../media/new_resource_mappings.gif[""] Symbol zum Erstellen einer neuen Ressourcenzuordnung.
+. Klicken Sie auf das image:../media/new_resource_mappings.gif["Globe-Symbol"] Symbol zum Erstellen einer neuen Ressourcenzuordnung.
 +
 Der Assistent „Ressourcenzuordnung erstellen“ wird angezeigt.
 

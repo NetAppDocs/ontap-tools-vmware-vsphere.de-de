@@ -98,12 +98,13 @@ Es kann ein paar Minuten dauern, bis das Plug-in im vSphere Client aktualisiert 
 
 [NOTE]
 ====
+* Ab ONTAP-Tools für VMware vSphere 9.12 erfolgt die Authentifizierung mit ONTAP über Zertifikat. Sie können entweder ein CA-signiertes Zertifikat oder ein selbstsigniertes Zertifikat hinzufügen. Siehe, link:../configure/task_modify_storage_system.html["Ändern von Speichersystemen"] Weitere Anweisungen.
 * Wenn Sie ein Upgrade von der Version 7.0 von ONTAP Tools auf die neueste Version von ONTAP Tools durchführen, müssen Sie zuerst Storage-Funktionsprofile erstellen, bevor Sie versuchen, eine vorhandene VM-Speicherrichtlinie zu bearbeiten. Andernfalls wird möglicherweise ein Fehler angezeigt, dass falsche oder fehlende Werte vorhanden sind.
 * Wenn Sie ein Upgrade von einer früheren Version auf die neueste Version von ONTAP Tools durchführen, wird das gefunden `vvol.rebalance.threshold` Die Eigenschaft fehlt in der Datei `vvol.properties.
 +
-Der Standardwert der Eigenschaft ist 85 %.
+Der Standardwert der Eigenschaft ist auf 85% gesetzt.* Nachdem Sie auf die neueste Version von ONTAP Tools aktualisiert haben, die FIPS aktiviert hat, aber Sie eine ältere Version von vCenter haben, in der FIPS nicht unterstützt wird, wird die Bereitstellung trotzdem funktionieren.
+Wenn Sie jedoch ein Upgrade Ihres vCenter auf die neueste von FIPS unterstützte Version durchführen und zudem eine frühere Version von ONTAP Tools verwenden, funktioniert die Implementierung nur dann, wenn FIPS im vCenter deaktiviert ist.
 
-* Nachdem Sie ein Upgrade auf die neueste Version der ONTAP-Tools mit FIPS-Aktivierung durchgeführt haben, jedoch eine ältere Version von vCenter verwenden, für die FIPS nicht unterstützt wird, funktioniert die Implementierung weiterhin. Wenn Sie jedoch ein Upgrade Ihres vCenter auf die neueste von FIPS unterstützte Version durchführen und zudem eine frühere Version von ONTAP Tools verwenden, funktioniert die Implementierung nur dann, wenn FIPS im vCenter deaktiviert ist.
 
 
 ====
