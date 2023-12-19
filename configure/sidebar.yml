@@ -39,8 +39,6 @@ entries:
   entries:
   - title: Überblick über das Storage-System für ONTAP Tools
     url: "/configure/concept_configure_storage_systems_for_ontap_tools_for_vmware_vsphere.html"
-  - title: Legen Sie die Standardanmeldeinformationen für Speichersysteme fest
-    url: "/configure/task_set_default_credentials_for_storage_systems.html"
   - title: Storage-Systeme hinzufügen
     url: "/configure/task_add_storage_systems.html"
   - title: Ändern von Speichersystemen

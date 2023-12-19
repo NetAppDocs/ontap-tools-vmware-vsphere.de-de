@@ -259,18 +259,10 @@
   <block id="53d2ec82e60f2fa8563f76e1038a66bc" category="list-text">Die Zeit läuft ab.</block>
   <block id="3d7fb394c85bb4d38079573b5a7dd241" category="paragraph">Die Anmeldesitzung bleibt nur bis Mitternacht am nächsten Tag gültig.</block>
   <block id="89d6409d2df201f4f1ab3e5173030ee0" category="list-text">Sie melden sich erneut als Diagnose-Benutzer mit SSH an.</block>
-  <block id="ae8542fbf5a656049ee2f2fc888a8431" category="list-text">Öffnen Sie über den vCenter Server eine Konsole für VASA Provider.</block>
   <block id="87c93b9816d806cccc58f0b610872eda" category="list-text">Eingabe<block ref="a87ff679a2f3e71d9181a67b7542122c" prefix=" " category="inline-code"></block> Wählen Sie Support und Diagnose aus.</block>
   <block id="4a046628c353b3aadc7da0fe8feb02e5" category="list-text">Eingabe<block ref="eccbc87e4b5ce2fe28308fd9f2a7baf3" prefix=" " category="inline-code"></block> So wählen Sie den Zugriff auf Remote-Diagnose aktivieren aus.</block>
   <block id="950be4668cb2fcdd834d276e66e90c4d" category="list-text">Eingabe<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> Im Dialogfeld „Bestätigung“ können Sie den Remote-Diagnosezugriff aktivieren.</block>
   <block id="d48f057485c79fea29ae606305f9eb86" category="list-text">Geben Sie ein Kennwort für den Remote-Diagnosezugriff ein.</block>
-  <block id="5385433ee01cd2037e0f3275521224ae" category="summary">Mit ONTAP® Tools für VMware vSphere können Sie Standardanmeldeinformationen für ein Speichersystem in Ihrem vCenter Server festlegen.</block>
-  <block id="3cabeb9f2dfaeed94f3553f24bb6697f" category="doc">Legen Sie die Standardanmeldeinformationen für Speichersysteme fest</block>
-  <block id="79709e46ab199855d00cbacbb6cc6473" category="paragraph">Sie müssen den vCenter Server ausgewählt haben, den Sie zum Erstellen von Standardanmeldeinformationen verwenden möchten.</block>
-  <block id="975c4484ae2524f3de4c1fe48b561c9e" category="list-text">Klicken Sie auf der Startseite der ONTAP-Tools auf *Einstellungen* &gt; *Administratoreinstellungen* &gt; *Standardanmeldeinformationen für das Speichersystem konfigurieren*.</block>
-  <block id="4753a60fdd29d20db04cca9e9d56fba7" category="list-text">Geben Sie im Dialogfeld Standardanmeldeinformationen des Speichersystems den Benutzernamen und das Kennwort für das Speichersystem ein.</block>
-  <block id="b241564d6daa7ecf800e2fce4f75c26d" category="paragraph">Storage Controller-Anmeldedaten werden in ONTAP basierend auf dem Benutzernamen und dem Passwort-Paar zugewiesen. Die Zugangsdaten für den Storage Controller können entweder das Administratorkonto oder ein benutzerdefiniertes Konto, das die rollenbasierte Zugriffssteuerung verwendet.</block>
-  <block id="5d647a0e64f2ce6656770c3697c2e747" category="list-text">Klicken Sie auf *OK*, um die Standardanmeldeinformationen zu speichern.</block>
   <block id="593947f8d5e4e5056e4cbc0df44b31ba" category="summary">Dieser Leitfaden bietet Informationen zu Aufgaben, die beim Bereitstellen und Optimieren von Storage und beim Monitoring von Datastores und Virtual Machines anfallen.</block>
   <block id="6cbc3d316243b777216f4f72ff0a0869" category="doc">Entscheiden Sie, ob Sie diesen Leitfaden verwenden</block>
   <block id="06ccfbdd4bca45f6352514dad9991bf7" category="paragraph">*Voraussetzungen für die Verwendung dieses Leitfadens*</block>
@@ -1451,7 +1443,6 @@
   <block id="bcafb10f2c5e3e1c946d39793d902146" category="paragraph"><block ref="bcafb10f2c5e3e1c946d39793d902146" category="inline-link-rx"></block></block>
   <block id="b292d4b33c15cd5429a4aec0164b62f4" category="inline-link">Konfigurieren Sie ESXi Hosts für die Kerberos Authentifizierung</block>
   <block id="2775eee214a07dd3ad16007a75341d1d" category="paragraph"><block ref="2775eee214a07dd3ad16007a75341d1d" category="inline-link-rx"></block></block>
-  <block id="c741ed49a5385413c6168a727f99799f" category="paragraph">Mit den ONTAP Tools für VMware vSphere können Sie Standardanmeldeinformationen für ein Speichersystem in Ihrem vCenter Server festlegen.</block>
   <block id="ad9cc0128590ca37c462b34961104d28" category="summary">Bei der Bereitstellung von FlexGroup-Datastores wird das Zuweisen von Storage-Funktionsprofilen zu den Datastores nicht unterstützt. Sie können Virtual Machines, die auf FlexGroup-gesicherten Datastores erstellt werden, jedoch QoS-Richtlinien zuweisen.</block>
   <block id="0d2917fccf8bea951b35e01424493df7" category="doc">Zuweisung von QoS-Richtlinien</block>
   <block id="edf7ac8b5e571fb4a86047807c593119" category="paragraph">Die QoS-Richtlinien können auf VM-Ebene oder auf Datastore-Ebene angewendet werden. Die QoS-Richtlinien sind für einen Datastore erforderlich, um Durchsatzschwellenwerte (max. Und Min. IOPS) zu konfigurieren. Wenn Sie die QoS auf einem Datastore festlegen, wird dies auf die Virtual Machines angewendet, die sich auf dem Datastore befinden, nicht auf dem FlexGroup Volume. Wenn Sie jedoch die QoS auf allen Virtual Machines in einem Datastore festlegen, werden alle individuellen QoS-Einstellungen für die Virtual Machines außer Kraft gesetzt. Dies gilt nur für die im Datastore verfügbaren virtuellen Maschinen und nicht für migrierte oder hinzugefügte Virtual Machines. Wenn Sie QoS auf neu hinzugefügte oder migrierte Virtual Machines eines bestimmten Datastores anwenden möchten, müssen Sie die QoS-Werte manuell festlegen.</block>
@@ -1571,7 +1562,6 @@
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">Konzepte</block>
   <block id="bba5d660126dffb643c6c3cc6300704d" category="sidebar">Storage Replication Adapter für Disaster Recovery</block>
   <block id="99da96b7c57595264a2d5f3ba294a0af" category="sidebar">Rollenbasierte Zugriffssteuerung</block>
-  <block id="96ab5f4eecc9217c7e8b30303647f507" category="sidebar">Übersicht über die rollenbasierte Zugriffssteuerung für ONTAP-Tools</block>
   <block id="f15e14b44728511393b49d485af9e88b" category="sidebar">So konfigurieren Sie die rollenbasierte Zugriffssteuerung für ONTAP Tools</block>
   <block id="a7c1f19a0afcdde0b988ba73af98d366" category="sidebar">Konfigurieren von ONTAP Tools</block>
   <block id="d323122d1d04a198d3dd6ef4bae01b87" category="sidebar">Konfigurieren Sie ESXi-Einstellungen</block>
@@ -1685,7 +1675,6 @@
   <block id="70443b52a86c20ad89a6e02da197f589" category="list-text">Wiederholen Sie die Schritte 4 und 5 für alle Speicher-Controller mit<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block> Status:</block>
   <block id="b5d3f62910840da363dc00c277bb04bb" category="paragraph">'Fortfahren nicht möglich. Keine ip-Adressen gefunden, wenn auf dem Controller Cross referierende Kernel-ip-Adressen und -Adressen referenziert werden. Es wurde kein passendes Netzwerk zum NFS-Mount-Volume für diese Hosts gefunden.'</block>
   <block id="dd21e95246bd9b59a210f7335f293a0f" category="paragraph"><block ref="dd21e95246bd9b59a210f7335f293a0f" category="inline-link-macro-rx"></block></block>
-  <block id="2384e9746fd49297b20eb475ef6c5bce" category="paragraph">Siehe <block ref="e3114922664a9d29184df9e8de358b9e" category="inline-link-macro-rx"></block>Abschnitt.</block>
   <block id="fdd13b82fb6d2a4ce51b8d8b17c621f9" category="paragraph">Klicken Sie mit der rechten Maustaste auf einen Cluster und wählen Sie dann *NetApp ONTAP Tools* &gt; *Datenspeicher bereitstellen* aus.</block>
   <block id="c3cee4f156cedf6cebe2ab86a8a41d7c" category="paragraph">Klicken Sie mit der rechten Maustaste auf einen Host, und wählen Sie dann *NetApp ONTAP Tools* &gt; *Datenspeicher bereitstellen* aus.</block>
   <block id="d1866eae9a3efecf8de082c109301663" category="paragraph">Sie können den VVols Datastore bereitstellen, wenn die VASA Provider-Funktion aktiviert ist. Siehe, <block ref="b6e18cc642479d1ec82545b2ffe73f70" category="inline-link-macro-rx"></block> Entsprechende Details. Der VVols Datastore unterstützt NFS-, iSCSI-, FC/FEoE- und NVMe/FC-Protokolle.</block>
@@ -1764,7 +1753,6 @@
   <block id="f3f47521549e89ed7cb7b073ea8a7d66" category="list-text">Eingabe<block ref="1679091c5a880faf6fb5e6087eb1b2dc" prefix=" " category="inline-code"></block> So wählen Sie *Administratorpasswort ändern* aus.</block>
   <block id="4fe6063d6d8500b42fd9878de1689157" category="list-text">Geben Sie ein Kennwort mit mindestens acht Zeichen und maximal 30 Zeichen ein. Das Passwort muss mindestens ein oberes, ein unteres, eine Ziffer und ein Sonderzeichen enthalten. Nach 75 Tagen nach dem Zurücksetzen des Passworts wird eine Warnung zum Ablauf des Kennworts angezeigt. Das neue Passwort darf nicht mit dem zuletzt verwendeten Passwort identisch sein.</block>
   <block id="2223c21ac625f0e9df4fbd3476db44ed" category="paragraph">Wenn Sie die Empfehlungen für das Passwort nicht befolgen, ist die Option für die Wartungskonsole auf das Ändern des Passworts beschränkt. Wenn das Passwort abgelaufen ist, werden Sie aufgefordert, das Passwort zu ändern.</block>
-  <block id="c38b8f955a1f067bf2f51d940354b04d" category="paragraph">Siehe <block ref="e3114922664a9d29184df9e8de358b9e" category="inline-link-macro-rx"></block>Abschnitt in der Dokumentation _ONTAP Tools for VMware vSphere_.</block>
   <block id="9566e142d595702f8d77be59e617fade" category="list-text">Integritätsbericht Protokollieren</block>
   <block id="e5c7f658fde95383afe704dfbf972436" category="list-text">Typ des Datenspeichers: NFS und VMFS</block>
   <block id="ac48ff6b348f6f42e4ba7777328ae401" category="paragraph">Sie können Berichte anzeigen, organisieren und exportieren. Der Bericht Daten für VVols Datastores und Virtual Machines wird von ONTAP bereitgestellt.</block>
@@ -1901,7 +1889,6 @@
   <block id="f09ce17953135a26f2f12c89bb1b9a79" category="paragraph">Sie können über die Registerkarte *Zusammenfassung* der bereitgestellten ONTAP-Tools auf die Wartungskonsole zugreifen. Wenn Sie auf klicken  <block ref="80abd5c70dec820fc31b07b6e3d6acac" category="inline-image-macro-rx" type="image"></block>, Die Wartungskonsole wird gestartet.</block>
   <block id="ad6409a6647b6007d0c59236c9a9526d" category="inline-image-macro">Globe-Symbol</block>
   <block id="de0b37295bc569e05978d71253c5fc03" category="list-text">Klicken Sie auf das <block ref="10af7a3d6b71a29635365f6da600da8a" category="inline-image-macro-rx" type="image"></block> Symbol, um eine neue Netzwerkzuordnung zu erstellen.</block>
-  <block id="a86a5be1650520ca8fdf9ff8bc76967f" category="list-text">Aktualisieren Sie Ihre vorhandene ONTAP Tools Appliance auf die neueste Version.</block>
   <block id="ceafa9243433e49b5a0576a4ed1cd4b5" category="list-text">Migrieren Sie Windows-basierten Storage Replication Adapter auf Appliance-basierte SRA.</block>
   <block id="81f65208775e1359f20f81e36c085f41" category="list-text">Migrieren von Windows SRM-Daten zur SRM Appliance</block>
   <block id="008e64a5de1742c87435cc61c7288a46" category="image-alt">Neuer Benutzer und vorhandener Benutzer-Workflow</block>
@@ -1927,9 +1914,6 @@ Mit der Berechtigung *Ansicht* können Sie auf die Benutzeroberfläche der ONTAP
   <block id="cd407a7dc68ec4931863b0a4b9511c12" category="summary">Die ONTAP Tools für VMware vSphere bieten die Möglichkeit, die SRA Funktion zusammen mit ONTAP Tools zur Konfiguration der Disaster Recovery zu verwenden.</block>
   <block id="75d26898739bfbd118ceb40ee609588b" category="list-text">Greifen Sie über die URL auf die VMware SRM Appliance Management Interface zu:<block ref="65934cfc97d2d08e8dbabc6019658190" category="inline-link-rx"></block>, Und wechseln Sie dann zu Storage Replication Adapters in VMware SRM Appliance Management Interface.</block>
   <block id="fcfc4d0541fcfaef918a6982404c79f6" category="paragraph">Wenn Sie möchten, dass ONTAP-Tools die Größe des enthaltenen Volumes bei der Größenänderung des VMFS-Datenspeichers ändern, sollten Sie die Option *vorhandenes Volume verwenden* unter dem Abschnitt Speicherattribute beim ersten Provisioning des VMFS-Datenspeichers nicht verwenden, sondern es automatisch ein neues Volume für jeden Datenspeicher erstellen lassen.</block>
-  <block id="0660b9689bf2b0fa8177b2047a37e93b" category="paragraph">Wenn Sie Standardanmeldeinformationen für Storage-Systeme einrichten, verwenden die ONTAP-Tools diese Anmeldeinformationen, um sich bei einem Storage-System anzumelden, das gerade von den ONTAP-Tools erkannt wurde. Wenn die Standardanmeldeinformationen nicht funktionieren, müssen Sie sich manuell beim Speichersystem anmelden. ONTAP-Tools und SRA unterstützen das Hinzufügen von Anmeldedaten für Storage-Systeme auf Cluster- oder SVM-Ebene. Vasa Provider kann aber nur mit Anmeldedaten auf Cluster-Ebene arbeiten.</block>
-  <block id="4dc8b39d7d7b6d7c31dfedf281c6ce67" category="paragraph">Sie können mit ONTAP Tools nicht die Rollen ändern, die mit dem Benutzernamen und dem Passwort-Paar des Storage Controllers verknüpft sind. Um eine neue ONTAP-Benutzerrolle für die Verwendung mit ONTAP Tools zu ändern oder zu erstellen, können Sie System Manager verwenden.</block>
-  <block id="abfa917bee29e9d6901145eb371db3c3" category="paragraph">Wenn Sie die Anmeldedaten des Speichersystems aktualisiert haben, weil ein Speichersystem gemeldet hat<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block> Status, sollten Sie auf die Option *REDISCOVER ALL* klicken, die auf der Seite Speichersysteme verfügbar ist. Dies ermöglicht es ONTAP Tools, mithilfe der neuen Zugangsdaten eine Verbindung zum Storage-System herzustellen.</block>
   <block id="51f5ef577515311d873f15616c367953" category="summary">Wenn die virtuelle VASA Provider (VP)-Appliance verloren gegangen ist, nicht mehr zugänglich gemacht wird oder anderweitig nicht funktionsfähig ist, müssen Sie möglicherweise eine VP-Disaster-Recovery durchführen. </block>
   <block id="b8d4b381d817836a8a1f3e5c51418019" category="doc">Disaster Recovery für VASA Provider</block>
   <block id="6799b6ec743f9159edf3b43790210a11" category="inline-link">So führen Sie eine VASA Provider Disaster Recovery - Resolution Guide durch</block>
@@ -2154,4 +2138,8 @@ System und kann später deaktiviert werden.</block>
 Wenn Sie jedoch ein Upgrade Ihres vCenter auf die neueste von FIPS unterstützte Version durchführen und zudem eine frühere Version von ONTAP Tools verwenden, funktioniert die Implementierung nur dann, wenn FIPS im vCenter deaktiviert ist.</block>
   <block id="700f785cc3b0c94782ea099d30974628" category="paragraph">Der Storage Replication Adapter (SRA) unterstützt Umgebungen, die MetroCluster-Konfigurationen (MCC) mit dem NFS-, iSCSI- und FCP-Protokoll verwenden.</block>
   <block id="b0cf503432f798961e23d246f3541857" category="paragraph">Als Voraussetzung für die MCC SRA-Konfiguration sollten alle SVM-Namen (Storage Virtual Machine) auf den MCC-Clustern eindeutig sein. Wenn die Namen nicht eindeutig sind, verursacht dies Konflikte und die SRA-Workflows scheitern.</block>
+  <block id="ebfe914a124eb1ec0cc1d8f6d6c420cb" category="list-text">VSphere 8.x wird mit dem NetApp NFS VAAI Plug-in 2.0.1(Build 16) unterstützt.</block>
+  <block id="142666c1fbe08e639361aca9fb6d3d5a" category="list-text">Aktualisieren Sie Ihre bestehende ONTAP Tools Appliance auf die neueste Version.</block>
+  <block id="7ffdc51b9c93dfaa755052457f971d9e" category="list-text">Öffnen Sie vom vCenter Server aus eine Konsole für die virtuelle Maschine der ONTAP Tools Appliance.</block>
+  <block id="d0119a1425315c47822975d16de6de70" category="sidebar">Überblick über die rollenbasierte Zugriffssteuerung für ONTAP-Tools</block>
 </blocks>

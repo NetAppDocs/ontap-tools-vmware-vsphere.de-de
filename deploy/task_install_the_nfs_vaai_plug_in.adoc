@@ -25,6 +25,7 @@ Diese Werte werden automatisch auf dem ESXi-Host gesetzt, wenn das Dialogfeld Em
 * Sie sollten die vstorage Option auf der Storage Virtual Machine (SVM) mithilfe von aktiviert haben `vserver nfs modify -vserver vserver_name -vstorage enabled` Befehl.
 * Sie sollten ESXi 7.0-Update 1 oder höher haben, wenn Sie ein NetApp NFS VAAI Plug-in 2.0 verwenden.
 * Sie sollten die vSphere 7.x-Versionen haben, da vSphere 6.5 veraltet ist und vSphere 8.x nicht unterstützt wird.
+* VSphere 8.x wird mit dem NetApp NFS VAAI Plug-in 2.0.1(Build 16) unterstützt.
 
 
 *Schritte*

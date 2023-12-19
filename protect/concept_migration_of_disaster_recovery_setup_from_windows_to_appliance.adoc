@@ -15,7 +15,7 @@ Wenn Sie Windows-basierten Site Recovery Manager (SRM) für Disaster Recovery ve
 
 Bei der Migration der Disaster Recovery sind folgende Schritte zu beachten:
 
-. Aktualisieren Sie Ihre vorhandene ONTAP Tools Appliance auf die neueste Version.
+. Aktualisieren Sie Ihre bestehende ONTAP Tools Appliance auf die neueste Version.
 +
 link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["Upgraden auf die aktuelle Version von ONTAP-Tools"]
 
