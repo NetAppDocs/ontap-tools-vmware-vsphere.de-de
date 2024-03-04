@@ -28,5 +28,4 @@ Bei Flash-Array-Hybridsystemen, ASA- und AFF-Systemen können Sie die Speicherpl
 Die Profile der älteren Storage-Funktionen werden zur Rückwärtskompatibilität aufbewahrt. Wenn die Standardvorlagen nicht verwendet werden, werden die vorhandenen Vorlagen während des Upgrades auf die neueste Version der ONTAP Tools überschrieben, um die neuen QoS-Metriken zu reflektieren, die mit der Performance der Storage-Funktionsprofile zusammenhängen.
 
 * Sie können die alten Storage-Funktionsprofile nicht ändern oder verwenden, um neue virtuelle Datastores oder VM Storage-Richtlinien bereitzustellen.
-* Sie müssen für alle neuen Datenspeicher neue Storage-Funktionsprofile verwenden.
 

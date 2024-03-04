@@ -263,17 +263,6 @@
   <block id="4a046628c353b3aadc7da0fe8feb02e5" category="list-text">Eingabe<block ref="eccbc87e4b5ce2fe28308fd9f2a7baf3" prefix=" " category="inline-code"></block> So wählen Sie den Zugriff auf Remote-Diagnose aktivieren aus.</block>
   <block id="950be4668cb2fcdd834d276e66e90c4d" category="list-text">Eingabe<block ref="415290769594460e2e485922904f345d" prefix=" " category="inline-code"></block> Im Dialogfeld „Bestätigung“ können Sie den Remote-Diagnosezugriff aktivieren.</block>
   <block id="d48f057485c79fea29ae606305f9eb86" category="list-text">Geben Sie ein Kennwort für den Remote-Diagnosezugriff ein.</block>
-  <block id="593947f8d5e4e5056e4cbc0df44b31ba" category="summary">Dieser Leitfaden bietet Informationen zu Aufgaben, die beim Bereitstellen und Optimieren von Storage und beim Monitoring von Datastores und Virtual Machines anfallen.</block>
-  <block id="6cbc3d316243b777216f4f72ff0a0869" category="doc">Entscheiden Sie, ob Sie diesen Leitfaden verwenden</block>
-  <block id="06ccfbdd4bca45f6352514dad9991bf7" category="paragraph">*Voraussetzungen für die Verwendung dieses Leitfadens*</block>
-  <block id="62418c82e837c2de8717d422c47f1704" category="paragraph">Dieser Leitfaden basiert auf folgenden Annahmen:</block>
-  <block id="2a4ebfe287de523c0821df3c92fcb0c2" category="list-text">Die Funktionen, die Sie für die Aufgaben benötigen, die Sie ausführen, wurden installiert.</block>
-  <block id="4128e8f68603e53206775205d1f0397e" category="paragraph">Zu diesen Funktionen zählen beispielsweise das NFS-Plug-in für VMware VAAI, der VASA Provider für ONTAP und der Storage Replication Adapter.</block>
-  <block id="385efce5a9724c9f179860be1b8c1a16" category="list-text">Die rollenbasierte Zugriffssteuerung (Role Based Access Control, RBAC) sowohl für vCenter Server als auch für ONTAP wurde eingerichtet.</block>
-  <block id="777e62cd03e65fc88d5dd8bf6e074b5f" category="paragraph">Wenn Sie nicht über alle erforderlichen Berechtigungen und Berechtigungen verfügen, kann die Aufgabe, die Sie ausführen, während Sie den Assistenten durchlaufen, funktionieren, aber dennoch nicht erfolgreich abgeschlossen werden.</block>
-  <block id="fd80a621abb064d6b42d01e151f1b653" category="paragraph">Bei den meisten in diesem Leitfaden vorgestellten Aufgaben muss zudem nur jeweils ein Vorgang auf dem Ziel-Datastore oder der Virtual Machine ausgeführt werden.</block>
-  <block id="6e1cc1c43c963fb2f7be56194436c0bc" category="inline-link">NetApp Community: Virtual Storage Console für VMware vSphere</block>
-  <block id="b117a32af6ce3993d0558888d48066aa" category="paragraph"><block ref="b117a32af6ce3993d0558888d48066aa" category="inline-link-rx"></block></block>
   <block id="81e4ca59135c3f45f286823f56664170" category="summary">Die Datastore-Berichte bieten detaillierte Informationen zu herkömmlichen Datastores und den auf diesen Datastores erstellten Virtual Machines.</block>
   <block id="6b02839975c8740a45d6599f918343aa" category="doc">Datastore Reports</block>
   <block id="27c82488e4515938ae4b9054ae24fb14" category="paragraph">Das herkömmliche Dashboard ermöglicht es Ihnen, potenzielle Probleme mit den Datastores und Virtual Machines in Ihrem vCenter Server zu prüfen und zu identifizieren. Sie können Berichte anzeigen, sortieren und exportieren. Die Daten für die Berichte zu herkömmlichen Datastores und Virtual Machines werden vom vCenter Server bereitgestellt. Doch aufgrund der Unterstützung von FlexGroup-gestützten Datastore kommen einige Metriken wie Latenz, Durchsatz und IOPS bei ONTAP zum Einsatz.</block>
@@ -1258,7 +1247,6 @@
   <block id="8cc26aabe4ce86b5e0e7cfb0b18110c4" category="list-text">Vorhandene Storage-Funktionsprofile, die vor der Version 7.2 erstellt wurden, können nach dem Upgrade von einer früheren Version der ONTAP Tools für VMware vSphere auf die aktuelle Version der ONTAP Tools nicht geändert werden.</block>
   <block id="4313b18a787f869e62a3625361a97eec" category="paragraph">Die Profile der älteren Storage-Funktionen werden zur Rückwärtskompatibilität aufbewahrt. Wenn die Standardvorlagen nicht verwendet werden, werden die vorhandenen Vorlagen während des Upgrades auf die neueste Version der ONTAP Tools überschrieben, um die neuen QoS-Kennzahlen und Tiering-Richtlinien festzulegen, die mit der Performance der Storage-Funktionsprofile zusammenhängen.</block>
   <block id="a73487c98f2dda3222e7778da1b41360" category="list-text">Sie können die alten Storage-Funktionsprofile nicht ändern oder verwenden, um neue virtuelle Datastores oder VM Storage-Richtlinien bereitzustellen.</block>
-  <block id="b73838ffcbb69f170964cafa4454f6e6" category="list-text">Sie müssen für alle neuen Datenspeicher neue Storage-Funktionsprofile verwenden.</block>
   <block id="10fe24e67af2df3bfb206c5863b86c02" category="list-text">Geben Sie im Dialogfeld *Storage-System hinzufügen* die Management-IP-Adresse und die Anmeldeinformationen für dieses Speichersystem ein.</block>
   <block id="5e76a0ccaa822c77f5e23f13a579496f" category="summary">Sie können die Datastores, die VASA Provider für ONTAP zugeordnet sind, den Storage-Funktionsprofilen zuordnen. Sie können einem Datenspeicher, der nicht einem Storage-Funktionsprofil zugeordnet ist, ein Profil zuweisen.</block>
   <block id="ff83d16bc5d8d21cbb8ed4893d197bbc" category="doc">Zuordnen von Datastores zu Storage-Funktionsprofilen</block>
@@ -1450,7 +1438,6 @@
   <block id="5dfffeb251713b6b10e51ca1a58a16d1" category="list-text">Klicken Sie auf der ONTAP Tools Homepage auf *Menü* &gt; *Host und Cluster*.</block>
   <block id="944df66e06b22f6332bfa0c03f99d5cf" category="list-text">Klicken Sie mit der rechten Maustaste auf den gewünschten Datenspeicher oder die virtuelle Maschine und klicken Sie auf *NetApp ONTAP Tools* &gt; *QoS zuweisen*.</block>
   <block id="438a5a3c55ac2da39715ccc2098b77d7" category="list-text">Geben Sie im Dialogfeld „QoS zuweisen“ Werte für die erforderlichen IOPS-Werte ein, und klicken Sie auf *Anwenden*.</block>
-  <block id="8c9aff8d70d2347574f52228c778a94e" category="doc">Konfiguration herkömmlicher Datastores und Virtual Machines</block>
   <block id="aa9742a8c89b1a51af38fb3122936dfa" category="doc">Aktualisieren Sie die Anzeige des Speichersystems</block>
   <block id="4bb5cb1ed310f90a7d75fa02aaf4c306" category="paragraph">Je nach System-Setup kann dieser Vorgang viel Zeit in Anspruch nehmen.</block>
   <block id="f6f602e0b8bacecaeac351913bc637cb" category="list-text">Starten Sie das Update:</block>
@@ -1525,25 +1512,9 @@
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Patente</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Eine aktuelle Liste der NetApp Patente finden Sie unter:</block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Datenschutzrichtlinie</block>
-  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Los geht's</block>
-  <block id="da951ef1610be90b45b31baf7b25b179" category="sidebar">Erfahren Sie mehr über ONTAP Tools für VMware vSphere</block>
   <block id="e695b432b77d6bddfcb785c76f5e5442" category="sidebar">ONTAP-Tools Schnellstartanleitung</block>
   <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">Implementierung von ONTAP Tools</block>
   <block id="a2fa58344be7fbd9a2be0320a8df0f77" category="sidebar">Upgrade von ONTAP-Tools</block>
-  <block id="21e2a89d708329706ec6ed3fc989a1f6" category="sidebar">Verwenden Sie ONTAP-Tools</block>
-  <block id="317bbf73ff27c5f981628c8fb83ebf22" category="sidebar">Konfigurieren Sie die rollenbasierte Zugriffssteuerung</block>
-  <block id="48bc2d028cb2a507ef974230ca3ba793" category="sidebar">Konfigurieren Sie die Remote-Diagnose</block>
-  <block id="641e9457539249e880725760f91d5ee2" category="sidebar">Konfigurieren Sie Hochverfügbarkeit</block>
-  <block id="04edeb5424c826c14a69edb777edf395" category="sidebar">Sicherung und Management von Datenspeichern</block>
-  <block id="eaf78ca462bf848b7c59c410077002b6" category="sidebar">Sichern Sie Ihre Datenspeicher</block>
-  <block id="c724784c65896d8b16350f4b0580dfd4" category="sidebar">Sicherung von Virtual Machines</block>
-  <block id="5267febc97a2cc385cc5c73995dc64df" category="sidebar">Überwachen Sie herkömmliche Datenspeicher und Virtual Machines</block>
-  <block id="3123ece3c3b36f605758cb0c9a28f904" category="sidebar">Überwachen Sie VVols Datastores und Virtual Machines</block>
-  <block id="dfcc398099d6a64026e51ab282e16253" category="sidebar">Mehr Ressourcen</block>
-  <block id="51cf1968b9a38ab03f7396d237ad0be6" category="sidebar">Dokumentation für frühere Versionen von ONTAP-Tools für VMware</block>
-  <block id="4c3c39a603eb21106d2df2836d4b456c" category="sidebar">NetApp Knowledge Base – ONTAP Tools</block>
-  <block id="bbf1057ad175e1e1664e224351019ac9" category="sidebar">NetApp Import Utility – Video</block>
-  <block id="72393f9ef0b6b69526a30ac7ce5276bc" category="sidebar">NetApp Community – ONTAP Tools</block>
   <block id="4226794a7bb33ab0a2309e30c07c9031" category="sidebar">Management von ONTAP-Tools</block>
   <block id="1b8a04f09ff55290753a17988fd53c2a" category="sidebar">Managen von Datastores</block>
   <block id="427d9ce60f4b39aa82a25138b4aa489f" category="sidebar">Management von Virtual Machines</block>
@@ -1951,7 +1922,6 @@ Weitere Informationen finden Sie unter<block ref="4f93ad428ff5409cfa4e0415508a7d
   <block id="1582cc9629306ba6f3639270bdf4eb44" category="paragraph">Die Art der generierten ONTAP-Tools und VASA-Zertifikate hängt von der IP-Adresse (IPv4 oder IPv6) ab, die Sie während der Bereitstellung angegeben haben. Wenn Sie bei der Bereitstellung von ONTAP-Tools keine statischen IP-Details und DHCP eingegeben haben, stellt das Netzwerk sowohl IPv4- als auch IPv6-Adressen bereit.</block>
   <block id="86bb68a12bd0cf7f26f81f22d3f0750c" category="paragraph">Sowohl die ONTAP-Tools als auch die VASA-Zertifikate werden unter Verwendung derselben IP-Adresse generiert, die bei der vCenter Server-Registrierung verwendet wird.</block>
   <block id="82f408b562b890390f80688a77d415b7" category="inline-link">Fügen Sie Speicher zu ONTAP-Tools von Swagger-UI hinzu</block>
-  <block id="388c8beb5db60ef8f333013e0bff7505" category="paragraph">Im VCF-Modus können Sie Container für Ihren Speicher erstellen, ohne dass ein vCenter Server benötigt wird. VASA Provider ist standardmäßig nach der Bereitstellung von ONTAP-Tools im VCF-Modus aktiviert. Nach Abschluss der Implementierung können Sie mit REST-APIs Storage-Systeme hinzufügen und Container erstellen. Im folgenden Artikel werden die Verfahren zum Hinzufügen von Speicher zu ONTAP-Tools beschrieben, wenn VCF aktiviert ist,<block ref="3ac4be985d9966f37c32d23f811ada05" category="inline-link-rx"></block>.</block>
   <block id="3b7d87c8639d968f41f7f7a7da57f7bb" category="summary">ONTAP Tools für VMware vSphere bietet einen einzigen Mechanismus, um Storage-Systeme zu erkennen und die Storage-Anmeldedaten festzulegen. Die Zugangsdaten liefern die ONTAP Berechtigungen, die erforderlich sind, um Benutzern von ONTAP Tools die Ausführung von Aufgaben mithilfe der Storage-Systeme zu ermöglichen.</block>
   <block id="81077972c7560c903eb8f825a5ccfb3f" category="paragraph">ONTAP Tools für VMware vSphere bietet einen einzigen Mechanismus zur Erkennung von Storage-Systemen und zur Festlegung von Storage-Zugangsdaten. Die Zugangsdaten liefern die ONTAP Berechtigungen, die erforderlich sind, um Benutzern von ONTAP Tools die Ausführung von Aufgaben mithilfe der Storage-Systeme zu ermöglichen.</block>
   <block id="206a8ab8f173d67e0c18c8ffd9a8c590" category="paragraph">Bevor ONTAP-Tools die Storage-Ressourcen anzeigen und verwalten können, müssen ONTAP-Tools die Storage-Systeme erkennen. Im Rahmen des Erkennungsvorgangs müssen Sie die ONTAP Zugangsdaten für Ihre Storage-Systeme angeben. Hierbei handelt es sich um die Berechtigungen (oder Rollen), die mit dem Benutzernamen und dem Kennwort-Paar verknüpft sind, das jedem Speichersystem zugewiesen ist. Diese Benutzername und Passwort-Paare verwenden die rollenbasierte Zugriffssteuerung (Role-Based Access Control, RBAC) von ONTAP und müssen aus ONTAP heraus eingerichtet werden. Sie können diese Anmeldeinformationen nicht in ONTAP Tools ändern. ONTAP RBAC-Rollen können Sie mit ONTAP System Manager definieren.</block>
@@ -1997,7 +1967,6 @@ Weitere Informationen finden Sie unter<block ref="4f93ad428ff5409cfa4e0415508a7d
   <block id="fa0abf64888de4c94dacb5a7652d58d0" category="summary">ONTAP Tools unterstützen eine Vielzahl an Umgebungen. Einige Funktionen in diesen Umgebungen erfordern möglicherweise zusätzliche Konfigurationen.</block>
   <block id="41f0d5d36394297256afcd5376ca3397" category="paragraph">Möglicherweise müssen Sie einige der folgenden Aufgaben ausführen, um Ihre ESXi-Hosts, Gastbetriebssysteme und ONTAP-Tools zu konfigurieren:</block>
   <block id="00d05dc82a56c2b5c54c0026652008fc" category="list-text">Erneutes Generieren des SSL-Zertifikats der ONTAP-Tools</block>
-  <block id="535f47691e05fee56d1f18e523c6a360" category="summary">Sie können die ONTAP-Tools verwenden, um Datastores und virtuelle Maschinen in Ihrem vCenter-Server zu konfigurieren. Die Datastores und Virtual Machines, die mit ONTAP Tools bereitgestellt werden, werden im Dashboard der ONTAP Tools angezeigt. So können Sie diese Datenspeicher und Virtual Machines einfach überwachen und managen.</block>
   <block id="7d74f1d21f6854c7993e1b0275d74e28" category="admonition">Wenn Sie den Array-Manager konfigurieren, müssen Sie die gleiche Verbindung und die gleichen Anmeldeinformationen für das Speichersystem verwenden, das zum Hinzufügen des Speichersystems im Menü Storage-Systeme der virtuellen Speicherkonsole verwendet wurde. Wenn beispielsweise die Array Manager-Konfiguration im Umfang der SVM konfiguriert ist, muss der Storage unter den ONTAP Tools auf SVM-Ebene hinzugefügt werden.</block>
   <block id="a1c0444b1a542c852fc2d20519caf067" category="admonition">Site Recovery Manager (SRM) Workflows schlagen in vCenter 8.0 mit einer Fehlermeldung fehl. Vvol-Replizierung funktioniert wie erwartet in vCenter 7.0u3-Version.</block>
   <block id="40bca699ad9d82790f8acf46746bf6bf" category="list-text">Wählen Sie im vSphere-Client-Menü *NetApp ONTAP-Tools* &gt; *Einstellungen* &gt; *Verwaltungseinstellungen* &gt; *Funktionen verwalten* &gt; *Speicherreplikationsadapter (SRA) aktivieren*</block>
@@ -2009,10 +1978,6 @@ Weitere Informationen finden Sie unter<block ref="4f93ad428ff5409cfa4e0415508a7d
   <block id="89320c6c07930c9881a6ac929a15a616" category="list-text"><block ref="43ee33685f5d1476018f13eeaa89da14" prefix="" category="inline-code"></block>, Mit Informationen über API-Verkehr in und aus VASA Provider
 <block ref="e2d364adecadb42493d95a6c48245376" prefix="*" category="inline-code"></block>, Mit Informationen über die Einstellungen der ONTAP-Tools</block>
   <block id="faf06ec17c1b33b9c2b3d7682971f5f7" category="list-text">ONTAP-Tools-Server:<block ref="d73aa7cfc3f8e89c37a2673bb667f1d8" prefix=" " category="inline-code"></block> Und<block ref="6fbea5707094c19c0cf0e7517f528702" prefix=" " category="inline-code"></block></block>
-  <block id="1f4ec73bb8d94c3cbed17be018e69c97" category="paragraph">Die Informationen in diesem Handbuch beziehen sich auf Benutzer von ONTAP Tools und nicht auf den Systemadministrator. Dieses Handbuch enthält Informationen zu allen Aufgaben nach der Implementierung für die ONTAP®-Tools für VMware vSphere.</block>
-  <block id="4747dace70ccea8e51c1ab662498a395" category="list-text">Sie haben ONTAP-Tools installiert und konfiguriert.</block>
-  <block id="4cc75885a6d06db585c32cea6a7d8485" category="list-text">ONTAP-Tools haben alle von Ihnen verwendeten Storage-Systeme erkannt.</block>
-  <block id="c2d7bb1d880bb0fddb8c0da4f36fbedf" category="paragraph">Wenn Sie Fragen zu ONTAP-Tools haben oder Informationen mit anderen Benutzern von ONTAP-Tools austauschen möchten, können Sie das NetApp-Community-Forum besuchen.</block>
   <block id="88f7a3f25d4be5ba3ffcdaa56a5a8f85" category="list-text">Die Anzahl der herkömmlichen Datastores und ihre Performance-Kennzahlen, die von ONTAP Tools in Ihrer vCenter Server-Instanz gemanagt werden</block>
   <block id="e69424f143b8af4676d84ab6088e12fb" category="paragraph">Ab ONTAP-Tools für VMware vSphere 9.12 entfernt die ONTAP-Tools die früheren 2.0 Syslog-APIs. Sie enthalten neue 3.0 Syslog-bezogene APIs, die gegenseitige Authentifizierung unterstützen.
 Führen Sie die folgenden Schritte aus, um syslog einzurichten.</block>
@@ -2023,8 +1988,6 @@ Führen Sie die folgenden Schritte aus, um syslog einzurichten.</block>
   <block id="b75a1f15b9d5c67a12df98a9f92a5966" category="paragraph">Bei Flash-Array-Hybridsystemen, ASA- und AFF-Systemen können Sie die Speicherplatzreserve als Thick oder Thin Provisioning konfigurieren.</block>
   <block id="9ce0d0c7f1eb71c44d9deec84bc83698" category="summary">Mit den ONTAP Tools können Sie Storage-Funktionsprofile manuell erstellen, basierend auf den Funktionen eines Datastore automatisch ein Profil generieren oder ein Profil entsprechend den Anforderungen ändern.</block>
   <block id="08356be0c93d53bb862523b5f265dc58" category="paragraph">Sie können das Feld *Beschreibung* auf der Registerkarte Name und Beschreibung verwenden, um den Zweck des Speicherfunktionsprofils (Storage Capability Profile, SCP) zu beschreiben. Eine gute Beschreibung ist nützlich, da es sich bei der Einrichtung verschiedener Profile auf der Grundlage der verwendeten Anwendungen empfiehlt.</block>
-  <block id="0db06e45c833cc0383b061f129de7e01" category="paragraph">Beispielsweise erfordert eine geschäftskritische Applikation ein Profil mit Funktionen, die eine höhere Performance unterstützen, wie z. B. AFF und ASA Plattform. Ein Datastore, der für Tests und Trainings verwendet wird, kann ein Profil mit einer Flash-Array-Hybrid-Plattform mit niedrigerer Performance verwenden und alle Storage-Effizienzfunktionen und Tiering zur Kostenkontrolle aktivieren.
-Die Kombination aus Plattformtyp und asymmetrischem Flag bestimmt den Typ der SCPs. Beispiel: Platinum_ASA_A, Platinum_AFF_A, Platinum_AFF_C.</block>
   <block id="357990fd8e31e2fb0a3bad1794beb33c" category="list-text">Bei Auswahl von Flash Array Hybrid Storage können Sie Speicherplatzreserve (Thick oder Thin) konfigurieren sowie Deduplizierung, Komprimierung und Verschlüsselung aktivieren.</block>
   <block id="13144f962def59576c0e52e4bc8fd480" category="paragraph">Das Tiering-Attribut ist deaktiviert, da dieses Attribut für Flash-Array-Hybrid-Storage nicht gilt.</block>
   <block id="89bf031d8a89602b6558e06d692d13a1" category="list-text">Bei Auswahl von ASA Storage können Sie Verschlüsselung und Tiering aktivieren.</block>
@@ -2142,4 +2105,17 @@ Wenn Sie jedoch ein Upgrade Ihres vCenter auf die neueste von FIPS unterstützte
   <block id="142666c1fbe08e639361aca9fb6d3d5a" category="list-text">Aktualisieren Sie Ihre bestehende ONTAP Tools Appliance auf die neueste Version.</block>
   <block id="7ffdc51b9c93dfaa755052457f971d9e" category="list-text">Öffnen Sie vom vCenter Server aus eine Konsole für die virtuelle Maschine der ONTAP Tools Appliance.</block>
   <block id="d0119a1425315c47822975d16de6de70" category="sidebar">Überblick über die rollenbasierte Zugriffssteuerung für ONTAP-Tools</block>
+  <block id="b98d139729a71b493dcd4c3f860f1947" category="paragraph">Im VCF-Modus können Sie Container für Ihren Speicher erstellen, ohne dass ein vCenter Server benötigt wird. VASA Provider ist standardmäßig nach der Bereitstellung von ONTAP-Tools im VCF-Modus aktiviert. Nach Abschluss der Implementierung können Sie Speichersysteme hinzufügen, löschen oder ändern sowie Container mithilfe von REST-APIs erstellen. Im folgenden Artikel werden die Verfahren zum Hinzufügen von Speicher zu ONTAP-Tools beschrieben, wenn VCF aktiviert ist,<block ref="3ac4be985d9966f37c32d23f811ada05" category="inline-link-rx"></block>.</block>
+  <block id="32f68a60cef40faedbc6af20298c1a1e" category="paragraph">Löschen</block>
+  <block id="3e75383a5992a6d15fb81e872e46e256" category="paragraph">PUT</block>
+  <block id="3609cc991ef06b80256315c4e79537aa" category="paragraph">Platinum_ASA_C</block>
+  <block id="d84c449b5ba5c99192b66c773c0134a7" category="paragraph">AFF_NVME_ASA_C</block>
+  <block id="f456be3bdce5629c658724dad4f3a865" category="paragraph">AFF_THICK_ASA_C</block>
+  <block id="eae2a40fbc4ae52edc2b32231150c9e6" category="paragraph">AFF_DEFAULT_ASA_C</block>
+  <block id="3fbc1f1a3ba06f7917f54e41b9123e21" category="paragraph">AFF_TIERING_ASA_C</block>
+  <block id="2c539e94dde16d8a3ef8f6da22c85df3" category="paragraph">AFF_ENCRYPTED_ASA_C</block>
+  <block id="65e13e4d0253abff89ed1874b8274341" category="paragraph">AFF_Encrypted_Tiering_ASA_C</block>
+  <block id="eb8ad81730e4bb2e83e5a8fd73176d69" category="paragraph">AFF_Encrypted_Min50_ASA_C</block>
+  <block id="f5117d7744e4edc2e74fa77f9eff59ed" category="paragraph">Beispielsweise erfordert eine geschäftskritische Applikation ein Profil mit Funktionen, die eine höhere Performance unterstützen, wie z. B. AFF und ASA Plattform. Ein Datastore, der für Tests und Trainings verwendet wird, kann ein Profil mit einer Flash-Array-Hybrid-Plattform mit niedrigerer Performance verwenden und alle Storage-Effizienzfunktionen und Tiering zur Kostenkontrolle aktivieren.
+Die Kombination aus Plattformtyp und asymmetrischem Flag bestimmt den Typ der SCPs. Beispiel: Platinum_ASA_A, Platinum_ASA_C, Platinum_AFF_A, Platinum_AFF_C.</block>
 </blocks>

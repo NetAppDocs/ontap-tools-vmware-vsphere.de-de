@@ -72,7 +72,7 @@ Identifizierung mehrerer Profile
 Sie können das Feld *Beschreibung* auf der Registerkarte Name und Beschreibung verwenden, um den Zweck des Speicherfunktionsprofils (Storage Capability Profile, SCP) zu beschreiben. Eine gute Beschreibung ist nützlich, da es sich bei der Einrichtung verschiedener Profile auf der Grundlage der verwendeten Anwendungen empfiehlt.
 
 Beispielsweise erfordert eine geschäftskritische Applikation ein Profil mit Funktionen, die eine höhere Performance unterstützen, wie z. B. AFF und ASA Plattform. Ein Datastore, der für Tests und Trainings verwendet wird, kann ein Profil mit einer Flash-Array-Hybrid-Plattform mit niedrigerer Performance verwenden und alle Storage-Effizienzfunktionen und Tiering zur Kostenkontrolle aktivieren.
-Die Kombination aus Plattformtyp und asymmetrischem Flag bestimmt den Typ der SCPs. Beispiel: Platinum_ASA_A, Platinum_AFF_A, Platinum_AFF_C.
+Die Kombination aus Plattformtyp und asymmetrischem Flag bestimmt den Typ der SCPs. Beispiel: Platinum_ASA_A, Platinum_ASA_C, Platinum_AFF_A, Platinum_AFF_C.
 
 Wenn Sie den Modus „`Linked`“ für Ihre vCenter Server aktiviert haben, müssen Sie den vCenter Server auswählen, für den Sie das Storage-Funktionsprofil erstellen.
 

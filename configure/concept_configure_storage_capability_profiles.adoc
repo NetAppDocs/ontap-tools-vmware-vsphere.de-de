@@ -27,27 +27,35 @@ In Kombination mit VVols wird darüber hinaus das Storage-Funktionsprofil verwen
 * Platinum_AFF_A
 * Platinum_AFF_C
 * Platinum_ASA_A
+* Platinum_ASA_C
 * AFF_NVME_AFF_A
 * AFF_NVME_AFF_C
 * AFF_NVME_ASA_A
+* AFF_NVME_ASA_C
 * AFF_THICK_AFF_A
 * AFF_THICK_AFF_C
 * AFF_THICK_ASA_A
+* AFF_THICK_ASA_C
 * ALL FLASH FAS_DEFAULT_AFF_A
 * ALL FLASH FAS_DEFAULT_AFF_C
 * AFF_DEFAULT_ASA_A
+* AFF_DEFAULT_ASA_C
 * AFF_TIERING_AFF_A
 * AFF_TIERING_AFF_C
 * AFF_TIERING_ASA_A
+* AFF_TIERING_ASA_C
 * ALL FLASH FAS_ENCRYPTED_AFF_A
 * ALL FLASH FAS_ENCRYPTED_AFF_C
 * AFF_ENCRYPTED_ASA_A
+* AFF_ENCRYPTED_ASA_C
 * AFF_Encrypted_Tiering_AFF_A
 * AFF_Encrypted_Tiering_AFF_C
 * AFF_Encrypted_Tiering_ASA_A
+* AFF_Encrypted_Tiering_ASA_C
 * All Flash FAS_Encrypted_Min50_AFF_A
 * All Flash FAS_Encrypted_Min50_AFF_C
 * AFF_Encrypted_Min50_ASA_A
+* AFF_Encrypted_Min50_ASA_C
 * Bronze
 
 
@@ -76,5 +84,4 @@ Bei Flash-Array-Hybrid-, ASA- und AFF-Systemen können Sie die Speicherplatzrese
 Die Profile der älteren Storage-Funktionen werden zur Rückwärtskompatibilität aufbewahrt. Wenn die Standardvorlagen nicht verwendet werden, werden die vorhandenen Vorlagen während des Upgrades auf die neueste Version der ONTAP Tools überschrieben, um die neuen QoS-Kennzahlen und Tiering-Richtlinien festzulegen, die mit der Performance der Storage-Funktionsprofile zusammenhängen.
 
 * Sie können die alten Storage-Funktionsprofile nicht ändern oder verwenden, um neue virtuelle Datastores oder VM Storage-Richtlinien bereitzustellen.
-* Sie müssen für alle neuen Datenspeicher neue Storage-Funktionsprofile verwenden.
 

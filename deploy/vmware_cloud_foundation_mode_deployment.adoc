@@ -13,7 +13,7 @@ summary: ONTAP Tools für VMware vSphere können in einer VMware Cloud-Umgebung 
 [role="lead"]
 ONTAP Tools für VMware vSphere können in VMware Cloud Foundation (VCF) Umgebung implementiert werden. Hauptziel der VCF-Implementierung ist die Verwendung von ONTAP-Tools in einem Cloud-Setup und die Erstellung von Containern ohne vCenter Server.
 
-Im VCF-Modus können Sie Container für Ihren Speicher erstellen, ohne dass ein vCenter Server benötigt wird. VASA Provider ist standardmäßig nach der Bereitstellung von ONTAP-Tools im VCF-Modus aktiviert. Nach Abschluss der Implementierung können Sie mit REST-APIs Storage-Systeme hinzufügen und Container erstellen. Im folgenden Artikel werden die Verfahren zum Hinzufügen von Speicher zu ONTAP-Tools beschrieben, wenn VCF aktiviert ist, https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["Fügen Sie Speicher zu ONTAP-Tools von Swagger-UI hinzu"].
+Im VCF-Modus können Sie Container für Ihren Speicher erstellen, ohne dass ein vCenter Server benötigt wird. VASA Provider ist standardmäßig nach der Bereitstellung von ONTAP-Tools im VCF-Modus aktiviert. Nach Abschluss der Implementierung können Sie Speichersysteme hinzufügen, löschen oder ändern sowie Container mithilfe von REST-APIs erstellen. Im folgenden Artikel werden die Verfahren zum Hinzufügen von Speicher zu ONTAP-Tools beschrieben, wenn VCF aktiviert ist, https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["Fügen Sie Speicher zu ONTAP-Tools von Swagger-UI hinzu"].
 
 Es wird eine neue API zur Generierung des _Appliance-API-Tokens_ eingeführt, das API-Aufrufe authentifiziert. Einige der vorhandenen APIs wurden geändert, um den Header _Appliance-API-Token_ zu verwenden. Ab Version 9.12 der ONTAP-Tools unterstützt swagger keine 1.0 APIs. Die Zeiger, die zuvor auf 1.0 waren, werden auf 2.0 oder 3.0 APIs verschoben.
 
@@ -78,6 +78,28 @@ Storage-Systeme
 POST
  a| 
 Geändert
+ a| 
+Storage-Systeme
+
+
+
+ a| 
+/3.0/Storage/Cluster
+ a| 
+Löschen
+ a| 
+Neu
+ a| 
+Storage-Systeme
+
+
+
+ a| 
+/3.0/Storage/Cluster
+ a| 
+PUT
+ a| 
+Neu
  a| 
 Storage-Systeme
 
@@ -177,6 +199,15 @@ Beides
 
 
  a| 
+Platinum_ASA_C
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
 AFF_NVME_AFF_A
  a| 
 Beides
@@ -196,6 +227,15 @@ Beides
 
  a| 
 AFF_NVME_ASA_A
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+AFF_NVME_ASA_C
  a| 
 Beides
  a| 
@@ -231,6 +271,15 @@ Beides
 
 
  a| 
+AFF_THICK_ASA_C
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
 ALL FLASH FAS_DEFAULT_AFF_A
  a| 
 Hintergrund
@@ -250,6 +299,15 @@ Keine
 
  a| 
 AFF_DEFAULT_ASA_A
+ a| 
+Hintergrund
+ a| 
+Keine
+
+
+
+ a| 
+AFF_DEFAULT_ASA_C
  a| 
 Hintergrund
  a| 
@@ -285,6 +343,15 @@ Beides
 
 
  a| 
+AFF_TIERING_ASA_C
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
 ALL FLASH FAS_ENCRYPTED_AFF_A
  a| 
 Beides
@@ -304,6 +371,15 @@ Beides
 
  a| 
 AFF_ENCRYPTED_ASA_A
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+AFF_ENCRYPTED_ASA_C
  a| 
 Beides
  a| 
@@ -339,6 +415,15 @@ Beides
 
 
  a| 
+AFF_Encrypted_Tiering_ASA_C
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
 All Flash FAS_Encrypted_Min50_AFF_A
  a| 
 Beides
@@ -358,6 +443,15 @@ Beides
 
  a| 
 AFF_Encrypted_Min50_ASA_A
+ a| 
+Beides
+ a| 
+Beides
+
+
+
+ a| 
+AFF_Encrypted_Min50_ASA_C
  a| 
 Beides
  a| 
