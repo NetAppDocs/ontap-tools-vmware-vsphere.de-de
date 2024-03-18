@@ -40,7 +40,7 @@ Dank der Flexibilität, VASA Provider und SRA Funktionen zu aktivieren, können 
 * Für SRM-Gerät*
 
 +
-.. Greifen Sie über die URL auf die VMware SRM Appliance Management Interface zu: https://:<srm_ip>:5480[], Und wechseln Sie dann zu Storage Replication Adapters in VMware SRM Appliance Management Interface.
+.. Greifen Sie über die URL \https://:<srm_ip>:5480 auf die VMware SRM Appliance Management Interface zu und wechseln Sie dann zu Storage Replication Adapters in VMware SRM Appliance Management Interface.
 .. Klicken Sie Auf *Neuer Adapter*.
 .. Laden Sie das Installationsprogramm für _.tar.gz_ für das SRA-Plug-in auf SRM hoch.
 .. Überprüfen Sie die Adapter erneut, ob die Details auf der Seite SRM Storage Replication Adapter aktualisiert werden.

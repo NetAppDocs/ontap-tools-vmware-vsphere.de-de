@@ -32,7 +32,7 @@ Sie können das Flag Quick_Resync aktivieren, um den erneuten Schutz und die Wie
 Führen Sie die folgenden Schritte aus, um das Flag Quick_Resync zu aktivieren:
 
 .Schritte
-. Melden Sie sich am Bedienfeld unter _https://<IP address>:9083_ an, und klicken Sie auf die webbasierte CLI-Schnittstelle.
+. Melden Sie sich am Bedienfeld unter an `/https://<IP address>:9083` Und klicken Sie auf webbasierte CLI-Schnittstelle.
 . Führen Sie den Befehl aus `vp updateconfig -key=snapmirror.quick.resync.enabled -value=true`.
 . Führen Sie den Befehl aus `vp reloadconfig`.
 

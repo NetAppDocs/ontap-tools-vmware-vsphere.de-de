@@ -22,7 +22,12 @@ NOTE: VVol Datastores werden auf direkten SVMs nicht unterstützt.
 
 Bei Verwendung mit VVols-Datastores kann der Bereitstellungsassistent mehrere Storage-Funktionsprofile verwenden, um verschiedene FlexVol Volumes im Datastore zu erstellen. Sie können die VM Storage-Richtlinie verwenden, um VVols automatisch für eine Virtual Machine in entsprechenden FlexVol Volumes gemäß Definition zu erstellen. Sie können beispielsweise Profile für allgemeine Storage-Klassen erstellen (beispielsweise für Performance-Limits und andere Funktionen wie Verschlüsselung oder FabricPool). Sie können später VM Storage-Richtlinien in vCenter Server erstellen, die Business-Klassen von Virtual Machines darstellen und diese mit dem entsprechenden Storage-Funktionsprofil nach Name verknüpfen (z. B. Produktion, Test, HR).
 
-In Kombination mit VVols wird darüber hinaus das Storage-Funktionsprofil verwendet, um die Storage-Performance für die individuelle Virtual Machine festzulegen und diese auf das FlexVol Volume im VVols Datastore abzulegen, der die Performance-Anforderungen am besten erfüllt. Sie können eine QoS-Richtlinie mit minimalen und/oder maximalen IOPS für die Performance festlegen. Die Standardrichtlinien können verwendet werden, wenn Sie eine Virtual Machine bereitstellen oder Ihre VM Storage-Richtlinie später ändern, wenn sich Ihre Geschäftsanforderungen ändern. Die standardmäßigen Storage-Funktionsprofile für diese Version von ONTAP Tools:
+In Kombination mit VVols wird darüber hinaus das Storage-Funktionsprofil verwendet, um die Storage-Performance für die individuelle Virtual Machine festzulegen und diese auf das FlexVol Volume im VVols Datastore abzulegen, der die Performance-Anforderungen am besten erfüllt. Sie können eine QoS-Richtlinie mit minimalen und/oder maximalen IOPS für die Performance festlegen. Die Standardrichtlinien können verwendet werden, wenn Sie eine Virtual Machine bereitstellen oder Ihre VM Storage-Richtlinie später ändern, wenn sich Ihre Geschäftsanforderungen ändern.
+
+
+NOTE: Das ASA-C Storage-Funktionsprofil wird über ONTAP Tools für VMware vSphere 9.13P1 unterstützt.
+
+Die standardmäßigen Storage-Funktionsprofile für diese Version von ONTAP Tools:
 
 * Platinum_AFF_A
 * Platinum_AFF_C

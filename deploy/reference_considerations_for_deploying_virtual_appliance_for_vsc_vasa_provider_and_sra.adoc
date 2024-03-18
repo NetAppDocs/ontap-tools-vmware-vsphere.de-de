@@ -88,7 +88,7 @@ Die folgende Tabelle bietet eine Übersicht über die erforderlichen Komponenten
  a| 
 Anforderungen der rollenbasierten Zugriffssteuerung (Role Based Access Control, RBAC)
  a| 
-Die ONTAP Tools unterstützen sowohl die RBAC für vCenter Server als auch die rollenbasierte Zugriffssteuerung für ONTAP. Das Konto zur Registrierung von ONTAP-Tools bei vCenter Server (`https://<appliance_ip>:8143/Register.html`) Muss ein vCenter Server Administrator sein (dem vCenter Server Administrator oder der Administratorrolle zugewiesen). Wenn Sie ONTAP-Tools als Administrator ausführen möchten, müssen Sie über alle erforderlichen Berechtigungen und Berechtigungen für alle Aufgaben verfügen.
+Die ONTAP Tools unterstützen sowohl die RBAC für vCenter Server als auch die rollenbasierte Zugriffssteuerung für ONTAP. Das Konto zur Registrierung von ONTAP-Tools bei vCenter Server (`\https://<appliance_ip>:8143/Register.html`) Muss ein vCenter Server Administrator sein (dem vCenter Server Administrator oder der Administratorrolle zugewiesen). Wenn Sie ONTAP-Tools als Administrator ausführen möchten, müssen Sie über alle erforderlichen Berechtigungen und Berechtigungen für alle Aufgaben verfügen.
 
 Falls Ihr Unternehmen den Zugriff auf vSphere-Objekte einschränken muss, können Sie Benutzern standardmäßige Rollen von ONTAP-Tools erstellen und zuweisen, um die Anforderungen von vCenter Server zu erfüllen.
 
