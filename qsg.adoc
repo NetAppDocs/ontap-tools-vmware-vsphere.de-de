@@ -185,7 +185,8 @@ SRA kann entweder auf Windows SRM Server oder auf 8.2 SRM Appliance implementier
 . Zum Root-Benutzer wechseln: `su root`
 . Geben Sie im Protokollverzeichnis den Befehl ein, um die vom SRA-Docker-Andocker verwendete Docker-ID zu erhalten: `docker ps -l`
 . Melden Sie sich bei der Container-ID an: `docker exec -it -u srm <container id> sh`
-. Konfigurieren Sie SRM mit der IP-Adresse und dem Passwort der ONTAP Tools: `perl command.pl -I <otv-IP> administrator <otv-password>`Eine Erfolgsmeldung, die bestätigt, dass die Speicher-Anmeldedaten gespeichert werden, wird angezeigt.
+. Konfigurieren Sie SRM mit der IP-Adresse und dem Passwort der ONTAP Tools: `perl command.pl -I <otv-IP> administrator <otv-password>`. Sie benötigen ein einziges Angebot um den Passwortwert herum.
+Eine Erfolgsmeldung, die bestätigt, dass die Speicher-Anmeldedaten gespeichert werden, wird angezeigt. SRA kann mit dem SRA-Server unter Verwendung der angegebenen IP-Adresse, des Ports und der Anmeldeinformationen kommunizieren.
 
 
 
@@ -202,7 +203,10 @@ SRA kann entweder auf Windows SRM Server oder auf 8.2 SRM Appliance implementier
 . Führen Sie den Perl-Befehl aus, um SRA mit den neuen Zugangsdaten zu konfigurieren:
 +
 .. `cd /srm/sra/`
-.. `perl command.pl -I <otv-IP> administrator <otv-password>`
+.. `perl command.pl -I <otv-IP> administrator <otv-password>`. Sie benötigen ein einziges Angebot um den Passwortwert herum.
++
+Eine Erfolgsmeldung, die bestätigt, dass die Speicher-Anmeldedaten gespeichert werden, wird angezeigt. SRA kann mit dem SRA-Server unter Verwendung der angegebenen IP-Adresse, des Ports und der Anmeldeinformationen kommunizieren.
+
 
 
 

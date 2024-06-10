@@ -28,7 +28,7 @@ ONTAP-Tools verwenden die folgenden bidirektionalen TCP-Standardports:
  a| 
 9083
  a| 
-Bei Aktivierung verwenden sowohl VASA Provider als auch Storage Replication Adapter (SRA) diesen Port zur Kommunikation mit dem vCenter Server. Dieser Port wird auch zum Abrufen der TCP/IP-Einstellungen benötigt. Dieser Port dient zum Herunterladen des VP-Support-Pakets, zum Zugriff auf die Web-CLI-Benutzeroberfläche und zur Steuerung der Pfadkommunikation von VMware zu VP.
+Bei Aktivierung verwenden sowohl VASA Provider als auch Storage Replication Adapter (SRA) diesen Port zur Kommunikation mit dem vCenter Server. Dieser Port wird auch zum Abrufen der TCP/IP-Einstellungen benötigt. Dieser Port muss auf der Firewall von ESXi-Hosts bis zur ONTAP-Tools-Appliance aktiviert sein. Dieser Port dient zum Herunterladen des VP-Support-Pakets, zum Zugriff auf die Web-CLI-Benutzeroberfläche und zur Steuerung der Pfadkommunikation von VMware zu VP.
 
 
 

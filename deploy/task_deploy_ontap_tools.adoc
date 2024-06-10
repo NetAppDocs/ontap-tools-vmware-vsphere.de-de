@@ -68,7 +68,9 @@ Extrahieren Sie die .zip-Datei, die die .ova-Datei enthält, auf Ihrem lokalen S
 |===
 . Geben Sie die Details ein, um den Bereitstellungsassistenten anzupassen.
 +
-(Optional) Wählen Sie im Abschnitt vCenter konfigurieren oder VCF aktivieren das Kontrollkästchen *VMware Cloud Foundation (VCF) aktivieren* aus und geben Sie ein Passwort für die ONTAP Tools-Anmeldedaten ein. Sie müssen keine IP-Adresse angeben, aber es ist ein Kennwort erforderlich. Sämtliche Details finden Sie im Folgenden.
+(Optional) Wählen Sie im Abschnitt vCenter konfigurieren oder VCF aktivieren das Kontrollkästchen *VMware Cloud Foundation (VCF) aktivieren* aus und geben Sie ein Passwort für die ONTAP Tools-Anmeldedaten ein. ONTAP-Werkzeuge speichern die Benutzerdetails in einem kodierten Format. Für jede Kommunikation von ONTAP Tools an vCenter werden diese vCenter Benutzerdetails verwendet.
+Sie müssen keine IP-Adresse angeben, aber es ist ein Kennwort erforderlich.
+Sämtliche Details finden Sie im Folgenden.
 
 +
 ** link:../deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html["Überlegungen zur Anpassung der Implementierung"]
@@ -80,6 +82,10 @@ Extrahieren Sie die .zip-Datei, die die .ova-Datei enthält, auf Ihrem lokalen S
 Wenn Sie auf den Abschluss der Implementierung warten, können Sie den Fortschritt der Implementierung auf der Registerkarte Aufgaben anzeigen.
 
 . Schalten Sie die ONTAP Tools Virtual Machine ein, und öffnen Sie dann eine Konsole der Virtual Machine, auf der die ONTAP Tools ausgeführt werden.
++
+
+NOTE: Speichern Sie die virtuelle Maschine der ONTAP-Tools nicht auf einem vVol-Datastore, den sie verwaltet.
+
 . Überprüfen Sie, ob die ONTAP-Tools nach Abschluss der Implementierung ausgeführt werden.
 . Wenn ONTAP-Tools nicht bei vCenter-Servern registriert sind, verwenden Sie `\https://appliance_ip:8143/Register.html` Um die Instanz der ONTAP-Tools zu registrieren. Die Register.html leitet Sie zur Seite der Schwagger um. Ab den ONTAP-Tools 9.12 erfolgt die Registrierung von ONTAP-Tools mit vCenter über die Seite „swagger“.
 +
