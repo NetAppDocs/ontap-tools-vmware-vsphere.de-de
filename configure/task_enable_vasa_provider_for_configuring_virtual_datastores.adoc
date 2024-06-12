@@ -31,7 +31,7 @@ Wenn die VASA Provider-Funktion deaktiviert ist, bevor ein Upgrade auf die Versi
 . Klicken Sie auf der Registerkarte Verwaltungseinstellungen auf *Funktionen verwalten*.
 . Wählen Sie im Dialogfeld Funktionen managen die VASA Provider-Erweiterung aus, um sie zu aktivieren.
 . Wenn Sie die Replikationsfunktion für VVols-Datastores verwenden möchten, verwenden Sie die Schaltfläche *VVols-Replizierung aktivieren* umschalten.
-. Geben Sie die IP-Adresse der ONTAP-Tools und das Administratorpasswort ein, und klicken Sie dann auf *Apply*.
+. Geben Sie die IP-Adresse der ONTAP-Tools für VMware vSphere und das Administratorkennwort ein, und klicken Sie dann auf *Apply*.
 +
 
 NOTE: Wenn der VASA Provider-Status auch nach Aktivierung der VASA Provider-Erweiterung als „`Offline`“ angezeigt wird, prüfen Sie die Datei /var/log/vmware/vmware/sps/sps.log auf Verbindungsfehler mit VASA Provider oder starten Sie den Dienst „`vmware-sps`“ neu.

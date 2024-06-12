@@ -18,10 +18,10 @@ NOTE: Wenn ONTAP Cluster SAML-aktiviert ist, erfolgt die Kommunikation mit ONTAP
 
 *Über diese Aufgabe*
 
-Jedes Mal, wenn Sie ONTAP-Tools starten oder die Option *NEU ENTDECKEN* auswählen, erkennt ONTAP-Tools automatisch die verfügbaren Speichersysteme.
+Jedes Mal, wenn Sie ONTAP-Tools starten oder die Option *NEU ENTDECKEN* auswählen, erkennt ONTAP-Tools für VMware vSphere automatisch die verfügbaren Speichersysteme.
 
 
-NOTE: VVol Datastores werden auf direkten SVMs nicht unterstützt.
+NOTE: VVol Datastores werden auf SVM-Benutzern nicht unterstützt.
 
 *Schritte*
 

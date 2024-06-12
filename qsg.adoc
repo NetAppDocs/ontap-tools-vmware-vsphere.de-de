@@ -86,7 +86,7 @@ Die ONTAP-Tools sorgen für eine sichere Kommunikation über diesen Port. Der Po
  a| 
 8443
  a| 
-Dieser Port wird für den Remote-Plugin-Dienst verwendet.
+Dieser Port wird für ONTAP-Tools für den VMware vSphere Plug-in-Service verwendet.
 
 |===
 Minimale Storage- und Applikationsanforderungen:
@@ -223,5 +223,5 @@ Eine Erfolgsmeldung, die bestätigt, dass die Speicher-Anmeldedaten gespeichert 
 
 NOTE: VASA Provider ist standardmäßig aktiviert. Wenn Sie die Replizierungsfunktion für VVols-Datastores verwenden möchten, aktivieren Sie die Kippschaltfläche zum Aktivieren der VVols-Replizierung.
 
-. Geben Sie die IP-Adresse der ONTAP-Tools und das Administratorpasswort ein, und klicken Sie dann auf *Anwenden*.
+. Geben Sie die IP-Adresse der ONTAP-Tools für VMware vSphere und das Administratorkennwort ein, und klicken Sie dann auf *Apply*.
 

@@ -476,7 +476,7 @@ Sie können die ONTAP-PATCH-API verwenden, um die entsprechenden Werte festzuleg
 
 `\https://<machine_IP>/api/storage/volumes/{uuid}`
 
-Die VCF-Implementierung von ONTAP-Tools erlaubt nur die Erstellung von Containern. Wenn Sie andere Workflows wie die Bereitstellung von Datastores, die Erstellung von Storage-Funktionsprofilen oder Disaster Recovery verwenden möchten, sollten Sie ONTAP Tools über die Seite „swagger“ bei vCenter Server registrieren. Ab den ONTAP-Tools 9.12 erfolgt die Registrierung von ONTAP-Tools mit vCenter über die Seite „swagger“. Die Einschränkung von ONTAP-Tools im VCF-Modus besteht darin, dass Sie SRA erst für die Disaster Recovery konfigurieren können, wenn Sie das Plug-in registrieren. Wenn Sie ONTAP Tools ohne VCF-Modus implementieren, erfolgt die Registrierung automatisch.
+Bei der VCF-Implementierung von ONTAP Tools für VMware vSphere sind nur Workflows zur Container-Erstellung möglich. Wenn Sie andere Workflows wie die Bereitstellung von Datastores, die Erstellung von Storage-Funktionsprofilen oder Disaster Recovery verwenden möchten, sollten Sie ONTAP Tools über die Seite „swagger“ bei vCenter Server registrieren. Ab den ONTAP-Tools 9.12 erfolgt die Registrierung von ONTAP-Tools mit vCenter über die Seite „swagger“. Die Einschränkung von ONTAP-Tools im VCF-Modus besteht darin, dass Sie SRA erst für die Disaster Recovery konfigurieren können, wenn Sie das Plug-in registrieren. Wenn Sie ONTAP Tools ohne VCF-Modus implementieren, erfolgt die Registrierung automatisch.
 
 
 NOTE: Die Register.html wird in den kommenden Versionen der ONTAP Tools entfernt.

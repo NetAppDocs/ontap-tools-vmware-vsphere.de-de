@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: ONTAP Tools für VMware vSphere prüfen und legen die Einstellungen für Multipathing des ESXi Hosts und HBA-Zeitüberschreitungseinstellungen fest, die für NetApp Storage-Systeme am besten geeignet sind. 
 ---
-= Konfigurieren Sie Multipathing- und Zeitüberschreitungseinstellungen für ESXi-Server
+= Konfigurieren Sie die Einstellungen für Multipathing und Timeout des ESXi-Hostservers
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

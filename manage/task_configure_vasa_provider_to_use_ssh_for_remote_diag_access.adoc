@@ -35,7 +35,7 @@ Die Anmeldesitzung bleibt nur bis Mitternacht am nächsten Tag gültig.
 
 *Schritte*
 
-. Öffnen Sie vom vCenter Server aus eine Konsole für die virtuelle Maschine der ONTAP Tools Appliance.
+. Öffnen Sie vom vCenter Server aus eine Konsole zu den ONTAP-Tools für die virtuelle Maschine der VMware vSphere Appliance.
 . Melden Sie sich als Wartungbenutzer an.
 . Eingabe `4` Wählen Sie Support und Diagnose aus.
 . Eingabe `3` So wählen Sie den Zugriff auf Remote-Diagnose aktivieren aus.

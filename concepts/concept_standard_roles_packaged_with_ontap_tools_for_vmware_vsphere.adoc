@@ -40,7 +40,7 @@ Bietet alle nativen vCenter Server-Berechtigungen und ONTAP-Tools-spezifischen B
  a| 
 VSC schreibgeschützt
  a| 
-Bietet schreibgeschützten Zugriff auf ONTAP Tools. Diese Benutzer können keine ONTAP-Tools-Aktionen ausführen, die über Zugriffskontrollmöglichkeiten verfügen.
+Bietet schreibgeschützten Zugriff auf ONTAP Tools. Diese Benutzer können keine ONTAP Tools für VMware vSphere Aktionen ausführen, die zugriffsgesteuert sind.
 
 
 
@@ -61,7 +61,7 @@ Bietet alle nativen vCenter Server-Berechtigungen und ONTAP-Tools-spezifischen B
 
 Wenn Sie mit standardmäßigen ONTAP-Tools für VMware vSphere-Rollen arbeiten, gibt es bestimmte Richtlinien, die Sie befolgen sollten.
 
-Sie sollten die Standardrollen nicht direkt ändern. Wenn Sie dies tun, überschreiben ONTAP-Tools Ihre Änderungen bei jedem Upgrade. Das Installationsprogramm aktualisiert die Standardrollendefinitionen jedes Mal, wenn Sie ONTAP-Tools aktualisieren. Dadurch wird sichergestellt, dass die Rollen für Ihre Version von ONTAP-Tools sowie für alle unterstützten Versionen von vCenter Server aktuell sind.
+Sie sollten die Standardrollen nicht direkt ändern. Wenn Sie dies tun, überschreiben ONTAP-Tools Ihre Änderungen bei jedem Upgrade. Das Installationsprogramm aktualisiert die Standardrollendefinitionen jedes Mal, wenn Sie ONTAP-Tools aktualisieren. Dadurch wird sichergestellt, dass die Rollen für Ihre Version der ONTAP-Tools für VMware vSphere sowie für alle unterstützten Versionen des vCenter Servers aktuell sind.
 
 Sie können jedoch die Standardrollen verwenden, um Rollen zu erstellen, die auf Ihre Umgebung zugeschnitten sind. Dazu sollten Sie die Standardrolle „ONTAP Tools“ kopieren und dann die kopierte Rolle bearbeiten. Wenn Sie eine neue Rolle erstellen, können Sie diese Rolle auch dann beibehalten, wenn Sie den Windows-Dienst für ONTAP-Tools neu starten oder aktualisieren.
 

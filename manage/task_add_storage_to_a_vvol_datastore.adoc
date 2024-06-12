@@ -80,4 +80,4 @@ Nachdem Sie ein FlexVol-Volume erstellt haben, können Sie es bearbeiten, indem 
 Der Assistent fügt den Speicher hinzu, den Sie dem VVols-Datastore angegeben haben. Sie zeigt eine Erfolgsmeldung an, wenn sie beendet ist.
 
 
-NOTE: Der Assistent Expand Storage of VVols Datastore verarbeitet automatisch alle erforderlichen ESXi Storage-Ressourcen oder andere wichtige Operationen. Da es sich bei einem VVols-Datastore um eine logische Einheit handelt, die über VASA-Provider gesteuert wird, müssen Sie nur die Kapazität des Storage-Containers durch das Hinzufügen des FlexVol Volume erweitern.
+NOTE: Der Assistent zum erweitern des Storage für VVols Datenspeicher verarbeitet automatisch alle neu gescannen und/oder anderen wichtigen nötig Vorgänge für ESXi Hosts. Da es sich bei einem VVols-Datastore um eine logische Einheit handelt, die über VASA-Provider gesteuert wird, müssen Sie nur die Kapazität des Storage-Containers durch das Hinzufügen des FlexVol Volume erweitern.

@@ -52,7 +52,7 @@ Startseite von vSphere Client
 
 
  a| 
-Portlet „ESXi Host Systems“
+Portlet „ESXi-Hostsysteme“
  a| 
 .. Klicken Sie im Abschnitt Übersicht der ONTAP-Tools auf die Registerkarte *Traditional Dashboard*.
 .. Klicken Sie auf *ESXi Host-Einstellungen bearbeiten*.

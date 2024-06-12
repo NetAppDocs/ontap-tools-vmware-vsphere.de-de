@@ -17,7 +17,7 @@ Auf einem ESXi-Host können Sie die folgenden Werte festlegen:
 
 
 
-== Erweiterte ESXi Konfiguration
+== Erweiterte Konfiguration des ESXi-Hosts
 
 * *VMFS3.HardwareAcceleratLocking*
 +

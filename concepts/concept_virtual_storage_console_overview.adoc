@@ -17,7 +17,7 @@ Die ONTAP Tools lassen sich in vSphere Client integrieren und ermöglichen die V
 
 Jede Komponente der ONTAP Tools verfügt über Funktionen zur effizienteren Verwaltung Ihres Storage.
 
-Das Remote-Plug-in-Tool für VMware vSphere Client wurde entwickelt, um Plug-in-Funktionen in den vSphere Client zu integrieren, ohne dass es in vCenter Server ausgeführt werden muss. Dies sorgt für eine Isolierung von Plug-ins und ermöglicht die horizontale Skalierung von Plug-ins in großen vSphere Umgebungen.
+Das Plug-in-Tool VMware vSphere Client wurde entwickelt, um Plug-in-Funktionen in den vSphere Client zu integrieren, ohne dass es in vCenter Server ausgeführt werden muss. Dies sorgt für eine Isolierung von Plug-ins und ermöglicht die horizontale Skalierung von Plug-ins in großen vSphere Umgebungen.
 
 
 

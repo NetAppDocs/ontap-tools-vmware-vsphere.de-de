@@ -2,7 +2,7 @@
 permalink: configure/concept_configure_storage_systems_for_ontap_tools_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: Sie sollten Storage-Systeme zu ONTAP Tools hinzufügen und bei Bedarf über die Schnittstelle der ONTAP Tools die Standardanmeldedaten festlegen. 
+summary: Sie sollten Storage-Systeme zu ONTAP Tools für VMware vSphere hinzufügen und bei Bedarf über die Benutzeroberfläche der ONTAP Tools die Standardanmeldeinformationen festlegen. 
 ---
 = Überblick über Storage-Systeme für ONTAP Tools
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Sie sollten Storage-Systeme zu ONTAP Tools hinzufügen und bei Bedarf �
 
 
 [role="lead"]
-Sie sollten Storage-Systeme zu ONTAP Tools hinzufügen und bei Bedarf über die Schnittstelle der ONTAP Tools die Standardanmeldedaten festlegen.
+Sie sollten Storage-Systeme zu ONTAP Tools für VMware vSphere hinzufügen und bei Bedarf über die Benutzeroberfläche der ONTAP Tools die Standardanmeldeinformationen festlegen.
 
 ONTAP Tools für VMware vSphere bietet einen einzigen Mechanismus, um Storage-Systeme zu erkennen und die Storage-Anmeldedaten festzulegen. Die Zugangsdaten liefern die ONTAP Berechtigungen, die erforderlich sind, um Benutzern von ONTAP Tools die Ausführung von Aufgaben mithilfe der Storage-Systeme zu ermöglichen.
 
@@ -20,7 +20,7 @@ Bevor ONTAP-Tools die Storage-Ressourcen anzeigen und verwalten können, müssen
 
 NOTE: Wenn Sie sich als Administrator anmelden, verfügen Sie automatisch über alle Berechtigungen für dieses Speichersystem.
 
-Wenn Sie ONTAP Tools ein Storage-System hinzufügen, müssen Sie eine IP-Adresse für das Storage-System sowie den Benutzernamen und das Passwort-Paar angeben, die dem System zugeordnet sind. Sie können Standardanmeldeinformationen einrichten, die ONTAP-Tools während der Erkennung des Speichersystems verwenden, oder Sie können Anmeldeinformationen manuell eingeben, wenn das Speichersystem erkannt wird. Die Details des Speichersystems, das zu ONTAP Tools hinzugefügt wird, werden automatisch an die Erweiterungen weitergeleitet, die Sie in Ihrer Implementierung aktivieren. Sie müssen nicht manuell Storage zu VASA Provider und Storage Replication Adapter (SRA) hinzufügen. Sowohl ONTAP-Tools als auch SRA unterstützen das Hinzufügen von Zugangsdaten auf Cluster-Ebene und SVM-Ebene (Storage Virtual Machine). VASA Provider unterstützt nur Cluster-Level-Anmeldeinformationen zum Hinzufügen von Storage-Systemen. Wenn Sie ein Storage-System hinzufügen, sollte jede Kommunikation zwischen dem ONTAP Tools Plug-in und dem Storage-System gegenseitig authentifiziert werden.
+Wenn Sie ONTAP Tools ein Storage-System hinzufügen, müssen Sie eine IP-Adresse für das Storage-System sowie den Benutzernamen und das Passwort-Paar angeben, die dem System zugeordnet sind. Sie können Standardanmeldeinformationen einrichten, die ONTAP-Tools während der Erkennung des Speichersystems verwenden, oder Sie können Anmeldeinformationen manuell eingeben, wenn das Speichersystem erkannt wird. Die Details des Storage-Systems, das zu den ONTAP Tools für VMware vSphere hinzugefügt wurde, werden automatisch an die Erweiterungen weitergeleitet, die Sie in Ihrer Bereitstellung aktivieren. Sie müssen nicht manuell Storage zu VASA Provider und Storage Replication Adapter (SRA) hinzufügen. Die beiden ONTAP Tools für VMware vSphere und SRA unterstützen das Hinzufügen von Anmeldeinformationen auf Cluster- und SVM-Ebene (Storage Virtual Machine). VASA Provider unterstützt nur Cluster-Level-Anmeldeinformationen zum Hinzufügen von Storage-Systemen. Wenn Sie ein Storage-System hinzufügen, sollte jede Kommunikation zwischen dem ONTAP Tools Plug-in und dem Storage-System gegenseitig authentifiziert werden.
 
 Wenn Ihre Umgebung mehrere vCenter Server-Instanzen umfasst, wird im Dialogfeld Speichersystem hinzufügen ein vCenter Server-Feld angezeigt, in dem Sie angeben können, welcher vCenter Server-Instanz das Speichersystem hinzugefügt werden soll, wenn Sie ein Speichersystem zu ONTAP-Tools hinzufügen. Wenn Sie ein Speichersystem hinzufügen, indem Sie mit der rechten Maustaste auf einen Rechenzentrumsnamen klicken, können Sie keine vCenter Server-Instanz angeben, da der Server bereits mit diesem Datacenter verknüpft ist.
 

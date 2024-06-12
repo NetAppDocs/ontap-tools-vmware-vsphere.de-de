@@ -41,6 +41,6 @@ Befolgen Sie die Anweisungen auf dem Bildschirm, um die Installation abzuschlie�
 
 . Starten Sie den ESXi-Host nach Abschluss der Installation neu.
 +
-Wenn Sie den ESXi Host neu starten, erkennt ONTAP Tools automatisch das NFS VAAI Plug-in. Sie m체ssen keine weiteren Schritte durchf체hren, um das Plug-in zu aktivieren.
+Wenn Sie den ESXi-Host neu starten, erkennt ONTAP-Tools f체r VMware vSphere automatisch das NFS VAAI-Plug-in. Sie m체ssen keine weiteren Schritte durchf체hren, um das Plug-in zu aktivieren.
 
 

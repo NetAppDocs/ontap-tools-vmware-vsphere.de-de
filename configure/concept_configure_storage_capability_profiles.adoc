@@ -18,7 +18,7 @@ Eine Storage-Funktion ist eine Reihe von Attributen von Storage-Systemen. Dadurc
 Bei herkömmlichen Datastores können Sie ein Storage-Funktionsprofil verwenden, um Datastores mit gängigen Attributen zu konsistent zu erstellen und ihnen QoS-Richtlinien zuzuweisen. Während der Bereitstellung werden mit ONTAP Tools Cluster, SVMs und Aggregate angezeigt, die dem Storage-Funktionsprofil entsprechen. Sie können aus bestehenden herkömmlichen Datastores ein Storage-Funktionsprofil generieren, indem Sie im Menü Storage Mapping die Option *GLOBAL AUTO-GENERATE PROFILES* verwenden. Nachdem das Profil erstellt wurde, können Sie mit ONTAP Tools die Compliance von Datastores mit dem Profil überwachen.
 
 
-NOTE: VVol Datastores werden auf direkten SVMs nicht unterstützt.
+NOTE: VVol Datastores werden auf SVM-Benutzern nicht unterstützt.
 
 Bei Verwendung mit VVols-Datastores kann der Bereitstellungsassistent mehrere Storage-Funktionsprofile verwenden, um verschiedene FlexVol Volumes im Datastore zu erstellen. Sie können die VM Storage-Richtlinie verwenden, um VVols automatisch für eine Virtual Machine in entsprechenden FlexVol Volumes gemäß Definition zu erstellen. Sie können beispielsweise Profile für allgemeine Storage-Klassen erstellen (beispielsweise für Performance-Limits und andere Funktionen wie Verschlüsselung oder FabricPool). Sie können später VM Storage-Richtlinien in vCenter Server erstellen, die Business-Klassen von Virtual Machines darstellen und diese mit dem entsprechenden Storage-Funktionsprofil nach Name verknüpfen (z. B. Produktion, Test, HR).
 

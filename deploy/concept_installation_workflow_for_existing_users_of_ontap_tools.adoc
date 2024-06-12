@@ -24,7 +24,7 @@ Die Konfigurationsdaten umfassen Anmeldeinformationen des Storage-Systems sowie 
 
 link:../configure/reference_set_ipv4_or_ipv6.html["Legen Sie IPv4 oder IPv6 mithilfe der Voreinferenzdatei fest"]
 
-In vielen Fällen sind Konfigurationsdaten möglicherweise nicht notwendig. Wenn Sie die Voreinpräferenzen jedoch bereits zuvor angepasst haben, sollten Sie sie überprüfen und ähnliche Änderungen an den neu implementierten ONTAP Tools vornehmen. Sie können die Storage-Systeme zu den neu implementierten ONTAP Tools hinzufügen und die Anmeldedaten beim Hinzufügen angeben.
+In vielen Fällen sind Konfigurationsdaten möglicherweise nicht notwendig. Wenn Sie die Voreinpräferenzen jedoch bereits zuvor angepasst haben, sollten Sie sie überprüfen und ähnliche Änderungen an den neu implementierten ONTAP Tools vornehmen. Sie können die Storage-Systeme zu den neu implementierten ONTAP Tools für VMware vSphere hinzufügen und die Anmeldeinformationen beim Hinzufügen angeben.
 
 Wenn Sie ein Upgrade von VASA Provider 6.X durchführen, sollten Sie vor dem Upgrade VASA Provider aus registrieren. Weitere Informationen finden Sie in der Dokumentation zu Ihrer aktuellen Version.
 

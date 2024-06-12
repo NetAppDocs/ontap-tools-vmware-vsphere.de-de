@@ -36,7 +36,27 @@ Der Befehl zum Ausgleich entfernt leere FlexVol Volumes, um Platz für andere Da
 
 
 * Wenn ein FlexVol Volume über Snapshots verfügt, werden die VVols während des Ausgleichs für VVols nicht richtig neu ausgeglichen, da die Speicherplatzauslastung nicht ausreichend ist.
-* Sie können die Eigenschaft „VASA Provider“ _enable.Update.vvol.Through.Discovery_ auf „true“ setzen, um konsistente Daten zwischen ONTAP Tools und ONTAP zu erhalten, wenn während des Ausgleichs für Container Zeitüberschreitung auftritt.
+* Sie können die VASA Provider-Eigenschaft _enable.Update.vvol.through.Discovery_ auf true setzen, um konsistente Daten zwischen den ONTAP-Tools für VMware vSphere und ONTAP zu erhalten, wenn während des Ausgleichs von Containern ein Timeout auftritt.
+* Es gibt keine offengelegten REST-APIs zum Rebalancieren von vVol Datastore.
 
 
 ====
+.*Bevor Sie beginnen*
+* Generieren Sie das Web-CLI-Token über die Wartungskonsole:
++
+.. Melden Sie sich bei der Wartung-Konsole an.
+.. Wählen Sie Option *1* Appliance Configuration.
+.. Wählen Sie die Option *12* Web-CLI-Authentifizierungstoken generieren.
+
+
+* Rufen Sie den Containernamen und den Namen der FlexVol-Volumes aus vCenter oder aus der Web-CLI ab.
+Um die Liste der mit dem Container verbundenen FlexVol-Volumes zu erhalten, führen Sie den Befehl _Container list_ von der Web-CLI aus. Die Details des Befehls „Container rebalancieren“ finden Sie auf der Web-CLI-Seite.
+
+
+
+NOTE: Sie müssen den Containernamen angeben, um die Verteilung über alle an diesen Container angeschlossenen FlexVol Volumes hinweg zu durchführen. Wenn jedoch der FlexVol Volume-Parameter angegeben wird, wird die Ausbalancierung nur für das bereitgestellte FlexVol Volume durchgeführt.
+
+.*Schritte*
+. Melden Sie sich über die Web-CLI über die URL an `\https://<OTV-IP>:9083/`
+. Führen Sie den Befehl _Container rebalancing -Container_Name=<container-name>_ aus
+

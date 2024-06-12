@@ -35,7 +35,7 @@ Mit der Option *Provision Datastore* können Sie ein Speicherfähigkeit-Profil f
 
 * NFSv3 und NFSv4.1
 * VMFS5 und VMFS6
-* Ab vSphere 8.0 Version wird das NVMe/FC-Protokoll für vvol Datastores unterstützt.
+* Ab vSphere 8.0 Version wird das NVMe/FC-Protokoll für vVol-Datastores unterstützt.
 
 
 ONTAP Tools können einen Datastore entweder auf einem NFS Volume oder einer LUN erstellen:
@@ -65,7 +65,7 @@ Auf anderen Plattformen wird die maximal unterstützte LUN-Größe 16 TB unterst
 
 
 
-Wenn ein Storage-Funktionsprofil während der Bereitstellung nicht angegeben wird, können Sie es später auf der Seite Storage Mapping verwenden, um einen Datenspeicher einem Storage-Funktionsprofil zuzuordnen. Sie können Storage-QoS-Einstellungen, Durchsatzobergrenze (max. IOPS) und Durchsatzboden (Min. IOPS) auf Daten-VMDK-Dateien von Virtual Machines anwenden, die auf FlexGroup-gestütztem Datastore bereitgestellt werden. QoS-Einstellungen können auf Datastore-Ebene oder auf Ebene einzelner Virtual Machines angewendet werden, indem Sie mit der rechten Maustaste auf den Datenspeicher klicken. Die Option mit einem Rechtsklick ist nur für die Datenspeicher oder Virtual Machines verfügbar, die durch den FlexGroup Datastore gesichert werden. Nachdem die QoS auf einen Datastore angewendet wurde, werden alle QoS-Einstellungen für vorab vorhandene Datastores oder Virtual Machines außer Kraft gesetzt. QoS-Einstellungen können nicht auf Datastore-Ebene oder auf Virtual-Machine-Ebene für Datastores angewendet werden, die auf Direct-SVM's bereitgestellt werden, da ONTAP keine QoS auf SVM-Managementebene unterstützt.
+Wenn ein Storage-Funktionsprofil während der Bereitstellung nicht angegeben wird, können Sie es später auf der Seite Storage Mapping verwenden, um einen Datenspeicher einem Storage-Funktionsprofil zuzuordnen. Sie können Storage-QoS-Einstellungen, Durchsatzobergrenze (max. IOPS) und Durchsatzboden (Min. IOPS) auf Daten-VMDK-Dateien von Virtual Machines anwenden, die auf FlexGroup-gestütztem Datastore bereitgestellt werden. QoS-Einstellungen können auf Datastore-Ebene oder auf Ebene einzelner Virtual Machines angewendet werden, indem Sie mit der rechten Maustaste auf den Datenspeicher klicken. Die Option mit einem Rechtsklick ist nur für die Datenspeicher oder Virtual Machines verfügbar, die durch den FlexGroup Datastore gesichert werden. Nachdem die QoS auf einen Datastore angewendet wurde, werden alle QoS-Einstellungen für vorab vorhandene Datastores oder Virtual Machines außer Kraft gesetzt. QoS-Einstellungen können nicht auf Datastore-Ebene oder auf VM-Ebene für Datastores angewendet werden, die auf SVM-Benutzern bereitgestellt werden, da ONTAP QoS auf SVM-Managementebene nicht unterstützt.
 
 *Schritte*
 

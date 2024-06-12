@@ -2,7 +2,7 @@
 permalink: concepts/concept_privileges_required_for_vsc_tasks.html 
 sidebar: sidebar 
 keywords:  
-summary: Verschiedene ONTAP-Tools für VMware vSphere-Aufgaben erfordern unterschiedliche Kombinationen von Berechtigungen für ONTAP-Tools und native vCenter Server-Berechtigungen. 
+summary: Für verschiedene ONTAP-Tools für VMware vSphere-Tasks sind unterschiedliche Kombinationen von Berechtigungen für ONTAP-Tools für VMware vSphere sowie native vCenter Server-Berechtigungen erforderlich. 
 ---
 = Erforderliche Berechtigungen für Aufgaben mit ONTAP-Tools
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: Verschiedene ONTAP-Tools für VMware vSphere-Aufgaben erfordern untersc
 
 
 [role="lead"]
-Verschiedene ONTAP-Tools für VMware vSphere-Aufgaben erfordern unterschiedliche Kombinationen von Berechtigungen für ONTAP-Tools und native vCenter Server-Berechtigungen.
+Für verschiedene ONTAP-Tools für VMware vSphere-Tasks sind unterschiedliche Kombinationen von Berechtigungen für ONTAP-Tools für VMware vSphere sowie native vCenter Server-Berechtigungen erforderlich.
 
 Informationen zu den für Aufgaben mit ONTAP-Tools erforderlichen Berechtigungen finden Sie im NetApp Knowledge Base Artikel 1032542.
 

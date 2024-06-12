@@ -34,7 +34,7 @@ Dank der Flexibilität, VASA Provider und SRA Funktionen zu aktivieren, können 
 . Klicken Sie Auf *Einstellungen*.
 . Klicken Sie auf der Registerkarte *Administrative Einstellungen* auf *Funktionen verwalten*.
 . Wählen Sie im Dialogfeld *Funktionen verwalten* die SRA-Erweiterung aus, die aktiviert werden soll.
-. Geben Sie die IP-Adresse der ONTAP-Tools und das Administratorpasswort ein, und klicken Sie dann auf *Apply*.
+. Geben Sie die IP-Adresse der ONTAP-Tools für VMware vSphere und das Administratorkennwort ein, und klicken Sie dann auf *Apply*.
 . Nutzen Sie für die Implementierung von SRA eine der folgenden Methoden:
 +
 * Für SRM-Gerät*

@@ -36,7 +36,8 @@ Der Adapter wird entweder auf SRM installiert.
 . Vergewissern Sie sich, dass die LUNS in Initiatorgruppen vorhanden sind, die über die verfügen `ostype` Option auf dem primären Storage-System auf _VMware_ eingestellt.
 . Vergewissern Sie sich, dass die ESXi-Hosts am Recovery-Standort über entsprechende FC- oder iSCSI-Konnektivität zur Storage Virtual Machine (SVM) verfügen. Die ESXi-Hosts der sekundären Site sollten Zugriff auf den sekundären Standort-Storage haben, ebenso sollten die ESXi-Hosts des primären Standorts Zugriff auf den primären Standort-Storage haben.
 +
-Dazu müssen Sie entweder überprüfen, ob die ESXi Hosts über lokale LUNs auf der SVM verbunden sind, oder Sie verwenden die `fcp show initiators` Befehl oder das `iscsi show initiators` Befehl auf den SVMs. Überprüfen Sie den LUN-Zugriff für die zugeordneten LUNs in ESXi, um die FC- und iSCSI-Konnektivität zu überprüfen.
+Dazu müssen Sie entweder überprüfen, ob die ESXi Hosts über lokale LUNs auf der SVM verbunden sind, oder Sie verwenden die `fcp show initiators` Befehl oder das `iscsi show initiators` Befehl auf den SVMs.
+Überprüfen Sie den LUN-Zugriff auf die zugeordneten LUNs auf dem ESXi-Host, um die FC- und iSCSI-Konnektivität zu überprüfen.
 
 
 

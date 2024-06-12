@@ -13,9 +13,9 @@ summary: 'Sie müssen die rollenbasierte Zugriffssteuerung \(RBAC\) von ONTAP au
 [role="lead"]
 Sie müssen die rollenbasierte Zugriffssteuerung (RBAC) von ONTAP auf dem Storage-System konfigurieren, wenn Sie eine rollenbasierte Zugriffssteuerung mit ONTAP Tools für VMware vSphere verwenden möchten. Über die ONTAP Funktion zur rollenbasierten Zugriffssteuerung können Sie ein oder mehrere benutzerdefinierte Benutzerkonten mit begrenzten Zugriffsberechtigungen erstellen.
 
-ONTAP Tools und SRA können auf Storage-Systeme entweder auf Cluster-Ebene oder auf SVM-Ebene (Storage Virtual Machine) zugreifen. Wenn Sie Storage-Systeme auf Cluster-Ebene hinzufügen, müssen Sie die Anmeldedaten des Admin-Benutzers angeben, um alle erforderlichen Funktionen bereitzustellen. Wenn Sie Storage-Systeme durch direktes Hinzufügen von SVM-Details hinzufügen, müssen Sie beachten, dass der Benutzer „`vsadmin`“ nicht über alle erforderlichen Rollen und Funktionen zum Ausführen bestimmter Aufgaben verfügt.
+ONTAP Tools für VMware vSphere und SRA können auf Storage-Systeme auf Cluster-Ebene oder SVM-Ebene (Storage Virtual Machine) zugreifen. Wenn Sie Storage-Systeme auf Cluster-Ebene hinzufügen, müssen Sie die Anmeldedaten des Admin-Benutzers angeben, um alle erforderlichen Funktionen bereitzustellen. Wenn Sie Storage-Systeme durch direktes Hinzufügen von SVM-Details hinzufügen, müssen Sie beachten, dass der Benutzer „`vsadmin`“ nicht über alle erforderlichen Rollen und Funktionen zum Ausführen bestimmter Aufgaben verfügt.
 
-VASA Provider kann nur auf Cluster-Ebene auf Storage-Systeme zugreifen. Wenn VASA Provider für einen bestimmten Storage-Controller erforderlich ist, muss das Storage-System zu ONTAP Tools auf Cluster-Ebene hinzugefügt werden, selbst wenn Sie ONTAP Tools oder SRA verwenden.
+VASA Provider kann nur auf Cluster-Ebene auf Storage-Systeme zugreifen. Wenn VASA Provider für einen bestimmten Storage Controller erforderlich ist, muss das Storage-System den ONTAP Tools für VMware vSphere auf Cluster-Ebene hinzugefügt werden, selbst wenn Sie ONTAP Tools oder SRA verwenden.
 
 Um einen neuen Benutzer zu erstellen und ein Cluster oder eine SVM mit ONTAP-Tools zu verbinden, sollten Sie Folgendes durchführen:
 
@@ -24,7 +24,7 @@ Um einen neuen Benutzer zu erstellen und ein Cluster oder eine SVM mit ONTAP-Too
 +
 Sie benötigen diese Anmeldedaten für das Storage-System, um die Storage-Systeme für ONTAP Tools zu konfigurieren. Sie können Storage-Systeme für ONTAP Tools konfigurieren, indem Sie die Zugangsdaten in die ONTAP Tools eingeben. Jedes Mal, wenn Sie sich mit diesen Zugangsdaten bei einem Storage-System anmelden, haben Sie Berechtigungen für die ONTAP-Tools-Funktionen, die Sie in ONTAP eingerichtet hatten, während Sie die Anmeldedaten erstellen.
 
-* Fügen Sie das Storage-System zu den ONTAP Tools hinzu und geben Sie die Anmeldeinformationen des soeben erstellten Benutzers an
+* Fügen Sie das Storage-System den ONTAP Tools für VMware vSphere hinzu und geben Sie die Zugangsdaten des soeben erstellten Benutzers an
 
 
 
@@ -63,4 +63,4 @@ Sie können nur richtlinienbasiertes Management auf Cluster-Ebene erstellen. Die
 
 SRA klassifiziert die ONTAP-Berechtigungen als SAN- oder NAS-Rolle auf Cluster-Ebene oder SVM-Ebene. So können Benutzer SRM-Vorgänge ausführen.
 
-ONTAP-Tools führen eine Erstvalidierung von Berechtigungen für RBAC-Rollen von ONTAP durch, wenn Sie den Cluster zu ONTAP Tools hinzufügen. Wenn Sie eine direkte SVM-Storage-IP hinzugefügt haben, führen die ONTAP-Tools die erste Validierung nicht durch. ONTAP-Tools prüfen und erzwingt die Berechtigungen später im Task-Workflow.
+ONTAP-Tools führen eine Erstvalidierung von Berechtigungen für RBAC-Rollen von ONTAP durch, wenn Sie den Cluster zu ONTAP Tools hinzufügen. Wenn Sie eine SVM-Benutzer-Storage-IP hinzugefügt haben, führen ONTAP-Tools die erste Validierung nicht durch. ONTAP-Tools prüfen und erzwingt die Berechtigungen später im Task-Workflow.

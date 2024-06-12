@@ -28,7 +28,7 @@ Wenn die SVM sowohl IPv4 als auch IPv6 LIFs hat, sollten Sie IPv6 LIFs deaktivie
 [NOTE]
 ====
 ** Diese Version von ONTAP Tools unterstützt keine laufenden Klone gesicherter Virtual Machines. Sie sollten die Virtual Machine ausschalten und dann den Klonvorgang ausführen.
-** Wenn ein Datastore nach einem Reprotect-Vorgang nicht in den ONTAP-Tools angezeigt wird, sollten Sie eine Storage-System-Erkennung ausführen oder auf die nächste geplante Bestandsaufnahme warten.
+** Wenn nach einem erneuten Schutz-Vorgang in den ONTAP-Tools für VMware vSphere kein Datastore angezeigt wird, sollten Sie eine Ermittlung des Speichersystems ausführen oder auf den nächsten geplanten Erkennungsvorgang warten.
 
 
 ====

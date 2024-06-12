@@ -28,7 +28,7 @@ ONTAP-Tools verwenden die folgenden bidirektionalen TCP-Standardports:
  a| 
 9083
  a| 
-Bei Aktivierung verwenden sowohl VASA Provider als auch Storage Replication Adapter (SRA) diesen Port zur Kommunikation mit dem vCenter Server. Dieser Port wird auch zum Abrufen der TCP/IP-Einstellungen benötigt. Dieser Port muss auf der Firewall von ESXi-Hosts bis zur ONTAP-Tools-Appliance aktiviert sein. Dieser Port dient zum Herunterladen des VP-Support-Pakets, zum Zugriff auf die Web-CLI-Benutzeroberfläche und zur Steuerung der Pfadkommunikation von VMware zu VP.
+Bei Aktivierung verwenden sowohl VASA Provider als auch Storage Replication Adapter (SRA) diesen Port zur Kommunikation mit dem vCenter Server. Dieser Port wird auch zum Abrufen der TCP/IP-Einstellungen benötigt. Dieser Port muss auf der Firewall von ESXi-Hosts bis zu den ONTAP-Tools für die VMware vSphere-Appliance aktiviert sein. Dieser Port dient zum Herunterladen des VP-Support-Pakets, zum Zugriff auf die Web-CLI-Benutzeroberfläche und zur Steuerung der Pfadkommunikation von VMware zu VP.
 
 
 
@@ -49,7 +49,7 @@ Die ONTAP-Tools sorgen für eine sichere Kommunikation über diesen Port. Der Po
  a| 
 8443
  a| 
-Dieser Port wird für den Remote-Plugin-Dienst verwendet.
+Dieser Port wird für ONTAP-Tools für den VMware vSphere Plug-in-Service verwendet.
 
 
 
@@ -63,4 +63,4 @@ System und kann später deaktiviert werden.
 
 NOTE: Sie sollten das Internet Control Message Protocol (ICMP) aktivieren, bevor Sie die ONTAP-Tools bereitstellen.
 
-Wenn ICMP deaktiviert ist, schlägt die Erstkonfiguration der ONTAP-Tools fehl, und ONTAP-Tools können die ONTAP-Tools und VASA Provider-Dienste nach der Bereitstellung nicht starten. Sie müssen die ONTAP-Tools und VASA Provider-Services nach der Implementierung manuell aktivieren.
+Wenn ICMP deaktiviert ist, schlägt die Erstkonfiguration der ONTAP-Tools fehl, und ONTAP-Tools können die ONTAP-Tools für VMware vSphere- und VASA Provider-Dienste nach der Bereitstellung nicht starten. Sie müssen die ONTAP-Tools für VMware vSphere und VASA Provider nach der Implementierung manuell aktivieren.
