@@ -354,13 +354,11 @@
   <block id="7ceb96cf2f53ab82cf68115087e42798" category="inline-link">Dokumentation zu VMware vSphere: Ändern der Storage Provider-Einstellungen</block>
   <block id="6b9647887381f9ce12a57a287e1bafbd" category="paragraph"><block ref="6b9647887381f9ce12a57a287e1bafbd" category="inline-link-rx"></block></block>
   <block id="6deaa5e1cafca832bac1b468485b9454" category="section-title">Speichereinstellungen</block>
-  <block id="686f64fc789747485a424cbfcfd51b54" category="paragraph">Sie müssen den Wert des festlegen<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> Und<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> Timeout-Intervall für Umgebungen mit hoher Skalierbarkeit auf 99,999 Sekunden</block>
   <block id="00a510939945fb6eb144a70baf6f9fd4" category="admonition">Das angegebene Zeitüberschreitungsintervall ist der Höchstwert. Sie müssen nicht warten, bis die maximale Zeitüberschreitung erreicht ist. Die meisten Befehle sind innerhalb des festgelegten maximalen Timeout-Intervalls abgeschlossen.</block>
   <block id="e8e75924ea6b1743aedaf9cdc60f2811" category="paragraph">Sie sollten auch die maximale Zeit für SRA festlegen, um eine einzelne Operation in der Datei vvol.properties: offtap.operation.timeout.period.seconds=86400 durchzuführen.</block>
   <block id="0a757269d3671e08f4647a4a3f39c7af" category="inline-link">Antwort auf die NetApp Knowledgebase 1001111: NetApp Storage Replication Adapter 4.0/7.X für den ONTAP Sizing Guide</block>
   <block id="b2dacb077897e6e20eab5019528b0b4d" category="paragraph">Die VMware Dokumentation zum Ändern der SAN-Provider-Einstellungen enthält weitere Informationen.</block>
   <block id="c106a2cd545fb9665a990784905584ee" category="inline-link">Dokumentation zum VMware Site Recovery Manager: Storage-Einstellungen ändern</block>
-  <block id="5ae0fbc5a94ef2dc0c2a09ad3529481f" category="paragraph"><block ref="5ae0fbc5a94ef2dc0c2a09ad3529481f" category="inline-link-rx"></block></block>
   <block id="1038f02378276c1c82917b2cf099f52b" category="summary">Sie müssen die Ressourcenzuordnungen wie VM-Netzwerke, ESXi-Hosts und Ordner auf beiden Standorten konfigurieren, damit jede Ressource vom geschützten Standort auf die entsprechende Ressource am Recovery-Standort abgebildet werden kann.</block>
   <block id="a239701adb72159a71164b036c18a53a" category="doc">Konfigurieren Sie geschützte Ressourcen und Recovery-Standortressourcen</block>
   <block id="efaffeb3b78cdea8c2d89ba705dfa281" category="paragraph">Sie müssen die folgenden Ressourcenkonfigurationen durchführen:</block>
@@ -850,14 +848,6 @@
   <block id="744ec7526945686620ba725a3be0778f" category="list-text">Löschen Sie den Inhalt des Verzeichnisses /srm/sra/conf mit:</block>
   <block id="9394c3b706fe8eb791b91c156fbd1c93" category="section-title">Aktivieren von VASA Provider und SRA</block>
   <block id="20cbf632da037959a9ff1b82711dd95e" category="admonition">VASA Provider ist standardmäßig aktiviert. Wenn Sie die Replizierungsfunktion für VVols-Datastores verwenden möchten, aktivieren Sie die Kippschaltfläche zum Aktivieren der VVols-Replizierung.</block>
-  <block id="fe4c6a5e7bd6793b37370e4e46daf998" category="cell">Erweiterte Einstellungen</block>
-  <block id="2d454f7be17f2289142fb73539ba0c06" category="cell">Zeitüberschreitungswerte</block>
-  <block id="cfb1af8547e34b1470b19edbde9418b8" category="paragraph">StorageProvider.RckeTimeout</block>
-  <block id="084a7cbae7a12c6ad6f1f66a39e88f9b" category="paragraph">StorageProvider.hostRescanDelaySec</block>
-  <block id="aa18dc2961636b24cb5d5f9e925404a9" category="paragraph">StorageProvider.hostRescanRepeatCnt</block>
-  <block id="c1533677fede32792c4b54cf81865145" category="paragraph">StorageProvider.hostRescanTimeoutSec</block>
-  <block id="3868919c1577c6c9fcb90f12ff7241a9" category="paragraph">Sie sollten auch die Option StorageProvider.autoResignatureMode aktivieren.</block>
-  <block id="202667bd06a4b1c9918ebf1e566e60f2" category="paragraph">Sie müssen den Wert storage.commandTimeout und Storage einstellen.maxConcurrentCommandCnt Timeout-Intervall für stark skalierte Umgebungen auf 99,999 Sekunden.</block>
   <block id="3f3cc3de4019e9795e981e468c628e57" category="summary">ONTAP Tools für VMware vSphere können in einer VMware Cloud-Umgebung implementiert werden.</block>
   <block id="4782e61635c721d2ac646cbaa6066487" category="doc">Implementierungs-Modus von VMware Cloud Foundation für ONTAP Tools</block>
   <block id="7000cc49932b0bf3b8ea4c43591f9119" category="paragraph">ONTAP Tools für VMware vSphere können in VMware Cloud Foundation (VCF) Umgebung implementiert werden. Hauptziel der VCF-Implementierung ist die Verwendung von ONTAP-Tools in einem Cloud-Setup und die Erstellung von Containern ohne vCenter Server.</block>
@@ -1345,7 +1335,6 @@
   <block id="64e03b083d70c2d810f723dad414a6b6" category="paragraph">Mit der Option *Provision Datastore* können Sie ein Speicherfähigkeit-Profil für den Datastore angeben. Storage-Funktionsprofile unterstützen die Festlegung konsistenter Service Level Objectives (SLOs) und vereinfachen den Provisionierungsprozess. Sie können nur ein Storage-Funktionsprofil angeben, wenn Sie VASA Provider aktiviert haben. Die ONTAP Tools für VMware vSphere unterstützen folgende Protokolle:</block>
   <block id="d381d999826d4e61587a2570d1e51324" category="list-text">NFSv3 und NFSv4.1</block>
   <block id="c95106f0432e13b79e1223e1c8f1ab3b" category="list-text">VMFS5 und VMFS6</block>
-  <block id="ec2fa05ad1e1cd992e000b32058b54e0" category="list-text">ONTAP Tools unterstützen die Bereitstellung von VMFS5 und VMFS6-Datastores bis zur maximalen VMFS-LUN- und Volume-Größe von 64 TB bei der Verwendung mit ASA und genehmigten AFF Systemen mit ONTAP 9.8 und höher.</block>
   <block id="e5c5d2c6aa619e098374e32171e7bd4a" category="paragraph">Auf anderen Plattformen wird die maximal unterstützte LUN-Größe 16 TB unterstützt.</block>
   <block id="5164789a1859f790f66a6451331546d0" category="list-text">VMware unterstützt NFSv4.1 mit Datastore-Clustern nicht.</block>
   <block id="1415c1c83a97d2309236d6acbf410723" category="list-text">Für die Kerberos-Authentifizierung benötigen Sie Folgendes:</block>
@@ -1743,7 +1732,6 @@
   <block id="5547d8d27b62c49e4555e1f79122a342" category="paragraph"><block ref="9e427bf42ac054021120757914ef1809" prefix="" category="inline-code"></block></block>
   <block id="b8ace162f3094fd5ac1138ced112d7a7" category="list-text">Starten Sie den VMware vSphere Client-Dienst:<block ref="bfbe7f4b006f6fcfc7bb66e075309067" prefix=" " category="inline-code"></block></block>
   <block id="02026f27af003e00469addac855d370b" category="paragraph">Wenn Sie die neueste Version von ONTAP Tools implementieren, müssen Sie das Thema sehen <block ref="44969696c082c6abaae247e8c1723287" category="inline-link-macro-rx"></block>. Das Thema <block ref="6db555bae030dd891aa85762ae9d5b14" category="inline-link-macro-rx"></block> Verfügt über Informationen zur Durchführung eines vorhandenen Upgrades.</block>
-  <block id="36716d5924fd9465137a810fd76c2f48" category="paragraph">Bei Aktivierung verwenden sowohl VASA Provider als auch Storage Replication Adapter (SRA) diesen Port zur Kommunikation mit dem vCenter Server. Dieser Port wird auch zum Abrufen der TCP/IP-Einstellungen benötigt. Dieser Port dient zum Herunterladen des VP-Support-Pakets, zum Zugriff auf die Web-CLI-Benutzeroberfläche und zur Steuerung der Pfadkommunikation von VMware zu VP.</block>
   <block id="71a6973fa992a434c0d25fb07bd6f07d" category="paragraph">Je nach Konfiguration Ihrer Anmeldedaten achten VMware vCenter Server und die Speichersysteme auf die sichere Kommunikation auf diesem Port. Der Port wird in der Client-Server-Kommunikationsarchitektur verwendet. Der Port 443 ist standardmäßig für sichere Verbindungen aktiviert. Der Client, der beliebige Automatisierungs-Client sein kann, der REST API verwendet, initiiert die Verbindung zum Server und den Datenaustausch mit den Endpunkten.</block>
   <block id="94694a876801fa4851e5478564de6f4a" category="paragraph">ONTAP-Tools können mit einer virtuellen VMware vCenter Server-Appliance (vCSA) verwendet werden. Sie müssen die ONTAP-Tools auf einer unterstützten vSphere bereitstellen, die auch das ESXi-System umfasst.</block>
   <block id="9abf7c4d6f8e5b536137c70ad41a5f3b" category="paragraph"><block ref="9abf7c4d6f8e5b536137c70ad41a5f3b" category="inline-link-rx"></block></block>
@@ -2162,4 +2150,6 @@ Um die Liste der mit dem Container verbundenen FlexVol-Volumes zu erhalten, füh
   <block id="c4d7bfe92b4693a00e8289e45547ab0d" category="paragraph">In einer SRM Shared Recovery Site-Konfiguration benötigt jeder SRM-Server eine dedizierte SRA-Instanz (1:1 Beziehung zwischen SRM und SRA). Konfigurieren Sie OTV im VCF-Modus als dedizierte SRA-Instanz für jeden SRM-Server. Sie können auch ONTAP-Tools für die VMware vSphere Appliance implementiert haben, die nicht SRA-fähig sind, aber in vCenter registriert sind und für nicht-SRA-Aufgaben wie die Bereitstellung von Datastores verwendet werden.</block>
   <block id="ffb65cab8d95fee8d80abc7ceaa0a0ec" category="list-text">Wenn nach einem erneuten Schutz-Vorgang in den ONTAP-Tools für VMware vSphere kein Datastore angezeigt wird, sollten Sie eine Ermittlung des Speichersystems ausführen oder auf den nächsten geplanten Erkennungsvorgang warten.</block>
   <block id="1030a4736944c363305ecfdc816d75b0" category="sidebar">Konfigurieren Sie ESXi-Hosteinstellungen</block>
+  <block id="5f479a62f2104046972d10f2cbf88255" category="paragraph">Wenn Sie auf ein Timeout klicken, erhöhen Sie die Werte von<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> Und<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> Zu einem höheren Wert.</block>
+  <block id="7e2e86e08ed241dcd1c4a60663089958" category="list-text">Die ONTAP Tools unterstützen die Bereitstellung von VMFS5- und VMFS6-Datenspeichern mit einer maximalen VMFS-LUN und einer Volume-Größe von 64 TB, wenn alle ASA Systeme mit ONTAP 9.8 oder höher und allen anderen Systemen mit ONTAP 9.12.1P2 oder höher verwendet werden.</block>
 </blocks>

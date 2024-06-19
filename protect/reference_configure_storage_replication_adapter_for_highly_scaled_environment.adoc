@@ -62,7 +62,7 @@ https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GU
 
 == Speichereinstellungen
 
-Sie müssen den Wert des festlegen `storage.commandTimeout` Und `storage.maxConcurrentCommandCnt` Timeout-Intervall für Umgebungen mit hoher Skalierbarkeit auf 99,999 Sekunden
+Wenn Sie auf ein Timeout klicken, erhöhen Sie die Werte von `storage.commandTimeout` Und `storage.maxConcurrentCommandCnt` Zu einem höheren Wert.
 
 
 NOTE: Das angegebene Zeitüberschreitungsintervall ist der Höchstwert. Sie müssen nicht warten, bis die maximale Zeitüberschreitung erreicht ist. Die meisten Befehle sind innerhalb des festgelegten maximalen Timeout-Intervalls abgeschlossen.
