@@ -2152,4 +2152,7 @@ Um die Liste der mit dem Container verbundenen FlexVol-Volumes zu erhalten, füh
   <block id="1030a4736944c363305ecfdc816d75b0" category="sidebar">Konfigurieren Sie ESXi-Hosteinstellungen</block>
   <block id="5f479a62f2104046972d10f2cbf88255" category="paragraph">Wenn Sie auf ein Timeout klicken, erhöhen Sie die Werte von<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> Und<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> Zu einem höheren Wert.</block>
   <block id="7e2e86e08ed241dcd1c4a60663089958" category="list-text">Die ONTAP Tools unterstützen die Bereitstellung von VMFS5- und VMFS6-Datenspeichern mit einer maximalen VMFS-LUN und einer Volume-Größe von 64 TB, wenn alle ASA Systeme mit ONTAP 9.8 oder höher und allen anderen Systemen mit ONTAP 9.12.1P2 oder höher verwendet werden.</block>
+  <block id="df5910bf5ed161a784cc7b4fb3fc0a84" category="list-text">*SunRPC.MaxConnPerIP*</block>
+  <block id="4a8c1c4202dd77901215a87452e10629" category="paragraph">Wenn Sie vSphere 7.0 oder höher verwenden, sollten Sie diesen Wert auf 128 setzen.</block>
+  <block id="34881aef32159ff28f8619a31ff308a3" category="paragraph">Das Interoperabilitäts-Matrix-Tool (IMT) enthält die neuesten Informationen zu unterstützten Versionen von ONTAP, vCenter Server, ESXi Hosts, Plug-in-Applikationen und Site Recovery Manager (SRM). <block ref="c4e3c5dd56e9c0925a46d52133eef091" category="inline-link-rx"></block>Informationen zu allen unterstützten Upgrade-Pfaden finden Sie unter.</block>
 </blocks>

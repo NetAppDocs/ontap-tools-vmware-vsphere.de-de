@@ -15,6 +15,8 @@ Sie können ein Upgrade auf die aktuelle Version der ONTAP Tools von Ihrer vorha
 
 *Was Sie brauchen*
 
+Das Interoperabilitäts-Matrix-Tool (IMT) enthält die neuesten Informationen zu unterstützten Versionen von ONTAP, vCenter Server, ESXi Hosts, Plug-in-Applikationen und Site Recovery Manager (SRM).  https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Interoperabilitäts-Matrix-Tool"^]Informationen zu allen unterstützten Upgrade-Pfaden finden Sie unter.
+
 * Sie müssen die Datei _.iso_ für die neueste Version der ONTAP-Tools heruntergeladen haben.
 * Sie müssen mindestens 12 GB RAM reserviert haben, damit die ONTAP-Tools nach dem Upgrade optimal arbeiten können.
 * Sie müssen den vSphere Client-Browser-Cache reinigen.
