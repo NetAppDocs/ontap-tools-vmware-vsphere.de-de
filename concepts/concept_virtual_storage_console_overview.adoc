@@ -2,16 +2,16 @@
 permalink: concepts/concept_virtual_storage_console_overview.html 
 sidebar: sidebar 
 keywords:  
-summary: Die ONTAP Tools für VMware vSphere ermöglichen ein lückenloses Lifecycle Management für Virtual Machines in VMware Umgebungen, die NetApp Storage-Systeme verwenden. So können Administratoren den Storage direkt innerhalb von vCenter Server managen und vereinfachen somit das Storage- und Datenmanagement für VMware Umgebungen. 
+summary: ONTAP Tools für VMware vSphere bieten ein lückenloses Lifecycle Management für Virtual Machines in VMware Umgebungen, die NetApp Storage-Systeme nutzen. So können Administratoren den Storage direkt innerhalb von vCenter Server managen und vereinfachen somit das Storage- und Datenmanagement für VMware Umgebungen. 
 ---
-= ONTAP-Tools im Überblick
+= Übersicht über die ONTAP Tools
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-Die ONTAP Tools für VMware vSphere ermöglichen ein lückenloses Lifecycle Management für Virtual Machines in VMware Umgebungen, die NetApp Storage-Systeme verwenden. So können Administratoren den Storage direkt innerhalb von vCenter Server managen und vereinfachen somit das Storage- und Datenmanagement für VMware Umgebungen.
+ONTAP Tools für VMware vSphere bieten ein lückenloses Lifecycle Management für Virtual Machines in VMware Umgebungen, die NetApp Storage-Systeme nutzen. So können Administratoren den Storage direkt innerhalb von vCenter Server managen und vereinfachen somit das Storage- und Datenmanagement für VMware Umgebungen.
 
 Die ONTAP Tools lassen sich in vSphere Client integrieren und ermöglichen die Verwendung von SSO-Services (Single Sign On). In einer Umgebung mit mehreren vCenter Server-Instanzen muss jede vCenter Server-Instanz, die Sie managen möchten, über eine eigene registrierte Instanz von ONTAP-Tools verfügen.
 
