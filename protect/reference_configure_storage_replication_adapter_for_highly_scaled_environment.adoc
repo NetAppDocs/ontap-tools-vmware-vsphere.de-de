@@ -54,9 +54,9 @@ Legen Sie einen hohen Wert fest (z. B.: 99999)
 |===
 Sie sollten auch die aktivieren `StorageProvider.autoResignatureMode` Option.
 
-Weitere Informationen zum Ändern der Speicheranbieter-Einstellungen finden Sie in der VMware-Dokumentation.
+Weitere Informationen zum Ändern der Einstellungen des Speicheranbieters finden Sie in der Dokumentation von Broadcom.
 
-https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GUID-E4060824-E3C2-4869-BC39-76E88E2FF9A0.html["Dokumentation zu VMware vSphere: Ändern der Storage Provider-Einstellungen"]
+https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/advanced-srm-configuration/reconfigure-srm-settings/change-storage-provider-settings.html["Ändern Sie Die Einstellungen Des Speicheranbieters"]
 
 
 
@@ -71,6 +71,6 @@ Sie sollten auch die maximale Zeit für SRA festlegen, um eine einzelne Operatio
 
 https://kb.netapp.com/mgmt/OTV/SRA/NetApp_Storage_Replication_Adapter_4.0%2F%2F7.X_for_ONTAP_Sizing_Guide["Antwort auf die NetApp Knowledgebase 1001111: NetApp Storage Replication Adapter 4.0/7.X für den ONTAP Sizing Guide"]
 
-Die VMware Dokumentation zum Ändern der SAN-Provider-Einstellungen enthält weitere Informationen.
+Die Broadcom-Dokumentation zum Ändern der SAN-Provider-Einstellungen enthält weitere Informationen.
 
-https://docs.vmware.com/en/Site-Recovery-Manager/index.html?hWord=N4IghgNiBcIGoFkDuYBOBTABAZQJYBcsAldAYwHsA3dVAT0wTADswBzGzAEXNIFcBbdE3xh8uckxABfIA["Dokumentation zum VMware Site Recovery Manager: Storage-Einstellungen ändern"]
+https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-administration-8-8/advanced-srm-configuration/reconfigure-srm-settings/change-storage-settings.html["Ändern Sie Die Speichereinstellungen"]

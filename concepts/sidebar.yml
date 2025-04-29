@@ -2,7 +2,7 @@
 section: concepts
 title: Konzepte
 entries:
-- title: ONTAP-Tools im Überblick
+- title: Übersicht über die ONTAP Tools
   url: "/concepts/concept_virtual_storage_console_overview.html"
 - title: VASA Provider-Konfigurationen für VVols
   url: "/concepts/concept_configure_vvols_datastores.html"

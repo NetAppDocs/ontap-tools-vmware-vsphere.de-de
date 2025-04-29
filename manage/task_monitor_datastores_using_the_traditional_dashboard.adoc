@@ -17,7 +17,7 @@ Mithilfe der herkömmlichen Konsole der ONTAP Tools können Sie die herkömmlich
 
 Wählen Sie im Dialogfeld Storage-I/O-Steuerung konfigurieren die Option *Storage-I/O-Steuerung aktivieren und Statistiken sammeln* oder *Storage-I/O-Steuerung deaktivieren, aber Statistiksammlung aktivieren* aus. Sie können Storage I/O Control nur aktivieren, wenn Sie über die Enterprise Plus Lizenz von VMware verfügen.
 
-https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-BB5D9BAB-9E0E-4204-A76A-54634CD8AD51.html["Dokumentation zu VMware vSphere: Storage I/O Control ermöglichen"]
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/vsphere-resource-management-6-5.html["VSphere-Ressourcenmanagement"]
 
 Im herkömmlichen Dashboard werden Kennzahlen zu IOPS, Kapazitätsauslastung, Latenz und engagierte Kapazität angezeigt, die vom vCenter Server abgerufen werden. ONTAP bietet im herkömmlichen Dashboard Metriken zur Speicherersparnis für das Aggregat. Sie können die Speicherplatzeinsparung für ein bestimmtes Aggregat anzeigen. Mit diesen Performance-Parametern können Sie Performance-Engpässe in der virtuellen Umgebung identifizieren und Korrekturmaßnahmen ergreifen, um die Probleme zu beheben.
 

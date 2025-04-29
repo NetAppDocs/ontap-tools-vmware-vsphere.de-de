@@ -34,5 +34,5 @@ Sie müssen die FlexClone Lizenz aktivieren, um Test-Failover-Vorgänge für SRA
 Um die IOPS für einen Datastore anzuzeigen, müssen Sie entweder die Storage-I/O-Steuerung aktivieren oder das Kontrollkästchen „Storage-I/O-Statistiksammlung deaktivieren“ in der Konfiguration des Storage-I/O-Steuersystems deaktivieren. Sie können die Storage-I/O-Steuerung nur aktivieren, wenn Sie über die Enterprise Plus-Lizenz von VMware verfügen.
 
 * https://kb.vmware.com/s/article/1022091["Fehlerbehebung bei der Storage-I/O-Steuerung"]
-* https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-37CC0E44-7BC7-479C-81DC-FFFC21C1C4E3.html["Anforderungen an die Storage-I/O-Kontrolle"]
+* https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/vsphere-resource-management-6-5.html["VSphere-Ressourcenmanagement"]
 

@@ -11,7 +11,7 @@ summary: ONTAP Tools für VMware vSphere unterstützen die Konfiguration gemeins
 
 
 [role="lead"]
-ONTAP Tools für VMware vSphere unterstützen die Konfiguration gemeinsam genutzter SRM-Recovery-Standorte von VMware. Weitere Informationen finden Sie unter: https://docs.vmware.com/en/Site-Recovery-Manager/8.6/com.vmware.srm.install_config.doc/GUID-EBF84252-DF37-43CD-ADC8-E90F5254F315.html["Site Recovery Manager in einer Konfiguration mit gemeinsam genutzten Recovery-Standorten"]. Die Site Recovery Manager Server-Instanzen am Recovery-Standort stellen eine Verbindung zu denselben vCenter Server-Instanzen her.
+ONTAP Tools für VMware vSphere unterstützen die Konfiguration gemeinsam genutzter SRM-Recovery-Standorte von VMware. Weitere Informationen finden Sie unter  https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-installation-and-configuration-8-8.html["Site Recovery Manager in einer Konfiguration mit gemeinsam genutzten Recovery-Standorten"]. Die Site Recovery Manager Server-Instanzen am Recovery-Standort stellen eine Verbindung zu denselben vCenter Server-Instanzen her.
 
 In einer SRM Shared Recovery Site-Konfiguration benötigt jeder SRM-Server eine dedizierte SRA-Instanz (1:1 Beziehung zwischen SRM und SRA). Konfigurieren Sie OTV im VCF-Modus als dedizierte SRA-Instanz für jeden SRM-Server. Sie können auch ONTAP-Tools für die VMware vSphere Appliance implementiert haben, die nicht SRA-fähig sind, aber in vCenter registriert sind und für nicht-SRA-Aufgaben wie die Bereitstellung von Datastores verwendet werden.
 
